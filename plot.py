@@ -1,3 +1,7 @@
+# This script plots user inputted residue arguments from sum_crg.out against its pH
+# To run code use command
+# python plot.py sum_crg.out <residue_001> <residue_002> <residue_003>
+
 import sys # Get output outside program
 
 #print(sys.argv[1])
