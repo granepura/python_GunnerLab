@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 import math
 import random
 import sys
@@ -10,10 +11,11 @@ import sys
 # Read the input PDB file to extract the oxygen atom coordinates and the ChainRes_ID
 with open(sys.argv[1]) as file:
     for line in file:
-        if line.startswith("ATOM") and line[12:16].strip() == "O":
-            x = float(line[30:38].strip())
-            y = float(line[38:46].strip())
-            z = float(line[46:54].strip())
+        if line.startswith("ATOM") and line[15:17].strip() == "O":
+            newline = line.strip().split()
+            x = float(newline[6])
+            y = float(newline[7])
+            z = float(newline[8])
             oxygen_coordinates = [x,y,z]
             
             f = open(sys.argv[1])         
@@ -29,7 +31,7 @@ with open(sys.argv[1]) as file:
 # bond_length =   0.96 # The typical bond length for an oxygen-hydrogen bond in a water molecule
 # bond_angle  = 109.5  # The typical bond angle for a water molecule
 
-N = 100 # Set the number of water conformers
+N = 20 # Set the number of water conformers
 with open("HOH_confs.pdb", 'w') as file:
     for i in range(N):
         def add_Hs(O_coord, bond_length=0.96, bond_angle=109.5):
