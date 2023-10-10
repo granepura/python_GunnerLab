@@ -8,10 +8,7 @@ import numpy as np
 import os
 
 # put your directory here, remember to also update head3.lst path in ms_analysis.py
-# path to the MCCE directory data
-# path to ms_out file data
-# mcce_dir = '/Users/mohamedelrefaiy/Library/CloudStorage/Box-Box/Reseach/projects/2023/ISIA/MCCE/Aug_27_2023/trimer'
-mcce_dir = "/Users/granepura/Dropbox (Graduate Center)/BennettLab_Gehan/Bailey/Gehan_microstates/final_scripts/IsiA/MCCE/"
+mcce_dir = "Path to MCCE directory data"
 mc = msa.MSout(f"{mcce_dir}/ms_out/pH7eH0ms.txt")
 
 ms_orig_lst = [[ms.E, ms.count, ms.state] for ms in list((mc.microstates.values()))]
