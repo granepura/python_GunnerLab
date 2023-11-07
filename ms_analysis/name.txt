@@ -448,6 +448,17 @@ HBD**HEC******  *****PDD******
 *C37 LHG******  *C37 lhg*******
 *C38 LHG******  *C38 lhg*******
 
+*C2  LMU******  *C2  lmu*******     create LMU tail - added by Gehan (11/06/23)
+*C3  LMU******  *C3  lmu*******
+*C4  LMU******  *C4  lmu*******
+*C5  LMU******  *C5  lmu*******
+*C6  LMU******  *C6  lmu*******
+*C7  LMU******  *C7  lmu*******
+*C8  LMU******  *C8  lmu*******
+*C9  LMU******  *C9  lmu*******
+*C10 LMU******  *C10 lmu*******
+*C11 LMU******  *C11 lmu*******
+*C12 LMU******  *C12 lmu*******
 
 *C9  SQD******  *C9  sqd*******     create SQD tail - added by Gehan (09/19/22)
 *C10 SQD******  *C10 sqd*******
