@@ -6,11 +6,14 @@ from pymembrane.util.mcce_util.MCCEtoGromacsConverter import *
 # path = '/Users/mohamedelrefaiy/Library/CloudStorage/Box-Box/Reseach/projects/2023/ISIA/MCCE/Aug_27_2023/trimer/'
 path = os.getcwd()
 ms_mcce_pdb_dir = f'{path}/pdb_output_mc/'        # path to the input dir
+#ms_mcce_pdb_dir = f'{path}/ms_out/pH7eH0ms/pdbs_from_ms/'        # path to the input dir
 path_dir_save = f'{path}/parsed_pdb_output_mc/'   # path to the output dir
 
-shutil.rmtree(path_dir_save)
-print(f'The directory {path_dir_save} has been deleted.')
-os.makedirs(path_dir_save)
+if os.path.exists(path_dir_save):
+    shutil.rmtree(path_dir_save)
+    print(f'The directory {path_dir_save} has been deleted.')
+os.mkdir(path_dir_save)
+
 
 list_all_ligands = ['CLA', 'CLB', 'BCR', 'SQD', 'HOH', 'MEM']  # Should be updated based on the cofactors in the pdb
 

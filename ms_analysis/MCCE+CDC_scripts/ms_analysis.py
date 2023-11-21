@@ -6,7 +6,8 @@ import numpy as np
 
 ph2Kcal = 1.364
 Kcal2kT = 1.688
-head_3_path = "Path to head3.lst"
+head_3_path = "head3.lst"
+# head_3_path = '/Users/mohamedelrefaiy/Library/CloudStorage/Box-Box/Reseach/projects/2023/ISIA/MCCE/Aug_27_2023/trimer/head3.lst'
 
 class Microstate:
     def __init__(self, state, E, count):

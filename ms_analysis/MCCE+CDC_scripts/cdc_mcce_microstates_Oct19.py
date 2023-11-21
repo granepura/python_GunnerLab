@@ -15,7 +15,7 @@ dict_cofactors = {'SQD': dict_compelete_SQD_mcce,
 # dir = 'PATH_TO_YOUR_MS_PDB_DIRECTORY_WHERE_YOU_WILL_RUN_CDC_CALCULATION'
 path = os.getcwd()
 dir = f'{path}/parsed_pdb_output_mc/'
-#dir = f'{path}/test_parsed/'
+#dir = f'{path}/ms_out/pH7eH0ms/pdbs_from_ms/'
 
 # Create a dictionary to store site energies for each microstate
 dict_site_energy = {}

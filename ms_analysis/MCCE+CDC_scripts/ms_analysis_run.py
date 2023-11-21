@@ -8,7 +8,10 @@ import numpy as np
 import os
 
 # put your directory here, remember to also update head3.lst path in ms_analysis.py
-mcce_dir = "Path to MCCE directory data"
+# path to the MCCE directory data
+# path to ms_out file data
+# mcce_dir = '/Users/mohamedelrefaiy/Library/CloudStorage/Box-Box/Reseach/projects/2023/ISIA/MCCE/Aug_27_2023/trimer'
+mcce_dir = "."
 mc = msa.MSout(f"{mcce_dir}/ms_out/pH7eH0ms.txt")
 
 ms_orig_lst = [[ms.E, ms.count, ms.state] for ms in list((mc.microstates.values()))]
@@ -61,7 +64,7 @@ full_count_list = list(np.arange(n_counts))
 
 ms_cum_sum = np.cumsum(ms_count_values)
 
-count_selection_list = np.arange(1000, n_counts - 1000, n_counts / 1000)
+count_selection_list = np.arange(100, n_counts - 100, n_counts / 100)
 
 
 for count in count_selection_list:
