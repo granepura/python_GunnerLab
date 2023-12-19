@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 import math
 import random
 import sys
@@ -11,11 +10,11 @@ import sys
 # Read the input PDB file to extract the oxygen atom coordinates and the ChainRes_ID
 with open(sys.argv[1]) as file:
     for line in file:
-        if line.startswith("ATOM") and line[15:17].strip() == "O":
+        if line.startswith("HETATM") and line[12:16].strip() == "O":
             newline = line.strip().split()
-            x = float(newline[6])
-            y = float(newline[7])
-            z = float(newline[8])
+            x = float(line[30:38])
+            y = float(line[38:46])
+            z = float(line[46:54])
             oxygen_coordinates = [x,y,z]
             
             f = open(sys.argv[1])         
@@ -31,7 +30,7 @@ with open(sys.argv[1]) as file:
 # bond_length =   0.96 # The typical bond length for an oxygen-hydrogen bond in a water molecule
 # bond_angle  = 109.5  # The typical bond angle for a water molecule
 
-N = 20 # Set the number of water conformers
+N = 25 # Set the number of water conformers
 with open("HOH_confs.pdb", 'w') as file:
     for i in range(N):
         def add_Hs(O_coord, bond_length=0.96, bond_angle=109.5):
@@ -91,12 +90,12 @@ with open("HOH_confs.pdb", 'w') as file:
             HOHangle = np.degrees(np.arccos(np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))))   
             h1_L = np.linalg.norm(np.array(O_coord) - np.array(H1_coord))
             h2_L = np.linalg.norm(np.array(O_coord) - np.array(H2_coord))
-            H1 = [ float('{:07.3f}'.format(H1_coord[0])), float('{:07.3f}'.format(H1_coord[1])), float('{:07.3f}'.format(H1_coord[2])) ]
-            H2 = [ float('{:07.3f}'.format(H2_coord[0])), float('{:07.3f}'.format(H2_coord[1])), float('{:07.3f}'.format(H2_coord[2])) ]
+            H1 = ['{:07.3f}'.format(H1_coord[0]), '{:07.3f}'.format(H1_coord[1]), '{:07.3f}'.format(H1_coord[2])]
+            H2 = ['{:07.3f}'.format(H2_coord[0]), '{:07.3f}'.format(H2_coord[1]), '{:07.3f}'.format(H2_coord[2])]
             
-            print("HOH_{} --> Angle = {}, O-H1 = {}, O-H2 = {} ---> H1 = {}, H2 = {}".format('{:03d}'.format(i+1), '{:.1f}'.format(HOHangle), 
-                                                                                             '{:.2f}'.format(h1_L), '{:.2f}'.format(h2_L),
-                                                                                              H1, H2))
+            print("HOH_{} --> Angle = {}, O-H1 = {}, O-H2 = {}, H1 = {}, H2 = {}".format('{:03d}'.format(i+1), '{:.1f}'.format(HOHangle), 
+                                                                                         '{:.2f}'.format(h1_L), '{:.2f}'.format(h2_L),
+                                                                                          H1, H2))
             
             return H1_coord, H2_coord
 
