@@ -1,0 +1,696 @@
+# Conformer definition
+CONFLIST, 4MK: 4MKBK, 4MK+1, 4MK01, 4MK+a
+#CONFLIST, 4MK: 4MKBK, 4MK+1, 4MK01, 4MK+a, 4MKDM
+
+# ATOM name and bonds
+CONNECT, " C1 ", 4MK+1:  sp3, " C2 "," H1 "," H1A"," H1B"
+CONNECT, " C2 ", 4MK+1:  sp3, " C1 "," C3 "," O4 "," H2 "
+CONNECT, " C3 ", 4MK+1:  sp3, " C2 "," H3 "," H3A"," H3B"
+CONNECT, " O4 ", 4MK+1:  sp2, " C2 "," C5 "
+CONNECT, " C5 ", 4MK+1:  sp2, " O4 "," C6 "," C17"
+CONNECT, " C6 ", 4MK+1:  sp2, " C5 "," C7 "," H6 "
+CONNECT, " C7 ", 4MK+1:  sp2, " C6 "," C8 "," C14"
+CONNECT, " C8 ", 4MK+1:  sp3, " C7 "," C9 "," C13"," H8 "
+CONNECT, " C9 ", 4MK+1:  sp3, " C8 "," C10"," H9 "," H9A"
+CONNECT, " C10", 4MK+1:  sp3, " C9 "," N11"," H10","H10A"
+CONNECT, " N11", 4MK+1:  sp3, " C10"," C12","HN11"," H75"
+CONNECT, " C12", 4MK+1:  sp3, " N11"," C13"," H12","H12A"
+CONNECT, " C13", 4MK+1:  sp3, " C8 "," C12"," H13","H13A"
+CONNECT, " C14", 4MK+1:  sp2, " C7 "," C15"," C16"
+CONNECT, " C15", 4MK+1:  sp3, " C14"," H15","H15A","H15B"
+CONNECT, " C16", 4MK+1:  sp2, " C14"," C17"," H16"
+CONNECT, " C17", 4MK+1:  sp2, " C5 "," C16"," N18"
+CONNECT, " N18", 4MK+1:  sp2, " C17"," C19","HN18"
+CONNECT, " C19", 4MK+1:  sp2, " N18"," N20"," N38"
+CONNECT, " N20", 4MK+1:  sp2, " C19"," C21"
+CONNECT, " C21", 4MK+1:  sp2, " N20"," C22"," H21"
+CONNECT, " C22", 4MK+1:  sp2, " C21","CL1 "," C24"
+CONNECT, "CL1 ", 4MK+1:     , " C22"
+CONNECT, " C24", 4MK+1:  sp2, " C22"," N25"," N38"
+CONNECT, " N25", 4MK+1:  sp2, " C24"," C26","HN25"
+CONNECT, " C26", 4MK+1:  sp2, " N25"," C27"," C31"
+CONNECT, " C27", 4MK+1:  sp2, " C26"," C28"," H27"
+CONNECT, " C28", 4MK+1:  sp2, " C27"," C29"," H28"
+CONNECT, " C29", 4MK+1:  sp2, " C28"," C30"," H29"
+CONNECT, " C30", 4MK+1:  sp2, " C29"," C31"," H30"
+CONNECT, " C31", 4MK+1:  sp2, " C26"," C30"," S32"
+CONNECT, " S32", 4MK+1:  sp3, " C31"," O33"," O34"," C35"
+CONNECT, " O33", 4MK+1:  sp3, " S32"
+CONNECT, " O34", 4MK+1:  sp3, " S32"
+CONNECT, " C35", 4MK+1:  sp3, " S32"," C36"," C37"," H35"
+CONNECT, " C36", 4MK+1:  sp3, " C35"," H36","H36A","H36B"
+CONNECT, " C37", 4MK+1:  sp3, " C35"," H37","H37A","H37B"
+CONNECT, " N38", 4MK+1:  sp2, " C19"," C24"
+CONNECT, " H1 ", 4MK+1:    s, " C1 "
+CONNECT, " H1A", 4MK+1:    s, " C1 "
+CONNECT, " H1B", 4MK+1:    s, " C1 "
+CONNECT, " H2 ", 4MK+1:    s, " C2 "
+CONNECT, " H3 ", 4MK+1:    s, " C3 "
+CONNECT, " H3A", 4MK+1:    s, " C3 "
+CONNECT, " H3B", 4MK+1:    s, " C3 "
+CONNECT, " H6 ", 4MK+1:    s, " C6 "
+CONNECT, " H8 ", 4MK+1:    s, " C8 "
+CONNECT, " H9 ", 4MK+1:    s, " C9 "
+CONNECT, " H9A", 4MK+1:    s, " C9 "
+CONNECT, " H10", 4MK+1:    s, " C10"
+CONNECT, "H10A", 4MK+1:    s, " C10"
+CONNECT, "HN11", 4MK+1:    s, " N11"
+CONNECT, " H75", 4MK+1:    s, " N11"
+CONNECT, " H12", 4MK+1:    s, " C12"
+CONNECT, "H12A", 4MK+1:    s, " C12"
+CONNECT, " H13", 4MK+1:    s, " C13"
+CONNECT, "H13A", 4MK+1:    s, " C13"
+CONNECT, " H15", 4MK+1:    s, " C15"
+CONNECT, "H15A", 4MK+1:    s, " C15"
+CONNECT, "H15B", 4MK+1:    s, " C15"
+CONNECT, " H16", 4MK+1:    s, " C16"
+CONNECT, "HN18", 4MK+1:    s, " N18"
+CONNECT, " H21", 4MK+1:    s, " C21"
+CONNECT, "HN25", 4MK+1:    s, " N25"
+CONNECT, " H27", 4MK+1:    s, " C27"
+CONNECT, " H28", 4MK+1:    s, " C28"
+CONNECT, " H29", 4MK+1:    s, " C29"
+CONNECT, " H30", 4MK+1:    s, " C30"
+CONNECT, " H35", 4MK+1:    s, " C35"
+CONNECT, " H36", 4MK+1:    s, " C36"
+CONNECT, "H36A", 4MK+1:    s, " C36"
+CONNECT, "H36B", 4MK+1:    s, " C36"
+CONNECT, " H37", 4MK+1:    s, " C37"
+CONNECT, "H37A", 4MK+1:    s, " C37"
+CONNECT, "H37B", 4MK+1:    s, " C37"
+
+CONNECT, " C1 ", 4MK01:  sp3, " C2 "," H1 "," H1A"," H1B"
+CONNECT, " C2 ", 4MK01:  sp3, " C1 "," C3 "," O4 "," H2 "
+CONNECT, " C3 ", 4MK01:  sp3, " C2 "," H3 "," H3A"," H3B"
+CONNECT, " O4 ", 4MK01:  sp2, " C2 "," C5 "
+CONNECT, " C5 ", 4MK01:  sp2, " O4 "," C6 "," C17"
+CONNECT, " C6 ", 4MK01:  sp2, " C5 "," C7 "," H6 "
+CONNECT, " C7 ", 4MK01:  sp2, " C6 "," C8 "," C14"
+CONNECT, " C8 ", 4MK01:  sp3, " C7 "," C9 "," C13"," H8 "
+CONNECT, " C9 ", 4MK01:  sp3, " C8 "," C10"," H9 "," H9A"
+CONNECT, " C10", 4MK01:  sp3, " C9 "," N11"," H10","H10A"
+CONNECT, " N11", 4MK01:  sp3, " C10"," C12","HN11"
+CONNECT, " C12", 4MK01:  sp3, " N11"," C13"," H12","H12A"
+CONNECT, " C13", 4MK01:  sp3, " C8 "," C12"," H13","H13A"
+CONNECT, " C14", 4MK01:  sp2, " C7 "," C15"," C16"
+CONNECT, " C15", 4MK01:  sp3, " C14"," H15","H15A","H15B"
+CONNECT, " C16", 4MK01:  sp2, " C14"," C17"," H16"
+CONNECT, " C17", 4MK01:  sp2, " C5 "," C16"," N18"
+CONNECT, " N18", 4MK01:  sp2, " C17"," C19","HN18"
+CONNECT, " C19", 4MK01:  sp2, " N18"," N20"," N38"
+CONNECT, " N20", 4MK01:  sp2, " C19"," C21"
+CONNECT, " C21", 4MK01:  sp2, " N20"," C22"," H21"
+CONNECT, " C22", 4MK01:  sp2, " C21","CL1 "," C24"
+CONNECT, "CL1 ", 4MK01:     , " C22"
+CONNECT, " C24", 4MK01:  sp2, " C22"," N25"," N38"
+CONNECT, " N25", 4MK01:  sp2, " C24"," C26","HN25"
+CONNECT, " C26", 4MK01:  sp2, " N25"," C27"," C31"
+CONNECT, " C27", 4MK01:  sp2, " C26"," C28"," H27"
+CONNECT, " C28", 4MK01:  sp2, " C27"," C29"," H28"
+CONNECT, " C29", 4MK01:  sp2, " C28"," C30"," H29"
+CONNECT, " C30", 4MK01:  sp2, " C29"," C31"," H30"
+CONNECT, " C31", 4MK01:  sp2, " C26"," C30"," S32"
+CONNECT, " S32", 4MK01:  sp3, " C31"," O33"," O34"," C35"
+CONNECT, " O33", 4MK01:  sp3, " S32"
+CONNECT, " O34", 4MK01:  sp3, " S32"
+CONNECT, " C35", 4MK01:  sp3, " S32"," C36"," C37"," H35"
+CONNECT, " C36", 4MK01:  sp3, " C35"," H36","H36A","H36B"
+CONNECT, " C37", 4MK01:  sp3, " C35"," H37","H37A","H37B"
+CONNECT, " N38", 4MK01:  sp2, " C19"," C24"
+CONNECT, " H1 ", 4MK01:    s, " C1 "
+CONNECT, " H1A", 4MK01:    s, " C1 "
+CONNECT, " H1B", 4MK01:    s, " C1 "
+CONNECT, " H2 ", 4MK01:    s, " C2 "
+CONNECT, " H3 ", 4MK01:    s, " C3 "
+CONNECT, " H3A", 4MK01:    s, " C3 "
+CONNECT, " H3B", 4MK01:    s, " C3 "
+CONNECT, " H6 ", 4MK01:    s, " C6 "
+CONNECT, " H8 ", 4MK01:    s, " C8 "
+CONNECT, " H9 ", 4MK01:    s, " C9 "
+CONNECT, " H9A", 4MK01:    s, " C9 "
+CONNECT, " H10", 4MK01:    s, " C10"
+CONNECT, "H10A", 4MK01:    s, " C10"
+CONNECT, "HN11", 4MK01:    s, " N11"
+CONNECT, " H12", 4MK01:    s, " C12"
+CONNECT, "H12A", 4MK01:    s, " C12"
+CONNECT, " H13", 4MK01:    s, " C13"
+CONNECT, "H13A", 4MK01:    s, " C13"
+CONNECT, " H15", 4MK01:    s, " C15"
+CONNECT, "H15A", 4MK01:    s, " C15"
+CONNECT, "H15B", 4MK01:    s, " C15"
+CONNECT, " H16", 4MK01:    s, " C16"
+CONNECT, "HN18", 4MK01:    s, " N18"
+CONNECT, " H21", 4MK01:    s, " C21"
+CONNECT, "HN25", 4MK01:    s, " N25"
+CONNECT, " H27", 4MK01:    s, " C27"
+CONNECT, " H28", 4MK01:    s, " C28"
+CONNECT, " H29", 4MK01:    s, " C29"
+CONNECT, " H30", 4MK01:    s, " C30"
+CONNECT, " H35", 4MK01:    s, " C35"
+CONNECT, " H36", 4MK01:    s, " C36"
+CONNECT, "H36A", 4MK01:    s, " C36"
+CONNECT, "H36B", 4MK01:    s, " C36"
+CONNECT, " H37", 4MK01:    s, " C37"
+CONNECT, "H37A", 4MK01:    s, " C37"
+CONNECT, "H37B", 4MK01:    s, " C37"
+
+CONNECT, " C1 ", 4MK+a:  sp3, " C2 "," H1 "," H1A"," H1B"
+CONNECT, " C2 ", 4MK+a:  sp3, " C1 "," C3 "," O4 "," H2 "
+CONNECT, " C3 ", 4MK+a:  sp3, " C2 "," H3 "," H3A"," H3B"
+CONNECT, " O4 ", 4MK+a:  sp2, " C2 "," C5 "
+CONNECT, " C5 ", 4MK+a:  sp2, " O4 "," C6 "," C17"
+CONNECT, " C6 ", 4MK+a:  sp2, " C5 "," C7 "," H6 "
+CONNECT, " C7 ", 4MK+a:  sp2, " C6 "," C8 "," C14"
+CONNECT, " C8 ", 4MK+a:  sp3, " C7 "," C9 "," C13"," H8 "
+CONNECT, " C9 ", 4MK+a:  sp3, " C8 "," C10"," H9 "," H9A"
+CONNECT, " C10", 4MK+a:  sp3, " C9 "," N11"," H10","H10A"
+CONNECT, " N11", 4MK+a:  sp3, " C10"," C12","HN11"," H75"
+CONNECT, " C12", 4MK+a:  sp3, " N11"," C13"," H12","H12A"
+CONNECT, " C13", 4MK+a:  sp3, " C8 "," C12"," H13","H13A"
+CONNECT, " C14", 4MK+a:  sp2, " C7 "," C15"," C16"
+CONNECT, " C15", 4MK+a:  sp3, " C14"," H15","H15A","H15B"
+CONNECT, " C16", 4MK+a:  sp2, " C14"," C17"," H16"
+CONNECT, " C17", 4MK+a:  sp2, " C5 "," C16"," N18"
+CONNECT, " N18", 4MK+a:  sp2, " C17"," C19","HN18"
+CONNECT, " C19", 4MK+a:  sp2, " N18"," N20"," N38"
+CONNECT, " N20", 4MK+a:  sp2, " C19"," C21"," H76"
+CONNECT, " C21", 4MK+a:  sp2, " N20"," C22"," H21"
+CONNECT, " C22", 4MK+a:  sp2, " C21","CL1 "," C24"
+CONNECT, "CL1 ", 4MK+a:     , " C22"
+CONNECT, " C24", 4MK+a:  sp2, " C22"," N25"," N38"
+CONNECT, " N25", 4MK+a:  sp2, " C24"," C26","HN25"
+CONNECT, " C26", 4MK+a:  sp2, " N25"," C27"," C31"
+CONNECT, " C27", 4MK+a:  sp2, " C26"," C28"," H27"
+CONNECT, " C28", 4MK+a:  sp2, " C27"," C29"," H28"
+CONNECT, " C29", 4MK+a:  sp2, " C28"," C30"," H29"
+CONNECT, " C30", 4MK+a:  sp2, " C29"," C31"," H30"
+CONNECT, " C31", 4MK+a:  sp2, " C26"," C30"," S32"
+CONNECT, " S32", 4MK+a:  sp3, " C31"," O33"," O34"," C35"
+CONNECT, " O33", 4MK+a:  sp3, " S32"
+CONNECT, " O34", 4MK+a:  sp3, " S32"
+CONNECT, " C35", 4MK+a:  sp3, " S32"," C36"," C37"," H35"
+CONNECT, " C36", 4MK+a:  sp3, " C35"," H36","H36A","H36B"
+CONNECT, " C37", 4MK+a:  sp3, " C35"," H37","H37A","H37B"
+CONNECT, " N38", 4MK+a:  sp2, " C19"," C24"
+CONNECT, " H1 ", 4MK+a:    s, " C1 "
+CONNECT, " H1A", 4MK+a:    s, " C1 "
+CONNECT, " H1B", 4MK+a:    s, " C1 "
+CONNECT, " H2 ", 4MK+a:    s, " C2 "
+CONNECT, " H3 ", 4MK+a:    s, " C3 "
+CONNECT, " H3A", 4MK+a:    s, " C3 "
+CONNECT, " H3B", 4MK+a:    s, " C3 "
+CONNECT, " H6 ", 4MK+a:    s, " C6 "
+CONNECT, " H8 ", 4MK+a:    s, " C8 "
+CONNECT, " H9 ", 4MK+a:    s, " C9 "
+CONNECT, " H9A", 4MK+a:    s, " C9 "
+CONNECT, " H10", 4MK+a:    s, " C10"
+CONNECT, "H10A", 4MK+a:    s, " C10"
+CONNECT, "HN11", 4MK+a:    s, " N11"
+CONNECT, " H75", 4MK+a:    s, " N11"
+CONNECT, " H12", 4MK+a:    s, " C12"
+CONNECT, "H12A", 4MK+a:    s, " C12"
+CONNECT, " H13", 4MK+a:    s, " C13"
+CONNECT, "H13A", 4MK+a:    s, " C13"
+CONNECT, " H15", 4MK+a:    s, " C15"
+CONNECT, "H15A", 4MK+a:    s, " C15"
+CONNECT, "H15B", 4MK+a:    s, " C15"
+CONNECT, " H16", 4MK+a:    s, " C16"
+CONNECT, "HN18", 4MK+a:    s, " N18"
+CONNECT, " H21", 4MK+a:    s, " C21"
+CONNECT, "HN25", 4MK+a:    s, " N25"
+CONNECT, " H27", 4MK+a:    s, " C27"
+CONNECT, " H28", 4MK+a:    s, " C28"
+CONNECT, " H29", 4MK+a:    s, " C29"
+CONNECT, " H30", 4MK+a:    s, " C30"
+CONNECT, " H35", 4MK+a:    s, " C35"
+CONNECT, " H36", 4MK+a:    s, " C36"
+CONNECT, "H36A", 4MK+a:    s, " C36"
+CONNECT, "H36B", 4MK+a:    s, " C36"
+CONNECT, " H37", 4MK+a:    s, " C37"
+CONNECT, "H37A", 4MK+a:    s, " C37"
+CONNECT, "H37B", 4MK+a:    s, " C37"
+CONNECT, " H76", 4MK+a:    s, " N20"
+
+
+# ATOM charges
+CHARGE, 4MK+1, " C1 ": -0.113 # amended
+CHARGE, 4MK+1, " C2 ":  0.144 # amended
+CHARGE, 4MK+1, " C3 ": -0.113 # amended
+CHARGE, 4MK+1, " O4 ": -0.342 # amended
+CHARGE, 4MK+1, " C5 ":  0.057 # amended
+CHARGE, 4MK+1, " C6 ": -0.132 # amended
+CHARGE, 4MK+1, " C7 ": -0.134 # amended
+CHARGE, 4MK+1, " C8 ": -0.008 # amended
+CHARGE, 4MK+1, " C9 ": -0.107 # amended
+CHARGE, 4MK+1, " C10":  0.107 # amended
+CHARGE, 4MK+1, " N11": -0.764 # amended
+CHARGE, 4MK+1, " C12":  0.107 # amended
+CHARGE, 4MK+1, " C13": -0.107 # amended
+CHARGE, 4MK+1, " C14": -0.041 # amended
+CHARGE, 4MK+1, " C15": -0.060 # amended
+CHARGE, 4MK+1, " C16": -0.141 # amended
+CHARGE, 4MK+1, " C17":  0.209 # amended
+CHARGE, 4MK+1, " N18": -0.742 # amended
+CHARGE, 4MK+1, " C19":  0.895 # amended
+CHARGE, 4MK+1, " N20": -0.741 # amended
+CHARGE, 4MK+1, " C21":  0.478 # amended
+CHARGE, 4MK+1, " C22": -0.305 # amended
+CHARGE, 4MK+1, "CL1 ": -0.021 # amended
+CHARGE, 4MK+1, " C24":  0.710 # amended
+CHARGE, 4MK+1, " N25": -0.762 # amended
+CHARGE, 4MK+1, " C26":  0.290 # amended
+CHARGE, 4MK+1, " C27": -0.196 # amended
+CHARGE, 4MK+1, " C28": -0.037 # amended
+CHARGE, 4MK+1, " C29": -0.179 # amended
+CHARGE, 4MK+1, " C30": -0.006 # amended
+CHARGE, 4MK+1, " C31": -0.430 # amended
+CHARGE, 4MK+1, " S32":  1.369 # amended
+CHARGE, 4MK+1, " O33": -0.656 # amended
+CHARGE, 4MK+1, " O34": -0.656 # amended
+CHARGE, 4MK+1, " C35": -0.272 # amended
+CHARGE, 4MK+1, " C36": -0.077 # amended
+CHARGE, 4MK+1, " C37": -0.077 # amended
+CHARGE, 4MK+1, " N38": -0.743 # amended
+CHARGE, 4MK+1, " H1 ":  0.052 # amended
+CHARGE, 4MK+1, " H1A":  0.052 # amended
+CHARGE, 4MK+1, " H1B":  0.052 # amended
+CHARGE, 4MK+1, " H2 ":  0.027 # amended
+CHARGE, 4MK+1, " H3 ":  0.053 # amended
+CHARGE, 4MK+1, " H3A":  0.052 # amended
+CHARGE, 4MK+1, " H3B":  0.052 # amended
+CHARGE, 4MK+1, " H6 ":  0.129 # amended
+CHARGE, 4MK+1, " H8 ":  0.070 # amended
+CHARGE, 4MK+1, " H9 ":  0.093 # amended
+CHARGE, 4MK+1, " H9A":  0.093 # amended
+CHARGE, 4MK+1, " H10":  0.104 # amended
+CHARGE, 4MK+1, "H10A":  0.105 # amended
+CHARGE, 4MK+1, "HN11":  0.451 # amended
+CHARGE, 4MK+1, " H12":  0.105 # amended
+CHARGE, 4MK+1, "H12A":  0.105 # amended
+CHARGE, 4MK+1, " H13":  0.092 # amended
+CHARGE, 4MK+1, "H13A":  0.092 # amended
+CHARGE, 4MK+1, " H15":  0.049 # amended
+CHARGE, 4MK+1, "H15A":  0.049 # amended
+CHARGE, 4MK+1, "H15B":  0.049 # amended
+CHARGE, 4MK+1, " H16":  0.161 # amended
+CHARGE, 4MK+1, "HN18":  0.482 # amended
+CHARGE, 4MK+1, " H21":  0.048 # amended
+CHARGE, 4MK+1, "HN25":  0.479 # amended
+CHARGE, 4MK+1, " H27":  0.149 # amended
+CHARGE, 4MK+1, " H28":  0.139 # amended
+CHARGE, 4MK+1, " H29":  0.150 # amended
+CHARGE, 4MK+1, " H30":  0.172 # amended
+CHARGE, 4MK+1, " H35":  0.115 # amended
+CHARGE, 4MK+1, " H36":  0.054 # amended
+CHARGE, 4MK+1, "H36A":  0.054 # amended
+CHARGE, 4MK+1, "H36B":  0.054 # amended
+CHARGE, 4MK+1, " H37":  0.054 # amended
+CHARGE, 4MK+1, "H37A":  0.054 # amended
+CHARGE, 4MK+1, "H37B":  0.054 # amended
+CHARGE, 4MK+1, " H75":  0.451 # amended mrg
+
+CHARGE, 4MK01, " C1 ": -0.109 # amended
+CHARGE, 4MK01, " C2 ":  0.140 # amended
+CHARGE, 4MK01, " C3 ": -0.109 # amended
+CHARGE, 4MK01, " O4 ": -0.351 # amended
+CHARGE, 4MK01, " C5 ":  0.061 # amended
+CHARGE, 4MK01, " C6 ": -0.135 # amended
+CHARGE, 4MK01, " C7 ": -0.073 # amended
+CHARGE, 4MK01, " C8 ": -0.021 # amended
+CHARGE, 4MK01, " C9 ": -0.072 # amended
+CHARGE, 4MK01, " C10":  0.161 # amended
+CHARGE, 4MK01, " N11": -0.819 # amended
+CHARGE, 4MK01, " C12":  0.161 # amended
+CHARGE, 4MK01, " C13": -0.072 # amended
+CHARGE, 4MK01, " C14": -0.060 # amended
+CHARGE, 4MK01, " C15": -0.054 # amended
+CHARGE, 4MK01, " C16": -0.134 # amended
+CHARGE, 4MK01, " C17":  0.157 # amended
+CHARGE, 4MK01, " N18": -0.734 # amended
+CHARGE, 4MK01, " C19":  0.918 # amended
+CHARGE, 4MK01, " N20": -0.741 # amended
+CHARGE, 4MK01, " C21":  0.489 # amended
+CHARGE, 4MK01, " C22": -0.333 # amended
+CHARGE, 4MK01, "CL1 ": -0.045 # amended
+CHARGE, 4MK01, " C24":  0.726 # amended
+CHARGE, 4MK01, " N25": -0.756 # amended
+CHARGE, 4MK01, " C26":  0.301 # amended
+CHARGE, 4MK01, " C27": -0.186 # amended
+CHARGE, 4MK01, " C28": -0.041 # amended
+CHARGE, 4MK01, " C29": -0.184 # amended
+CHARGE, 4MK01, " C30": -0.014 # amended
+CHARGE, 4MK01, " C31": -0.445 # amended
+CHARGE, 4MK01, " S32":  1.370 # amended
+CHARGE, 4MK01, " O33": -0.659 # amended
+CHARGE, 4MK01, " O34": -0.659 # amended
+CHARGE, 4MK01, " C35": -0.272 # amended
+CHARGE, 4MK01, " C36": -0.075 # amended
+CHARGE, 4MK01, " C37": -0.075 # amended
+CHARGE, 4MK01, " N38": -0.790 # amended
+CHARGE, 4MK01, " H1 ":  0.046 # amended
+CHARGE, 4MK01, " H1A":  0.046 # amended
+CHARGE, 4MK01, " H1B":  0.046 # amended
+CHARGE, 4MK01, " H2 ":  0.051 # amended
+CHARGE, 4MK01, " H3 ":  0.046 # amended
+CHARGE, 4MK01, " H3A":  0.046 # amended
+CHARGE, 4MK01, " H3B":  0.046 # amended
+CHARGE, 4MK01, " H6 ":  0.147 # amended
+CHARGE, 4MK01, " H8 ":  0.054 # amended
+CHARGE, 4MK01, " H9 ":  0.052 # amended
+CHARGE, 4MK01, " H9A":  0.052 # amended
+CHARGE, 4MK01, " H10":  0.028 # amended
+CHARGE, 4MK01, "H10A":  0.028 # amended
+CHARGE, 4MK01, "HN11":  0.362 # amended
+CHARGE, 4MK01, " H12":  0.028 # amended
+CHARGE, 4MK01, "H12A":  0.028 # amended
+CHARGE, 4MK01, " H13":  0.051 # amended
+CHARGE, 4MK01, "H13A":  0.051 # amended
+CHARGE, 4MK01, " H15":  0.046 # amended
+CHARGE, 4MK01, "H15A":  0.046 # amended
+CHARGE, 4MK01, "H15B":  0.046 # amended
+CHARGE, 4MK01, " H16":  0.148 # amended
+CHARGE, 4MK01, "HN18":  0.476 # amended
+CHARGE, 4MK01, " H21":  0.043 # amended
+CHARGE, 4MK01, "HN25":  0.477 # amended
+CHARGE, 4MK01, " H27":  0.169 # amended
+CHARGE, 4MK01, " H28":  0.139 # amended
+CHARGE, 4MK01, " H29":  0.145 # amended
+CHARGE, 4MK01, " H30":  0.166 # amended
+CHARGE, 4MK01, " H35":  0.113 # amended
+CHARGE, 4MK01, " H36":  0.052 # amended
+CHARGE, 4MK01, "H36A":  0.052 # amended
+CHARGE, 4MK01, "H36B":  0.052 # amended
+CHARGE, 4MK01, " H37":  0.052 # amended
+CHARGE, 4MK01, "H37A":  0.052 # amended
+CHARGE, 4MK01, "H37B":  0.052 # amended
+
+CHARGE, 4MK+a, " C1 ": -0.116 # amended
+CHARGE, 4MK+a, " C2 ":  0.138 # amended
+CHARGE, 4MK+a, " C3 ": -0.116 # amended
+CHARGE, 4MK+a, " O4 ": -0.336 # amended
+CHARGE, 4MK+a, " C5 ":  0.116 # amended
+CHARGE, 4MK+a, " C6 ": -0.137 # amended
+CHARGE, 4MK+a, " C7 ": -0.075 # amended
+CHARGE, 4MK+a, " C8 ": -0.026 # amended
+CHARGE, 4MK+a, " C9 ": -0.106 # amended
+CHARGE, 4MK+a, " C10":  0.106 # amended
+CHARGE, 4MK+a, " N11": -0.764 # amended
+CHARGE, 4MK+a, " C12":  0.106 # amended
+CHARGE, 4MK+a, " C13": -0.106 # amended
+CHARGE, 4MK+a, " C14": -0.046 # amended
+CHARGE, 4MK+a, " C15": -0.069 # amended
+CHARGE, 4MK+a, " C16": -0.159 # amended
+CHARGE, 4MK+a, " C17":  0.100 # amended
+CHARGE, 4MK+a, " N18": -0.613 # amended
+CHARGE, 4MK+a, " C19":  0.612 # amended
+CHARGE, 4MK+a, " N20": -0.614 # amended
+CHARGE, 4MK+a, " C21":  0.137 # amended
+CHARGE, 4MK+a, " C22": -0.227 # amended
+CHARGE, 4MK+a, "CL1 ":  0.038 # amended
+CHARGE, 4MK+a, " C24":  0.788 # amended
+CHARGE, 4MK+a, " N25": -0.636 # amended
+CHARGE, 4MK+a, " C26":  0.196 # amended
+CHARGE, 4MK+a, " C27": -0.134 # amended
+CHARGE, 4MK+a, " C28": -0.061 # amended
+CHARGE, 4MK+a, " C29": -0.124 # amended
+CHARGE, 4MK+a, " C30": -0.010 # amended
+CHARGE, 4MK+a, " C31": -0.361 # amended
+CHARGE, 4MK+a, " S32":  1.357 # amended
+CHARGE, 4MK+a, " O33": -0.639 # amended
+CHARGE, 4MK+a, " O34": -0.639 # amended
+CHARGE, 4MK+a, " C35": -0.269 # amended
+CHARGE, 4MK+a, " C36": -0.083 # amended
+CHARGE, 4MK+a, " C37": -0.083 # amended
+CHARGE, 4MK+a, " N38": -0.691 # amended
+CHARGE, 4MK+a, " H1 ":  0.059 # amended
+CHARGE, 4MK+a, " H1A":  0.059 # amended
+CHARGE, 4MK+a, " H1B":  0.059 # amended
+CHARGE, 4MK+a, " H2 ":  0.035 # amended
+CHARGE, 4MK+a, " H3 ":  0.059 # amended
+CHARGE, 4MK+a, " H3A":  0.058 # amended
+CHARGE, 4MK+a, " H3B":  0.058 # amended
+CHARGE, 4MK+a, " H6 ":  0.153 # amended
+CHARGE, 4MK+a, " H8 ":  0.080 # amended
+CHARGE, 4MK+a, " H9 ":  0.092 # amended
+CHARGE, 4MK+a, " H9A":  0.092 # amended
+CHARGE, 4MK+a, " H10":  0.113 # amended
+CHARGE, 4MK+a, "H10A":  0.113 # amended
+CHARGE, 4MK+a, "HN11":  0.459 # amended
+CHARGE, 4MK+a, " H12":  0.113 # amended
+CHARGE, 4MK+a, "H12A":  0.113 # amended
+CHARGE, 4MK+a, " H13":  0.092 # amended
+CHARGE, 4MK+a, "H13A":  0.092 # amended
+CHARGE, 4MK+a, " H15":  0.060 # amended
+CHARGE, 4MK+a, "H15A":  0.060 # amended
+CHARGE, 4MK+a, "H15B":  0.060 # amended
+CHARGE, 4MK+a, " H16":  0.151 # amended
+CHARGE, 4MK+a, "HN18":  0.508 # amended
+CHARGE, 4MK+a, " H21":  0.214 # amended
+CHARGE, 4MK+a, "HN25":  0.524 # amended
+CHARGE, 4MK+a, " H27":  0.152 # amended
+CHARGE, 4MK+a, " H28":  0.154 # amended
+CHARGE, 4MK+a, " H29":  0.169 # amended
+CHARGE, 4MK+a, " H30":  0.189 # amended
+CHARGE, 4MK+a, " H35":  0.088 # amended
+CHARGE, 4MK+a, " H36":  0.061 # amended
+CHARGE, 4MK+a, "H36A":  0.061 # amended
+CHARGE, 4MK+a, "H36B":  0.061 # amended
+CHARGE, 4MK+a, " H37":  0.061 # amended
+CHARGE, 4MK+a, "H37A":  0.061 # amended
+CHARGE, 4MK+a, "H37B":  0.061 # amended
+CHARGE, 4MK+a, " H75":  0.459 # amended mrg
+CHARGE, 4MK+a, " H76":  0.493 # amended mrg
+
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, 4MK+1, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " O4 ": 1.400,  1.520, 0.200 # amended
+RADIUS, 4MK+1, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " N11": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK+1, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " N18": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK+1, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " N20": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK+1, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, "CL1 ": 1.850,  1.700, 0.173 # amended
+RADIUS, 4MK+1, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " N25": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK+1, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C29": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C30": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C31": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " S32": 1.850,  1.800, 0.200 # amended
+RADIUS, 4MK+1, " O33": 1.400,  1.520, 0.200 # amended
+RADIUS, 4MK+1, " O34": 1.400,  1.520, 0.200 # amended
+RADIUS, 4MK+1, " C35": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C36": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " C37": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+1, " N38": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK+1, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H1A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H1B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H3A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H3B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H9A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "H10A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "HN11": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "H12A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "H13A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "H15A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "H15B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "HN18": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "HN25": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H28": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H29": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H36": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "H36A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "H36B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, " H37": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "H37A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "H37B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+1, "HN75": 1.000,  1.000, 0.020 # amended mrg
+
+RADIUS, 4MK01, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " O4 ": 1.400,  1.520, 0.200 # amended
+RADIUS, 4MK01, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " N11": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK01, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " N18": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK01, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " N20": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK01, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, "CL1 ": 1.850,  1.700, 0.173 # amended
+RADIUS, 4MK01, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " N25": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK01, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C29": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C30": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C31": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " S32": 1.850,  1.800, 0.200 # amended
+RADIUS, 4MK01, " O33": 1.400,  1.520, 0.200 # amended
+RADIUS, 4MK01, " O34": 1.400,  1.520, 0.200 # amended
+RADIUS, 4MK01, " C35": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C36": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " C37": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK01, " N38": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK01, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H1A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H1B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H3A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H3B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H9A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "H10A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "HN11": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "H12A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "H13A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "H15A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "H15B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "HN18": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "HN25": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H28": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H29": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H36": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "H36A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "H36B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, " H37": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "H37A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK01, "H37B": 1.000,  1.000, 0.020 # amended
+
+RADIUS, 4MK+a, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " O4 ": 1.400,  1.520, 0.200 # amended
+RADIUS, 4MK+a, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " N11": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK+a, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " N18": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK+a, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " N20": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK+a, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, "CL1 ": 1.850,  1.700, 0.173 # amended
+RADIUS, 4MK+a, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " N25": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK+a, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C29": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C30": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C31": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " S32": 1.850,  1.800, 0.200 # amended
+RADIUS, 4MK+a, " O33": 1.400,  1.520, 0.200 # amended
+RADIUS, 4MK+a, " O34": 1.400,  1.520, 0.200 # amended
+RADIUS, 4MK+a, " C35": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C36": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " C37": 1.700,  1.700, 0.150 # amended
+RADIUS, 4MK+a, " N38": 1.500,  1.550, 0.160 # amended
+RADIUS, 4MK+a, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H1A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H1B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H3A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H3B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H9A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "H10A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "HN11": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "H12A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "H13A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "H15A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "H15B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "HN18": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "HN25": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H28": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H29": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H36": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "H36A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "H36B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, " H37": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "H37A": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "H37B": 1.000,  1.000, 0.020 # amended
+RADIUS, 4MK+a, "HN75": 1.000,  1.000, 0.020 # amended mrg
+
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, 4MK+1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -20.974, rxn08= -9.694
+CONFORMER, 4MK01:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -8.203, rxn08= -3.843
+CONFORMER, 4MK+a:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -39.370, rxn08= -18.488

@@ -1,0 +1,707 @@
+# Conformer definition
+CONFLIST, B49: B49BK, B49+1, B4901, B4902, B4903
+#CONFLIST, B49: B49BK, B49+1, B4901, B4902, B4903, B49DM
+
+# ATOM name and bonds
+CONNECT, " C4 ", B49+1:  sp3, " C14"," H4 "," H4A"," H4B"
+CONNECT, " C5 ", B49+1:  sp2, " C6 "," C15"," H5 "
+CONNECT, " C6 ", B49+1:  sp2, " C5 "," C16"," H6 "
+CONNECT, " C7 ", B49+1:  sp2, " C15"," C17"," H7 "
+CONNECT, " C13", B49+1:  sp2, " C3 "," C18"," C19"
+CONNECT, " C15", B49+1:  sp2, " C5 "," C7 "," F29"
+CONNECT, " C17", B49+1:  sp2, " C7 "," C20"," C16"
+CONNECT, " C20", B49+1:  sp3, " C17"," C21"," C12"
+CONNECT, " C21", B49+1:  sp3, " C20"," N24"," O27"
+CONNECT, " C22", B49+1:  sp2, " C19"," N25"," O28"
+CONNECT, " C3 ", B49+1:  sp3, " C13"," H3 "," H3A"," H3B"
+CONNECT, " C12", B49+1:  sp2, " C20"," C18"," H12"
+CONNECT, " C14", B49+1:  sp2, " C4 "," C19"," N23"
+CONNECT, " C16", B49+1:  sp2, " C6 "," C17"," N24"
+CONNECT, " C18", B49+1:  sp2, " C13"," C12"," N23"
+CONNECT, " C19", B49+1:  sp2, " C13"," C22"," C14"
+CONNECT, " N23", B49+1:  sp3, " C14"," C18","HN23"
+CONNECT, " N24", B49+1:  sp3, " C21"," C16","HN24"
+CONNECT, " N25", B49+1:  sp2, " C22","HN25"," C37"
+CONNECT, " O27", B49+1:  sp3, " C21"
+CONNECT, " O28", B49+1:  sp3, " C22"
+CONNECT, " F29", B49+1:     , " C15"
+CONNECT, " H4 ", B49+1:    s, " C4 "
+CONNECT, " H4A", B49+1:    s, " C4 "
+CONNECT, " H4B", B49+1:    s, " C4 "
+CONNECT, " H5 ", B49+1:    s, " C5 "
+CONNECT, " H6 ", B49+1:    s, " C6 "
+CONNECT, " H7 ", B49+1:    s, " C7 "
+CONNECT, " H3 ", B49+1:    s, " C3 "
+CONNECT, " H3A", B49+1:    s, " C3 "
+CONNECT, " H3B", B49+1:    s, " C3 "
+CONNECT, " H12", B49+1:    s, " C12"
+CONNECT, "HN23", B49+1:    s, " N23"
+CONNECT, "HN24", B49+1:    s, " N24"
+CONNECT, "HN25", B49+1:    s, " N25"
+CONNECT, " C37", B49+1:  sp3, " N25"," C38"," H14"," H15"
+CONNECT, " C38", B49+1:  sp3, " C37"," N4 "," H16"," H17"
+CONNECT, " N4 ", B49+1:  sp3, " C38"," C39"," C40"," H57"
+CONNECT, " C39", B49+1:  sp3, " N4 "," C42"," H18"," H19"
+CONNECT, " C40", B49+1:  sp3, " N4 "," C41"," H20"," H21"
+CONNECT, " C41", B49+1:  sp3, " C40"," H22"," H23"," H24"
+CONNECT, " C42", B49+1:  sp3, " C39"," H25"," H26"," H27"
+CONNECT, " H14", B49+1:    s, " C37"
+CONNECT, " H15", B49+1:    s, " C37"
+CONNECT, " H16", B49+1:    s, " C38"
+CONNECT, " H17", B49+1:    s, " C38"
+CONNECT, " H18", B49+1:    s, " C39"
+CONNECT, " H19", B49+1:    s, " C39"
+CONNECT, " H20", B49+1:    s, " C40"
+CONNECT, " H21", B49+1:    s, " C40"
+CONNECT, " H22", B49+1:    s, " C41"
+CONNECT, " H23", B49+1:    s, " C41"
+CONNECT, " H24", B49+1:    s, " C41"
+CONNECT, " H25", B49+1:    s, " C42"
+CONNECT, " H26", B49+1:    s, " C42"
+CONNECT, " H27", B49+1:    s, " C42"
+CONNECT, " H57", B49+1:    s, " N4 "
+
+CONNECT, " C4 ", B4901:  sp3, " C14"," H4 "," H4A"," H4B"
+CONNECT, " C5 ", B4901:  sp2, " C6 "," C15"," H5 "
+CONNECT, " C6 ", B4901:  sp2, " C5 "," C16"," H6 "
+CONNECT, " C7 ", B4901:  sp2, " C15"," C17"," H7 "
+CONNECT, " C13", B4901:  sp2, " C3 "," C18"," C19"
+CONNECT, " C15", B4901:  sp2, " C5 "," C7 "," F29"
+CONNECT, " C17", B4901:  sp2, " C7 "," C20"," C16"
+CONNECT, " C20", B4901:  sp3, " C17"," C21"," C12"
+CONNECT, " C21", B4901:  sp3, " C20"," N24"," O27"
+CONNECT, " C22", B4901:  sp2, " C19"," N25"," O28"
+CONNECT, " C3 ", B4901:  sp3, " C13"," H3 "," H3A"," H3B"
+CONNECT, " C12", B4901:  sp2, " C20"," C18"," H12"
+CONNECT, " C14", B4901:  sp2, " C4 "," C19"," N23"
+CONNECT, " C16", B4901:  sp2, " C6 "," C17"," N24"
+CONNECT, " C18", B4901:  sp2, " C13"," C12"," N23"
+CONNECT, " C19", B4901:  sp2, " C13"," C22"," C14"
+CONNECT, " N23", B4901:  sp3, " C14"," C18","HN23"
+CONNECT, " N24", B4901:  sp3, " C21"," C16","HN24"
+CONNECT, " N25", B4901:  sp2, " C22","HN25"," C37"
+CONNECT, " O27", B4901:  sp3, " C21"
+CONNECT, " O28", B4901:  sp3, " C22"
+CONNECT, " F29", B4901:     , " C15"
+CONNECT, " H4 ", B4901:    s, " C4 "
+CONNECT, " H4A", B4901:    s, " C4 "
+CONNECT, " H4B", B4901:    s, " C4 "
+CONNECT, " H5 ", B4901:    s, " C5 "
+CONNECT, " H6 ", B4901:    s, " C6 "
+CONNECT, " H7 ", B4901:    s, " C7 "
+CONNECT, " H3 ", B4901:    s, " C3 "
+CONNECT, " H3A", B4901:    s, " C3 "
+CONNECT, " H3B", B4901:    s, " C3 "
+CONNECT, " H12", B4901:    s, " C12"
+CONNECT, "HN23", B4901:    s, " N23"
+CONNECT, "HN24", B4901:    s, " N24"
+CONNECT, "HN25", B4901:    s, " N25"
+CONNECT, " C37", B4901:  sp3, " N25"," C38"," H14"," H15"
+CONNECT, " C38", B4901:  sp3, " C37"," N4 "," H16"," H17"
+CONNECT, " N4 ", B4901:  sp3, " C38"," C39"," C40"
+CONNECT, " C39", B4901:  sp3, " N4 "," C42"," H18"," H19"
+CONNECT, " C40", B4901:  sp3, " N4 "," C41"," H20"," H21"
+CONNECT, " C41", B4901:  sp3, " C40"," H22"," H23"," H24"
+CONNECT, " C42", B4901:  sp3, " C39"," H25"," H26"," H27"
+CONNECT, " H14", B4901:    s, " C37"
+CONNECT, " H15", B4901:    s, " C37"
+CONNECT, " H16", B4901:    s, " C38"
+CONNECT, " H17", B4901:    s, " C38"
+CONNECT, " H18", B4901:    s, " C39"
+CONNECT, " H19", B4901:    s, " C39"
+CONNECT, " H20", B4901:    s, " C40"
+CONNECT, " H21", B4901:    s, " C40"
+CONNECT, " H22", B4901:    s, " C41"
+CONNECT, " H23", B4901:    s, " C41"
+CONNECT, " H24", B4901:    s, " C41"
+CONNECT, " H25", B4901:    s, " C42"
+CONNECT, " H26", B4901:    s, " C42"
+CONNECT, " H27", B4901:    s, " C42"
+
+CONNECT, " C4 ", B4902:  sp3, " C14"," H4 "," H4A"," H4B"
+CONNECT, " C5 ", B4902:  sp2, " C6 "," C15"," H5 "
+CONNECT, " C6 ", B4902:  sp2, " C5 "," C16"," H6 "
+CONNECT, " C7 ", B4902:  sp2, " C15"," C17"," H7 "
+CONNECT, " C13", B4902:  sp2, " C3 "," C18"," C19"
+CONNECT, " C15", B4902:  sp2, " C5 "," C7 "," F29"
+CONNECT, " C17", B4902:  sp2, " C7 "," C20"," C16"
+CONNECT, " C20", B4902:  sp3, " C17"," C21"," C12"
+CONNECT, " C21", B4902:  sp3, " C20"," N24"," O27"
+CONNECT, " C22", B4902:  sp2, " C19"," N25"," O28"
+CONNECT, " C3 ", B4902:  sp3, " C13"," H3 "," H3A"," H3B"
+CONNECT, " C12", B4902:  sp2, " C20"," C18"," H12"
+CONNECT, " C14", B4902:  sp2, " C4 "," C19"," N23"
+CONNECT, " C16", B4902:  sp2, " C6 "," C17"," N24"
+CONNECT, " C18", B4902:  sp2, " C13"," C12"," N23"
+CONNECT, " C19", B4902:  sp2, " C13"," C22"," C14"
+CONNECT, " N23", B4902:  sp3, " C14"," C18","HN23"
+CONNECT, " N24", B4902:  sp3, " C21"," C16","HN24"
+#CONNECT, " N25", B4902:  sp2, " C22","HN25"," C37"
+CONNECT, " N25", B4902:  sp2, " C22"," C37"
+CONNECT, " O27", B4902:  sp3, " C21"
+CONNECT, " O28", B4902:  sp3, " C22"
+CONNECT, " F29", B4902:     , " C15"
+CONNECT, " H4 ", B4902:    s, " C4 "
+CONNECT, " H4A", B4902:    s, " C4 "
+CONNECT, " H4B", B4902:    s, " C4 "
+CONNECT, " H5 ", B4902:    s, " C5 "
+CONNECT, " H6 ", B4902:    s, " C6 "
+CONNECT, " H7 ", B4902:    s, " C7 "
+CONNECT, " H3 ", B4902:    s, " C3 "
+CONNECT, " H3A", B4902:    s, " C3 "
+CONNECT, " H3B", B4902:    s, " C3 "
+CONNECT, " H12", B4902:    s, " C12"
+CONNECT, "HN23", B4902:    s, " N23"
+CONNECT, "HN24", B4902:    s, " N24"
+#CONNECT, "HN25", B4902:    s, " N25"
+CONNECT, " C37", B4902:  sp3, " N25"," C38"," H14"," H15"
+CONNECT, " C38", B4902:  sp3, " C37"," N4 "," H16"," H17"
+CONNECT, " N4 ", B4902:  sp3, " C38"," C39"," C40"," H56"
+CONNECT, " C39", B4902:  sp3, " N4 "," C42"," H18"," H19"
+CONNECT, " C40", B4902:  sp3, " N4 "," C41"," H20"," H21"
+CONNECT, " C41", B4902:  sp3, " C40"," H22"," H23"," H24"
+CONNECT, " C42", B4902:  sp3, " C39"," H25"," H26"," H27"
+CONNECT, " H14", B4902:    s, " C37"
+CONNECT, " H15", B4902:    s, " C37"
+CONNECT, " H16", B4902:    s, " C38"
+CONNECT, " H17", B4902:    s, " C38"
+CONNECT, " H18", B4902:    s, " C39"
+CONNECT, " H19", B4902:    s, " C39"
+CONNECT, " H20", B4902:    s, " C40"
+CONNECT, " H21", B4902:    s, " C40"
+CONNECT, " H22", B4902:    s, " C41"
+CONNECT, " H23", B4902:    s, " C41"
+CONNECT, " H24", B4902:    s, " C41"
+CONNECT, " H25", B4902:    s, " C42"
+CONNECT, " H26", B4902:    s, " C42"
+CONNECT, " H27", B4902:    s, " C42"
+CONNECT, " H56", B4902:    s, " N4 "
+
+CONNECT, " C4 ", B4903:  sp3, " C14"," H4 "," H4A"," H4B"
+CONNECT, " C5 ", B4903:  sp2, " C6 "," C15"," H5 "
+CONNECT, " C6 ", B4903:  sp2, " C5 "," C16"," H6 "
+CONNECT, " C7 ", B4903:  sp2, " C15"," C17"," H7 "
+CONNECT, " C13", B4903:  sp2, " C3 "," C18"," C19"
+CONNECT, " C15", B4903:  sp2, " C5 "," C7 "," F29"
+CONNECT, " C17", B4903:  sp2, " C7 "," C20"," C16"
+CONNECT, " C20", B4903:  sp3, " C17"," C21"," C12"
+CONNECT, " C21", B4903:  sp3, " C20"," N24"," O27"
+CONNECT, " C22", B4903:  sp2, " C19"," N25"," O28"
+CONNECT, " C3 ", B4903:  sp3, " C13"," H3 "," H3A"," H3B"
+CONNECT, " C12", B4903:  sp2, " C20"," C18"," H12"
+CONNECT, " C14", B4903:  sp2, " C4 "," C19"," N23"
+CONNECT, " C16", B4903:  sp2, " C6 "," C17"," N24"
+CONNECT, " C18", B4903:  sp2, " C13"," C12"," N23"
+CONNECT, " C19", B4903:  sp2, " C13"," C22"," C14"
+CONNECT, " N23", B4903:  sp3, " C14"," C18","HN23"
+CONNECT, " N24", B4903:  sp3, " C21"," C16"
+#CONNECT, " N24", B4903:  sp3, " C21"," C16","HN24"
+CONNECT, " N25", B4903:  sp2, " C22","HN25"," C37"
+CONNECT, " O27", B4903:  sp3, " C21"
+CONNECT, " O28", B4903:  sp3, " C22"
+CONNECT, " F29", B4903:     , " C15"
+CONNECT, " H4 ", B4903:    s, " C4 "
+CONNECT, " H4A", B4903:    s, " C4 "
+CONNECT, " H4B", B4903:    s, " C4 "
+CONNECT, " H5 ", B4903:    s, " C5 "
+CONNECT, " H6 ", B4903:    s, " C6 "
+CONNECT, " H7 ", B4903:    s, " C7 "
+CONNECT, " H3 ", B4903:    s, " C3 "
+CONNECT, " H3A", B4903:    s, " C3 "
+CONNECT, " H3B", B4903:    s, " C3 "
+CONNECT, " H12", B4903:    s, " C12"
+CONNECT, "HN23", B4903:    s, " N23"
+#CONNECT, "HN24", B4903:    s, " N24"
+CONNECT, "HN25", B4903:    s, " N25"
+CONNECT, " C37", B4903:  sp3, " N25"," C38"," H14"," H15"
+CONNECT, " C38", B4903:  sp3, " C37"," N4 "," H16"," H17"
+CONNECT, " N4 ", B4903:  sp3, " C38"," C39"," C40"," H56"
+CONNECT, " C39", B4903:  sp3, " N4 "," C42"," H18"," H19"
+CONNECT, " C40", B4903:  sp3, " N4 "," C41"," H20"," H21"
+CONNECT, " C41", B4903:  sp3, " C40"," H22"," H23"," H24"
+CONNECT, " C42", B4903:  sp3, " C39"," H25"," H26"," H27"
+CONNECT, " H14", B4903:    s, " C37"
+CONNECT, " H15", B4903:    s, " C37"
+CONNECT, " H16", B4903:    s, " C38"
+CONNECT, " H17", B4903:    s, " C38"
+CONNECT, " H18", B4903:    s, " C39"
+CONNECT, " H19", B4903:    s, " C39"
+CONNECT, " H20", B4903:    s, " C40"
+CONNECT, " H21", B4903:    s, " C40"
+CONNECT, " H22", B4903:    s, " C41"
+CONNECT, " H23", B4903:    s, " C41"
+CONNECT, " H24", B4903:    s, " C41"
+CONNECT, " H25", B4903:    s, " C42"
+CONNECT, " H26", B4903:    s, " C42"
+CONNECT, " H27", B4903:    s, " C42"
+CONNECT, " H56", B4903:    s, " N4 "
+
+
+# ATOM charges
+CHARGE, B49+1, " C4 ": -0.045 # amended
+CHARGE, B49+1, " C5 ": -0.119 # amended
+CHARGE, B49+1, " C6 ": -0.138 # amended
+CHARGE, B49+1, " C7 ": -0.102 # amended
+CHARGE, B49+1, " C13": -0.042 # amended
+CHARGE, B49+1, " C15":  0.098 # amended
+CHARGE, B49+1, " C17": -0.099 # amended
+CHARGE, B49+1, " C20": -0.108 # amended
+CHARGE, B49+1, " C21":  0.700 # amended
+CHARGE, B49+1, " C22":  0.730 # amended
+CHARGE, B49+1, " C3 ": -0.037 # amended
+CHARGE, B49+1, " C12":  0.006 # amended
+CHARGE, B49+1, " C14": -0.041 # amended
+CHARGE, B49+1, " C16":  0.051 # amended
+CHARGE, B49+1, " C18": -0.115 # amended
+CHARGE, B49+1, " C19": -0.248 # amended
+CHARGE, B49+1, " N23": -0.127 # amended
+CHARGE, B49+1, " N24": -0.471 # amended
+CHARGE, B49+1, " N25": -0.597 # amended
+CHARGE, B49+1, " O27": -0.619 # amended
+CHARGE, B49+1, " O28": -0.589 # amended
+CHARGE, B49+1, " F29": -0.133 # amended
+CHARGE, B49+1, " H4 ":  0.056 # amended
+CHARGE, B49+1, " H4A":  0.056 # amended
+CHARGE, B49+1, " H4B":  0.056 # amended
+CHARGE, B49+1, " H5 ":  0.161 # amended
+CHARGE, B49+1, " H6 ":  0.153 # amended
+CHARGE, B49+1, " H7 ":  0.153 # amended
+CHARGE, B49+1, " H3 ":  0.054 # amended
+CHARGE, B49+1, " H3A":  0.054 # amended
+CHARGE, B49+1, " H3B":  0.054 # amended
+CHARGE, B49+1, " H12":  0.155 # amended
+CHARGE, B49+1, "HN23":  0.319 # amended
+CHARGE, B49+1, "HN24":  0.351 # amended
+CHARGE, B49+1, "HN25":  0.327 # amended
+CHARGE, B49+1, " C37":  0.090 # amended
+CHARGE, B49+1, " C38":  0.065 # amended
+CHARGE, B49+1, " N4 ": -0.682 # amended
+CHARGE, B49+1, " C39":  0.111 # amended
+CHARGE, B49+1, " C40":  0.111 # amended
+CHARGE, B49+1, " C41": -0.132 # amended
+CHARGE, B49+1, " C42": -0.132 # amended
+CHARGE, B49+1, " H14":  0.074 # amended
+CHARGE, B49+1, " H15":  0.074 # amended
+CHARGE, B49+1, " H16":  0.101 # amended
+CHARGE, B49+1, " H17":  0.101 # amended
+CHARGE, B49+1, " H18":  0.100 # amended
+CHARGE, B49+1, " H19":  0.100 # amended
+CHARGE, B49+1, " H20":  0.100 # amended
+CHARGE, B49+1, " H21":  0.100 # amended
+CHARGE, B49+1, " H22":  0.079 # amended
+CHARGE, B49+1, " H23":  0.079 # amended
+CHARGE, B49+1, " H24":  0.079 # amended
+CHARGE, B49+1, " H25":  0.079 # amended
+CHARGE, B49+1, " H26":  0.079 # amended
+CHARGE, B49+1, " H27":  0.079 # amended
+CHARGE, B49+1, " H57":  0.441 # amended
+
+CHARGE, B4901, " C4 ": -0.043 # amended
+CHARGE, B4901, " C5 ": -0.120 # amended
+CHARGE, B4901, " C6 ": -0.150 # amended
+CHARGE, B4901, " C7 ": -0.101 # amended
+CHARGE, B4901, " C13": -0.046 # amended
+CHARGE, B4901, " C15":  0.085 # amended
+CHARGE, B4901, " C17": -0.102 # amended
+CHARGE, B4901, " C20": -0.104 # amended
+CHARGE, B4901, " C21":  0.701 # amended
+CHARGE, B4901, " C22":  0.708 # amended
+CHARGE, B4901, " C3 ": -0.032 # amended
+CHARGE, B4901, " C12":  0.013 # amended
+CHARGE, B4901, " C14": -0.059 # amended
+CHARGE, B4901, " C16":  0.063 # amended
+CHARGE, B4901, " C18": -0.136 # amended
+CHARGE, B4901, " C19": -0.214 # amended
+CHARGE, B4901, " N23": -0.154 # amended
+CHARGE, B4901, " N24": -0.485 # amended
+CHARGE, B4901, " N25": -0.583 # amended
+CHARGE, B4901, " O27": -0.565 # amended
+CHARGE, B4901, " O28": -0.592 # amended
+CHARGE, B4901, " F29": -0.141 # amended
+CHARGE, B4901, " H4 ":  0.055 # amended
+CHARGE, B4901, " H4A":  0.055 # amended
+CHARGE, B4901, " H4B":  0.055 # amended
+CHARGE, B4901, " H5 ":  0.152 # amended
+CHARGE, B4901, " H6 ":  0.148 # amended
+CHARGE, B4901, " H7 ":  0.153 # amended
+CHARGE, B4901, " H3 ":  0.050 # amended
+CHARGE, B4901, " H3A":  0.050 # amended
+CHARGE, B4901, " H3B":  0.050 # amended
+CHARGE, B4901, " H12":  0.146 # amended
+CHARGE, B4901, "HN23":  0.299 # amended
+CHARGE, B4901, "HN24":  0.345 # amended
+CHARGE, B4901, "HN25":  0.306 # amended
+CHARGE, B4901, " C37":  0.086 # amended
+CHARGE, B4901, " C38":  0.143 # amended
+CHARGE, B4901, " N4 ": -0.724 # amended
+CHARGE, B4901, " C39":  0.166 # amended
+CHARGE, B4901, " C40":  0.166 # amended
+CHARGE, B4901, " C41": -0.095 # amended
+CHARGE, B4901, " C42": -0.095 # amended
+CHARGE, B4901, " H14":  0.066 # amended
+CHARGE, B4901, " H15":  0.066 # amended
+CHARGE, B4901, " H16":  0.032 # amended
+CHARGE, B4901, " H17":  0.032 # amended
+CHARGE, B4901, " H18":  0.029 # amended
+CHARGE, B4901, " H19":  0.029 # amended
+CHARGE, B4901, " H20":  0.029 # amended
+CHARGE, B4901, " H21":  0.029 # amended
+CHARGE, B4901, " H22":  0.039 # amended
+CHARGE, B4901, " H23":  0.039 # amended
+CHARGE, B4901, " H24":  0.039 # amended
+CHARGE, B4901, " H25":  0.039 # amended
+CHARGE, B4901, " H26":  0.039 # amended
+CHARGE, B4901, " H27":  0.039 # amended
+
+CHARGE, B4902, " C4 ": -0.032 # amended
+CHARGE, B4902, " C5 ": -0.131 # amended
+CHARGE, B4902, " C6 ": -0.150 # amended
+CHARGE, B4902, " C7 ": -0.117 # amended
+CHARGE, B4902, " C13": -0.062 # amended
+CHARGE, B4902, " C15":  0.086 # amended
+CHARGE, B4902, " C17": -0.078 # amended
+CHARGE, B4902, " C20": -0.163 # amended
+CHARGE, B4902, " C21":  0.706 # amended
+CHARGE, B4902, " C22":  0.985 # amended
+CHARGE, B4902, " C3 ": -0.031 # amended
+CHARGE, B4902, " C12":  0.064 # amended
+CHARGE, B4902, " C14": -0.075 # amended
+CHARGE, B4902, " C16":  0.053 # amended
+CHARGE, B4902, " C18": -0.191 # amended
+CHARGE, B4902, " C19": -0.249 # amended
+CHARGE, B4902, " N23": -0.167 # amended
+CHARGE, B4902, " N24": -0.482 # amended
+CHARGE, B4902, " N25": -0.913 # amended
+CHARGE, B4902, " O27": -0.598 # amended
+CHARGE, B4902, " O28": -0.743 # amended
+CHARGE, B4902, " F29": -0.147 # amended
+CHARGE, B4902, " H4 ":  0.049 # amended
+CHARGE, B4902, " H4A":  0.049 # amended
+CHARGE, B4902, " H4B":  0.049 # amended
+CHARGE, B4902, " H5 ":  0.149 # amended
+CHARGE, B4902, " H6 ":  0.144 # amended
+CHARGE, B4902, " H7 ":  0.148 # amended
+CHARGE, B4902, " H3 ":  0.043 # amended
+CHARGE, B4902, " H3A":  0.043 # amended
+CHARGE, B4902, " H3B":  0.043 # amended
+CHARGE, B4902, " H12":  0.134 # amended
+CHARGE, B4902, "HN23":  0.290 # amended
+CHARGE, B4902, "HN24":  0.342 # amended
+#CHARGE, B4902, "HN25": to_be_filled
+CHARGE, B4902, " C37":  0.192 # amended
+CHARGE, B4902, " C38":  0.110 # amended
+CHARGE, B4902, " N4 ": -0.683 # amended
+CHARGE, B4902, " C39":  0.110 # amended
+CHARGE, B4902, " C40":  0.110 # amended
+CHARGE, B4902, " C41": -0.128 # amended
+CHARGE, B4902, " C42": -0.128 # amended
+CHARGE, B4902, " H14": -0.026 # amended
+CHARGE, B4902, " H15": -0.026 # amended
+CHARGE, B4902, " H16":  0.094 # amended
+CHARGE, B4902, " H17":  0.094 # amended
+CHARGE, B4902, " H18":  0.097 # amended
+CHARGE, B4902, " H19":  0.097 # amended
+CHARGE, B4902, " H20":  0.097 # amended
+CHARGE, B4902, " H21":  0.097 # amended
+CHARGE, B4902, " H22":  0.071 # amended
+CHARGE, B4902, " H23":  0.071 # amended
+CHARGE, B4902, " H24":  0.071 # amended
+CHARGE, B4902, " H25":  0.071 # amended
+CHARGE, B4902, " H26":  0.071 # amended
+CHARGE, B4902, " H27":  0.071 # amended
+CHARGE, B4902, " H56":  0.419 # amended
+
+CHARGE, B4903, " C4 ": -0.034 # amended
+CHARGE, B4903, " C5 ": -0.097 # amended
+CHARGE, B4903, " C6 ": -0.197 # amended
+CHARGE, B4903, " C7 ": -0.068 # amended
+CHARGE, B4903, " C13": -0.109 # amended
+CHARGE, B4903, " C15": -0.021 # amended
+CHARGE, B4903, " C17": -0.226 # amended
+CHARGE, B4903, " C20": -0.137 # amended
+CHARGE, B4903, " C21":  0.952 # amended
+CHARGE, B4903, " C22":  0.740 # amended
+CHARGE, B4903, " C3 ": -0.017 # amended
+CHARGE, B4903, " C12": -0.135 # amended
+CHARGE, B4903, " C14": -0.076 # amended
+CHARGE, B4903, " C16":  0.249 # amended
+CHARGE, B4903, " C18": -0.017 # amended
+CHARGE, B4903, " C19": -0.254 # amended
+CHARGE, B4903, " N23": -0.122 # amended
+CHARGE, B4903, " N24": -0.777 # amended
+CHARGE, B4903, " N25": -0.608 # amended
+CHARGE, B4903, " O27": -0.743 # amended
+CHARGE, B4903, " O28": -0.600 # amended
+CHARGE, B4903, " F29": -0.176 # amended
+CHARGE, B4903, " H4 ":  0.045 # amended
+CHARGE, B4903, " H4A":  0.045 # amended
+CHARGE, B4903, " H4B":  0.045 # amended
+CHARGE, B4903, " H5 ":  0.120 # amended
+CHARGE, B4903, " H6 ":  0.134 # amended
+CHARGE, B4903, " H7 ":  0.119 # amended
+CHARGE, B4903, " H3 ":  0.040 # amended
+CHARGE, B4903, " H3A":  0.040 # amended
+CHARGE, B4903, " H3B":  0.040 # amended
+CHARGE, B4903, " H12":  0.127 # amended
+CHARGE, B4903, "HN23":  0.335 # amended
+#CHARGE, B4903, "HN24": to_be_filled
+CHARGE, B4903, "HN25":  0.317 # amended
+CHARGE, B4903, " C37":  0.093 # amended
+CHARGE, B4903, " C38":  0.066 # amended
+CHARGE, B4903, " N4 ": -0.683 # amended
+CHARGE, B4903, " C39":  0.109 # amended
+CHARGE, B4903, " C40":  0.109 # amended
+CHARGE, B4903, " C41": -0.131 # amended
+CHARGE, B4903, " C42": -0.131 # amended
+CHARGE, B4903, " H14":  0.062 # amended
+CHARGE, B4903, " H15":  0.062 # amended
+CHARGE, B4903, " H16":  0.103 # amended
+CHARGE, B4903, " H17":  0.103 # amended
+CHARGE, B4903, " H18":  0.100 # amended
+CHARGE, B4903, " H19":  0.100 # amended
+CHARGE, B4903, " H20":  0.100 # amended
+CHARGE, B4903, " H21":  0.100 # amended
+CHARGE, B4903, " H22":  0.076 # amended
+CHARGE, B4903, " H23":  0.076 # amended
+CHARGE, B4903, " H24":  0.076 # amended
+CHARGE, B4903, " H25":  0.076 # amended
+CHARGE, B4903, " H26":  0.076 # amended
+CHARGE, B4903, " H27":  0.076 # amended
+CHARGE, B4903, " H56":  0.448 # amended
+
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, B49+1, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " N23": 1.500,  1.550, 0.160 # amended
+RADIUS, B49+1, " N24": 1.500,  1.550, 0.160 # amended
+RADIUS, B49+1, " N25": 1.500,  1.550, 0.160 # amended
+RADIUS, B49+1, " O27": 1.400,  1.520, 0.200 # amended
+RADIUS, B49+1, " O28": 1.400,  1.520, 0.200 # amended
+RADIUS, B49+1, " F29": 1.850,  1.470, 0.173 # amended
+RADIUS, B49+1, " H4 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H4A": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H4B": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H3A": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H3B": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, "HN23": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, "HN24": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, "HN25": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " C37": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C38": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, B49+1, " C39": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C40": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C41": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " C42": 1.700,  1.700, 0.150 # amended
+RADIUS, B49+1, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H24": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H26": 1.000,  1.000, 0.020 # amended
+RADIUS, B49+1, " H27": 1.000,  1.000, 0.020 # amended
+
+RADIUS, B4901, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " N23": 1.500,  1.550, 0.160 # amended
+RADIUS, B4901, " N24": 1.500,  1.550, 0.160 # amended
+RADIUS, B4901, " N25": 1.500,  1.550, 0.160 # amended
+RADIUS, B4901, " O27": 1.400,  1.520, 0.200 # amended
+RADIUS, B4901, " O28": 1.400,  1.520, 0.200 # amended
+RADIUS, B4901, " F29": 1.850,  1.470, 0.173 # amended
+RADIUS, B4901, " H4 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H4A": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H4B": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H3A": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H3B": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, "HN23": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, "HN24": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, "HN25": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " C37": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C38": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, B4901, " C39": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C40": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C41": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " C42": 1.700,  1.700, 0.150 # amended
+RADIUS, B4901, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H24": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H26": 1.000,  1.000, 0.020 # amended
+RADIUS, B4901, " H27": 1.000,  1.000, 0.020 # amended
+
+RADIUS, B4902, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " N23": 1.500,  1.550, 0.160 # amended
+RADIUS, B4902, " N24": 1.500,  1.550, 0.160 # amended
+RADIUS, B4902, " N25": 1.500,  1.550, 0.160 # amended
+RADIUS, B4902, " O27": 1.400,  1.520, 0.200 # amended
+RADIUS, B4902, " O28": 1.400,  1.520, 0.200 # amended
+RADIUS, B4902, " F29": 1.850,  1.470, 0.173 # amended
+RADIUS, B4902, " H4 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H4A": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H4B": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H3A": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H3B": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, "HN23": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, "HN24": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, "HN25": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " C37": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C38": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, B4902, " C39": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C40": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C41": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " C42": 1.700,  1.700, 0.150 # amended
+RADIUS, B4902, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H24": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H26": 1.000,  1.000, 0.020 # amended
+RADIUS, B4902, " H27": 1.000,  1.000, 0.020 # amended
+
+RADIUS, B4903, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " N23": 1.500,  1.550, 0.160 # amended
+RADIUS, B4903, " N24": 1.500,  1.550, 0.160 # amended
+RADIUS, B4903, " N25": 1.500,  1.550, 0.160 # amended
+RADIUS, B4903, " O27": 1.400,  1.520, 0.200 # amended
+RADIUS, B4903, " O28": 1.400,  1.520, 0.200 # amended
+RADIUS, B4903, " F29": 1.850,  1.470, 0.173 # amended
+RADIUS, B4903, " H4 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H4A": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H4B": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H3A": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H3B": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, "HN23": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, "HN24": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, "HN25": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " C37": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C38": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, B4903, " C39": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C40": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C41": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " C42": 1.700,  1.700, 0.150 # amended
+RADIUS, B4903, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H24": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H26": 1.000,  1.000, 0.020 # amended
+RADIUS, B4903, " H27": 1.000,  1.000, 0.020 # amended
+
+#mfg 6/23  2 proton positions for each type; chose the one with the largest rxn e in soln
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, B49+1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -19.301, rxn08=-9.005
+CONFORMER, B4901:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -7.986,  rxn08=-3.640
+CONFORMER, B4902:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -16.017, rxn08=-7.396
+CONFORMER, B4903:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -21.177,  rxn08=-9.876

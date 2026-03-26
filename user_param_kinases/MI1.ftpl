@@ -1,0 +1,281 @@
+# Conformer definition
+CONFLIST, MI1: MI1BK, MI101,  MI1+1
+#CONFLIST, MI1: MI1BK, MI101,  MI1+1, MI1DM
+
+# ATOM name and bonds
+CONNECT, " C1 ", MI101:  sp3, " C2 "," C6 "," N8 "," H1 "
+CONNECT, " C2 ", MI101:  sp3, " C1 "," N3 "," H2 "," H2A"
+CONNECT, " C4 ", MI101:  sp3, " C5 "," N3 "," H4 "," H4A"
+CONNECT, " C5 ", MI101:  sp3, " C4 "," C6 "," H5 "," H5A"
+CONNECT, " C6 ", MI101:  sp3, " C1 "," C5 "," C7 "," H6 "
+CONNECT, " N3 ", MI101:  sp2, " C2 "," C4 "," C20"
+CONNECT, " O21", MI101:  sp3, " C20"
+CONNECT, " C20", MI101:  sp2, " N3 "," O21"," C22"
+CONNECT, " C22", MI101:  sp3, " C20"," C23"," H22","H22A"
+CONNECT, " C23", MI101:   sp, " C22"," N24"
+CONNECT, " N24", MI101:  sp3, " C23"
+CONNECT, " C7 ", MI101:  sp3, " C6 "," H7 "," H7A"," H7B"
+CONNECT, " N8 ", MI101:  sp3, " C1 "," C9 "," C10"
+CONNECT, " C9 ", MI101:  sp3, " N8 "," H9 "," H9A"," H9B"
+CONNECT, " C10", MI101:  sp2, " N8 "," C15"," N19"
+CONNECT, " C15", MI101:  sp2, " C10"," C16"," C14"
+CONNECT, " C16", MI101:  sp3, " C15"," C11"," H16"
+CONNECT, " C11", MI101:  sp3, " C16"," N12"," H11"
+CONNECT, " N12", MI101:  sp3, " C11"," C14","HN12"
+CONNECT, " C14", MI101:  sp3, " C15"," N12"," N17"
+CONNECT, " N17", MI101:  sp2, " C14"," C18"
+CONNECT, " C18", MI101:  sp2, " N17"," N19"," H18"
+CONNECT, " N19", MI101:  sp2, " C10"," C18"
+CONNECT, " H1 ", MI101:    s, " C1 "
+CONNECT, " H2 ", MI101:    s, " C2 "
+CONNECT, " H2A", MI101:    s, " C2 "
+CONNECT, " H4 ", MI101:    s, " C4 "
+CONNECT, " H4A", MI101:    s, " C4 "
+CONNECT, " H5 ", MI101:    s, " C5 "
+CONNECT, " H5A", MI101:    s, " C5 "
+CONNECT, " H6 ", MI101:    s, " C6 "
+CONNECT, " H22", MI101:    s, " C22"
+CONNECT, "H22A", MI101:    s, " C22"
+CONNECT, " H7 ", MI101:    s, " C7 "
+CONNECT, " H7A", MI101:    s, " C7 "
+CONNECT, " H7B", MI101:    s, " C7 "
+CONNECT, " H9 ", MI101:    s, " C9 "
+CONNECT, " H9A", MI101:    s, " C9 "
+CONNECT, " H9B", MI101:    s, " C9 "
+CONNECT, " H16", MI101:    s, " C16"
+CONNECT, " H11", MI101:    s, " C11"
+CONNECT, " H18", MI101:    s, " C18"
+CONNECT, "HN12", MI101:    s, " N12"
+
+
+CONNECT, " C1 ", MI1+1:  sp3, " C2 "," C6 "," N8 "," H1 "
+CONNECT, " C2 ", MI1+1:  sp3, " C1 "," N3 "," H2 "," H2A"
+CONNECT, " C4 ", MI1+1:  sp3, " C5 "," N3 "," H4 "," H4A"
+CONNECT, " C5 ", MI1+1:  sp3, " C4 "," C6 "," H5 "," H5A"
+CONNECT, " C6 ", MI1+1:  sp3, " C1 "," C5 "," C7 "," H6 "
+CONNECT, " N3 ", MI1+1:  sp2, " C2 "," C4 "," C20"
+CONNECT, " O21", MI1+1:  sp3, " C20"
+CONNECT, " C20", MI1+1:  sp2, " N3 "," O21"," C22"
+CONNECT, " C22", MI1+1:  sp3, " C20"," C23"," H22","H22A"
+CONNECT, " C23", MI1+1:   sp, " C22"," N24"
+CONNECT, " N24", MI1+1:  sp3, " C23"
+CONNECT, " C7 ", MI1+1:  sp3, " C6 "," H7 "," H7A"," H7B"
+CONNECT, " N8 ", MI1+1:  sp3, " C1 "," C9 "," C10"
+CONNECT, " C9 ", MI1+1:  sp3, " N8 "," H9 "," H9A"," H9B"
+CONNECT, " C10", MI1+1:  sp2, " N8 "," C15"," N19"
+CONNECT, " C15", MI1+1:  sp2, " C10"," C16"," C14"
+CONNECT, " C16", MI1+1:  sp3, " C15"," C11"," H16"
+CONNECT, " C11", MI1+1:  sp3, " C16"," N12"," H11"
+CONNECT, " N12", MI1+1:  sp3, " C11"," C14","HN12"
+CONNECT, " C14", MI1+1:  sp3, " C15"," N12"," N17"
+CONNECT, " N17", MI1+1:  sp2, " C14"," C18"
+CONNECT, " C18", MI1+1:  sp2, " N17"," N19"," H18"
+CONNECT, " N19", MI1+1:  sp2, " C10"," C18"," H44"
+CONNECT, " H1 ", MI1+1:    s, " C1 "
+CONNECT, " H2 ", MI1+1:    s, " C2 "
+CONNECT, " H2A", MI1+1:    s, " C2 "
+CONNECT, " H4 ", MI1+1:    s, " C4 "
+CONNECT, " H4A", MI1+1:    s, " C4 "
+CONNECT, " H5 ", MI1+1:    s, " C5 "
+CONNECT, " H5A", MI1+1:    s, " C5 "
+CONNECT, " H6 ", MI1+1:    s, " C6 "
+CONNECT, " H22", MI1+1:    s, " C22"
+CONNECT, "H22A", MI1+1:    s, " C22"
+CONNECT, " H7 ", MI1+1:    s, " C7 "
+CONNECT, " H7A", MI1+1:    s, " C7 "
+CONNECT, " H7B", MI1+1:    s, " C7 "
+CONNECT, " H9 ", MI1+1:    s, " C9 "
+CONNECT, " H9A", MI1+1:    s, " C9 "
+CONNECT, " H9B", MI1+1:    s, " C9 "
+CONNECT, " H16", MI1+1:    s, " C16"
+CONNECT, " H11", MI1+1:    s, " C11"
+CONNECT, " H18", MI1+1:    s, " C18"
+CONNECT, "HN12", MI1+1:    s, " N12"
+CONNECT, " H44", MI1+1:    s, " N19"
+
+
+# ATOM charges
+CHARGE, MI101, " C1 ":  0.238 # amended
+CHARGE, MI101, " C2 ":  0.080 # amended
+CHARGE, MI101, " C4 ":  0.088 # amended
+CHARGE, MI101, " C5 ": -0.095 # amended
+CHARGE, MI101, " C6 ": -0.085 # amended
+CHARGE, MI101, " N3 ": -0.472 # amended
+CHARGE, MI101, " O21": -0.579 # amended
+CHARGE, MI101, " C20":  0.664 # amended
+CHARGE, MI101, " C22": -0.087 # amended
+CHARGE, MI101, " C23":  0.217 # amended
+CHARGE, MI101, " N24": -0.342 # amended
+CHARGE, MI101, " C7 ": -0.092 # amended
+CHARGE, MI101, " N8 ": -0.806 # amended
+CHARGE, MI101, " C9 ":  0.207 # amended
+CHARGE, MI101, " C10":  0.745 # amended
+CHARGE, MI101, " C15": -0.365 # amended
+CHARGE, MI101, " C16": -0.160 # amended
+CHARGE, MI101, " C11": -0.011 # amended
+CHARGE, MI101, " N12": -0.675 # amended
+CHARGE, MI101, " C14":  0.593 # amended
+CHARGE, MI101, " N17": -0.729 # amended
+CHARGE, MI101, " C18":  0.673 # amended
+CHARGE, MI101, " N19": -0.780 # amended
+CHARGE, MI101, " H1 ":  0.077 # amended
+CHARGE, MI101, " H2 ":  0.051 # amended
+CHARGE, MI101, " H2A":  0.051 # amended
+CHARGE, MI101, " H4 ":  0.066 # amended
+CHARGE, MI101, " H4A":  0.066 # amended
+CHARGE, MI101, " H5 ":  0.057 # amended
+CHARGE, MI101, " H5A":  0.057 # amended
+CHARGE, MI101, " H6 ":  0.072 # amended
+CHARGE, MI101, " H22":  0.095 # amended
+CHARGE, MI101, "H22A":  0.095 # amended
+CHARGE, MI101, " H7 ":  0.038 # amended
+CHARGE, MI101, " H7A":  0.038 # amended
+CHARGE, MI101, " H7B":  0.038 # amended
+CHARGE, MI101, " H9 ":  0.041 # amended
+CHARGE, MI101, " H9A":  0.041 # amended
+CHARGE, MI101, " H9B":  0.041 # amended
+CHARGE, MI101, " H16":  0.157 # amended
+CHARGE, MI101, " H11":  0.172 # amended
+CHARGE, MI101, " H18":  0.052 # amended
+CHARGE, MI101, "HN12":  0.468 # amended
+
+CHARGE, MI1+1, " C1 ":  0.185 # amended
+CHARGE, MI1+1, " C2 ":  0.094 # amended
+CHARGE, MI1+1, " C4 ":  0.090 # amended
+CHARGE, MI1+1, " C5 ": -0.101 # amended
+CHARGE, MI1+1, " C6 ": -0.076 # amended
+CHARGE, MI1+1, " N3 ": -0.493 # amended
+CHARGE, MI1+1, " O21": -0.564 # amended
+CHARGE, MI1+1, " C20":  0.671 # amended
+CHARGE, MI1+1, " C22": -0.076 # amended
+CHARGE, MI1+1, " C23":  0.198 # amended
+CHARGE, MI1+1, " N24": -0.306 # amended
+CHARGE, MI1+1, " C7 ": -0.102 # amended
+CHARGE, MI1+1, " N8 ": -0.637 # amended
+CHARGE, MI1+1, " C9 ":  0.176 # amended
+CHARGE, MI1+1, " C10":  0.490 # amended
+CHARGE, MI1+1, " C15": -0.227 # amended
+CHARGE, MI1+1, " C16": -0.140 # amended
+CHARGE, MI1+1, " C11": -0.086 # amended
+CHARGE, MI1+1, " N12": -0.131 # amended
+CHARGE, MI1+1, " C14":  0.190 # amended
+CHARGE, MI1+1, " N17": -0.537 # amended
+CHARGE, MI1+1, " C18":  0.639 # amended
+CHARGE, MI1+1, " N19": -0.688 # amended
+CHARGE, MI1+1, " H1 ":  0.069 # amended
+CHARGE, MI1+1, " H2 ":  0.080 # amended
+CHARGE, MI1+1, " H2A":  0.080 # amended
+CHARGE, MI1+1, " H4 ":  0.063 # amended
+CHARGE, MI1+1, " H4A":  0.063 # amended
+CHARGE, MI1+1, " H5 ":  0.066 # amended
+CHARGE, MI1+1, " H5A":  0.066 # amended
+CHARGE, MI1+1, " H6 ":  0.035 # amended
+CHARGE, MI1+1, " H22":  0.100 # amended
+CHARGE, MI1+1, "H22A":  0.100 # amended
+CHARGE, MI1+1, " H7 ":  0.051 # amended
+CHARGE, MI1+1, " H7A":  0.051 # amended
+CHARGE, MI1+1, " H7B":  0.051 # amended
+CHARGE, MI1+1, " H9 ":  0.077 # amended
+CHARGE, MI1+1, " H9A":  0.077 # amended
+CHARGE, MI1+1, " H9B":  0.077 # amended
+CHARGE, MI1+1, " H16":  0.184 # amended
+CHARGE, MI1+1, " H11":  0.209 # amended
+CHARGE, MI1+1, " H18":  0.103 # amended
+CHARGE, MI1+1, "HN12":  0.344 # amended
+CHARGE, MI1+1, " H44":  0.485 # amended
+
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, MI101, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, MI101, " O21": 1.400,  1.520, 0.200 # amended
+RADIUS, MI101, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " N24": 1.500,  1.550, 0.160 # amended
+RADIUS, MI101, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " N8 ": 1.500,  1.550, 0.160 # amended
+RADIUS, MI101, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " N12": 1.500,  1.550, 0.160 # amended
+RADIUS, MI101, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " N17": 1.500,  1.550, 0.160 # amended
+RADIUS, MI101, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, MI101, " N19": 1.500,  1.550, 0.160 # amended
+RADIUS, MI101, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H2A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H4 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H4A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H5A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, "H22A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H7A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H7B": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H9A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H9B": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, MI101, "HN12": 1.000,  1.000, 0.020 # amended
+
+
+RADIUS, MI1+1, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, MI1+1, " O21": 1.400,  1.520, 0.200 # amended
+RADIUS, MI1+1, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " N24": 1.500,  1.550, 0.160 # amended
+RADIUS, MI1+1, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " N8 ": 1.500,  1.550, 0.160 # amended
+RADIUS, MI1+1, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " N12": 1.500,  1.550, 0.160 # amended
+RADIUS, MI1+1, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " N17": 1.500,  1.550, 0.160 # amended
+RADIUS, MI1+1, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, MI1+1, " N19": 1.500,  1.550, 0.160 # amended
+RADIUS, MI1+1, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H2A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H4 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H4A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H5A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, "H22A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H7A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H7B": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H9A": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H9B": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, MI1+1, "HN12": 1.000,  1.000, 0.020 # amended
+
+
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, MI101:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-9.107, rxn08=-4.119
+CONFORMER, MI1+1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-19.104, rxn08=-8.861

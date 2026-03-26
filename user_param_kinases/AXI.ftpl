@@ -1,0 +1,442 @@
+Warning:  C18 -  S24 -  C07 bond angle = 102.988, assumed ion
+# Conformer definition
+CONFLIST, AXI: AXIBK, AXI01, AXI02, AXI+1
+#CONFLIST, AXI: AXIBK, AXI01, AXI02, AXI+1, AXIDM
+
+# ATOM name and bonds
+CONNECT, " O81", AXI01:  sp3, " C80"
+CONNECT, " C80", AXI01:  sp2, " O81"," N82"," C23"
+CONNECT, " N82", AXI01:  sp2, " C80"," C88"," H82"
+CONNECT, " C88", AXI01:  sp3, " N82","H881","H882","H883"
+CONNECT, " C23", AXI01:  sp2, " C80"," C22"," C18"
+CONNECT, " C22", AXI01:  sp2, " C23"," C21"," H22"
+CONNECT, " C21", AXI01:  sp2, " C22"," C20"," H21"
+CONNECT, " C20", AXI01:  sp2, " C21"," C19"," H20"
+CONNECT, " C18", AXI01:  sp2, " C23"," C19"," S24"
+CONNECT, " C19", AXI01:  sp2, " C20"," C18"," H19"
+CONNECT, " S24", AXI01:     , " C18"," C07"
+CONNECT, " C07", AXI01:  sp2, " S24"," C08"," C12"
+CONNECT, " C08", AXI01:  sp2, " C07"," C09"," H08"
+CONNECT, " C09", AXI01:  sp2, " C08"," C10"," H09"
+CONNECT, " C12", AXI01:  sp2, " C07"," C11"," H12"
+CONNECT, " C11", AXI01:  sp2, " C12"," N15"," C10"
+CONNECT, " N15", AXI01:  sp3, " C11"," N14"," H1 "
+CONNECT, " N14", AXI01:  sp3, " N15"," C13"
+CONNECT, " C13", AXI01:  sp3, " N14"," C10"," C16"
+CONNECT, " C10", AXI01:  sp2, " C09"," C11"," C13"
+CONNECT, " C16", AXI01:  sp2, " C13"," C17"," H16"
+CONNECT, " C17", AXI01:  sp2, " C16"," C02"," H17"
+CONNECT, " C02", AXI01:  sp2, " C17"," N03"," C01"
+CONNECT, " N03", AXI01:  sp2, " C02"," C04"
+CONNECT, " C04", AXI01:  sp2, " N03"," C05"," H04"
+CONNECT, " C05", AXI01:  sp2, " C04"," C06"," H05"
+CONNECT, " C06", AXI01:  sp2, " C05"," C01"," H06"
+CONNECT, " C01", AXI01:  sp2, " C02"," C06"," H01"
+CONNECT, " H82", AXI01:    s, " N82"
+CONNECT, "H881", AXI01:    s, " C88"
+CONNECT, "H882", AXI01:    s, " C88"
+CONNECT, "H883", AXI01:    s, " C88"
+CONNECT, " H22", AXI01:    s, " C22"
+CONNECT, " H21", AXI01:    s, " C21"
+CONNECT, " H20", AXI01:    s, " C20"
+CONNECT, " H19", AXI01:    s, " C19"
+CONNECT, " H08", AXI01:    s, " C08"
+CONNECT, " H12", AXI01:    s, " C12"
+CONNECT, " H09", AXI01:    s, " C09"
+CONNECT, " H16", AXI01:    s, " C16"
+CONNECT, " H17", AXI01:    s, " C17"
+CONNECT, " H01", AXI01:    s, " C01"
+CONNECT, " H04", AXI01:    s, " C04"
+CONNECT, " H05", AXI01:    s, " C05"
+CONNECT, " H06", AXI01:    s, " C06"
+CONNECT, " H1 ", AXI01:    s, " N15"       #was H46 in AXI.tpl
+
+CONNECT, " O81", AXI02:  sp3, " C80"
+CONNECT, " C80", AXI02:  sp2, " O81"," N82"," C23"
+CONNECT, " N82", AXI02:  sp2, " C80"," C88"," H82"
+CONNECT, " C88", AXI02:  sp3, " N82","H881","H882","H883"
+CONNECT, " C23", AXI02:  sp2, " C80"," C22"," C18"
+CONNECT, " C22", AXI02:  sp2, " C23"," C21"," H22"
+CONNECT, " C21", AXI02:  sp2, " C22"," C20"," H21"
+CONNECT, " C20", AXI02:  sp2, " C21"," C19"," H20"
+CONNECT, " C18", AXI02:  sp2, " C23"," C19"," S24"
+CONNECT, " C19", AXI02:  sp2, " C20"," C18"," H19"
+CONNECT, " S24", AXI02:     , " C18"," C07"
+CONNECT, " C07", AXI02:  sp2, " S24"," C08"," C12"
+CONNECT, " C08", AXI02:  sp2, " C07"," C09"," H08"
+CONNECT, " C09", AXI02:  sp2, " C08"," C10"," H09"
+CONNECT, " C12", AXI02:  sp2, " C07"," C11"," H12"
+CONNECT, " C11", AXI02:  sp2, " C12"," N15"," C10"
+CONNECT, " N15", AXI02:  sp3, " C11"," N14"
+CONNECT, " N14", AXI02:  sp3, " N15"," C13"," H14"
+CONNECT, " C13", AXI02:  sp3, " N14"," C10"," C16"
+CONNECT, " C10", AXI02:  sp2, " C09"," C11"," C13"
+CONNECT, " C16", AXI02:  sp2, " C13"," C17"," H16"
+CONNECT, " C17", AXI02:  sp2, " C16"," C02"," H17"
+CONNECT, " C02", AXI02:  sp2, " C17"," N03"," C01"
+CONNECT, " N03", AXI02:  sp2, " C02"," C04"
+CONNECT, " C04", AXI02:  sp2, " N03"," C05"," H04"
+CONNECT, " C05", AXI02:  sp2, " C04"," C06"," H05"
+CONNECT, " C06", AXI02:  sp2, " C05"," C01"," H06"
+CONNECT, " C01", AXI02:  sp2, " C02"," C06"," H01"
+CONNECT, " H82", AXI02:    s, " N82"
+CONNECT, "H881", AXI02:    s, " C88"
+CONNECT, "H882", AXI02:    s, " C88"
+CONNECT, "H883", AXI02:    s, " C88"
+CONNECT, " H22", AXI02:    s, " C22"
+CONNECT, " H21", AXI02:    s, " C21"
+CONNECT, " H20", AXI02:    s, " C20"
+CONNECT, " H19", AXI02:    s, " C19"
+CONNECT, " H08", AXI02:    s, " C08"
+CONNECT, " H12", AXI02:    s, " C12"
+CONNECT, " H09", AXI02:    s, " C09"
+CONNECT, " H16", AXI02:    s, " C16"
+CONNECT, " H17", AXI02:    s, " C17"
+CONNECT, " H01", AXI02:    s, " C01"
+CONNECT, " H04", AXI02:    s, " C04"
+CONNECT, " H05", AXI02:    s, " C05"
+CONNECT, " H06", AXI02:    s, " C06"
+CONNECT, " H14", AXI02:    s, " N14"
+#CONNECT, " H1 ", AXI02:    s, " N15"
+
+CONNECT, " O81", AXI+1:  sp3, " C80"
+CONNECT, " C80", AXI+1:  sp2, " O81"," N82"," C23"
+CONNECT, " N82", AXI+1:  sp2, " C80"," C88"," H82"
+CONNECT, " C88", AXI+1:  sp3, " N82","H881","H882","H883"
+CONNECT, " C23", AXI+1:  sp2, " C80"," C22"," C18"
+CONNECT, " C22", AXI+1:  sp2, " C23"," C21"," H22"
+CONNECT, " C21", AXI+1:  sp2, " C22"," C20"," H21"
+CONNECT, " C20", AXI+1:  sp2, " C21"," C19"," H20"
+CONNECT, " C18", AXI+1:  sp2, " C23"," C19"," S24"
+CONNECT, " C19", AXI+1:  sp2, " C20"," C18"," H19"
+CONNECT, " S24", AXI+1:     , " C18"," C07"
+CONNECT, " C07", AXI+1:  sp2, " S24"," C08"," C12"
+CONNECT, " C08", AXI+1:  sp2, " C07"," C09"," H08"
+CONNECT, " C09", AXI+1:  sp2, " C08"," C10"," H09"
+CONNECT, " C12", AXI+1:  sp2, " C07"," C11"," H12"
+CONNECT, " C11", AXI+1:  sp2, " C12"," N15"," C10"
+CONNECT, " N15", AXI+1:  sp3, " C11"," N14","  H1"   #was H46 in axi.tpl
+CONNECT, " N14", AXI+1:  sp3, " N15"," C13"
+CONNECT, " C13", AXI+1:  sp3, " N14"," C10"," C16"
+CONNECT, " C10", AXI+1:  sp2, " C09"," C11"," C13"
+CONNECT, " C16", AXI+1:  sp2, " C13"," C17"," H16"
+CONNECT, " C17", AXI+1:  sp2, " C16"," C02"," H17"
+CONNECT, " C02", AXI+1:  sp2, " C17"," N03"," C01"
+CONNECT, " N03", AXI+1:  sp2, " C02"," C04"," H47"
+CONNECT, " C04", AXI+1:  sp2, " N03"," C05"," H04"
+CONNECT, " C05", AXI+1:  sp2, " C04"," C06"," H05"
+CONNECT, " C06", AXI+1:  sp2, " C05"," C01"," H06"
+CONNECT, " C01", AXI+1:  sp2, " C02"," C06"," H01"
+CONNECT, " H82", AXI+1:    s, " N82"
+CONNECT, "H881", AXI+1:    s, " C88"
+CONNECT, "H882", AXI+1:    s, " C88"
+CONNECT, "H883", AXI+1:    s, " C88"
+CONNECT, " H22", AXI+1:    s, " C22"
+CONNECT, " H21", AXI+1:    s, " C21"
+CONNECT, " H20", AXI+1:    s, " C20"
+CONNECT, " H19", AXI+1:    s, " C19"
+CONNECT, " H08", AXI+1:    s, " C08"
+CONNECT, " H12", AXI+1:    s, " C12"
+CONNECT, " H09", AXI+1:    s, " C09"
+CONNECT, " H16", AXI+1:    s, " C16"
+CONNECT, " H17", AXI+1:    s, " C17"
+CONNECT, " H01", AXI+1:    s, " C01"
+CONNECT, " H04", AXI+1:    s, " C04"
+CONNECT, " H05", AXI+1:    s, " C05"
+CONNECT, " H06", AXI+1:    s, " C06"
+CONNECT, " H1 ", AXI+1:    s, " N15"   #was H46 in axi.tpl
+CONNECT, " H47", AXI+1:    s, " N03"   
+
+
+# ATOM charges
+CHARGE, AXI01, " O81": -0.581 # amended
+CHARGE, AXI01, " C80":  0.668 # amended
+CHARGE, AXI01, " N82": -0.575 # amended
+CHARGE, AXI01, " C88":  0.086 # amended
+CHARGE, AXI01, " C23": -0.121 # amended
+CHARGE, AXI01, " C22": -0.108 # amended
+CHARGE, AXI01, " C21": -0.135 # amended
+CHARGE, AXI01, " C20": -0.106 # amended
+CHARGE, AXI01, " C18":  0.021 # amended
+CHARGE, AXI01, " C19": -0.136 # amended
+CHARGE, AXI01, " S24": -0.091 # amended
+CHARGE, AXI01, " C07": -0.023 # amended
+CHARGE, AXI01, " C08": -0.121 # amended
+CHARGE, AXI01, " C09": -0.073 # amended
+CHARGE, AXI01, " C12": -0.092 # amended
+CHARGE, AXI01, " C11":  0.062 # amended
+CHARGE, AXI01, " N15": -0.386 # amended
+CHARGE, AXI01, " N14": -0.398 # amended
+CHARGE, AXI01, " C13":  0.377 # amended
+CHARGE, AXI01, " C10": -0.181 # amended
+CHARGE, AXI01, " C16": -0.174 # amended
+CHARGE, AXI01, " C17": -0.200 # amended
+CHARGE, AXI01, " C02":  0.448 # amended
+CHARGE, AXI01, " N03": -0.658 # amended
+CHARGE, AXI01, " C04":  0.399 # amended
+CHARGE, AXI01, " C05": -0.247 # amended
+CHARGE, AXI01, " C06": -0.093 # amended
+CHARGE, AXI01, " C01": -0.237 # amended
+CHARGE, AXI01, " H82":  0.313 # amended
+CHARGE, AXI01, "H881":  0.043 # amended
+CHARGE, AXI01, "H882":  0.043 # amended
+CHARGE, AXI01, "H883":  0.043 # amended
+CHARGE, AXI01, " H22":  0.137 # amended
+CHARGE, AXI01, " H21":  0.137 # amended
+CHARGE, AXI01, " H20":  0.137 # amended
+CHARGE, AXI01, " H19":  0.146 # amended
+CHARGE, AXI01, " H08":  0.154 # amended
+CHARGE, AXI01, " H12":  0.151 # amended
+CHARGE, AXI01, " H09":  0.144 # amended
+CHARGE, AXI01, " H16":  0.132 # amended
+CHARGE, AXI01, " H17":  0.161 # amended
+CHARGE, AXI01, " H01":  0.144 # amended
+CHARGE, AXI01, " H04":  0.023 # amended
+CHARGE, AXI01, " H05":  0.144 # amended
+CHARGE, AXI01, " H06":  0.138 # amended
+CHARGE, AXI01, " H1 ": 0.485 # was H46 in axi.tpl
+
+CHARGE, AXI02, " O81": -0.581 # amended
+CHARGE, AXI02, " C80":  0.670 # amended
+CHARGE, AXI02, " N82": -0.576 # amended
+CHARGE, AXI02, " C88":  0.085 # amended
+CHARGE, AXI02, " C23": -0.120 # amended
+CHARGE, AXI02, " C22": -0.109 # amended
+CHARGE, AXI02, " C21": -0.135 # amended
+CHARGE, AXI02, " C20": -0.108 # amended
+CHARGE, AXI02, " C18":  0.021 # amended
+CHARGE, AXI02, " C19": -0.134 # amended
+CHARGE, AXI02, " S24": -0.109 # amended
+CHARGE, AXI02, " C07": -0.031 # amended
+CHARGE, AXI02, " C08": -0.109 # amended
+CHARGE, AXI02, " C09": -0.078 # amended
+CHARGE, AXI02, " C12": -0.144 # amended
+CHARGE, AXI02, " C11":  0.339 # amended
+CHARGE, AXI02, " N15": -0.507 # amended
+CHARGE, AXI02, " N14":  0.052 # amended
+CHARGE, AXI02, " C13": -0.100 # amended
+CHARGE, AXI02, " C10": -0.169 # amended
+CHARGE, AXI02, " C16": -0.075 # amended
+CHARGE, AXI02, " C17": -0.223 # amended
+CHARGE, AXI02, " C02":  0.446 # amended
+CHARGE, AXI02, " N03": -0.660 # amended
+CHARGE, AXI02, " C04":  0.401 # amended
+CHARGE, AXI02, " C05": -0.243 # amended
+CHARGE, AXI02, " C06": -0.092 # amended
+CHARGE, AXI02, " C01": -0.234 # amended
+CHARGE, AXI02, " H82":  0.314 # amended
+CHARGE, AXI02, "H881":  0.044 # amended
+CHARGE, AXI02, "H882":  0.044 # amended
+CHARGE, AXI02, "H883":  0.044 # amended
+CHARGE, AXI02, " H22":  0.137 # amended
+CHARGE, AXI02, " H21":  0.137 # amended
+CHARGE, AXI02, " H20":  0.138 # amended
+CHARGE, AXI02, " H19":  0.148 # amended
+CHARGE, AXI02, " H08":  0.152 # amended
+CHARGE, AXI02, " H12":  0.157 # amended
+CHARGE, AXI02, " H09":  0.138 # amended
+CHARGE, AXI02, " H16":  0.149 # amended
+CHARGE, AXI02, " H17":  0.142 # amended
+CHARGE, AXI02, " H01":  0.145 # amended
+CHARGE, AXI02, " H04":  0.025 # amended
+CHARGE, AXI02, " H05":  0.146 # amended
+CHARGE, AXI02, " H06":  0.141 # amended
+CHARGE, AXI02, " H14":  0.322 # amended
+#CHARGE, AXI02, " H1 ": to_be_filled
+
+CHARGE, AXI+1, " O81": -0.583 # amended
+CHARGE, AXI+1, " C80":  0.664 # amended
+CHARGE, AXI+1, " N82": -0.569 # amended
+CHARGE, AXI+1, " C88":  0.082 # amended
+CHARGE, AXI+1, " C23": -0.107 # amended
+CHARGE, AXI+1, " C22": -0.106 # amended
+CHARGE, AXI+1, " C21": -0.122 # amended
+CHARGE, AXI+1, " C20": -0.109 # amended
+CHARGE, AXI+1, " C18":  0.007 # amended
+CHARGE, AXI+1, " C19": -0.139 # amended
+CHARGE, AXI+1, " S24": -0.068 # amended
+CHARGE, AXI+1, " C07": -0.014 # amended
+CHARGE, AXI+1, " C08": -0.086 # amended
+CHARGE, AXI+1, " C09": -0.096 # amended
+CHARGE, AXI+1, " C12": -0.074 # amended
+CHARGE, AXI+1, " C11":  0.044 # amended
+CHARGE, AXI+1, " N15": -0.334 # amended
+CHARGE, AXI+1, " N14": -0.352 # amended
+CHARGE, AXI+1, " C13":  0.288 # amended
+CHARGE, AXI+1, " C10": -0.158 # amended
+CHARGE, AXI+1, " C16":  0.002 # amended
+CHARGE, AXI+1, " C17": -0.269 # amended
+CHARGE, AXI+1, " C02":  0.237 # amended
+CHARGE, AXI+1, " N03": -0.480 # amended
+CHARGE, AXI+1, " C04":  0.083 # amended
+CHARGE, AXI+1, " C05": -0.157 # amended
+CHARGE, AXI+1, " C06": -0.002 # amended
+CHARGE, AXI+1, " C01": -0.174 # amended
+CHARGE, AXI+1, " H82":  0.316 # amended
+CHARGE, AXI+1, "H881":  0.048 # amended
+CHARGE, AXI+1, "H882":  0.048 # amended
+CHARGE, AXI+1, "H883":  0.048 # amended
+CHARGE, AXI+1, " H22":  0.147 # amended
+CHARGE, AXI+1, " H21":  0.145 # amended
+CHARGE, AXI+1, " H20":  0.139 # amended
+CHARGE, AXI+1, " H19":  0.137 # amended
+CHARGE, AXI+1, " H08":  0.168 # amended
+CHARGE, AXI+1, " H12":  0.165 # amended
+CHARGE, AXI+1, " H09":  0.141 # amended
+CHARGE, AXI+1, " H16":  0.140 # amended
+CHARGE, AXI+1, " H17":  0.177 # amended
+CHARGE, AXI+1, " H01":  0.190 # amended
+CHARGE, AXI+1, " H04":  0.205 # amended
+CHARGE, AXI+1, " H05":  0.197 # amended
+CHARGE, AXI+1, " H06":  0.187 # amended
+CHARGE, AXI+1, " H47":  0.492 # amended
+CHARGE, AXI+1, "  H1":  0.502 # was H46 in axi.tpl
+
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, AXI01, " O81": 1.400,  1.520, 0.200 # amended
+RADIUS, AXI01, " C80": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " N82": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI01, " C88": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " S24": 1.850,  1.800, 0.200 # amended
+RADIUS, AXI01, " C07": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C08": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C09": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " N15": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI01, " N14": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI01, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C02": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " N03": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI01, " C04": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C05": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C06": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " C01": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI01, " H82": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, "H881": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, "H882": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, "H883": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H08": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H09": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H01": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H04": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H05": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H06": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI01, " H1 ":  1.000,  1.000,  0.020
+
+RADIUS, AXI02, " O81": 1.400,  1.520, 0.200 # amended
+RADIUS, AXI02, " C80": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " N82": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI02, " C88": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " S24": 1.850,  1.800, 0.200 # amended
+RADIUS, AXI02, " C07": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C08": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C09": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " N15": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI02, " N14": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI02, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C02": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " N03": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI02, " C04": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C05": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C06": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " C01": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI02, " H82": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, "H881": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, "H882": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, "H883": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H08": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H09": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H01": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H04": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H05": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H06": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI02, " H1 ":  1.000,  1.000,  0.020
+
+RADIUS, AXI+1, " O81": 1.400,  1.520, 0.200 # amended
+RADIUS, AXI+1, " C80": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " N82": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI+1, " C88": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " S24": 1.850,  1.800, 0.200 # amended
+RADIUS, AXI+1, " C07": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C08": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C09": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " N15": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI+1, " N14": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI+1, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C02": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " N03": 1.500,  1.550, 0.160 # amended
+RADIUS, AXI+1, " C04": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C05": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C06": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " C01": 1.700,  1.700, 0.150 # amended
+RADIUS, AXI+1, " H82": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, "H881": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, "H882": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, "H883": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H08": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H09": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H01": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H04": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H05": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H06": 1.000,  1.000, 0.020 # amended
+RADIUS, AXI+1, " H1 ":  1.000,  1.000,  0.020
+
+
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, AXI01:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -9.504, rxn08=-4.211
+CONFORMER, AXI02:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -7.708, rxn08=-3.549
+CONFORMER, AXI+1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -18.94, rxn08=-8.834 

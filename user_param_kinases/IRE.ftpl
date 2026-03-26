@@ -1,0 +1,1043 @@
+# Conformer definition
+# Conformer definition
+#CONFLIST, IRE: IREBK, IRE+a, IRE01, IRE+1, IRE+2, IRE+3, IRE+a, IREDM
+CONFLIST, IRE: IREBK, IRE+a, IRE01, IRE+1, IRE+2, IRE+3
+
+# ATOM name and bonds
+CONNECT, " CAO", IRE+a:  sp3, " CAL"," NBE","HAO1","HAO2"
+CONNECT, " CAL", IRE+a:  sp3, " CAO"," OAU","HAL1","HAL2"
+CONNECT, " OAU", IRE+a:  sp3, " CAL"," CAM"
+CONNECT, " CAM", IRE+a:  sp3, " OAU"," CAP","HAM1","HAM2"
+CONNECT, " CAP", IRE+a:  sp3, " CAM"," NBE","HAP1","HAP2"
+CONNECT, " NBE", IRE+a:  sp3, " CAO"," CAP"," CAN"," H56"  #H57 in ire.tpl
+CONNECT, " CAN", IRE+a:  sp3, " NBE"," CAJ","HAN1","HAN2"
+CONNECT, " CAJ", IRE+a:  sp3, " CAN"," CAK","HAJ1","HAJ2"
+CONNECT, " CAK", IRE+a:  sp3, " CAJ"," OAV","HAK1","HAK2"
+CONNECT, " OAV", IRE+a:  sp2, " CAK"," CBA"
+CONNECT, " CBA", IRE+a:  sp2, " OAV"," CAZ"," CAI"
+CONNECT, " CAZ", IRE+a:  sp2, " CBA"," CAH"," OAT"
+CONNECT, " CAH", IRE+a:  sp2, " CAZ"," C4 "," HAH"
+CONNECT, " OAT", IRE+a:  sp2, " CAZ"," CAA"
+CONNECT, " CAA", IRE+a:  sp3, " OAT","HAA1","HAA2","HAA3"
+CONNECT, " CAI", IRE+a:  sp2, " CBA"," C5 "," HAI"
+CONNECT, " C5 ", IRE+a:  sp2, " CAI"," C4 "," C6 "
+CONNECT, " C4 ", IRE+a:  sp2, " CAH"," C5 "," N3 "
+CONNECT, " N3 ", IRE+a:  sp2, " C4 "," C2 "," H3 "
+CONNECT, " C2 ", IRE+a:  sp2, " N3 "," N1 "," H2 "
+CONNECT, " N1 ", IRE+a:  sp2, " C2 "," C6 "
+CONNECT, " C6 ", IRE+a:  sp2, " C5 "," N1 "," NAS"
+CONNECT, " NAS", IRE+a:  sp2, " C6 "," CAY"," H1 "
+CONNECT, " CAY", IRE+a:  sp2, " NAS"," CAG"," CAE"
+CONNECT, " CAG", IRE+a:  sp2, " CAY"," CAX"," HAG"
+CONNECT, " CAX", IRE+a:  sp2, " CAG","CL  "," CAW"
+CONNECT, "CL  ", IRE+a:     , " CAX"
+CONNECT, " CAW", IRE+a:  sp2, " CAX"," FAB"," CAD"
+CONNECT, " FAB", IRE+a:     , " CAW"
+CONNECT, " CAD", IRE+a:  sp2, " CAW"," CAE"," HAD"
+CONNECT, " CAE", IRE+a:  sp2, " CAY"," CAD"," HAE"
+CONNECT, "HAO1", IRE+a:    s, " CAO"
+CONNECT, "HAO2", IRE+a:    s, " CAO"
+CONNECT, "HAL1", IRE+a:    s, " CAL"
+CONNECT, "HAL2", IRE+a:    s, " CAL"
+CONNECT, "HAM1", IRE+a:    s, " CAM"
+CONNECT, "HAM2", IRE+a:    s, " CAM"
+CONNECT, "HAP1", IRE+a:    s, " CAP"
+CONNECT, "HAP2", IRE+a:    s, " CAP"
+CONNECT, "HAN1", IRE+a:    s, " CAN"
+CONNECT, "HAN2", IRE+a:    s, " CAN"
+CONNECT, "HAJ1", IRE+a:    s, " CAJ"
+CONNECT, "HAJ2", IRE+a:    s, " CAJ"
+CONNECT, "HAK1", IRE+a:    s, " CAK"
+CONNECT, "HAK2", IRE+a:    s, " CAK"
+CONNECT, " HAH", IRE+a:    s, " CAH"
+CONNECT, "HAA1", IRE+a:    s, " CAA"
+CONNECT, "HAA2", IRE+a:    s, " CAA"
+CONNECT, "HAA3", IRE+a:    s, " CAA"
+CONNECT, " HAI", IRE+a:    s, " CAI"
+CONNECT, " H2 ", IRE+a:    s, " C2 "
+CONNECT, " HAG", IRE+a:    s, " CAG"
+CONNECT, " HAD", IRE+a:    s, " CAD"
+CONNECT, " HAE", IRE+a:    s, " CAE"
+CONNECT, " H1 ", IRE+a:    s, " NAS"
+CONNECT, " H56", IRE+a:    s, " NBE"
+CONNECT, " H3 ", IRE+a:    s, " N3 "
+
+CONNECT, " CAO", IRE01:  sp3, " CAL"," NBE","HAO1","HAO2"
+CONNECT, " CAL", IRE01:  sp3, " CAO"," OAU","HAL1","HAL2"
+CONNECT, " OAU", IRE01:  sp3, " CAL"," CAM"
+CONNECT, " CAM", IRE01:  sp3, " OAU"," CAP","HAM1","HAM2"
+CONNECT, " CAP", IRE01:  sp3, " CAM"," NBE","HAP1","HAP2"
+CONNECT, " NBE", IRE01:  sp3, " CAO"," CAP"," CAN"
+CONNECT, " CAN", IRE01:  sp3, " NBE"," CAJ","HAN1","HAN2"
+CONNECT, " CAJ", IRE01:  sp3, " CAN"," CAK","HAJ1","HAJ2"
+CONNECT, " CAK", IRE01:  sp3, " CAJ"," OAV","HAK1","HAK2"
+CONNECT, " OAV", IRE01:  sp2, " CAK"," CBA"
+CONNECT, " CBA", IRE01:  sp2, " OAV"," CAZ"," CAI"
+CONNECT, " CAZ", IRE01:  sp2, " CBA"," CAH"," OAT"
+CONNECT, " CAH", IRE01:  sp2, " CAZ"," C4 "," HAH"
+CONNECT, " OAT", IRE01:  sp2, " CAZ"," CAA"
+CONNECT, " CAA", IRE01:  sp3, " OAT","HAA1","HAA2","HAA3"
+CONNECT, " CAI", IRE01:  sp2, " CBA"," C5 "," HAI"
+CONNECT, " C5 ", IRE01:  sp2, " CAI"," C4 "," C6 "
+CONNECT, " C4 ", IRE01:  sp2, " CAH"," C5 "," N3 "
+CONNECT, " N3 ", IRE01:  sp2, " C4 "," C2 "
+CONNECT, " C2 ", IRE01:  sp2, " N3 "," N1 "," H2 "
+CONNECT, " N1 ", IRE01:  sp2, " C2 "," C6 "
+CONNECT, " C6 ", IRE01:  sp2, " C5 "," N1 "," NAS"
+CONNECT, " NAS", IRE01:  sp2, " C6 "," CAY"," H1 "
+CONNECT, " CAY", IRE01:  sp2, " NAS"," CAG"," CAE"
+CONNECT, " CAG", IRE01:  sp2, " CAY"," CAX"," HAG"
+CONNECT, " CAX", IRE01:  sp2, " CAG","CL  "," CAW"
+CONNECT, "CL  ", IRE01:     , " CAX"
+CONNECT, " CAW", IRE01:  sp2, " CAX"," FAB"," CAD"
+CONNECT, " FAB", IRE01:     , " CAW"
+CONNECT, " CAD", IRE01:  sp2, " CAW"," CAE"," HAD"
+CONNECT, " CAE", IRE01:  sp2, " CAY"," CAD"," HAE"
+CONNECT, "HAO1", IRE01:    s, " CAO"
+CONNECT, "HAO2", IRE01:    s, " CAO"
+CONNECT, "HAL1", IRE01:    s, " CAL"
+CONNECT, "HAL2", IRE01:    s, " CAL"
+CONNECT, "HAM1", IRE01:    s, " CAM"
+CONNECT, "HAM2", IRE01:    s, " CAM"
+CONNECT, "HAP1", IRE01:    s, " CAP"
+CONNECT, "HAP2", IRE01:    s, " CAP"
+CONNECT, "HAN1", IRE01:    s, " CAN"
+CONNECT, "HAN2", IRE01:    s, " CAN"
+CONNECT, "HAJ1", IRE01:    s, " CAJ"
+CONNECT, "HAJ2", IRE01:    s, " CAJ"
+CONNECT, "HAK1", IRE01:    s, " CAK"
+CONNECT, "HAK2", IRE01:    s, " CAK"
+CONNECT, " HAH", IRE01:    s, " CAH"
+CONNECT, "HAA1", IRE01:    s, " CAA"
+CONNECT, "HAA2", IRE01:    s, " CAA"
+CONNECT, "HAA3", IRE01:    s, " CAA"
+CONNECT, " HAI", IRE01:    s, " CAI"
+CONNECT, " H2 ", IRE01:    s, " C2 "
+CONNECT, " HAG", IRE01:    s, " CAG"
+CONNECT, " HAD", IRE01:    s, " CAD"
+CONNECT, " HAE", IRE01:    s, " CAE"
+CONNECT, " H1 ", IRE01:    s, " NAS"
+
+CONNECT, " CAO", IRE+1:  sp3, " CAL"," NBE","HAO1","HAO2"
+CONNECT, " CAL", IRE+1:  sp3, " CAO"," OAU","HAL1","HAL2"
+CONNECT, " OAU", IRE+1:  sp3, " CAL"," CAM"
+CONNECT, " CAM", IRE+1:  sp3, " OAU"," CAP","HAM1","HAM2"
+CONNECT, " CAP", IRE+1:  sp3, " CAM"," NBE","HAP1","HAP2"
+CONNECT, " NBE", IRE+1:  sp3, " CAO"," CAP"," CAN"," H56"
+CONNECT, " CAN", IRE+1:  sp3, " NBE"," CAJ","HAN1","HAN2"
+CONNECT, " CAJ", IRE+1:  sp3, " CAN"," CAK","HAJ1","HAJ2"
+CONNECT, " CAK", IRE+1:  sp3, " CAJ"," OAV","HAK1","HAK2"
+CONNECT, " OAV", IRE+1:  sp2, " CAK"," CBA"
+CONNECT, " CBA", IRE+1:  sp2, " OAV"," CAZ"," CAI"
+CONNECT, " CAZ", IRE+1:  sp2, " CBA"," CAH"," OAT"
+CONNECT, " CAH", IRE+1:  sp2, " CAZ"," C4 "," HAH"
+CONNECT, " OAT", IRE+1:  sp2, " CAZ"," CAA"
+CONNECT, " CAA", IRE+1:  sp3, " OAT","HAA1","HAA2","HAA3"
+CONNECT, " CAI", IRE+1:  sp2, " CBA"," C5 "," HAI"
+CONNECT, " C5 ", IRE+1:  sp2, " CAI"," C4 "," C6 "
+CONNECT, " C4 ", IRE+1:  sp2, " CAH"," C5 "," N3 "
+CONNECT, " N3 ", IRE+1:  sp2, " C4 "," C2 "
+CONNECT, " C2 ", IRE+1:  sp2, " N3 "," N1 "," H2 "
+CONNECT, " N1 ", IRE+1:  sp2, " C2 "," C6 "
+CONNECT, " C6 ", IRE+1:  sp2, " C5 "," N1 "," NAS"
+CONNECT, " NAS", IRE+1:  sp2, " C6 "," CAY"," H1 "
+CONNECT, " CAY", IRE+1:  sp2, " NAS"," CAG"," CAE"
+CONNECT, " CAG", IRE+1:  sp2, " CAY"," CAX"," HAG"
+CONNECT, " CAX", IRE+1:  sp2, " CAG","CL  "," CAW"
+CONNECT, "CL  ", IRE+1:     , " CAX"
+CONNECT, " CAW", IRE+1:  sp2, " CAX"," FAB"," CAD"
+CONNECT, " FAB", IRE+1:     , " CAW"
+CONNECT, " CAD", IRE+1:  sp2, " CAW"," CAE"," HAD"
+CONNECT, " CAE", IRE+1:  sp2, " CAY"," CAD"," HAE"
+CONNECT, "HAO1", IRE+1:    s, " CAO"
+CONNECT, "HAO2", IRE+1:    s, " CAO"
+CONNECT, "HAL1", IRE+1:    s, " CAL"
+CONNECT, "HAL2", IRE+1:    s, " CAL"
+CONNECT, "HAM1", IRE+1:    s, " CAM"
+CONNECT, "HAM2", IRE+1:    s, " CAM"
+CONNECT, "HAP1", IRE+1:    s, " CAP"
+CONNECT, "HAP2", IRE+1:    s, " CAP"
+CONNECT, "HAN1", IRE+1:    s, " CAN"
+CONNECT, "HAN2", IRE+1:    s, " CAN"
+CONNECT, "HAJ1", IRE+1:    s, " CAJ"
+CONNECT, "HAJ2", IRE+1:    s, " CAJ"
+CONNECT, "HAK1", IRE+1:    s, " CAK"
+CONNECT, "HAK2", IRE+1:    s, " CAK"
+CONNECT, " HAH", IRE+1:    s, " CAH"
+CONNECT, "HAA1", IRE+1:    s, " CAA"
+CONNECT, "HAA2", IRE+1:    s, " CAA"
+CONNECT, "HAA3", IRE+1:    s, " CAA"
+CONNECT, " HAI", IRE+1:    s, " CAI"
+CONNECT, " H2 ", IRE+1:    s, " C2 "
+CONNECT, " HAG", IRE+1:    s, " CAG"
+CONNECT, " HAD", IRE+1:    s, " CAD"
+CONNECT, " HAE", IRE+1:    s, " CAE"
+CONNECT, " H1 ", IRE+1:    s, " NAS"
+CONNECT, " H56", IRE+1:    s, " NBE"
+
+CONNECT, " CAO", IRE+2:  sp3, " CAL"," NBE","HAO1","HAO2"
+CONNECT, " CAL", IRE+2:  sp3, " CAO"," OAU","HAL1","HAL2"
+CONNECT, " OAU", IRE+2:  sp3, " CAL"," CAM"
+CONNECT, " CAM", IRE+2:  sp3, " OAU"," CAP","HAM1","HAM2"
+CONNECT, " CAP", IRE+2:  sp3, " CAM"," NBE","HAP1","HAP2"
+CONNECT, " NBE", IRE+2:  sp3, " CAO"," CAP"," CAN"
+CONNECT, " CAN", IRE+2:  sp3, " NBE"," CAJ","HAN1","HAN2"
+CONNECT, " CAJ", IRE+2:  sp3, " CAN"," CAK","HAJ1","HAJ2"
+CONNECT, " CAK", IRE+2:  sp3, " CAJ"," OAV","HAK1","HAK2"
+CONNECT, " OAV", IRE+2:  sp2, " CAK"," CBA"
+CONNECT, " CBA", IRE+2:  sp2, " OAV"," CAZ"," CAI"
+CONNECT, " CAZ", IRE+2:  sp2, " CBA"," CAH"," OAT"
+CONNECT, " CAH", IRE+2:  sp2, " CAZ"," C4 "," HAH"
+CONNECT, " OAT", IRE+2:  sp2, " CAZ"," CAA"
+CONNECT, " CAA", IRE+2:  sp3, " OAT","HAA1","HAA2","HAA3"
+CONNECT, " CAI", IRE+2:  sp2, " CBA"," C5 "," HAI"
+CONNECT, " C5 ", IRE+2:  sp2, " CAI"," C4 "," C6 "
+CONNECT, " C4 ", IRE+2:  sp2, " CAH"," C5 "," N3 "
+CONNECT, " N3 ", IRE+2:  sp2, " C4 "," C2 "," H3 "
+CONNECT, " C2 ", IRE+2:  sp2, " N3 "," N1 "," H2 "
+CONNECT, " N1 ", IRE+2:  sp2, " C2 "," C6 "
+CONNECT, " C6 ", IRE+2:  sp2, " C5 "," N1 "," NAS"
+CONNECT, " NAS", IRE+2:  sp2, " C6 "," CAY"," H1 "
+CONNECT, " CAY", IRE+2:  sp2, " NAS"," CAG"," CAE"
+CONNECT, " CAG", IRE+2:  sp2, " CAY"," CAX"," HAG"
+CONNECT, " CAX", IRE+2:  sp2, " CAG","CL  "," CAW"
+CONNECT, "CL  ", IRE+2:     , " CAX"
+CONNECT, " CAW", IRE+2:  sp2, " CAX"," FAB"," CAD"
+CONNECT, " FAB", IRE+2:     , " CAW"
+CONNECT, " CAD", IRE+2:  sp2, " CAW"," CAE"," HAD"
+CONNECT, " CAE", IRE+2:  sp2, " CAY"," CAD"," HAE"
+CONNECT, "HAO1", IRE+2:    s, " CAO"
+CONNECT, "HAO2", IRE+2:    s, " CAO"
+CONNECT, "HAL1", IRE+2:    s, " CAL"
+CONNECT, "HAL2", IRE+2:    s, " CAL"
+CONNECT, "HAM1", IRE+2:    s, " CAM"
+CONNECT, "HAM2", IRE+2:    s, " CAM"
+CONNECT, "HAP1", IRE+2:    s, " CAP"
+CONNECT, "HAP2", IRE+2:    s, " CAP"
+CONNECT, "HAN1", IRE+2:    s, " CAN"
+CONNECT, "HAN2", IRE+2:    s, " CAN"
+CONNECT, "HAJ1", IRE+2:    s, " CAJ"
+CONNECT, "HAJ2", IRE+2:    s, " CAJ"
+CONNECT, "HAK1", IRE+2:    s, " CAK"
+CONNECT, "HAK2", IRE+2:    s, " CAK"
+CONNECT, " HAH", IRE+2:    s, " CAH"
+CONNECT, "HAA1", IRE+2:    s, " CAA"
+CONNECT, "HAA2", IRE+2:    s, " CAA"
+CONNECT, "HAA3", IRE+2:    s, " CAA"
+CONNECT, " HAI", IRE+2:    s, " CAI"
+CONNECT, " H2 ", IRE+2:    s, " C2 "
+CONNECT, " HAG", IRE+2:    s, " CAG"
+CONNECT, " HAD", IRE+2:    s, " CAD"
+CONNECT, " HAE", IRE+2:    s, " CAE"
+CONNECT, " H1 ", IRE+2:    s, " NAS"
+CONNECT, " H3 ", IRE+2:    s, " N3 "
+
+CONNECT, " CAO", IRE+3:  sp3, " CAL"," NBE","HAO1","HAO2"
+CONNECT, " CAL", IRE+3:  sp3, " CAO"," OAU","HAL1","HAL2"
+CONNECT, " OAU", IRE+3:  sp3, " CAL"," CAM"
+CONNECT, " CAM", IRE+3:  sp3, " OAU"," CAP","HAM1","HAM2"
+CONNECT, " CAP", IRE+3:  sp3, " CAM"," NBE","HAP1","HAP2"
+CONNECT, " NBE", IRE+3:  sp3, " CAO"," CAP"," CAN"
+CONNECT, " CAN", IRE+3:  sp3, " NBE"," CAJ","HAN1","HAN2"
+CONNECT, " CAJ", IRE+3:  sp3, " CAN"," CAK","HAJ1","HAJ2"
+CONNECT, " CAK", IRE+3:  sp3, " CAJ"," OAV","HAK1","HAK2"
+CONNECT, " OAV", IRE+3:  sp2, " CAK"," CBA"
+CONNECT, " CBA", IRE+3:  sp2, " OAV"," CAZ"," CAI"
+CONNECT, " CAZ", IRE+3:  sp2, " CBA"," CAH"," OAT"
+CONNECT, " CAH", IRE+3:  sp2, " CAZ"," C4 "," HAH"
+CONNECT, " OAT", IRE+3:  sp2, " CAZ"," CAA"
+CONNECT, " CAA", IRE+3:  sp3, " OAT","HAA1","HAA2","HAA3"
+CONNECT, " CAI", IRE+3:  sp2, " CBA"," C5 "," HAI"
+CONNECT, " C5 ", IRE+3:  sp2, " CAI"," C4 "," C6 "
+CONNECT, " C4 ", IRE+3:  sp2, " CAH"," C5 "," N3 "
+CONNECT, " N3 ", IRE+3:  sp2, " C4 "," C2 "," H3 "
+CONNECT, " C2 ", IRE+3:  sp2, " N3 "," N1 "," H2 "
+CONNECT, " N1 ", IRE+3:  sp2, " C2 "," C6 "
+CONNECT, " C6 ", IRE+3:  sp2, " C5 "," N1 "," NAS"
+CONNECT, " NAS", IRE+3:  sp2, " C6 "," CAY"," H1 "
+CONNECT, " CAY", IRE+3:  sp2, " NAS"," CAG"," CAE"
+CONNECT, " CAG", IRE+3:  sp2, " CAY"," CAX"," HAG"
+CONNECT, " CAX", IRE+3:  sp2, " CAG","CL  "," CAW"
+CONNECT, "CL  ", IRE+3:     , " CAX"
+CONNECT, " CAW", IRE+3:  sp2, " CAX"," FAB"," CAD"
+CONNECT, " FAB", IRE+3:     , " CAW"
+CONNECT, " CAD", IRE+3:  sp2, " CAW"," CAE"," HAD"
+CONNECT, " CAE", IRE+3:  sp2, " CAY"," CAD"," HAE"
+CONNECT, "HAO1", IRE+3:    s, " CAO"
+CONNECT, "HAO2", IRE+3:    s, " CAO"
+CONNECT, "HAL1", IRE+3:    s, " CAL"
+CONNECT, "HAL2", IRE+3:    s, " CAL"
+CONNECT, "HAM1", IRE+3:    s, " CAM"
+CONNECT, "HAM2", IRE+3:    s, " CAM"
+CONNECT, "HAP1", IRE+3:    s, " CAP"
+CONNECT, "HAP2", IRE+3:    s, " CAP"
+CONNECT, "HAN1", IRE+3:    s, " CAN"
+CONNECT, "HAN2", IRE+3:    s, " CAN"
+CONNECT, "HAJ1", IRE+3:    s, " CAJ"
+CONNECT, "HAJ2", IRE+3:    s, " CAJ"
+CONNECT, "HAK1", IRE+3:    s, " CAK"
+CONNECT, "HAK2", IRE+3:    s, " CAK"
+CONNECT, " HAH", IRE+3:    s, " CAH"
+CONNECT, "HAA1", IRE+3:    s, " CAA"
+CONNECT, "HAA2", IRE+3:    s, " CAA"
+CONNECT, "HAA3", IRE+3:    s, " CAA"
+CONNECT, " HAI", IRE+3:    s, " CAI"
+CONNECT, " H2 ", IRE+3:    s, " C2 "
+CONNECT, " HAG", IRE+3:    s, " CAG"
+CONNECT, " HAD", IRE+3:    s, " CAD"
+CONNECT, " HAE", IRE+3:    s, " CAE"
+CONNECT, " H1 ", IRE+3:    s, " NAS"
+CONNECT, " H3 ", IRE+3:    s, " N3 "
+
+#CONNECT, " CAO", IRE+a:  sp3, " CAL"," NBE","HAO1","HAO2"
+#CONNECT, " CAL", IRE+a:  sp3, " CAO"," OAU","HAL1","HAL2"
+#CONNECT, " OAU", IRE+a:  sp3, " CAL"," CAM"
+#CONNECT, " CAM", IRE+a:  sp3, " OAU"," CAP","HAM1","HAM2"
+#CONNECT, " CAP", IRE+a:  sp3, " CAM"," NBE","HAP1","HAP2"
+#CONNECT, " NBE", IRE+a:  sp3, " CAO"," CAP"," CAN"," H56"  #H57 in ire.tpl
+#CONNECT, " CAN", IRE+a:  sp3, " NBE"," CAJ","HAN1","HAN2"
+#CONNECT, " CAJ", IRE+a:  sp3, " CAN"," CAK","HAJ1","HAJ2"
+#CONNECT, " CAK", IRE+a:  sp3, " CAJ"," OAV","HAK1","HAK2"
+#CONNECT, " OAV", IRE+a:  sp2, " CAK"," CBA"
+#CONNECT, " CBA", IRE+a:  sp2, " OAV"," CAZ"," CAI"
+#CONNECT, " CAZ", IRE+a:  sp2, " CBA"," CAH"," OAT"
+#CONNECT, " CAH", IRE+a:  sp2, " CAZ"," C4 "," HAH"
+#CONNECT, " OAT", IRE+a:  sp2, " CAZ"," CAA"
+#CONNECT, " CAA", IRE+a:  sp3, " OAT","HAA1","HAA2","HAA3"
+#CONNECT, " CAI", IRE+a:  sp2, " CBA"," C5 "," HAI"
+#CONNECT, " C5 ", IRE+a:  sp2, " CAI"," C4 "," C6 "
+#CONNECT, " C4 ", IRE+a:  sp2, " CAH"," C5 "," N3 "
+#CONNECT, " N3 ", IRE+a:  sp2, " C4 "," C2 "," H3 "
+#CONNECT, " C2 ", IRE+a:  sp2, " N3 "," N1 "," H2 "
+#CONNECT, " N1 ", IRE+a:  sp2, " C2 "," C6 "
+#CONNECT, " C6 ", IRE+a:  sp2, " C5 "," N1 "," NAS"
+#CONNECT, " NAS", IRE+a:  sp2, " C6 "," CAY"," H1 "
+#CONNECT, " CAY", IRE+a:  sp2, " NAS"," CAG"," CAE"
+#CONNECT, " CAG", IRE+a:  sp2, " CAY"," CAX"," HAG"
+#CONNECT, " CAX", IRE+a:  sp2, " CAG","CL  "," CAW"
+#CONNECT, "CL  ", IRE+a:     , " CAX"
+#CONNECT, " CAW", IRE+a:  sp2, " CAX"," FAB"," CAD"
+#CONNECT, " FAB", IRE+a:     , " CAW"
+#CONNECT, " CAD", IRE+a:  sp2, " CAW"," CAE"," HAD"
+#CONNECT, " CAE", IRE+a:  sp2, " CAY"," CAD"," HAE"
+#CONNECT, "HAO1", IRE+a:    s, " CAO"
+#CONNECT, "HAO2", IRE+a:    s, " CAO"
+#CONNECT, "HAL1", IRE+a:    s, " CAL"
+#CONNECT, "HAL2", IRE+a:    s, " CAL"
+#CONNECT, "HAM1", IRE+a:    s, " CAM"
+#CONNECT, "HAM2", IRE+a:    s, " CAM"
+#CONNECT, "HAP1", IRE+a:    s, " CAP"
+#CONNECT, "HAP2", IRE+a:    s, " CAP"
+#CONNECT, "HAN1", IRE+a:    s, " CAN"
+#CONNECT, "HAN2", IRE+a:    s, " CAN"
+#CONNECT, "HAJ1", IRE+a:    s, " CAJ"
+#CONNECT, "HAJ2", IRE+a:    s, " CAJ"
+#CONNECT, "HAK1", IRE+a:    s, " CAK"
+#CONNECT, "HAK2", IRE+a:    s, " CAK"
+#CONNECT, " HAH", IRE+a:    s, " CAH"
+#CONNECT, "HAA1", IRE+a:    s, " CAA"
+#CONNECT, "HAA2", IRE+a:    s, " CAA"
+#CONNECT, "HAA3", IRE+a:    s, " CAA"
+#CONNECT, " HAI", IRE+a:    s, " CAI"
+#CONNECT, " H2 ", IRE+a:    s, " C2 "
+#CONNECT, " HAG", IRE+a:    s, " CAG"
+#CONNECT, " HAD", IRE+a:    s, " CAD"
+#CONNECT, " HAE", IRE+a:    s, " CAE"
+#CONNECT, " H1 ", IRE+a:    s, " NAS"
+#CONNECT, " H56", IRE+a:    s, " NBE"
+
+
+# ATOM charges
+CHARGE, IRE+a, " CAO":  0.073 # amended
+CHARGE, IRE+a, " CAL":  0.096 # amended
+CHARGE, IRE+a, " OAU": -0.360 # amended
+CHARGE, IRE+a, " CAM":  0.096 # amended
+CHARGE, IRE+a, " CAP":  0.073 # amended
+CHARGE, IRE+a, " NBE": -0.689 # amended
+CHARGE, IRE+a, " CAN":  0.111 # amended
+CHARGE, IRE+a, " CAJ": -0.125 # amended
+CHARGE, IRE+a, " CAK":  0.133 # amended
+CHARGE, IRE+a, " OAV": -0.327 # amended
+CHARGE, IRE+a, " CBA":  0.079 # amended
+CHARGE, IRE+a, " CAZ":  0.157 # amended
+CHARGE, IRE+a, " CAH": -0.167 # amended
+CHARGE, IRE+a, " OAT": -0.356 # amended
+CHARGE, IRE+a, " CAA":  0.115 # amended
+CHARGE, IRE+a, " CAI": -0.071 # amended
+CHARGE, IRE+a, " C5 ": -0.238 # amended
+CHARGE, IRE+a, " C4 ":  0.182 # amended
+CHARGE, IRE+a, " N3 ": -0.664 # amended
+CHARGE, IRE+a, " C2 ":  0.723 # amended
+CHARGE, IRE+a, " N1 ": -0.726 # amended
+CHARGE, IRE+a, " C6 ":  0.609 # amended
+CHARGE, IRE+a, " NAS": -0.198 # amended
+CHARGE, IRE+a, " CAY": -0.079 # amended
+CHARGE, IRE+a, " CAG": -0.101 # amended
+CHARGE, IRE+a, " CAX": -0.016 # amended
+CHARGE, IRE+a, "CL  ": -0.010 # amended
+CHARGE, IRE+a, " CAW":  0.187 # amended
+CHARGE, IRE+a, " FAB": -0.087 # amended
+CHARGE, IRE+a, " CAD": -0.148 # amended
+CHARGE, IRE+a, " CAE": -0.066 # amended
+CHARGE, IRE+a, "HAO1":  0.115 # amended
+CHARGE, IRE+a, "HAO2":  0.115 # amended
+CHARGE, IRE+a, "HAL1":  0.102 # amended
+CHARGE, IRE+a, "HAL2":  0.102 # amended
+CHARGE, IRE+a, "HAM1":  0.102 # amended
+CHARGE, IRE+a, "HAM2":  0.102 # amended
+CHARGE, IRE+a, "HAP1":  0.115 # amended
+CHARGE, IRE+a, "HAP2":  0.115 # amended
+CHARGE, IRE+a, "HAN1":  0.109 # amended
+CHARGE, IRE+a, "HAN2":  0.109 # amended
+CHARGE, IRE+a, "HAJ1":  0.081 # amended
+CHARGE, IRE+a, "HAJ2":  0.081 # amended
+CHARGE, IRE+a, "HAK1":  0.071 # amended
+CHARGE, IRE+a, "HAK2":  0.071 # amended
+CHARGE, IRE+a, " HAH":  0.185 # amended
+CHARGE, IRE+a, "HAA1":  0.061 # amended
+CHARGE, IRE+a, "HAA2":  0.061 # amended
+CHARGE, IRE+a, "HAA3":  0.061 # amended
+CHARGE, IRE+a, " HAI":  0.167 # amended
+CHARGE, IRE+a, " H2 ":  0.112 # amended
+CHARGE, IRE+a, " HAG":  0.159 # amended
+CHARGE, IRE+a, " HAD":  0.182 # amended
+CHARGE, IRE+a, " HAE":  0.159 # amended
+CHARGE, IRE+a, " H1 ":  0.316 # was H56
+CHARGE, IRE+a, " H56":  0.445 # was H57
+CHARGE, IRE+a, " H3 ":  0.496 # amended
+
+CHARGE, IRE01, " CAO":  0.137 # amended
+CHARGE, IRE01, " CAL":  0.124 # amended
+CHARGE, IRE01, " OAU": -0.413 # amended
+CHARGE, IRE01, " CAM":  0.124 # amended
+CHARGE, IRE01, " CAP":  0.137 # amended
+CHARGE, IRE01, " NBE": -0.735 # amended
+CHARGE, IRE01, " CAN":  0.182 # amended
+CHARGE, IRE01, " CAJ": -0.092 # amended
+CHARGE, IRE01, " CAK":  0.131 # amended
+CHARGE, IRE01, " OAV": -0.329 # amended
+CHARGE, IRE01, " CBA":  0.090 # amended
+CHARGE, IRE01, " CAZ":  0.115 # amended
+CHARGE, IRE01, " CAH": -0.184 # amended
+CHARGE, IRE01, " OAT": -0.334 # amended
+CHARGE, IRE01, " CAA":  0.118 # amended
+CHARGE, IRE01, " CAI": -0.140 # amended
+CHARGE, IRE01, " C5 ": -0.279 # amended
+CHARGE, IRE01, " C4 ":  0.433 # amended
+CHARGE, IRE01, " N3 ": -0.704 # amended
+CHARGE, IRE01, " C2 ":  0.664 # amended
+CHARGE, IRE01, " N1 ": -0.750 # amended
+CHARGE, IRE01, " C6 ":  0.709 # amended
+CHARGE, IRE01, " NAS": -0.765 # amended
+CHARGE, IRE01, " CAY":  0.169 # amended
+CHARGE, IRE01, " CAG": -0.159 # amended
+CHARGE, IRE01, " CAX":  0.005 # amended
+CHARGE, IRE01, "CL  ": -0.066 # amended
+CHARGE, IRE01, " CAW":  0.110 # amended
+CHARGE, IRE01, " FAB": -0.125 # amended
+CHARGE, IRE01, " CAD": -0.133 # amended
+CHARGE, IRE01, " CAE": -0.118 # amended
+CHARGE, IRE01, "HAO1":  0.040 # amended
+CHARGE, IRE01, "HAO2":  0.040 # amended
+CHARGE, IRE01, "HAL1":  0.055 # amended
+CHARGE, IRE01, "HAL2":  0.055 # amended
+CHARGE, IRE01, "HAM1":  0.055 # amended
+CHARGE, IRE01, "HAM2":  0.055 # amended
+CHARGE, IRE01, "HAP1":  0.040 # amended
+CHARGE, IRE01, "HAP2":  0.040 # amended
+CHARGE, IRE01, "HAN1":  0.031 # amended
+CHARGE, IRE01, "HAN2":  0.031 # amended
+CHARGE, IRE01, "HAJ1":  0.068 # amended
+CHARGE, IRE01, "HAJ2":  0.068 # amended
+CHARGE, IRE01, "HAK1":  0.038 # amended
+CHARGE, IRE01, "HAK2":  0.038 # amended
+CHARGE, IRE01, " HAH":  0.171 # amended
+CHARGE, IRE01, "HAA1":  0.046 # amended
+CHARGE, IRE01, "HAA2":  0.046 # amended
+CHARGE, IRE01, "HAA3":  0.046 # amended
+CHARGE, IRE01, " HAI":  0.141 # amended
+CHARGE, IRE01, " H2 ":  0.058 # amended
+CHARGE, IRE01, " HAG":  0.151 # amended
+CHARGE, IRE01, " HAD":  0.157 # amended
+CHARGE, IRE01, " HAE":  0.158 # amended
+CHARGE, IRE01, " H1 ":  0.450 # was H55
+
+CHARGE, IRE+1, " CAO":  0.071 # amended
+CHARGE, IRE+1, " CAL":  0.095 # amended
+CHARGE, IRE+1, " OAU": -0.369 # amended
+CHARGE, IRE+1, " CAM":  0.095 # amended
+CHARGE, IRE+1, " CAP":  0.071 # amended
+CHARGE, IRE+1, " NBE": -0.688 # amended
+CHARGE, IRE+1, " CAN":  0.110 # amended
+CHARGE, IRE+1, " CAJ": -0.128 # amended
+CHARGE, IRE+1, " CAK":  0.133 # amended
+CHARGE, IRE+1, " OAV": -0.336 # amended
+CHARGE, IRE+1, " CBA":  0.044 # amended
+CHARGE, IRE+1, " CAZ":  0.095 # amended
+CHARGE, IRE+1, " CAH": -0.171 # amended
+CHARGE, IRE+1, " OAT": -0.357 # amended
+CHARGE, IRE+1, " CAA":  0.115 # amended
+CHARGE, IRE+1, " CAI": -0.089 # amended
+CHARGE, IRE+1, " C5 ": -0.299 # amended
+CHARGE, IRE+1, " C4 ":  0.451 # amended
+CHARGE, IRE+1, " N3 ": -0.707 # amended
+CHARGE, IRE+1, " C2 ":  0.686 # amended
+CHARGE, IRE+1, " N1 ": -0.745 # amended
+CHARGE, IRE+1, " C6 ":  0.704 # amended
+CHARGE, IRE+1, " NAS": -0.721 # amended
+CHARGE, IRE+1, " CAY":  0.107 # amended
+CHARGE, IRE+1, " CAG": -0.141 # amended
+CHARGE, IRE+1, " CAX": -0.013 # amended
+CHARGE, IRE+1, "CL  ": -0.057 # amended
+CHARGE, IRE+1, " CAW":  0.141 # amended
+CHARGE, IRE+1, " FAB": -0.115 # amended
+CHARGE, IRE+1, " CAD": -0.149 # amended
+CHARGE, IRE+1, " CAE": -0.074 # amended
+CHARGE, IRE+1, "HAO1":  0.116 # amended
+CHARGE, IRE+1, "HAO2":  0.116 # amended
+CHARGE, IRE+1, "HAL1":  0.098 # amended
+CHARGE, IRE+1, "HAL2":  0.098 # amended
+CHARGE, IRE+1, "HAM1":  0.098 # amended
+CHARGE, IRE+1, "HAM2":  0.098 # amended
+CHARGE, IRE+1, "HAP1":  0.116 # amended
+CHARGE, IRE+1, "HAP2":  0.116 # amended
+CHARGE, IRE+1, "HAN1":  0.108 # amended
+CHARGE, IRE+1, "HAN2":  0.108 # amended
+CHARGE, IRE+1, "HAJ1":  0.076 # amended
+CHARGE, IRE+1, "HAJ2":  0.076 # amended
+CHARGE, IRE+1, "HAK1":  0.066 # amended
+CHARGE, IRE+1, "HAK2":  0.066 # amended
+CHARGE, IRE+1, " HAH":  0.180 # amended
+CHARGE, IRE+1, "HAA1":  0.051 # amended
+CHARGE, IRE+1, "HAA2":  0.051 # amended
+CHARGE, IRE+1, "HAA3":  0.051 # amended
+CHARGE, IRE+1, " HAI":  0.138 # amended
+CHARGE, IRE+1, " H2 ":  0.068 # amended
+CHARGE, IRE+1, " HAG":  0.145 # amended
+CHARGE, IRE+1, " HAD":  0.165 # amended
+CHARGE, IRE+1, " HAE":  0.169 # amended
+CHARGE, IRE+1, " H1 ":  0.422 # was H55
+CHARGE, IRE+1, " H56":  0.445 # was H56
+
+CHARGE, IRE+2, " CAO":  0.131 # amended
+CHARGE, IRE+2, " CAL":  0.125 # amended
+CHARGE, IRE+2, " OAU": -0.406 # amended
+CHARGE, IRE+2, " CAM":  0.125 # amended
+CHARGE, IRE+2, " CAP":  0.131 # amended
+CHARGE, IRE+2, " NBE": -0.730 # amended
+CHARGE, IRE+2, " CAN":  0.179 # amended
+CHARGE, IRE+2, " CAJ": -0.092 # amended
+CHARGE, IRE+2, " CAK":  0.124 # amended
+CHARGE, IRE+2, " OAV": -0.311 # amended
+CHARGE, IRE+2, " CBA":  0.110 # amended
+CHARGE, IRE+2, " CAZ":  0.188 # amended
+CHARGE, IRE+2, " CAH": -0.177 # amended
+CHARGE, IRE+2, " OAT": -0.317 # amended
+CHARGE, IRE+2, " CAA":  0.116 # amended
+CHARGE, IRE+2, " CAI": -0.116 # amended
+CHARGE, IRE+2, " C5 ": -0.237 # amended
+CHARGE, IRE+2, " C4 ":  0.167 # amended
+CHARGE, IRE+2, " N3 ": -0.655 # amended
+CHARGE, IRE+2, " C2 ":  0.713 # amended
+CHARGE, IRE+2, " N1 ": -0.730 # amended
+CHARGE, IRE+2, " C6 ":  0.617 # amended
+CHARGE, IRE+2, " NAS": -0.232 # amended
+CHARGE, IRE+2, " CAY": -0.073 # amended
+CHARGE, IRE+2, " CAG": -0.070 # amended
+CHARGE, IRE+2, " CAX": -0.023 # amended
+CHARGE, IRE+2, "CL  ": -0.022 # amended
+CHARGE, IRE+2, " CAW":  0.176 # amended
+CHARGE, IRE+2, " FAB": -0.097 # amended
+CHARGE, IRE+2, " CAD": -0.146 # amended
+CHARGE, IRE+2, " CAE": -0.092 # amended
+CHARGE, IRE+2, "HAO1":  0.041 # amended
+CHARGE, IRE+2, "HAO2":  0.041 # amended
+CHARGE, IRE+2, "HAL1":  0.060 # amended
+CHARGE, IRE+2, "HAL2":  0.060 # amended
+CHARGE, IRE+2, "HAM1":  0.060 # amended
+CHARGE, IRE+2, "HAM2":  0.060 # amended
+CHARGE, IRE+2, "HAP1":  0.041 # amended
+CHARGE, IRE+2, "HAP2":  0.041 # amended
+CHARGE, IRE+2, "HAN1":  0.031 # amended
+CHARGE, IRE+2, "HAN2":  0.031 # amended
+CHARGE, IRE+2, "HAJ1":  0.072 # amended
+CHARGE, IRE+2, "HAJ2":  0.072 # amended
+CHARGE, IRE+2, "HAK1":  0.042 # amended
+CHARGE, IRE+2, "HAK2":  0.042 # amended
+CHARGE, IRE+2, " HAH":  0.180 # amended
+CHARGE, IRE+2, "HAA1":  0.059 # amended
+CHARGE, IRE+2, "HAA2":  0.059 # amended
+CHARGE, IRE+2, "HAA3":  0.059 # amended
+CHARGE, IRE+2, " HAI":  0.157 # amended
+CHARGE, IRE+2, " H2 ":  0.104 # amended
+CHARGE, IRE+2, " HAG":  0.163 # amended
+CHARGE, IRE+2, " HAD":  0.178 # amended
+CHARGE, IRE+2, " HAE":  0.156 # amended
+CHARGE, IRE+2, " H1 ":  0.322 # was H56
+CHARGE, IRE+2, " H3 ":  0.493 # was H3 
+
+CHARGE, IRE+3, " CAO":  0.133 # amended
+CHARGE, IRE+3, " CAL":  0.124 # amended
+CHARGE, IRE+3, " OAU": -0.403 # amended
+CHARGE, IRE+3, " CAM":  0.124 # amended
+CHARGE, IRE+3, " CAP":  0.133 # amended
+CHARGE, IRE+3, " NBE": -0.735 # amended
+CHARGE, IRE+3, " CAN":  0.179 # amended
+CHARGE, IRE+3, " CAJ": -0.093 # amended
+CHARGE, IRE+3, " CAK":  0.130 # amended
+CHARGE, IRE+3, " OAV": -0.332 # amended
+CHARGE, IRE+3, " CBA":  0.114 # amended
+CHARGE, IRE+3, " CAZ":  0.162 # amended
+CHARGE, IRE+3, " CAH": -0.170 # amended
+CHARGE, IRE+3, " OAT": -0.340 # amended
+CHARGE, IRE+3, " CAA":  0.116 # amended
+CHARGE, IRE+3, " CAI": -0.096 # amended
+CHARGE, IRE+3, " C5 ": -0.238 # amended
+CHARGE, IRE+3, " C4 ":  0.161 # amended
+CHARGE, IRE+3, " N3 ": -0.581 # amended
+CHARGE, IRE+3, " C2 ":  0.368 # amended
+CHARGE, IRE+3, " N1 ": -0.648 # amended
+CHARGE, IRE+3, " C6 ":  0.783 # amended
+CHARGE, IRE+3, " NAS": -0.606 # amended
+CHARGE, IRE+3, " CAY":  0.056 # amended
+CHARGE, IRE+3, " CAG": -0.111 # amended
+CHARGE, IRE+3, " CAX": -0.015 # amended
+CHARGE, IRE+3, "CL  ": -0.017 # amended
+CHARGE, IRE+3, " CAW":  0.173 # amended
+CHARGE, IRE+3, " FAB": -0.098 # amended
+CHARGE, IRE+3, " CAD": -0.153 # amended
+CHARGE, IRE+3, " CAE": -0.061 # amended
+CHARGE, IRE+3, "HAO1":  0.042 # amended
+CHARGE, IRE+3, "HAO2":  0.042 # amended
+CHARGE, IRE+3, "HAL1":  0.059 # amended
+CHARGE, IRE+3, "HAL2":  0.059 # amended
+CHARGE, IRE+3, "HAM1":  0.059 # amended
+CHARGE, IRE+3, "HAM2":  0.059 # amended
+CHARGE, IRE+3, "HAP1":  0.042 # amended
+CHARGE, IRE+3, "HAP2":  0.042 # amended
+CHARGE, IRE+3, "HAN1":  0.034 # amended
+CHARGE, IRE+3, "HAN2":  0.034 # amended
+CHARGE, IRE+3, "HAJ1":  0.066 # amended
+CHARGE, IRE+3, "HAJ2":  0.066 # amended
+CHARGE, IRE+3, "HAK1":  0.057 # amended
+CHARGE, IRE+3, "HAK2":  0.057 # amended
+CHARGE, IRE+3, " HAH":  0.178 # amended
+CHARGE, IRE+3, "HAA1":  0.062 # amended
+CHARGE, IRE+3, "HAA2":  0.062 # amended
+CHARGE, IRE+3, "HAA3":  0.062 # amended
+CHARGE, IRE+3, " HAI":  0.166 # amended
+CHARGE, IRE+3, " H2 ":  0.230 # amended
+CHARGE, IRE+3, " HAG":  0.158 # amended
+CHARGE, IRE+3, " HAD":  0.176 # amended
+CHARGE, IRE+3, " HAE":  0.166 # amended
+CHARGE, IRE+3, " H1 ":  0.471 # was H55
+CHARGE, IRE+3, " H3 ":  0.492 # was H56
+
+#CHARGE, IRE+a, " CAO":  0.072 # amended
+#CHARGE, IRE+a, " CAL":  0.095 # amended
+#CHARGE, IRE+a, " OAU": -0.360 # amended
+#CHARGE, IRE+a, " CAM":  0.095 # amended
+#CHARGE, IRE+a, " CAP":  0.072 # amended
+#CHARGE, IRE+a, " NBE": -0.689 # amended
+#CHARGE, IRE+a, " CAN":  0.110 # amended
+#CHARGE, IRE+a, " CAJ": -0.125 # amended
+#CHARGE, IRE+a, " CAK":  0.133 # amended
+#CHARGE, IRE+a, " OAV": -0.327 # amended
+#CHARGE, IRE+a, " CBA":  0.079 # amended
+#CHARGE, IRE+a, " CAZ":  0.157 # amended
+#CHARGE, IRE+a, " CAH": -0.167 # amended
+#CHARGE, IRE+a, " OAT": -0.356 # amended
+#CHARGE, IRE+a, " CAA":  0.115 # amended
+#CHARGE, IRE+a, " CAI": -0.071 # amended
+#CHARGE, IRE+a, " C5 ": -0.238 # amended
+#CHARGE, IRE+a, " C4 ":  0.182 # amended
+#CHARGE, IRE+a, " N3 ": -0.664 # amended
+#CHARGE, IRE+a, " C2 ":  0.723 # amended
+#CHARGE, IRE+a, " N1 ": -0.726 # amended
+#CHARGE, IRE+a, " C6 ":  0.609 # amended
+#CHARGE, IRE+a, " NAS": -0.198 # amended
+#CHARGE, IRE+a, " CAY": -0.079 # amended
+#CHARGE, IRE+a, " CAG": -0.101 # amended
+#CHARGE, IRE+a, " CAX": -0.016 # amended
+#CHARGE, IRE+a, "CL  ": -0.010 # amended
+#CHARGE, IRE+a, " CAW":  0.187 # amended
+#CHARGE, IRE+a, " FAB": -0.087 # amended
+#CHARGE, IRE+a, " CAD": -0.148 # amended
+#CHARGE, IRE+a, " CAE": -0.066 # amended
+#CHARGE, IRE+a, "HAO1":  0.115 # amended
+#CHARGE, IRE+a, "HAO2":  0.115 # amended
+#CHARGE, IRE+a, "HAL1":  0.102 # amended
+#CHARGE, IRE+a, "HAL2":  0.102 # amended
+#CHARGE, IRE+a, "HAM1":  0.102 # amended
+#CHARGE, IRE+a, "HAM2":  0.102 # amended
+#CHARGE, IRE+a, "HAP1":  0.115 # amended
+#CHARGE, IRE+a, "HAP2":  0.115 # amended
+#CHARGE, IRE+a, "HAN1":  0.109 # amended
+#CHARGE, IRE+a, "HAN2":  0.109 # amended
+#CHARGE, IRE+a, "HAJ1":  0.081 # amended
+#CHARGE, IRE+a, "HAJ2":  0.081 # amended
+#CHARGE, IRE+a, "HAK1":  0.071 # amended
+#CHARGE, IRE+a, "HAK2":  0.071 # amended
+#CHARGE, IRE+a, " HAH":  0.185 # amended
+#CHARGE, IRE+a, "HAA1":  0.061 # amended
+#CHARGE, IRE+a, "HAA2":  0.061 # amended
+#CHARGE, IRE+a, "HAA3":  0.061 # amended
+#CHARGE, IRE+a, " HAI":  0.167 # amended
+#CHARGE, IRE+a, " H2 ":  0.112 # amended
+#CHARGE, IRE+a, " HAG":  0.159 # amended
+#CHARGE, IRE+a, " HAD":  0.182 # amended
+#CHARGE, IRE+a, " HAE":  0.159 # amended
+#CHARGE, IRE+a, " H1 ":  0.315 # was H56
+#CHARGE, IRE+a, " H56":  0.445 # was H57
+#CHARGE, IRE+a, " H3 ":  0.496 # was H3 
+
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, IRE+a, " CAO": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " CAL": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " OAU": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+a, " CAM": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " CAP": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " NBE": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+a, " CAN": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " CAJ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " CAK": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " OAV": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+a, " CBA": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " CAZ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " CAH": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " OAT": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+a, " CAA": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " CAI": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+a, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+a, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " NAS": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+a, " CAY": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " CAG": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " CAX": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, "CL  ": 1.850,  1.700, 0.173 # amended
+RADIUS, IRE+a, " CAW": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " FAB": 1.850,  1.470, 0.173 # amended
+RADIUS, IRE+a, " CAD": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, " CAE": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+a, "HAO1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAO2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAL1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAL2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAM1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAM2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAP1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAP2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAN1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAN2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAJ1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAJ2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAK1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAK2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, " HAH": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAA1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAA2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, "HAA3": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, " HAI": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, " HAG": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, " HAD": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, " HAE": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+a, " H1 ":  1.000,  1.000,  0.020
+RADIUS, IRE+a, " H56":  1.000,  1.000,  0.020
+RADIUS, IRE+a, " H3 ":  1.000,  1.000,  0.020
+
+RADIUS, IRE01, " CAO": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " CAL": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " OAU": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE01, " CAM": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " CAP": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " NBE": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE01, " CAN": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " CAJ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " CAK": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " OAV": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE01, " CBA": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " CAZ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " CAH": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " OAT": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE01, " CAA": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " CAI": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE01, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE01, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " NAS": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE01, " CAY": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " CAG": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " CAX": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, "CL  ": 1.850,  1.700, 0.173 # amended
+RADIUS, IRE01, " CAW": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " FAB": 1.850,  1.470, 0.173 # amended
+RADIUS, IRE01, " CAD": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, " CAE": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE01, "HAO1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAO2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAL1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAL2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAM1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAM2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAP1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAP2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAN1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAN2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAJ1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAJ2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAK1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAK2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, " HAH": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAA1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAA2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, "HAA3": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, " HAI": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, " HAG": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, " HAD": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, " HAE": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE01, " H1 ":  1.000,  1.000,  0.020
+
+RADIUS, IRE+1, " CAO": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " CAL": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " OAU": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+1, " CAM": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " CAP": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " NBE": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+1, " CAN": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " CAJ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " CAK": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " OAV": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+1, " CBA": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " CAZ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " CAH": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " OAT": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+1, " CAA": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " CAI": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+1, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+1, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " NAS": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+1, " CAY": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " CAG": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " CAX": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, "CL  ": 1.850,  1.700, 0.173 # amended
+RADIUS, IRE+1, " CAW": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " FAB": 1.850,  1.470, 0.173 # amended
+RADIUS, IRE+1, " CAD": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, " CAE": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+1, "HAO1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAO2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAL1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAL2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAM1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAM2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAP1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAP2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAN1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAN2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAJ1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAJ2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAK1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAK2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, " HAH": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAA1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAA2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, "HAA3": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, " HAI": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, " HAG": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, " HAD": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, " HAE": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+1, " H1 ": 1.000,  1.000,  0.020
+RADIUS, IRE+1, " H56": 1.000,  1.000,  0.020
+
+RADIUS, IRE+2, " CAO": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " CAL": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " OAU": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+2, " CAM": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " CAP": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " NBE": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+2, " CAN": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " CAJ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " CAK": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " OAV": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+2, " CBA": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " CAZ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " CAH": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " OAT": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+2, " CAA": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " CAI": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+2, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+2, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " NAS": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+2, " CAY": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " CAG": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " CAX": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, "CL  ": 1.850,  1.700, 0.173 # amended
+RADIUS, IRE+2, " CAW": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " FAB": 1.850,  1.470, 0.173 # amended
+RADIUS, IRE+2, " CAD": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, " CAE": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+2, "HAO1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAO2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAL1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAL2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAM1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAM2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAP1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAP2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAN1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAN2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAJ1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAJ2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAK1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAK2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, " HAH": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAA1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAA2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, "HAA3": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, " HAI": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, " HAG": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, " HAD": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, " HAE": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+2, " H1 ":  1.000,  1.000,  0.020
+RADIUS, IRE+2, " H3 ":  1.000,  1.000,  0.020
+
+RADIUS, IRE+3, " CAO": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " CAL": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " OAU": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+3, " CAM": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " CAP": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " NBE": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+3, " CAN": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " CAJ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " CAK": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " OAV": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+3, " CBA": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " CAZ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " CAH": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " OAT": 1.400,  1.520, 0.200 # amended
+RADIUS, IRE+3, " CAA": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " CAI": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+3, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+3, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " NAS": 1.500,  1.550, 0.160 # amended
+RADIUS, IRE+3, " CAY": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " CAG": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " CAX": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, "CL  ": 1.850,  1.700, 0.173 # amended
+RADIUS, IRE+3, " CAW": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " FAB": 1.850,  1.470, 0.173 # amended
+RADIUS, IRE+3, " CAD": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, " CAE": 1.700,  1.700, 0.150 # amended
+RADIUS, IRE+3, "HAO1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAO2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAL1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAL2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAM1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAM2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAP1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAP2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAN1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAN2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAJ1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAJ2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAK1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAK2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, " HAH": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAA1": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAA2": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, "HAA3": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, " HAI": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, " HAG": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, " HAD": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, " HAE": 1.000,  1.000, 0.020 # amended
+RADIUS, IRE+3, " H1 ":  1.000,  1.000,  0.020
+RADIUS, IRE+3, " H3 ":  1.000,  1.000,  0.020
+
+#RADIUS, IRE+a, " CAO": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " CAL": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " OAU": 1.400,  1.520, 0.200 # amended
+#RADIUS, IRE+a, " CAM": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " CAP": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " NBE": 1.500,  1.550, 0.160 # amended
+#RADIUS, IRE+a, " CAN": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " CAJ": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " CAK": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " OAV": 1.400,  1.520, 0.200 # amended
+#RADIUS, IRE+a, " CBA": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " CAZ": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " CAH": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " OAT": 1.400,  1.520, 0.200 # amended
+#RADIUS, IRE+a, " CAA": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " CAI": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " C5 ": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " C4 ": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " N3 ": 1.500,  1.550, 0.160 # amended
+#RADIUS, IRE+a, " C2 ": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " N1 ": 1.500,  1.550, 0.160 # amended
+#RADIUS, IRE+a, " C6 ": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " NAS": 1.500,  1.550, 0.160 # amended
+#RADIUS, IRE+a, " CAY": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " CAG": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " CAX": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, "CL  ": 1.850,  1.700, 0.173 # amended
+#RADIUS, IRE+a, " CAW": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " FAB": 1.850,  1.470, 0.173 # amended
+#RADIUS, IRE+a, " CAD": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, " CAE": 1.700,  1.700, 0.150 # amended
+#RADIUS, IRE+a, "HAO1": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAO2": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAL1": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAL2": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAM1": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAM2": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAP1": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAP2": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAN1": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAN2": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAJ1": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAJ2": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAK1": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAK2": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, " HAH": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAA1": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAA2": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, "HAA3": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, " HAI": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, " H2 ": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, " HAG": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, " HAD": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, " HAE": 1.000,  1.000, 0.020 # amended
+#RADIUS, IRE+a, " H1 ":  1.000,  1.000,  0.020
+
+
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, IRE+a:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-42.716, rxn08=-20.016
+CONFORMER, IRE01:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-8.659, rxn08=-3.857
+CONFORMER, IRE+1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-22.010, rxn08=-10.215
+CONFORMER, IRE+2:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-18.910, rxn08=-8.736
+CONFORMER, IRE+3:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-20.326, rxn08=-9.340

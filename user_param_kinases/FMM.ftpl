@@ -1,0 +1,623 @@
+# Conformer definition
+CONFLIST, FMM: FMMBK, FMM01, FMM+1, FMM+a
+#CONFLIST, FMM: FMMBK, FMM01, FMM+1, FMM+a, FMMDM
+
+# ATOM name and bonds
+CONNECT, " C1 ", FMM01:  sp3, " S2 ","H11A"," H12"," H13"
+CONNECT, " S2 ", FMM01:  sp3, " C1 "," O3 "," O4 "," C5 "
+CONNECT, " O3 ", FMM01:  sp3, " S2 "
+CONNECT, " O4 ", FMM01:  sp3, " S2 "
+CONNECT, " C5 ", FMM01:  sp3, " S2 "," C6 "," H51"," H52"
+CONNECT, " C6 ", FMM01:  sp3, " C5 "," N7 "," H61"," H62"
+CONNECT, " N7 ", FMM01:  sp3, " C6 "," C8 "," HN7"
+CONNECT, " C8 ", FMM01:  sp3, " N7 "," C9 "," H81"," H82"
+CONNECT, " C9 ", FMM01:  sp2, " C8 "," C10"," O13"
+CONNECT, " C10", FMM01:  sp3, " C9 "," C11"," H10"
+CONNECT, " C11", FMM01:  sp3, " C10"," C12"," H11"
+CONNECT, " C12", FMM01:  sp3, " C11"," O13"," C14"
+CONNECT, " O13", FMM01:  sp3, " C9 "," C12"
+CONNECT, " C14", FMM01:  sp2, " C12"," C15"," C40"
+CONNECT, " C15", FMM01:  sp2, " C14"," C16"," H15"
+CONNECT, " C16", FMM01:  sp2, " C15"," C17"," H16"
+CONNECT, " C17", FMM01:  sp2, " C16"," N18"," C39"
+CONNECT, " N18", FMM01:  sp2, " C17"," C19"
+CONNECT, " C19", FMM01:  sp2, " N18"," N20"," H19"
+CONNECT, " N20", FMM01:  sp2, " C19"," C21"
+CONNECT, " C21", FMM01:  sp2, " N20"," N22"," C39"
+CONNECT, " N22", FMM01:  sp2, " C21"," C23"," H22"
+CONNECT, " C23", FMM01:  sp2, " N22"," C24"," C38"
+CONNECT, " C24", FMM01:  sp2, " C23"," C25"," H24"
+CONNECT, " C25", FMM01:  sp2, " C24"," C26"," H25"
+CONNECT, " C26", FMM01:  sp2, " C25"," O27"," C36"
+CONNECT, " O27", FMM01:  sp3, " C26"," C28"
+CONNECT, " C28", FMM01:  sp3, " O27"," C29","H281","H282"
+CONNECT, " C29", FMM01:  sp2, " C28"," C30"," C35"
+CONNECT, " C30", FMM01:  sp2, " C29"," C31"," H30"
+CONNECT, " C31", FMM01:  sp2, " C30"," C32"," H31"
+CONNECT, " C32", FMM01:  sp2, " C31"," C33"," H32"
+CONNECT, " C33", FMM01:  sp2, " C32"," F34"," C35"
+CONNECT, " F34", FMM01:     , " C33"
+CONNECT, " C35", FMM01:  sp2, " C29"," C33"," H35"
+CONNECT, " C36", FMM01:  sp2, " C26","CL3 "," C38"
+CONNECT, "CL3 ", FMM01:     , " C36"
+CONNECT, " C38", FMM01:  sp2, " C23"," C36"," H38"
+CONNECT, " C39", FMM01:  sp2, " C17"," C21"," C40"
+CONNECT, " C40", FMM01:  sp2, " C14"," C39"," H40"
+CONNECT, "H11A", FMM01:    s, " C1 "
+CONNECT, " H12", FMM01:    s, " C1 "
+CONNECT, " H13", FMM01:    s, " C1 "
+CONNECT, " H51", FMM01:    s, " C5 "
+CONNECT, " H52", FMM01:    s, " C5 "
+CONNECT, " H61", FMM01:    s, " C6 "
+CONNECT, " H62", FMM01:    s, " C6 "
+CONNECT, " HN7", FMM01:    s, " N7 "
+CONNECT, " H81", FMM01:    s, " C8 "
+CONNECT, " H82", FMM01:    s, " C8 "
+CONNECT, " H10", FMM01:    s, " C10"
+CONNECT, " H11", FMM01:    s, " C11"
+CONNECT, " H15", FMM01:    s, " C15"
+CONNECT, " H16", FMM01:    s, " C16"
+CONNECT, " H19", FMM01:    s, " C19"
+CONNECT, " H22", FMM01:    s, " N22"
+CONNECT, " H24", FMM01:    s, " C24"
+CONNECT, " H25", FMM01:    s, " C25"
+CONNECT, "H281", FMM01:    s, " C28"
+CONNECT, "H282", FMM01:    s, " C28"
+CONNECT, " H30", FMM01:    s, " C30"
+CONNECT, " H31", FMM01:    s, " C31"
+CONNECT, " H32", FMM01:    s, " C32"
+CONNECT, " H35", FMM01:    s, " C35"
+CONNECT, " H38", FMM01:    s, " C38"
+CONNECT, " H40", FMM01:    s, " C40"
+
+CONNECT, " C1 ", FMM+1:  sp3, " S2 ","H11A"," H12"," H13"
+CONNECT, " S2 ", FMM+1:  sp3, " C1 "," O3 "," O4 "," C5 "
+CONNECT, " O3 ", FMM+1:  sp3, " S2 "
+CONNECT, " O4 ", FMM+1:  sp3, " S2 "
+CONNECT, " C5 ", FMM+1:  sp3, " S2 "," C6 "," H51"," H52"
+CONNECT, " C6 ", FMM+1:  sp3, " C5 "," N7 "," H61"," H62"
+CONNECT, " N7 ", FMM+1:  sp3, " C6 "," C8 "," HN7"," H67"
+CONNECT, " C8 ", FMM+1:  sp3, " N7 "," C9 "," H81"," H82"
+CONNECT, " C9 ", FMM+1:  sp2, " C8 "," C10"," O13"
+CONNECT, " C10", FMM+1:  sp3, " C9 "," C11"," H10"
+CONNECT, " C11", FMM+1:  sp3, " C10"," C12"," H11"
+CONNECT, " C12", FMM+1:  sp3, " C11"," O13"," C14"
+CONNECT, " O13", FMM+1:  sp3, " C9 "," C12"
+CONNECT, " C14", FMM+1:  sp2, " C12"," C15"," C40"
+CONNECT, " C15", FMM+1:  sp2, " C14"," C16"," H15"
+CONNECT, " C16", FMM+1:  sp2, " C15"," C17"," H16"
+CONNECT, " C17", FMM+1:  sp2, " C16"," N18"," C39"
+CONNECT, " N18", FMM+1:  sp2, " C17"," C19"
+CONNECT, " C19", FMM+1:  sp2, " N18"," N20"," H19"
+CONNECT, " N20", FMM+1:  sp2, " C19"," C21"
+CONNECT, " C21", FMM+1:  sp2, " N20"," N22"," C39"
+CONNECT, " N22", FMM+1:  sp2, " C21"," C23"," H22"
+CONNECT, " C23", FMM+1:  sp2, " N22"," C24"," C38"
+CONNECT, " C24", FMM+1:  sp2, " C23"," C25"," H24"
+CONNECT, " C25", FMM+1:  sp2, " C24"," C26"," H25"
+CONNECT, " C26", FMM+1:  sp2, " C25"," O27"," C36"
+CONNECT, " O27", FMM+1:  sp3, " C26"," C28"
+CONNECT, " C28", FMM+1:  sp3, " O27"," C29","H281","H282"
+CONNECT, " C29", FMM+1:  sp2, " C28"," C30"," C35"
+CONNECT, " C30", FMM+1:  sp2, " C29"," C31"," H30"
+CONNECT, " C31", FMM+1:  sp2, " C30"," C32"," H31"
+CONNECT, " C32", FMM+1:  sp2, " C31"," C33"," H32"
+CONNECT, " C33", FMM+1:  sp2, " C32"," F34"," C35"
+CONNECT, " F34", FMM+1:     , " C33"
+CONNECT, " C35", FMM+1:  sp2, " C29"," C33"," H35"
+CONNECT, " C36", FMM+1:  sp2, " C26","CL3 "," C38"
+CONNECT, "CL3 ", FMM+1:     , " C36"
+CONNECT, " C38", FMM+1:  sp2, " C23"," C36"," H38"
+CONNECT, " C39", FMM+1:  sp2, " C17"," C21"," C40"
+CONNECT, " C40", FMM+1:  sp2, " C14"," C39"," H40"
+CONNECT, "H11A", FMM+1:    s, " C1 "
+CONNECT, " H12", FMM+1:    s, " C1 "
+CONNECT, " H13", FMM+1:    s, " C1 "
+CONNECT, " H51", FMM+1:    s, " C5 "
+CONNECT, " H52", FMM+1:    s, " C5 "
+CONNECT, " H61", FMM+1:    s, " C6 "
+CONNECT, " H62", FMM+1:    s, " C6 "
+CONNECT, " HN7", FMM+1:    s, " N7 "
+CONNECT, " H81", FMM+1:    s, " C8 "
+CONNECT, " H82", FMM+1:    s, " C8 "
+CONNECT, " H10", FMM+1:    s, " C10"
+CONNECT, " H11", FMM+1:    s, " C11"
+CONNECT, " H15", FMM+1:    s, " C15"
+CONNECT, " H16", FMM+1:    s, " C16"
+CONNECT, " H19", FMM+1:    s, " C19"
+CONNECT, " H22", FMM+1:    s, " N22"
+CONNECT, " H24", FMM+1:    s, " C24"
+CONNECT, " H25", FMM+1:    s, " C25"
+CONNECT, "H281", FMM+1:    s, " C28"
+CONNECT, "H282", FMM+1:    s, " C28"
+CONNECT, " H30", FMM+1:    s, " C30"
+CONNECT, " H31", FMM+1:    s, " C31"
+CONNECT, " H32", FMM+1:    s, " C32"
+CONNECT, " H35", FMM+1:    s, " C35"
+CONNECT, " H38", FMM+1:    s, " C38"
+CONNECT, " H40", FMM+1:    s, " C40"
+CONNECT, " H67", FMM+1:    s, " N7 "
+
+CONNECT, " C1 ", FMM+a:  sp3, " S2 ","H11A"," H12"," H13"
+CONNECT, " S2 ", FMM+a:  sp3, " C1 "," O3 "," O4 "," C5 "
+CONNECT, " O3 ", FMM+a:  sp3, " S2 "
+CONNECT, " O4 ", FMM+a:  sp3, " S2 "
+CONNECT, " C5 ", FMM+a:  sp3, " S2 "," C6 "," H51"," H52"
+CONNECT, " C6 ", FMM+a:  sp3, " C5 "," N7 "," H61"," H62"
+CONNECT, " N7 ", FMM+a:  sp3, " C6 "," C8 "," HN7"," H67"
+CONNECT, " C8 ", FMM+a:  sp3, " N7 "," C9 "," H81"," H82"
+CONNECT, " C9 ", FMM+a:  sp2, " C8 "," C10"," O13"
+CONNECT, " C10", FMM+a:  sp3, " C9 "," C11"," H10"
+CONNECT, " C11", FMM+a:  sp3, " C10"," C12"," H11"
+CONNECT, " C12", FMM+a:  sp3, " C11"," O13"," C14"
+CONNECT, " O13", FMM+a:  sp3, " C9 "," C12"
+CONNECT, " C14", FMM+a:  sp2, " C12"," C15"," C40"
+CONNECT, " C15", FMM+a:  sp2, " C14"," C16"," H15"
+CONNECT, " C16", FMM+a:  sp2, " C15"," C17"," H16"
+CONNECT, " C17", FMM+a:  sp2, " C16"," N18"," C39"
+CONNECT, " N18", FMM+a:  sp2, " C17"," C19"," H68"
+CONNECT, " C19", FMM+a:  sp2, " N18"," N20"," H19"
+CONNECT, " N20", FMM+a:  sp2, " C19"," C21"
+CONNECT, " C21", FMM+a:  sp2, " N20"," N22"," C39"
+CONNECT, " N22", FMM+a:  sp2, " C21"," C23"," H22"
+CONNECT, " C23", FMM+a:  sp2, " N22"," C24"," C38"
+CONNECT, " C24", FMM+a:  sp2, " C23"," C25"," H24"
+CONNECT, " C25", FMM+a:  sp2, " C24"," C26"," H25"
+CONNECT, " C26", FMM+a:  sp2, " C25"," O27"," C36"
+CONNECT, " O27", FMM+a:  sp3, " C26"," C28"
+CONNECT, " C28", FMM+a:  sp3, " O27"," C29","H281","H282"
+CONNECT, " C29", FMM+a:  sp2, " C28"," C30"," C35"
+CONNECT, " C30", FMM+a:  sp2, " C29"," C31"," H30"
+CONNECT, " C31", FMM+a:  sp2, " C30"," C32"," H31"
+CONNECT, " C32", FMM+a:  sp2, " C31"," C33"," H32"
+CONNECT, " C33", FMM+a:  sp2, " C32"," F34"," C35"
+CONNECT, " F34", FMM+a:     , " C33"
+CONNECT, " C35", FMM+a:  sp2, " C29"," C33"," H35"
+CONNECT, " C36", FMM+a:  sp2, " C26","CL3 "," C38"
+CONNECT, "CL3 ", FMM+a:     , " C36"
+CONNECT, " C38", FMM+a:  sp2, " C23"," C36"," H38"
+CONNECT, " C39", FMM+a:  sp2, " C17"," C21"," C40"
+CONNECT, " C40", FMM+a:  sp2, " C14"," C39"," H40"
+CONNECT, "H11A", FMM+a:    s, " C1 "
+CONNECT, " H12", FMM+a:    s, " C1 "
+CONNECT, " H13", FMM+a:    s, " C1 "
+CONNECT, " H51", FMM+a:    s, " C5 "
+CONNECT, " H52", FMM+a:    s, " C5 "
+CONNECT, " H61", FMM+a:    s, " C6 "
+CONNECT, " H62", FMM+a:    s, " C6 "
+CONNECT, " HN7", FMM+a:    s, " N7 "
+CONNECT, " H81", FMM+a:    s, " C8 "
+CONNECT, " H82", FMM+a:    s, " C8 "
+CONNECT, " H10", FMM+a:    s, " C10"
+CONNECT, " H11", FMM+a:    s, " C11"
+CONNECT, " H15", FMM+a:    s, " C15"
+CONNECT, " H16", FMM+a:    s, " C16"
+CONNECT, " H19", FMM+a:    s, " C19"
+CONNECT, " H22", FMM+a:    s, " N22"
+CONNECT, " H24", FMM+a:    s, " C24"
+CONNECT, " H25", FMM+a:    s, " C25"
+CONNECT, "H281", FMM+a:    s, " C28"
+CONNECT, "H282", FMM+a:    s, " C28"
+CONNECT, " H30", FMM+a:    s, " C30"
+CONNECT, " H31", FMM+a:    s, " C31"
+CONNECT, " H32", FMM+a:    s, " C32"
+CONNECT, " H35", FMM+a:    s, " C35"
+CONNECT, " H38", FMM+a:    s, " C38"
+CONNECT, " H40", FMM+a:    s, " C40"
+CONNECT, " H67", FMM+a:    s, " N7 "
+CONNECT, " H68", FMM+a:    s, " N18"
+
+
+# ATOM charges
+CHARGE, FMM01, " C1 ": -0.364 # amended
+CHARGE, FMM01, " S2 ":  1.334 # amended
+CHARGE, FMM01, " O3 ": -0.650 # amended
+CHARGE, FMM01, " O4 ": -0.651 # amended
+CHARGE, FMM01, " C5 ": -0.327 # amended
+CHARGE, FMM01, " C6 ":  0.196 # amended
+CHARGE, FMM01, " N7 ": -0.822 # amended
+CHARGE, FMM01, " C8 ":  0.137 # amended
+CHARGE, FMM01, " C9 ":  0.243 # amended
+CHARGE, FMM01, " C10": -0.232 # amended
+CHARGE, FMM01, " C11": -0.247 # amended
+CHARGE, FMM01, " C12":  0.298 # amended
+CHARGE, FMM01, " O13": -0.361 # amended
+CHARGE, FMM01, " C14": -0.133 # amended
+CHARGE, FMM01, " C15": -0.080 # amended
+CHARGE, FMM01, " C16": -0.179 # amended
+CHARGE, FMM01, " C17":  0.440 # amended
+CHARGE, FMM01, " N18": -0.707 # amended
+CHARGE, FMM01, " C19":  0.669 # amended
+CHARGE, FMM01, " N20": -0.753 # amended
+CHARGE, FMM01, " C21":  0.710 # amended
+CHARGE, FMM01, " N22": -0.763 # amended
+CHARGE, FMM01, " C23":  0.166 # amended
+CHARGE, FMM01, " C24": -0.166 # amended
+CHARGE, FMM01, " C25": -0.128 # amended
+CHARGE, FMM01, " C26":  0.078 # amended
+CHARGE, FMM01, " O27": -0.322 # amended
+CHARGE, FMM01, " C28":  0.174 # amended
+CHARGE, FMM01, " C29": -0.068 # amended
+CHARGE, FMM01, " C30": -0.122 # amended
+CHARGE, FMM01, " C31": -0.110 # amended
+CHARGE, FMM01, " C32": -0.156 # amended
+CHARGE, FMM01, " C33":  0.121 # amended
+CHARGE, FMM01, " F34": -0.141 # amended
+CHARGE, FMM01, " C35": -0.139 # amended
+CHARGE, FMM01, " C36":  0.034 # amended
+CHARGE, FMM01, "CL3 ": -0.064 # amended
+CHARGE, FMM01, " C38": -0.128 # amended
+CHARGE, FMM01, " C39": -0.292 # amended
+CHARGE, FMM01, " C40": -0.077 # amended
+CHARGE, FMM01, "H11A":  0.119 # amended
+CHARGE, FMM01, " H12":  0.119 # amended
+CHARGE, FMM01, " H13":  0.119 # amended
+CHARGE, FMM01, " H51":  0.115 # amended
+CHARGE, FMM01, " H52":  0.115 # amended
+CHARGE, FMM01, " H61":  0.052 # amended
+CHARGE, FMM01, " H62":  0.052 # amended
+CHARGE, FMM01, " HN7":  0.366 # amended
+CHARGE, FMM01, " H81":  0.058 # amended
+CHARGE, FMM01, " H82":  0.058 # amended
+CHARGE, FMM01, " H10":  0.171 # amended
+CHARGE, FMM01, " H11":  0.160 # amended
+CHARGE, FMM01, " H15":  0.153 # amended
+CHARGE, FMM01, " H16":  0.160 # amended
+CHARGE, FMM01, " H19":  0.057 # amended
+CHARGE, FMM01, " H22":  0.448 # amended
+CHARGE, FMM01, " H24":  0.137 # amended
+CHARGE, FMM01, " H25":  0.146 # amended
+CHARGE, FMM01, "H281":  0.046 # amended
+CHARGE, FMM01, "H282":  0.046 # amended
+CHARGE, FMM01, " H30":  0.138 # amended
+CHARGE, FMM01, " H31":  0.139 # amended
+CHARGE, FMM01, " H32":  0.149 # amended
+CHARGE, FMM01, " H35":  0.155 # amended
+CHARGE, FMM01, " H38":  0.166 # amended
+CHARGE, FMM01, " H40":  0.138 # amended
+
+CHARGE, FMM+1, " C1 ": -0.405 # amended
+CHARGE, FMM+1, " S2 ":  1.358 # amended
+CHARGE, FMM+1, " O3 ": -0.619 # amended
+CHARGE, FMM+1, " O4 ": -0.619 # amended
+CHARGE, FMM+1, " C5 ": -0.342 # amended
+CHARGE, FMM+1, " C6 ":  0.145 # amended
+CHARGE, FMM+1, " N7 ": -0.765 # amended
+CHARGE, FMM+1, " C8 ":  0.108 # amended
+CHARGE, FMM+1, " C9 ":  0.084 # amended
+CHARGE, FMM+1, " C10": -0.162 # amended
+CHARGE, FMM+1, " C11": -0.275 # amended
+CHARGE, FMM+1, " C12":  0.406 # amended
+CHARGE, FMM+1, " O13": -0.345 # amended
+CHARGE, FMM+1, " C14": -0.203 # amended
+CHARGE, FMM+1, " C15": -0.078 # amended
+CHARGE, FMM+1, " C16": -0.174 # amended
+CHARGE, FMM+1, " C17":  0.461 # amended
+CHARGE, FMM+1, " N18": -0.703 # amended
+CHARGE, FMM+1, " C19":  0.688 # amended
+CHARGE, FMM+1, " N20": -0.733 # amended
+CHARGE, FMM+1, " C21":  0.700 # amended
+CHARGE, FMM+1, " N22": -0.738 # amended
+CHARGE, FMM+1, " C23":  0.131 # amended
+CHARGE, FMM+1, " C24": -0.113 # amended
+CHARGE, FMM+1, " C25": -0.134 # amended
+CHARGE, FMM+1, " C26":  0.097 # amended
+CHARGE, FMM+1, " O27": -0.318 # amended
+CHARGE, FMM+1, " C28":  0.175 # amended
+CHARGE, FMM+1, " C29": -0.074 # amended
+CHARGE, FMM+1, " C30": -0.118 # amended
+CHARGE, FMM+1, " C31": -0.108 # amended
+CHARGE, FMM+1, " C32": -0.150 # amended
+CHARGE, FMM+1, " C33":  0.123 # amended
+CHARGE, FMM+1, " F34": -0.137 # amended
+CHARGE, FMM+1, " C35": -0.142 # amended
+CHARGE, FMM+1, " C36":  0.028 # amended
+CHARGE, FMM+1, "CL3 ": -0.059 # amended
+CHARGE, FMM+1, " C38": -0.160 # amended
+CHARGE, FMM+1, " C39": -0.301 # amended
+CHARGE, FMM+1, " C40": -0.026 # amended
+CHARGE, FMM+1, "H11A":  0.137 # amended
+CHARGE, FMM+1, " H12":  0.137 # amended
+CHARGE, FMM+1, " H13":  0.137 # amended
+CHARGE, FMM+1, " H51":  0.127 # amended
+CHARGE, FMM+1, " H52":  0.127 # amended
+CHARGE, FMM+1, " H61":  0.116 # amended
+CHARGE, FMM+1, " H62":  0.116 # amended
+CHARGE, FMM+1, " HN7":  0.453 # amended
+CHARGE, FMM+1, " H81":  0.122 # amended
+CHARGE, FMM+1, " H82":  0.122 # amended
+CHARGE, FMM+1, " H10":  0.170 # amended
+CHARGE, FMM+1, " H11":  0.190 # amended
+CHARGE, FMM+1, " H15":  0.142 # amended
+CHARGE, FMM+1, " H16":  0.170 # amended
+CHARGE, FMM+1, " H19":  0.071 # amended
+CHARGE, FMM+1, " H22":  0.434 # amended
+CHARGE, FMM+1, " H24":  0.152 # amended
+CHARGE, FMM+1, " H25":  0.154 # amended
+CHARGE, FMM+1, "H281":  0.045 # amended
+CHARGE, FMM+1, "H282":  0.045 # amended
+CHARGE, FMM+1, " H30":  0.140 # amended
+CHARGE, FMM+1, " H31":  0.142 # amended
+CHARGE, FMM+1, " H32":  0.154 # amended
+CHARGE, FMM+1, " H35":  0.151 # amended
+CHARGE, FMM+1, " H38":  0.145 # amended
+CHARGE, FMM+1, " H40":  0.145 # amended
+CHARGE, FMM+1, " H67":  0.453 # amended
+
+CHARGE, FMM+a, " C1 ": -0.407 # amended
+CHARGE, FMM+a, " S2 ":  1.354 # amended
+CHARGE, FMM+a, " O3 ": -0.611 # amended
+CHARGE, FMM+a, " O4 ": -0.611 # amended
+CHARGE, FMM+a, " C5 ": -0.342 # amended
+CHARGE, FMM+a, " C6 ":  0.143 # amended
+CHARGE, FMM+a, " N7 ": -0.755 # amended
+CHARGE, FMM+a, " C8 ":  0.087 # amended
+CHARGE, FMM+a, " C9 ":  0.161 # amended
+CHARGE, FMM+a, " C10": -0.211 # amended
+CHARGE, FMM+a, " C11": -0.217 # amended
+CHARGE, FMM+a, " C12":  0.332 # amended
+CHARGE, FMM+a, " O13": -0.335 # amended
+CHARGE, FMM+a, " C14": -0.140 # amended
+CHARGE, FMM+a, " C15": -0.022 # amended
+CHARGE, FMM+a, " C16": -0.151 # amended
+CHARGE, FMM+a, " C17":  0.192 # amended
+CHARGE, FMM+a, " N18": -0.597 # amended
+CHARGE, FMM+a, " C19":  0.372 # amended
+CHARGE, FMM+a, " N20": -0.630 # amended
+CHARGE, FMM+a, " C21":  0.770 # amended
+CHARGE, FMM+a, " N22": -0.578 # amended
+CHARGE, FMM+a, " C23":  0.036 # amended
+CHARGE, FMM+a, " C24": -0.080 # amended
+CHARGE, FMM+a, " C25": -0.157 # amended
+CHARGE, FMM+a, " C26":  0.165 # amended
+CHARGE, FMM+a, " O27": -0.318 # amended
+CHARGE, FMM+a, " C28":  0.182 # amended
+CHARGE, FMM+a, " C29": -0.093 # amended
+CHARGE, FMM+a, " C30": -0.129 # amended
+CHARGE, FMM+a, " C31": -0.101 # amended
+CHARGE, FMM+a, " C32": -0.144 # amended
+CHARGE, FMM+a, " C33":  0.131 # amended
+CHARGE, FMM+a, " F34": -0.130 # amended
+CHARGE, FMM+a, " C35": -0.137 # amended
+CHARGE, FMM+a, " C36":  0.009 # amended
+CHARGE, FMM+a, "CL3 ": -0.008 # amended
+CHARGE, FMM+a, " C38": -0.103 # amended
+CHARGE, FMM+a, " C39": -0.249 # amended
+CHARGE, FMM+a, " C40": -0.046 # amended
+CHARGE, FMM+a, "H11A":  0.139 # amended
+CHARGE, FMM+a, " H12":  0.139 # amended
+CHARGE, FMM+a, " H13":  0.139 # amended
+CHARGE, FMM+a, " H51":  0.129 # amended
+CHARGE, FMM+a, " H52":  0.129 # amended
+CHARGE, FMM+a, " H61":  0.122 # amended
+CHARGE, FMM+a, " H62":  0.122 # amended
+CHARGE, FMM+a, " HN7":  0.460 # amended
+CHARGE, FMM+a, " H81":  0.130 # amended
+CHARGE, FMM+a, " H82":  0.130 # amended
+CHARGE, FMM+a, " H10":  0.176 # amended
+CHARGE, FMM+a, " H11":  0.186 # amended
+CHARGE, FMM+a, " H15":  0.176 # amended
+CHARGE, FMM+a, " H16":  0.178 # amended
+CHARGE, FMM+a, " H19":  0.243 # amended
+CHARGE, FMM+a, " H22":  0.467 # amended
+CHARGE, FMM+a, " H24":  0.148 # amended
+CHARGE, FMM+a, " H25":  0.170 # amended
+CHARGE, FMM+a, "H281":  0.056 # amended
+CHARGE, FMM+a, "H282":  0.056 # amended
+CHARGE, FMM+a, " H30":  0.136 # amended
+CHARGE, FMM+a, " H31":  0.148 # amended
+CHARGE, FMM+a, " H32":  0.162 # amended
+CHARGE, FMM+a, " H35":  0.158 # amended
+CHARGE, FMM+a, " H38":  0.161 # amended
+CHARGE, FMM+a, " H40":  0.151 # amended
+CHARGE, FMM+a, " H67":  0.460 # amended
+CHARGE, FMM+a, " H68":  0.497 # amended
+
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, FMM01, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " S2 ": 1.850,  1.800, 0.200 # amended
+RADIUS, FMM01, " O3 ": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM01, " O4 ": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM01, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " N7 ": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM01, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " O13": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM01, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " N18": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM01, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " N20": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM01, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " N22": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM01, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " O27": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM01, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C29": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C30": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C31": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C32": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C33": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " F34": 1.850,  1.470, 0.173 # amended
+RADIUS, FMM01, " C35": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C36": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, "CL3 ": 1.850,  1.700, 0.173 # amended
+RADIUS, FMM01, " C38": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C39": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, " C40": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM01, "H11A": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H51": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H52": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H61": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H62": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " HN7": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H81": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H82": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H24": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, "H281": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, "H282": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H31": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H32": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H38": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM01, " H40": 1.000,  1.000, 0.020 # amended
+
+RADIUS, FMM+1, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " S2 ": 1.850,  1.800, 0.200 # amended
+RADIUS, FMM+1, " O3 ": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM+1, " O4 ": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM+1, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " N7 ": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM+1, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " O13": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM+1, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " N18": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM+1, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " N20": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM+1, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " N22": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM+1, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " O27": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM+1, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C29": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C30": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C31": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C32": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C33": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " F34": 1.850,  1.470, 0.173 # amended
+RADIUS, FMM+1, " C35": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C36": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, "CL3 ": 1.850,  1.700, 0.173 # amended
+RADIUS, FMM+1, " C38": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C39": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, " C40": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+1, "H11A": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H51": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H52": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H61": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H62": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " HN7": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H81": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H82": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H24": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, "H281": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, "H282": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H31": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H32": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H38": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+1, " H40": 1.000,  1.000, 0.020 # amended
+
+RADIUS, FMM+a, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " S2 ": 1.850,  1.800, 0.200 # amended
+RADIUS, FMM+a, " O3 ": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM+a, " O4 ": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM+a, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " N7 ": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM+a, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " O13": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM+a, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " N18": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM+a, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " N20": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM+a, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " N22": 1.500,  1.550, 0.160 # amended
+RADIUS, FMM+a, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " O27": 1.400,  1.520, 0.200 # amended
+RADIUS, FMM+a, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C29": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C30": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C31": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C32": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C33": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " F34": 1.850,  1.470, 0.173 # amended
+RADIUS, FMM+a, " C35": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C36": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, "CL3 ": 1.850,  1.700, 0.173 # amended
+RADIUS, FMM+a, " C38": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C39": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, " C40": 1.700,  1.700, 0.150 # amended
+RADIUS, FMM+a, "H11A": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H51": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H52": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H61": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H62": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " HN7": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H81": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H82": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H24": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, "H281": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, "H282": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H31": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H32": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H38": 1.000,  1.000, 0.020 # amended
+RADIUS, FMM+a, " H40": 1.000,  1.000, 0.020 # amended
+
+
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, FMM01:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -11.916, rxn08=-5.395
+CONFORMER, FMM+1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -25.067, rxn08= -11.34
+CONFORMER, FMM+a:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -44.284, rxn08= -20.596

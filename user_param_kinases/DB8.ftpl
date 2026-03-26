@@ -1,0 +1,815 @@
+# Conformer definition
+CONFLIST, DB8: DB8BK, DB801, DB802, DB8+1, DB8+2
+#CONFLIST, DB8: DB8BK, DB801, DB802, DB8+1, DB8+2, DB8DM
+
+# ATOM name and bonds
+CONNECT, " CAA", DB801:  sp3, " OAV"," HAA","HAAA","HAAB"
+CONNECT, " O02", DB801:  sp2, " CAX"," C01"
+CONNECT, " CAC", DB801:  sp3, " CAM"," NBH"," HAC","HACA"
+CONNECT, " NAD", DB801:  sp3, " CAG"
+CONNECT, "CL1 ", DB801:     , " CAY"
+CONNECT, "CL2 ", DB801:     , " CAZ"
+CONNECT, " CAG", DB801:   sp, " NAD"," CBA"
+CONNECT, " CAH", DB801:  sp2, " NAT"," CBA"," HAH"
+CONNECT, " CAI", DB801:  sp2, " CAY"," CAZ"," HAI"
+CONNECT, " CAJ", DB801:  sp2, " CAX"," CBB"," HAJ"
+CONNECT, " CAK", DB801:  sp2, " CBD"," CBF"," HAK"
+CONNECT, " CAL", DB801:  sp2, " CBC"," CBG"," HAL"
+CONNECT, " CAM", DB801:  sp3, " CAC"," CAN"," HAM","HAMA"
+CONNECT, " CAN", DB801:  sp3, " CAM"," OAW"," HAN","HANA"
+CONNECT, " CAO", DB801:  sp3, " NBI"," HAO","HAOA","HAOB"
+CONNECT, " CAP", DB801:  sp3, " CAR"," NBH"," HAP","HAPA"
+CONNECT, " CAQ", DB801:  sp3, " CAS"," NBH"," HAQ","HAQA"
+CONNECT, " CAR", DB801:  sp3, " CAP"," NBI"," HAR","HARA"
+CONNECT, " CAS", DB801:  sp3, " CAQ"," NBI"," HAS","HASA"
+CONNECT, " NAT", DB801:  sp2, " CAH"," CBF"
+CONNECT, " NAU", DB801:  sp2, " CBB"," CBE","HNAU"
+CONNECT, " OAV", DB801:  sp2, " CAA"," CBC"
+CONNECT, " OAW", DB801:  sp2, " CAN"," CBD"
+CONNECT, " CAX", DB801:  sp2, " O02"," CAJ"," CAY"
+CONNECT, " CAY", DB801:  sp2, "CL1 "," CAI"," CAX"
+CONNECT, " CAZ", DB801:  sp2, "CL2 "," CAI"," CBB"
+CONNECT, " CBA", DB801:  sp2, " CAG"," CAH"," CBE"
+CONNECT, " CBB", DB801:  sp2, " CAJ"," NAU"," CAZ"
+CONNECT, " CBC", DB801:  sp2, " CAL"," OAV"," CBD"
+CONNECT, " CBD", DB801:  sp2, " CAK"," OAW"," CBC"
+CONNECT, " CBE", DB801:  sp2, " NAU"," CBA"," CBG"
+CONNECT, " CBF", DB801:  sp2, " CAK"," NAT"," CBG"
+CONNECT, " CBG", DB801:  sp2, " CAL"," CBE"," CBF"
+CONNECT, " NBH", DB801:  sp3, " CAC"," CAP"," CAQ"
+CONNECT, " NBI", DB801:  sp3, " CAO"," CAR"," CAS"
+CONNECT, " C01", DB801:  sp3, " O02"," H01","H01A","H01B"
+CONNECT, " HAA", DB801:    s, " CAA"
+CONNECT, "HAAA", DB801:    s, " CAA"
+CONNECT, "HAAB", DB801:    s, " CAA"
+CONNECT, " HAC", DB801:    s, " CAC"
+CONNECT, "HACA", DB801:    s, " CAC"
+CONNECT, " HAH", DB801:    s, " CAH"
+CONNECT, " HAI", DB801:    s, " CAI"
+CONNECT, " HAJ", DB801:    s, " CAJ"
+CONNECT, " HAK", DB801:    s, " CAK"
+CONNECT, " HAL", DB801:    s, " CAL"
+CONNECT, " HAM", DB801:    s, " CAM"
+CONNECT, "HAMA", DB801:    s, " CAM"
+CONNECT, " HAN", DB801:    s, " CAN"
+CONNECT, "HANA", DB801:    s, " CAN"
+CONNECT, " HAO", DB801:    s, " CAO"
+CONNECT, "HAOA", DB801:    s, " CAO"
+CONNECT, "HAOB", DB801:    s, " CAO"
+CONNECT, " HAP", DB801:    s, " CAP"
+CONNECT, "HAPA", DB801:    s, " CAP"
+CONNECT, " HAQ", DB801:    s, " CAQ"
+CONNECT, "HAQA", DB801:    s, " CAQ"
+CONNECT, " HAR", DB801:    s, " CAR"
+CONNECT, "HARA", DB801:    s, " CAR"
+CONNECT, " HAS", DB801:    s, " CAS"
+CONNECT, "HASA", DB801:    s, " CAS"
+CONNECT, "HNAU", DB801:    s, " NAU"
+CONNECT, " H01", DB801:    s, " C01"
+CONNECT, "H01A", DB801:    s, " C01"
+CONNECT, "H01B", DB801:    s, " C01"
+
+CONNECT, " CAA", DB802:  sp3, " OAV"," HAA","HAAA","HAAB"
+CONNECT, " O02", DB802:  sp2, " CAX"," C01"
+CONNECT, " CAC", DB802:  sp3, " CAM"," NBH"," HAC","HACA"
+CONNECT, " NAD", DB802:  sp3, " CAG"
+CONNECT, "CL1 ", DB802:     , " CAY"
+CONNECT, "CL2 ", DB802:     , " CAZ"
+CONNECT, " CAG", DB802:   sp, " NAD"," CBA"
+CONNECT, " CAH", DB802:  sp2, " NAT"," CBA"," HAH"
+CONNECT, " CAI", DB802:  sp2, " CAY"," CAZ"," HAI"
+CONNECT, " CAJ", DB802:  sp2, " CAX"," CBB"," HAJ"
+CONNECT, " CAK", DB802:  sp2, " CBD"," CBF"," HAK"
+CONNECT, " CAL", DB802:  sp2, " CBC"," CBG"," HAL"
+CONNECT, " CAM", DB802:  sp3, " CAC"," CAN"," HAM","HAMA"
+CONNECT, " CAN", DB802:  sp3, " CAM"," OAW"," HAN","HANA"
+CONNECT, " CAO", DB802:  sp3, " NBI"," HAO","HAOA","HAOB"
+CONNECT, " CAP", DB802:  sp3, " CAR"," NBH"," HAP","HAPA"
+CONNECT, " CAQ", DB802:  sp3, " CAS"," NBH"," HAQ","HAQA"
+CONNECT, " CAR", DB802:  sp3, " CAP"," NBI"," HAR","HARA"
+CONNECT, " CAS", DB802:  sp3, " CAQ"," NBI"," HAS","HASA"
+CONNECT, " NAT", DB802:  sp2, " CAH"," CBF"
+CONNECT, " NAU", DB802:  sp2, " CBB"," CBE","HNAU"
+CONNECT, " OAV", DB802:  sp2, " CAA"," CBC"
+CONNECT, " OAW", DB802:  sp2, " CAN"," CBD"
+CONNECT, " CAX", DB802:  sp2, " O02"," CAJ"," CAY"
+CONNECT, " CAY", DB802:  sp2, "CL1 "," CAI"," CAX"
+CONNECT, " CAZ", DB802:  sp2, "CL2 "," CAI"," CBB"
+CONNECT, " CBA", DB802:  sp2, " CAG"," CAH"," CBE"
+CONNECT, " CBB", DB802:  sp2, " CAJ"," NAU"," CAZ"
+CONNECT, " CBC", DB802:  sp2, " CAL"," OAV"," CBD"
+CONNECT, " CBD", DB802:  sp2, " CAK"," OAW"," CBC"
+CONNECT, " CBE", DB802:  sp2, " NAU"," CBA"," CBG"
+CONNECT, " CBF", DB802:  sp2, " CAK"," NAT"," CBG"
+CONNECT, " CBG", DB802:  sp2, " CAL"," CBE"," CBF"
+CONNECT, " NBH", DB802:  sp3, " CAC"," CAP"," CAQ"
+CONNECT, " NBI", DB802:  sp3, " CAO"," CAR"," CAS"," H65"
+CONNECT, " C01", DB802:  sp3, " O02"," H01","H01A","H01B"
+CONNECT, " HAA", DB802:    s, " CAA"
+CONNECT, "HAAA", DB802:    s, " CAA"
+CONNECT, "HAAB", DB802:    s, " CAA"
+CONNECT, " HAC", DB802:    s, " CAC"
+CONNECT, "HACA", DB802:    s, " CAC"
+CONNECT, " HAH", DB802:    s, " CAH"
+CONNECT, " HAI", DB802:    s, " CAI"
+CONNECT, " HAJ", DB802:    s, " CAJ"
+CONNECT, " HAK", DB802:    s, " CAK"
+CONNECT, " HAL", DB802:    s, " CAL"
+CONNECT, " HAM", DB802:    s, " CAM"
+CONNECT, "HAMA", DB802:    s, " CAM"
+CONNECT, " HAN", DB802:    s, " CAN"
+CONNECT, "HANA", DB802:    s, " CAN"
+CONNECT, " HAO", DB802:    s, " CAO"
+CONNECT, "HAOA", DB802:    s, " CAO"
+CONNECT, "HAOB", DB802:    s, " CAO"
+CONNECT, " HAP", DB802:    s, " CAP"
+CONNECT, "HAPA", DB802:    s, " CAP"
+CONNECT, " HAQ", DB802:    s, " CAQ"
+CONNECT, "HAQA", DB802:    s, " CAQ"
+CONNECT, " HAR", DB802:    s, " CAR"
+CONNECT, "HARA", DB802:    s, " CAR"
+CONNECT, " HAS", DB802:    s, " CAS"
+CONNECT, "HASA", DB802:    s, " CAS"
+CONNECT, "HNAU", DB802:    s, " NAU"
+CONNECT, " H01", DB802:    s, " C01"
+CONNECT, "H01A", DB802:    s, " C01"
+CONNECT, "H01B", DB802:    s, " C01"
+CONNECT, " H65", DB802:    s, " C01"
+
+CONNECT, " CAA", DB8+1:  sp3, " OAV"," HAA","HAAA","HAAB"
+CONNECT, " O02", DB8+1:  sp2, " CAX"," C01"
+CONNECT, " CAC", DB8+1:  sp3, " CAM"," NBH"," HAC","HACA"
+CONNECT, " NAD", DB8+1:  sp3, " CAG"
+CONNECT, "CL1 ", DB8+1:     , " CAY"
+CONNECT, "CL2 ", DB8+1:     , " CAZ"
+CONNECT, " CAG", DB8+1:   sp, " NAD"," CBA"
+CONNECT, " CAH", DB8+1:  sp2, " NAT"," CBA"," HAH"
+CONNECT, " CAI", DB8+1:  sp2, " CAY"," CAZ"," HAI"
+CONNECT, " CAJ", DB8+1:  sp2, " CAX"," CBB"," HAJ"
+CONNECT, " CAK", DB8+1:  sp2, " CBD"," CBF"," HAK"
+CONNECT, " CAL", DB8+1:  sp2, " CBC"," CBG"," HAL"
+CONNECT, " CAM", DB8+1:  sp3, " CAC"," CAN"," HAM","HAMA"
+CONNECT, " CAN", DB8+1:  sp3, " CAM"," OAW"," HAN","HANA"
+CONNECT, " CAO", DB8+1:  sp3, " NBI"," HAO","HAOA","HAOB"
+CONNECT, " CAP", DB8+1:  sp3, " CAR"," NBH"," HAP","HAPA"
+CONNECT, " CAQ", DB8+1:  sp3, " CAS"," NBH"," HAQ","HAQA"
+CONNECT, " CAR", DB8+1:  sp3, " CAP"," NBI"," HAR","HARA"
+CONNECT, " CAS", DB8+1:  sp3, " CAQ"," NBI"," HAS","HASA"
+CONNECT, " NAT", DB8+1:  sp2, " CAH"," CBF"
+CONNECT, " NAU", DB8+1:  sp2, " CBB"," CBE","HNAU"
+CONNECT, " OAV", DB8+1:  sp2, " CAA"," CBC"
+CONNECT, " OAW", DB8+1:  sp2, " CAN"," CBD"
+CONNECT, " CAX", DB8+1:  sp2, " O02"," CAJ"," CAY"
+CONNECT, " CAY", DB8+1:  sp2, "CL1 "," CAI"," CAX"
+CONNECT, " CAZ", DB8+1:  sp2, "CL2 "," CAI"," CBB"
+CONNECT, " CBA", DB8+1:  sp2, " CAG"," CAH"," CBE"
+CONNECT, " CBB", DB8+1:  sp2, " CAJ"," NAU"," CAZ"
+CONNECT, " CBC", DB8+1:  sp2, " CAL"," OAV"," CBD"
+CONNECT, " CBD", DB8+1:  sp2, " CAK"," OAW"," CBC"
+CONNECT, " CBE", DB8+1:  sp2, " NAU"," CBA"," CBG"
+CONNECT, " CBF", DB8+1:  sp2, " CAK"," NAT"," CBG"
+CONNECT, " CBG", DB8+1:  sp2, " CAL"," CBE"," CBF"
+CONNECT, " NBH", DB8+1:  sp3, " CAC"," CAP"," CAQ"
+CONNECT, " NBI", DB8+1:  sp3, " CAO"," CAR"," CAS"," H66"
+CONNECT, " H66", DB8+1:    s, " NBI"
+CONNECT, " C01", DB8+1:  sp3, " O02"," H01","H01A","H01B"
+CONNECT, " HAA", DB8+1:    s, " CAA"
+CONNECT, "HAAA", DB8+1:    s, " CAA"
+CONNECT, "HAAB", DB8+1:    s, " CAA"
+CONNECT, " HAC", DB8+1:    s, " CAC"
+CONNECT, "HACA", DB8+1:    s, " CAC"
+CONNECT, " HAH", DB8+1:    s, " CAH"
+CONNECT, " HAI", DB8+1:    s, " CAI"
+CONNECT, " HAJ", DB8+1:    s, " CAJ"
+CONNECT, " HAK", DB8+1:    s, " CAK"
+CONNECT, " HAL", DB8+1:    s, " CAL"
+CONNECT, " HAM", DB8+1:    s, " CAM"
+CONNECT, "HAMA", DB8+1:    s, " CAM"
+CONNECT, " HAN", DB8+1:    s, " CAN"
+CONNECT, "HANA", DB8+1:    s, " CAN"
+CONNECT, " HAO", DB8+1:    s, " CAO"
+CONNECT, "HAOA", DB8+1:    s, " CAO"
+CONNECT, "HAOB", DB8+1:    s, " CAO"
+CONNECT, " HAP", DB8+1:    s, " CAP"
+CONNECT, "HAPA", DB8+1:    s, " CAP"
+CONNECT, " HAQ", DB8+1:    s, " CAQ"
+CONNECT, "HAQA", DB8+1:    s, " CAQ"
+CONNECT, " HAR", DB8+1:    s, " CAR"
+CONNECT, "HARA", DB8+1:    s, " CAR"
+CONNECT, " HAS", DB8+1:    s, " CAS"
+CONNECT, "HASA", DB8+1:    s, " CAS"
+CONNECT, "HNAU", DB8+1:    s, " NAU"
+CONNECT, " H01", DB8+1:    s, " C01"
+CONNECT, "H01A", DB8+1:    s, " C01"
+CONNECT, "H01B", DB8+1:    s, " C01"
+
+CONNECT, " CAA", DB8+2:  sp3, " OAV"," HAA","HAAA","HAAB"
+CONNECT, " O02", DB8+2:  sp2, " CAX"," C01"
+CONNECT, " CAC", DB8+2:  sp3, " CAM"," NBH"," HAC","HACA"
+CONNECT, " NAD", DB8+2:  sp3, " CAG"
+CONNECT, "CL1 ", DB8+2:     , " CAY"
+CONNECT, "CL2 ", DB8+2:     , " CAZ"
+CONNECT, " CAG", DB8+2:   sp, " NAD"," CBA"
+CONNECT, " CAH", DB8+2:  sp2, " NAT"," CBA"," HAH"
+CONNECT, " CAI", DB8+2:  sp2, " CAY"," CAZ"," HAI"
+CONNECT, " CAJ", DB8+2:  sp2, " CAX"," CBB"," HAJ"
+CONNECT, " CAK", DB8+2:  sp2, " CBD"," CBF"," HAK"
+CONNECT, " CAL", DB8+2:  sp2, " CBC"," CBG"," HAL"
+CONNECT, " CAM", DB8+2:  sp3, " CAC"," CAN"," HAM","HAMA"
+CONNECT, " CAN", DB8+2:  sp3, " CAM"," OAW"," HAN","HANA"
+CONNECT, " CAO", DB8+2:  sp3, " NBI"," HAO","HAOA","HAOB"
+CONNECT, " CAP", DB8+2:  sp3, " CAR"," NBH"," HAP","HAPA"
+CONNECT, " CAQ", DB8+2:  sp3, " CAS"," NBH"," HAQ","HAQA"
+CONNECT, " CAR", DB8+2:  sp3, " CAP"," NBI"," HAR","HARA"
+CONNECT, " CAS", DB8+2:  sp3, " CAQ"," NBI"," HAS","HASA"
+CONNECT, " NAT", DB8+2:  sp2, " CAH"," CBF"
+CONNECT, " NAU", DB8+2:  sp2, " CBB"," CBE","HNAU"
+CONNECT, " OAV", DB8+2:  sp2, " CAA"," CBC"
+CONNECT, " OAW", DB8+2:  sp2, " CAN"," CBD"
+CONNECT, " CAX", DB8+2:  sp2, " O02"," CAJ"," CAY"
+CONNECT, " CAY", DB8+2:  sp2, "CL1 "," CAI"," CAX"
+CONNECT, " CAZ", DB8+2:  sp2, "CL2 "," CAI"," CBB"
+CONNECT, " CBA", DB8+2:  sp2, " CAG"," CAH"," CBE"
+CONNECT, " CBB", DB8+2:  sp2, " CAJ"," NAU"," CAZ"
+CONNECT, " CBC", DB8+2:  sp2, " CAL"," OAV"," CBD"
+CONNECT, " CBD", DB8+2:  sp2, " CAK"," OAW"," CBC"
+CONNECT, " CBE", DB8+2:  sp2, " NAU"," CBA"," CBG"
+CONNECT, " CBF", DB8+2:  sp2, " CAK"," NAT"," CBG"
+CONNECT, " CBG", DB8+2:  sp2, " CAL"," CBE"," CBF"
+CONNECT, " NBH", DB8+2:  sp3, " CAC"," CAP"," CAQ"," H66"
+CONNECT, " H66", DB8+2:    s, " NBH"
+CONNECT, " NBI", DB8+2:  sp3, " CAO"," CAR"," CAS"
+CONNECT, " C01", DB8+2:  sp3, " O02"," H01","H01A","H01B"
+CONNECT, " HAA", DB8+2:    s, " CAA"
+CONNECT, "HAAA", DB8+2:    s, " CAA"
+CONNECT, "HAAB", DB8+2:    s, " CAA"
+CONNECT, " HAC", DB8+2:    s, " CAC"
+CONNECT, "HACA", DB8+2:    s, " CAC"
+CONNECT, " HAH", DB8+2:    s, " CAH"
+CONNECT, " HAI", DB8+2:    s, " CAI"
+CONNECT, " HAJ", DB8+2:    s, " CAJ"
+CONNECT, " HAK", DB8+2:    s, " CAK"
+CONNECT, " HAL", DB8+2:    s, " CAL"
+CONNECT, " HAM", DB8+2:    s, " CAM"
+CONNECT, "HAMA", DB8+2:    s, " CAM"
+CONNECT, " HAN", DB8+2:    s, " CAN"
+CONNECT, "HANA", DB8+2:    s, " CAN"
+CONNECT, " HAO", DB8+2:    s, " CAO"
+CONNECT, "HAOA", DB8+2:    s, " CAO"
+CONNECT, "HAOB", DB8+2:    s, " CAO"
+CONNECT, " HAP", DB8+2:    s, " CAP"
+CONNECT, "HAPA", DB8+2:    s, " CAP"
+CONNECT, " HAQ", DB8+2:    s, " CAQ"
+CONNECT, "HAQA", DB8+2:    s, " CAQ"
+CONNECT, " HAR", DB8+2:    s, " CAR"
+CONNECT, "HARA", DB8+2:    s, " CAR"
+CONNECT, " HAS", DB8+2:    s, " CAS"
+CONNECT, "HASA", DB8+2:    s, " CAS"
+CONNECT, "HNAU", DB8+2:    s, " NAU"
+CONNECT, " H01", DB8+2:    s, " C01"
+CONNECT, "H01A", DB8+2:    s, " C01"
+CONNECT, "H01B", DB8+2:    s, " C01"
+
+
+# ATOM charges
+CHARGE, DB801, " CAA":  0.116 # amended
+CHARGE, DB801, " O02": -0.338 # amended
+CHARGE, DB801, " CAC":  0.180 # amended
+CHARGE, DB801, " NAD": -0.364 # amended
+CHARGE, DB801, "CL1 ": -0.061 # amended
+CHARGE, DB801, "CL2 ": -0.072 # amended
+CHARGE, DB801, " CAG":  0.248 # amended
+CHARGE, DB801, " CAH":  0.464 # amended
+CHARGE, DB801, " CAI": -0.094 # amended
+CHARGE, DB801, " CAJ": -0.150 # amended
+CHARGE, DB801, " CAK": -0.214 # amended
+CHARGE, DB801, " CAL": -0.119 # amended
+CHARGE, DB801, " CAM": -0.089 # amended
+CHARGE, DB801, " CAN":  0.131 # amended
+CHARGE, DB801, " CAO":  0.161 # amended
+CHARGE, DB801, " CAP":  0.172 # amended
+CHARGE, DB801, " CAQ":  0.172 # amended
+CHARGE, DB801, " CAR":  0.169 # amended
+CHARGE, DB801, " CAS":  0.169 # amended
+CHARGE, DB801, " NAT": -0.668 # amended
+CHARGE, DB801, " NAU": -0.659 # amended
+CHARGE, DB801, " OAV": -0.332 # amended
+CHARGE, DB801, " OAW": -0.332 # amended
+CHARGE, DB801, " CAX":  0.122 # amended
+CHARGE, DB801, " CAY": -0.004 # amended
+CHARGE, DB801, " CAZ": -0.020 # amended
+CHARGE, DB801, " CBA": -0.173 # amended
+CHARGE, DB801, " CBB":  0.162 # amended
+CHARGE, DB801, " CBC":  0.088 # amended
+CHARGE, DB801, " CBD":  0.123 # amended
+CHARGE, DB801, " CBE":  0.253 # amended
+CHARGE, DB801, " CBF":  0.435 # amended
+CHARGE, DB801, " CBG": -0.185 # amended
+CHARGE, DB801, " NBH": -0.739 # amended
+CHARGE, DB801, " NBI": -0.737 # amended
+CHARGE, DB801, " C01":  0.115 # amended
+CHARGE, DB801, " HAA":  0.045 # amended
+CHARGE, DB801, "HAAA":  0.045 # amended
+CHARGE, DB801, "HAAB":  0.045 # amended
+CHARGE, DB801, " HAC":  0.032 # amended
+CHARGE, DB801, "HACA":  0.032 # amended
+CHARGE, DB801, " HAH":  0.037 # amended
+CHARGE, DB801, " HAI":  0.167 # amended
+CHARGE, DB801, " HAJ":  0.163 # amended
+CHARGE, DB801, " HAK":  0.166 # amended
+CHARGE, DB801, " HAL":  0.146 # amended
+CHARGE, DB801, " HAM":  0.066 # amended
+CHARGE, DB801, "HAMA":  0.066 # amended
+CHARGE, DB801, " HAN":  0.041 # amended
+CHARGE, DB801, "HANA":  0.041 # amended
+CHARGE, DB801, " HAO":  0.032 # amended
+CHARGE, DB801, "HAOA":  0.032 # amended
+CHARGE, DB801, "HAOB":  0.032 # amended
+CHARGE, DB801, " HAP":  0.037 # amended
+CHARGE, DB801, "HAPA":  0.037 # amended
+CHARGE, DB801, " HAQ":  0.037 # amended
+CHARGE, DB801, "HAQA":  0.037 # amended
+CHARGE, DB801, " HAR":  0.037 # amended
+CHARGE, DB801, "HARA":  0.037 # amended
+CHARGE, DB801, " HAS":  0.037 # amended
+CHARGE, DB801, "HASA":  0.037 # amended
+CHARGE, DB801, "HNAU":  0.442 # amended
+CHARGE, DB801, " H01":  0.048 # amended
+CHARGE, DB801, "H01A":  0.048 # amended
+CHARGE, DB801, "H01B":  0.048 # amended
+
+CHARGE, DB802, " CAA":  0.118 # amended
+CHARGE, DB802, " O02": -0.348 # amended
+CHARGE, DB802, " CAC":  0.164 # amended
+CHARGE, DB802, " NAD": -0.480 # amended
+CHARGE, DB802, "CL1 ": -0.114 # amended
+CHARGE, DB802, "CL2 ": -0.113 # amended
+CHARGE, DB802, " CAG":  0.298 # amended
+CHARGE, DB802, " CAH":  0.522 # amended
+CHARGE, DB802, " CAI": -0.105 # amended
+CHARGE, DB802, " CAJ": -0.166 # amended
+CHARGE, DB802, " CAK": -0.249 # amended
+CHARGE, DB802, " CAL": -0.045 # amended
+CHARGE, DB802, " CAM": -0.088 # amended
+CHARGE, DB802, " CAN":  0.131 # amended
+CHARGE, DB802, " CAO":  0.084 # amended
+CHARGE, DB802, " CAP":  0.142 # amended
+CHARGE, DB802, " CAQ":  0.142 # amended
+CHARGE, DB802, " CAR":  0.108 # amended
+CHARGE, DB802, " CAS":  0.108 # amended
+CHARGE, DB802, " NAT": -0.801 # amended
+CHARGE, DB802, " NAU": -0.519 # amended
+CHARGE, DB802, " OAV": -0.344 # amended
+CHARGE, DB802, " OAW": -0.341 # amended
+CHARGE, DB802, " CAX":  0.121 # amended
+CHARGE, DB802, " CAY": -0.037 # amended
+CHARGE, DB802, " CAZ": -0.031 # amended
+CHARGE, DB802, " CBA": -0.379 # amended
+CHARGE, DB802, " CBB":  0.217 # amended
+CHARGE, DB802, " CBC":  0.003 # amended
+CHARGE, DB802, " CBD":  0.083 # amended
+CHARGE, DB802, " CBE":  0.312 # amended
+CHARGE, DB802, " CBF":  0.466 # amended
+CHARGE, DB802, " CBG": -0.187 # amended
+CHARGE, DB802, " NBH": -0.732 # amended
+CHARGE, DB802, " NBI": -0.684 # amended
+CHARGE, DB802, " C01":  0.114 # amended
+CHARGE, DB802, " HAA":  0.034 # amended
+CHARGE, DB802, "HAAA":  0.034 # amended
+CHARGE, DB802, "HAAB":  0.034 # amended
+CHARGE, DB802, " HAC":  0.053 # amended
+CHARGE, DB802, "HACA":  0.053 # amended
+CHARGE, DB802, " HAH": -0.002 # amended
+CHARGE, DB802, " HAI":  0.144 # amended
+CHARGE, DB802, " HAJ":  0.156 # amended
+CHARGE, DB802, " HAK":  0.134 # amended
+CHARGE, DB802, " HAL":  0.167 # amended
+CHARGE, DB802, " HAM":  0.063 # amended
+CHARGE, DB802, "HAMA":  0.063 # amended
+CHARGE, DB802, " HAN":  0.041 # amended
+CHARGE, DB802, "HANA":  0.041 # amended
+CHARGE, DB802, " HAO":  0.102 # amended
+CHARGE, DB802, "HAOA":  0.102 # amended
+CHARGE, DB802, "HAOB":  0.102 # amended
+CHARGE, DB802, " HAP":  0.078 # amended
+CHARGE, DB802, "HAPA":  0.078 # amended
+CHARGE, DB802, " HAQ":  0.078 # amended
+CHARGE, DB802, "HAQA":  0.078 # amended
+CHARGE, DB802, " HAR":  0.106 # amended
+CHARGE, DB802, "HARA":  0.106 # amended
+CHARGE, DB802, " HAS":  0.106 # amended
+CHARGE, DB802, "HASA":  0.106 # amended
+#CHARGE, DB802, "HNAU": to_be_filled
+CHARGE, DB802, " H01":  0.043 # amended
+CHARGE, DB802, "H01A":  0.043 # amended
+CHARGE, DB802, "H01B":  0.043 # amended
+CHARGE, DB802, " H65":  0.444 # amended mg
+
+CHARGE, DB8+1, " CAA":  0.115 # amended
+CHARGE, DB8+1, " O02": -0.336 # amended
+CHARGE, DB8+1, " CAC":  0.171 # amended
+CHARGE, DB8+1, " NAD": -0.347 # amended
+CHARGE, DB8+1, "CL1 ": -0.051 # amended
+CHARGE, DB8+1, "CL2 ": -0.076 # amended
+CHARGE, DB8+1, " CAG":  0.241 # amended
+CHARGE, DB8+1, " CAH":  0.471 # amended
+CHARGE, DB8+1, " CAI": -0.094 # amended
+CHARGE, DB8+1, " CAJ": -0.147 # amended
+CHARGE, DB8+1, " CAK": -0.207 # amended
+CHARGE, DB8+1, " CAL": -0.110 # amended
+CHARGE, DB8+1, " CAM": -0.089 # amended
+CHARGE, DB8+1, " CAN":  0.131 # amended
+CHARGE, DB8+1, " CAO":  0.086 # amended
+CHARGE, DB8+1, " CAP":  0.143 # amended
+CHARGE, DB8+1, " CAQ":  0.143 # amended
+CHARGE, DB8+1, " CAR":  0.107 # amended
+CHARGE, DB8+1, " CAS":  0.107 # amended
+CHARGE, DB8+1, " NAT": -0.676 # amended
+CHARGE, DB8+1, " NAU": -0.656 # amended
+CHARGE, DB8+1, " OAV": -0.335 # amended
+CHARGE, DB8+1, " OAW": -0.331 # amended
+CHARGE, DB8+1, " CAX":  0.125 # amended
+CHARGE, DB8+1, " CAY": -0.001 # amended
+CHARGE, DB8+1, " CAZ": -0.019 # amended
+CHARGE, DB8+1, " CBA": -0.164 # amended
+CHARGE, DB8+1, " CBB":  0.151 # amended
+CHARGE, DB8+1, " CBC":  0.086 # amended
+CHARGE, DB8+1, " CBD":  0.103 # amended
+CHARGE, DB8+1, " CBE":  0.256 # amended
+CHARGE, DB8+1, " CBF":  0.433 # amended
+CHARGE, DB8+1, " CBG": -0.180 # amended
+CHARGE, DB8+1, " NBH": -0.739 # amended
+CHARGE, DB8+1, " NBI": -0.685 # amended
+CHARGE, DB8+1, " C01":  0.115 # amended
+CHARGE, DB8+1, " HAA":  0.046 # amended
+CHARGE, DB8+1, "HAAA":  0.046 # amended
+CHARGE, DB8+1, "HAAB":  0.046 # amended
+CHARGE, DB8+1, " HAC":  0.052 # amended
+CHARGE, DB8+1, "HACA":  0.052 # amended
+CHARGE, DB8+1, " HAH":  0.041 # amended
+CHARGE, DB8+1, " HAI":  0.169 # amended
+CHARGE, DB8+1, " HAJ":  0.164 # amended
+CHARGE, DB8+1, " HAK":  0.159 # amended
+CHARGE, DB8+1, " HAL":  0.152 # amended
+CHARGE, DB8+1, " HAM":  0.068 # amended
+CHARGE, DB8+1, "HAMA":  0.068 # amended
+CHARGE, DB8+1, " HAN":  0.046 # amended
+CHARGE, DB8+1, "HANA":  0.046 # amended
+CHARGE, DB8+1, " HAO":  0.106 # amended
+CHARGE, DB8+1, "HAOA":  0.106 # amended
+CHARGE, DB8+1, "HAOB":  0.106 # amended
+CHARGE, DB8+1, " HAP":  0.077 # amended
+CHARGE, DB8+1, "HAPA":  0.077 # amended
+CHARGE, DB8+1, " HAQ":  0.077 # amended
+CHARGE, DB8+1, "HAQA":  0.077 # amended
+CHARGE, DB8+1, " HAR":  0.111 # amended
+CHARGE, DB8+1, "HARA":  0.111 # amended
+CHARGE, DB8+1, " HAS":  0.111 # amended
+CHARGE, DB8+1, "HASA":  0.111 # amended
+CHARGE, DB8+1, "HNAU":  0.439 # amended
+CHARGE, DB8+1, " H01":  0.050 # amended
+CHARGE, DB8+1, "H01A":  0.050 # amended
+CHARGE, DB8+1, "H01B":  0.050 # amended
+CHARGE, DB8+1, " H66":  0.445 # amended mrg
+
+CHARGE, DB8+2, " CAA":  0.115 # amended
+CHARGE, DB8+2, " O02": -0.336 # amended
+CHARGE, DB8+2, " CAC":  0.112 # amended
+CHARGE, DB8+2, " NAD": -0.325 # amended
+CHARGE, DB8+2, "CL1 ": -0.047 # amended
+CHARGE, DB8+2, "CL2 ": -0.076 # amended
+CHARGE, DB8+2, " CAG":  0.226 # amended
+CHARGE, DB8+2, " CAH":  0.468 # amended
+CHARGE, DB8+2, " CAI": -0.082 # amended
+CHARGE, DB8+2, " CAJ": -0.176 # amended
+CHARGE, DB8+2, " CAK": -0.202 # amended
+CHARGE, DB8+2, " CAL": -0.099 # amended
+CHARGE, DB8+2, " CAM": -0.125 # amended
+CHARGE, DB8+2, " CAN":  0.136 # amended
+CHARGE, DB8+2, " CAO":  0.149 # amended
+CHARGE, DB8+2, " CAP":  0.113 # amended
+CHARGE, DB8+2, " CAQ":  0.113 # amended
+CHARGE, DB8+2, " CAR":  0.141 # amended
+CHARGE, DB8+2, " CAS":  0.141 # amended
+CHARGE, DB8+2, " NAT": -0.669 # amended
+CHARGE, DB8+2, " NAU": -0.691 # amended
+CHARGE, DB8+2, " OAV": -0.337 # amended
+CHARGE, DB8+2, " OAW": -0.328 # amended
+CHARGE, DB8+2, " CAX":  0.132 # amended
+CHARGE, DB8+2, " CAY": -0.015 # amended
+CHARGE, DB8+2, " CAZ": -0.030 # amended
+CHARGE, DB8+2, " CBA": -0.161 # amended
+CHARGE, DB8+2, " CBB":  0.181 # amended
+CHARGE, DB8+2, " CBC":  0.087 # amended
+CHARGE, DB8+2, " CBD":  0.089 # amended
+CHARGE, DB8+2, " CBE":  0.260 # amended
+CHARGE, DB8+2, " CBF":  0.426 # amended
+CHARGE, DB8+2, " CBG": -0.170 # amended
+CHARGE, DB8+2, " NBH": -0.694 # amended
+CHARGE, DB8+2, " NBI": -0.737 # amended
+CHARGE, DB8+2, " C01":  0.117 # amended
+CHARGE, DB8+2, " HAA":  0.048 # amended
+CHARGE, DB8+2, "HAAA":  0.048 # amended
+CHARGE, DB8+2, "HAAB":  0.048 # amended
+CHARGE, DB8+2, " HAC":  0.106 # amended
+CHARGE, DB8+2, "HACA":  0.106 # amended
+CHARGE, DB8+2, " HAH":  0.046 # amended
+CHARGE, DB8+2, " HAI":  0.170 # amended
+CHARGE, DB8+2, " HAJ":  0.158 # amended
+CHARGE, DB8+2, " HAK":  0.159 # amended
+CHARGE, DB8+2, " HAL":  0.164 # amended
+CHARGE, DB8+2, " HAM":  0.081 # amended
+CHARGE, DB8+2, "HAMA":  0.081 # amended
+CHARGE, DB8+2, " HAN":  0.054 # amended
+CHARGE, DB8+2, "HANA":  0.054 # amended
+CHARGE, DB8+2, " HAO":  0.059 # amended
+CHARGE, DB8+2, "HAOA":  0.059 # amended
+CHARGE, DB8+2, "HAOB":  0.059 # amended
+CHARGE, DB8+2, " HAP":  0.110 # amended
+CHARGE, DB8+2, "HAPA":  0.110 # amended
+CHARGE, DB8+2, " HAQ":  0.110 # amended
+CHARGE, DB8+2, "HAQA":  0.110 # amended
+CHARGE, DB8+2, " HAR":  0.076 # amended
+CHARGE, DB8+2, "HARA":  0.076 # amended
+CHARGE, DB8+2, " HAS":  0.076 # amended
+CHARGE, DB8+2, "HASA":  0.076 # amended
+CHARGE, DB8+2, "HNAU":  0.462 # amended
+CHARGE, DB8+2, " H01":  0.048 # amended
+CHARGE, DB8+2, "H01A":  0.048 # amended
+CHARGE, DB8+2, "H01B":  0.048 # amended
+CHARGE, DB8+2, " H66":  0.444 # amended mrg
+
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, DB801, " CAA": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " O02": 1.400,  1.520, 0.200 # amended
+RADIUS, DB801, " CAC": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " NAD": 1.500,  1.550, 0.160 # amended
+RADIUS, DB801, "CL1 ": 1.850,  1.700, 0.173 # amended
+RADIUS, DB801, "CL2 ": 1.850,  1.700, 0.173 # amended
+RADIUS, DB801, " CAG": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAH": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAI": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAJ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAK": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAL": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAM": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAN": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAO": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAP": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAQ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAR": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAS": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " NAT": 1.500,  1.550, 0.160 # amended
+RADIUS, DB801, " NAU": 1.500,  1.550, 0.160 # amended
+RADIUS, DB801, " OAV": 1.400,  1.520, 0.200 # amended
+RADIUS, DB801, " OAW": 1.400,  1.520, 0.200 # amended
+RADIUS, DB801, " CAX": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAY": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CAZ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CBA": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CBB": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CBC": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CBD": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CBE": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CBF": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " CBG": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " NBH": 1.500,  1.550, 0.160 # amended
+RADIUS, DB801, " NBI": 1.500,  1.550, 0.160 # amended
+RADIUS, DB801, " C01": 1.700,  1.700, 0.150 # amended
+RADIUS, DB801, " HAA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HAAA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HAAB": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAC": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HACA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAH": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAI": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAJ": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAK": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAL": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAM": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HAMA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAN": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HANA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAO": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HAOA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HAOB": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAP": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HAPA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAQ": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HAQA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAR": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HARA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " HAS": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HASA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "HNAU": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, " H01": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "H01A": 1.000,  1.000, 0.020 # amended
+RADIUS, DB801, "H01B": 1.000,  1.000, 0.020 # amended
+
+RADIUS, DB802, " CAA": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " O02": 1.400,  1.520, 0.200 # amended
+RADIUS, DB802, " CAC": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " NAD": 1.500,  1.550, 0.160 # amended
+RADIUS, DB802, "CL1 ": 1.850,  1.700, 0.173 # amended
+RADIUS, DB802, "CL2 ": 1.850,  1.700, 0.173 # amended
+RADIUS, DB802, " CAG": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAH": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAI": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAJ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAK": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAL": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAM": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAN": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAO": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAP": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAQ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAR": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAS": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " NAT": 1.500,  1.550, 0.160 # amended
+RADIUS, DB802, " NAU": 1.500,  1.550, 0.160 # amended
+RADIUS, DB802, " OAV": 1.400,  1.520, 0.200 # amended
+RADIUS, DB802, " OAW": 1.400,  1.520, 0.200 # amended
+RADIUS, DB802, " CAX": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAY": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CAZ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CBA": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CBB": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CBC": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CBD": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CBE": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CBF": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " CBG": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " NBH": 1.500,  1.550, 0.160 # amended
+RADIUS, DB802, " NBI": 1.500,  1.550, 0.160 # amended
+RADIUS, DB802, " C01": 1.700,  1.700, 0.150 # amended
+RADIUS, DB802, " HAA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HAAA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HAAB": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAC": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HACA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAH": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAI": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAJ": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAK": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAL": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAM": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HAMA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAN": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HANA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAO": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HAOA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HAOB": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAP": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HAPA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAQ": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HAQA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAR": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HARA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " HAS": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HASA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "HNAU": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " H01": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "H01A": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, "H01B": 1.000,  1.000, 0.020 # amended
+RADIUS, DB802, " H65": 1.000,  1.000, 0.020 # amended
+
+RADIUS, DB8+1, " CAA": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " O02": 1.400,  1.520, 0.200 # amended
+RADIUS, DB8+1, " CAC": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " NAD": 1.500,  1.550, 0.160 # amended
+RADIUS, DB8+1, "CL1 ": 1.850,  1.700, 0.173 # amended
+RADIUS, DB8+1, "CL2 ": 1.850,  1.700, 0.173 # amended
+RADIUS, DB8+1, " CAG": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAH": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAI": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAJ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAK": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAL": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAM": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAN": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAO": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAP": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAQ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAR": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAS": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " NAT": 1.500,  1.550, 0.160 # amended
+RADIUS, DB8+1, " NAU": 1.500,  1.550, 0.160 # amended
+RADIUS, DB8+1, " OAV": 1.400,  1.520, 0.200 # amended
+RADIUS, DB8+1, " OAW": 1.400,  1.520, 0.200 # amended
+RADIUS, DB8+1, " CAX": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAY": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CAZ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CBA": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CBB": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CBC": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CBD": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CBE": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CBF": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " CBG": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " NBH": 1.500,  1.550, 0.160 # amended
+RADIUS, DB8+1, " NBI": 1.500,  1.550, 0.160 # amended
+RADIUS, DB8+1, " C01": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+1, " HAA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HAAA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HAAB": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAC": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HACA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAH": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAI": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAJ": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAK": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAL": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAM": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HAMA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAN": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HANA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAO": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HAOA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HAOB": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAP": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HAPA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAQ": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HAQA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAR": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HARA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " HAS": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HASA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "HNAU": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " H01": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "H01A": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, "H01B": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+1, " H66": 1.000,  1.000, 0.020 # amended mrg
+
+RADIUS, DB8+2, " CAA": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " O02": 1.400,  1.520, 0.200 # amended
+RADIUS, DB8+2, " CAC": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " NAD": 1.500,  1.550, 0.160 # amended
+RADIUS, DB8+2, "CL1 ": 1.850,  1.700, 0.173 # amended
+RADIUS, DB8+2, "CL2 ": 1.850,  1.700, 0.173 # amended
+RADIUS, DB8+2, " CAG": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAH": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAI": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAJ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAK": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAL": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAM": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAN": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAO": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAP": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAQ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAR": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAS": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " NAT": 1.500,  1.550, 0.160 # amended
+RADIUS, DB8+2, " NAU": 1.500,  1.550, 0.160 # amended
+RADIUS, DB8+2, " OAV": 1.400,  1.520, 0.200 # amended
+RADIUS, DB8+2, " OAW": 1.400,  1.520, 0.200 # amended
+RADIUS, DB8+2, " CAX": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAY": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CAZ": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CBA": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CBB": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CBC": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CBD": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CBE": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CBF": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " CBG": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " NBH": 1.500,  1.550, 0.160 # amended
+RADIUS, DB8+2, " NBI": 1.500,  1.550, 0.160 # amended
+RADIUS, DB8+2, " C01": 1.700,  1.700, 0.150 # amended
+RADIUS, DB8+2, " HAA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HAAA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HAAB": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAC": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HACA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAH": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAI": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAJ": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAK": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAL": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAM": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HAMA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAN": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HANA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAO": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HAOA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HAOB": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAP": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HAPA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAQ": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HAQA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAR": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HARA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " HAS": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HASA": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "HNAU": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " H01": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "H01A": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, "H01B": 1.000,  1.000, 0.020 # amended
+RADIUS, DB8+2, " H66": 1.000,  1.000, 0.020 # amended mrg
+
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, DB801:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-9.284,  rxn08=-4.157 
+CONFORMER, DB802:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-23.729, rxn08=-10.987 
+CONFORMER, DB8+1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-21.902, rxn08=-10.154
+CONFORMER, DB8+2:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-21.560, rxn08=-9.980 

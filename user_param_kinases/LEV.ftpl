@@ -1,0 +1,465 @@
+# Conformer definition
+CONFLIST, LEV: LEVBK, LEV01, LEV-1, LEV-2
+#CONFLIST, LEV: LEVBK, LEV01, LEV-1, LEV-2, LEVDM
+
+# ATOM name and bonds
+CONNECT, " C1 ", LEV01:  sp3, " O2 "," H1 "," H2 "," H3 "
+CONNECT, " O2 ", LEV01:  sp2, " C1 "," C3 "
+CONNECT, " C3 ", LEV01:  sp2, " O2 "," C4 "," C12"
+CONNECT, " C4 ", LEV01:  sp2, " C3 "," C5 "," H4 "
+CONNECT, " C5 ", LEV01:  sp2, " C4 "," N6 "," C10"
+CONNECT, " N6 ", LEV01:  sp2, " C5 "," C7 "
+CONNECT, " C7 ", LEV01:  sp2, " N6 "," C8 "," H5 "
+CONNECT, " C8 ", LEV01:  sp2, " C7 "," C9 "," H6 "
+CONNECT, " C9 ", LEV01:  sp2, " C8 "," C10"," O16"
+CONNECT, " C10", LEV01:  sp2, " C5 "," C9 "," C11"
+CONNECT, " C11", LEV01:  sp2, " C10"," C12"," H7 "
+CONNECT, " C12", LEV01:  sp2, " C3 "," C11"," C13"
+CONNECT, " C13", LEV01:  sp2, " C12"," O14"," N15"
+CONNECT, " O14", LEV01:  sp3, " C13"
+CONNECT, " N15", LEV01:  sp2, " C13"," H8 "," H9 "
+CONNECT, " O16", LEV01:  sp2, " C9 "," C17"
+CONNECT, " C17", LEV01:  sp2, " O16"," C18"," C22"
+CONNECT, " C18", LEV01:  sp2, " C17"," C19"," H10"
+CONNECT, " C19", LEV01:  sp2, " C18"," C20","CL  "
+CONNECT, " C20", LEV01:  sp2, " C19"," C21"," N23"
+CONNECT, " C21", LEV01:  sp2, " C20"," C22"," H11"
+CONNECT, " C22", LEV01:  sp2, " C17"," C21"," H12"
+CONNECT, " N23", LEV01:  sp2, " C20"," C24"," H13"
+CONNECT, " C24", LEV01:  sp2, " N23"," O25"," N26"
+CONNECT, " O25", LEV01:  sp3, " C24"
+CONNECT, " N26", LEV01:  sp2, " C24"," C27"," H14"
+CONNECT, " C27", LEV01:  sp3, " N26"," C28"," C29"," H15"
+CONNECT, " C28", LEV01:  sp3, " C27"," C29"," H16"," H17"
+CONNECT, " C29", LEV01:  sp3, " C27"," C28"," H18"," H19"
+CONNECT, "CL  ", LEV01:     , " C19"
+CONNECT, " H1 ", LEV01:    s, " C1 "
+CONNECT, " H2 ", LEV01:    s, " C1 "
+CONNECT, " H3 ", LEV01:    s, " C1 "
+CONNECT, " H4 ", LEV01:    s, " C4 "
+CONNECT, " H5 ", LEV01:    s, " C7 "
+CONNECT, " H6 ", LEV01:    s, " C8 "
+CONNECT, " H7 ", LEV01:    s, " C11"
+CONNECT, " H8 ", LEV01:    s, " N15"
+CONNECT, " H9 ", LEV01:    s, " N15"
+CONNECT, " H10", LEV01:    s, " C18"
+CONNECT, " H11", LEV01:    s, " C21"
+CONNECT, " H12", LEV01:    s, " C22"
+CONNECT, " H13", LEV01:    s, " N23"
+CONNECT, " H14", LEV01:    s, " N26"
+CONNECT, " H15", LEV01:    s, " C27"
+CONNECT, " H16", LEV01:    s, " C28"
+CONNECT, " H17", LEV01:    s, " C28"
+CONNECT, " H18", LEV01:    s, " C29"
+CONNECT, " H19", LEV01:    s, " C29"
+
+CONNECT, " C1 ", LEV-1:  sp3, " O2 "," H1 "," H2 "," H3 "
+CONNECT, " O2 ", LEV-1:  sp2, " C1 "," C3 "
+CONNECT, " C3 ", LEV-1:  sp2, " O2 "," C4 "," C12"
+CONNECT, " C4 ", LEV-1:  sp2, " C3 "," C5 "," H4 "
+CONNECT, " C5 ", LEV-1:  sp2, " C4 "," N6 "," C10"
+CONNECT, " N6 ", LEV-1:  sp2, " C5 "," C7 "
+CONNECT, " C7 ", LEV-1:  sp2, " N6 "," C8 "," H5 "
+CONNECT, " C8 ", LEV-1:  sp2, " C7 "," C9 "," H6 "
+CONNECT, " C9 ", LEV-1:  sp2, " C8 "," C10"," O16"
+CONNECT, " C10", LEV-1:  sp2, " C5 "," C9 "," C11"
+CONNECT, " C11", LEV-1:  sp2, " C10"," C12"," H7 "
+CONNECT, " C12", LEV-1:  sp2, " C3 "," C11"," C13"
+CONNECT, " C13", LEV-1:  sp2, " C12"," O14"," N15"
+CONNECT, " O14", LEV-1:  sp3, " C13"
+CONNECT, " N15", LEV-1:  sp2, " C13"," H8 "," H9 "
+CONNECT, " O16", LEV-1:  sp2, " C9 "," C17"
+CONNECT, " C17", LEV-1:  sp2, " O16"," C18"," C22"
+CONNECT, " C18", LEV-1:  sp2, " C17"," C19"," H10"
+CONNECT, " C19", LEV-1:  sp2, " C18"," C20","CL  "
+CONNECT, " C20", LEV-1:  sp2, " C19"," C21"," N23"
+CONNECT, " C21", LEV-1:  sp2, " C20"," C22"," H11"
+CONNECT, " C22", LEV-1:  sp2, " C17"," C21"," H12"
+CONNECT, " N23", LEV-1:  sp2, " C20"," C24"," H13"
+CONNECT, " C24", LEV-1:  sp2, " N23"," O25"," N26"
+CONNECT, " O25", LEV-1:  sp3, " C24"
+CONNECT, " N26", LEV-1:  sp2, " C24"," C27"," H14"
+CONNECT, " C27", LEV-1:  sp3, " N26"," C28"," C29"," H15"
+CONNECT, " C28", LEV-1:  sp3, " C27"," C29"," H16"," H17"
+CONNECT, " C29", LEV-1:  sp3, " C27"," C28"," H18"," H19"
+CONNECT, "CL  ", LEV-1:     , " C19"
+CONNECT, " H1 ", LEV-1:    s, " C1 "
+CONNECT, " H2 ", LEV-1:    s, " C1 "
+CONNECT, " H3 ", LEV-1:    s, " C1 "
+CONNECT, " H4 ", LEV-1:    s, " C4 "
+CONNECT, " H5 ", LEV-1:    s, " C7 "
+CONNECT, " H6 ", LEV-1:    s, " C8 "
+CONNECT, " H7 ", LEV-1:    s, " C11"
+CONNECT, " H8 ", LEV-1:    s, " N15"
+CONNECT, " H9 ", LEV-1:    s, " N15"
+CONNECT, " H10", LEV-1:    s, " C18"
+CONNECT, " H11", LEV-1:    s, " C21"
+CONNECT, " H12", LEV-1:    s, " C22"
+CONNECT, " H13", LEV-1:    s, " N23"
+CONNECT, " H14", LEV-1:    s, " N26"
+CONNECT, " H15", LEV-1:    s, " C27"
+CONNECT, " H16", LEV-1:    s, " C28"
+CONNECT, " H17", LEV-1:    s, " C28"
+CONNECT, " H18", LEV-1:    s, " C29"
+CONNECT, " H19", LEV-1:    s, " C29"
+
+CONNECT, " C1 ", LEV-2:  sp3, " O2 "," H1 "," H2 "," H3 "
+CONNECT, " O2 ", LEV-2:  sp2, " C1 "," C3 "
+CONNECT, " C3 ", LEV-2:  sp2, " O2 "," C4 "," C12"
+CONNECT, " C4 ", LEV-2:  sp2, " C3 "," C5 "," H4 "
+CONNECT, " C5 ", LEV-2:  sp2, " C4 "," N6 "," C10"
+CONNECT, " N6 ", LEV-2:  sp2, " C5 "," C7 "
+CONNECT, " C7 ", LEV-2:  sp2, " N6 "," C8 "," H5 "
+CONNECT, " C8 ", LEV-2:  sp2, " C7 "," C9 "," H6 "
+CONNECT, " C9 ", LEV-2:  sp2, " C8 "," C10"," O16"
+CONNECT, " C10", LEV-2:  sp2, " C5 "," C9 "," C11"
+CONNECT, " C11", LEV-2:  sp2, " C10"," C12"," H7 "
+CONNECT, " C12", LEV-2:  sp2, " C3 "," C11"," C13"
+CONNECT, " C13", LEV-2:  sp2, " C12"," O14"," N15"
+CONNECT, " O14", LEV-2:  sp3, " C13"
+CONNECT, " N15", LEV-2:  sp2, " C13"," H8 "," H9 "
+CONNECT, " O16", LEV-2:  sp2, " C9 "," C17"
+CONNECT, " C17", LEV-2:  sp2, " O16"," C18"," C22"
+CONNECT, " C18", LEV-2:  sp2, " C17"," C19"," H10"
+CONNECT, " C19", LEV-2:  sp2, " C18"," C20","CL  "
+CONNECT, " C20", LEV-2:  sp2, " C19"," C21"," N23"
+CONNECT, " C21", LEV-2:  sp2, " C20"," C22"," H11"
+CONNECT, " C22", LEV-2:  sp2, " C17"," C21"," H12"
+CONNECT, " N23", LEV-2:  sp2, " C20"," C24"," H13"
+CONNECT, " C24", LEV-2:  sp2, " N23"," O25"," N26"
+CONNECT, " O25", LEV-2:  sp3, " C24"
+CONNECT, " N26", LEV-2:  sp2, " C24"," C27"," H14"
+CONNECT, " C27", LEV-2:  sp3, " N26"," C28"," C29"," H15"
+CONNECT, " C28", LEV-2:  sp3, " C27"," C29"," H16"," H17"
+CONNECT, " C29", LEV-2:  sp3, " C27"," C28"," H18"," H19"
+CONNECT, "CL  ", LEV-2:     , " C19"
+CONNECT, " H1 ", LEV-2:    s, " C1 "
+CONNECT, " H2 ", LEV-2:    s, " C1 "
+CONNECT, " H3 ", LEV-2:    s, " C1 "
+CONNECT, " H4 ", LEV-2:    s, " C4 "
+CONNECT, " H5 ", LEV-2:    s, " C7 "
+CONNECT, " H6 ", LEV-2:    s, " C8 "
+CONNECT, " H7 ", LEV-2:    s, " C11"
+CONNECT, " H8 ", LEV-2:    s, " N15"
+CONNECT, " H9 ", LEV-2:    s, " N15"
+CONNECT, " H10", LEV-2:    s, " C18"
+CONNECT, " H11", LEV-2:    s, " C21"
+CONNECT, " H12", LEV-2:    s, " C22"
+CONNECT, " H13", LEV-2:    s, " N23"
+CONNECT, " H14", LEV-2:    s, " N26"
+CONNECT, " H15", LEV-2:    s, " C27"
+CONNECT, " H16", LEV-2:    s, " C28"
+CONNECT, " H17", LEV-2:    s, " C28"
+CONNECT, " H18", LEV-2:    s, " C29"
+CONNECT, " H19", LEV-2:    s, " C29"
+
+
+# ATOM charges
+CHARGE, LEV01, " C1 ":  0.114 # amended
+CHARGE, LEV01, " O2 ": -0.354 # amended
+CHARGE, LEV01, " C3 ":  0.135 # amended
+CHARGE, LEV01, " C4 ": -0.197 # amended
+CHARGE, LEV01, " C5 ":  0.431 # amended
+CHARGE, LEV01, " N6 ": -0.679 # amended
+CHARGE, LEV01, " C7 ":  0.451 # amended
+CHARGE, LEV01, " C8 ": -0.333 # amended
+CHARGE, LEV01, " C9 ":  0.174 # amended
+CHARGE, LEV01, " C10": -0.174 # amended
+CHARGE, LEV01, " C11": -0.044 # amended
+CHARGE, LEV01, " C12": -0.157 # amended
+CHARGE, LEV01, " C13":  0.683 # amended
+CHARGE, LEV01, " O14": -0.605 # amended
+CHARGE, LEV01, " N15": -0.664 # amended
+CHARGE, LEV01, " O16": -0.239 # amended
+CHARGE, LEV01, " C17":  0.040 # amended
+CHARGE, LEV01, " C18": -0.091 # amended
+CHARGE, LEV01, " C19": -0.048 # amended
+CHARGE, LEV01, " C20":  0.110 # amended
+CHARGE, LEV01, " C21": -0.150 # amended
+CHARGE, LEV01, " C22": -0.093 # amended
+CHARGE, LEV01, " N23": -0.478 # amended
+CHARGE, LEV01, " C24":  0.776 # amended
+CHARGE, LEV01, " O25": -0.608 # amended
+CHARGE, LEV01, " N26": -0.528 # amended
+CHARGE, LEV01, " C27":  0.050 # amended
+CHARGE, LEV01, " C28": -0.146 # amended
+CHARGE, LEV01, " C29": -0.146 # amended
+CHARGE, LEV01, "CL  ": -0.095 # amended
+CHARGE, LEV01, " H1 ":  0.049 # amended
+CHARGE, LEV01, " H2 ":  0.049 # amended
+CHARGE, LEV01, " H3 ":  0.049 # amended
+CHARGE, LEV01, " H4 ":  0.168 # amended
+CHARGE, LEV01, " H5 ":  0.027 # amended
+CHARGE, LEV01, " H6 ":  0.161 # amended
+CHARGE, LEV01, " H7 ":  0.162 # amended
+CHARGE, LEV01, " H8 ":  0.315 # amended
+CHARGE, LEV01, " H9 ":  0.315 # amended
+CHARGE, LEV01, " H10":  0.166 # amended
+CHARGE, LEV01, " H11":  0.190 # amended
+CHARGE, LEV01, " H12":  0.160 # amended
+CHARGE, LEV01, " H13":  0.327 # amended
+CHARGE, LEV01, " H14":  0.299 # amended
+CHARGE, LEV01, " H15":  0.112 # amended
+CHARGE, LEV01, " H16":  0.079 # amended
+CHARGE, LEV01, " H17":  0.079 # amended
+CHARGE, LEV01, " H18":  0.079 # amended
+CHARGE, LEV01, " H19":  0.079 # amended
+
+CHARGE, LEV-1, " C1 ":  0.124 # amended
+CHARGE, LEV-1, " O2 ": -0.345 # amended
+CHARGE, LEV-1, " C3 ":  0.126 # amended
+CHARGE, LEV-1, " C4 ": -0.228 # amended
+CHARGE, LEV-1, " C5 ":  0.394 # amended
+CHARGE, LEV-1, " N6 ": -0.681 # amended
+CHARGE, LEV-1, " C7 ":  0.411 # amended
+CHARGE, LEV-1, " C8 ": -0.354 # amended
+CHARGE, LEV-1, " C9 ":  0.164 # amended
+CHARGE, LEV-1, " C10": -0.155 # amended
+CHARGE, LEV-1, " C11": -0.092 # amended
+CHARGE, LEV-1, " C12": -0.183 # amended
+CHARGE, LEV-1, " C13":  0.930 # amended
+CHARGE, LEV-1, " O14": -0.846 # amended
+CHARGE, LEV-1, " N15": -1.024 # amended
+CHARGE, LEV-1, " O16": -0.233 # amended
+CHARGE, LEV-1, " C17":  0.076 # amended
+CHARGE, LEV-1, " C18": -0.098 # amended
+CHARGE, LEV-1, " C19": -0.039 # amended
+CHARGE, LEV-1, " C20":  0.086 # amended
+CHARGE, LEV-1, " C21": -0.149 # amended
+CHARGE, LEV-1, " C22": -0.100 # amended
+CHARGE, LEV-1, " N23": -0.478 # amended
+CHARGE, LEV-1, " C24":  0.776 # amended
+CHARGE, LEV-1, " O25": -0.613 # amended
+CHARGE, LEV-1, " N26": -0.534 # amended
+CHARGE, LEV-1, " C27":  0.058 # amended
+CHARGE, LEV-1, " C28": -0.150 # amended
+CHARGE, LEV-1, " C29": -0.150 # amended
+CHARGE, LEV-1, "CL  ": -0.113 # amended
+CHARGE, LEV-1, " H1 ":  0.036 # amended
+CHARGE, LEV-1, " H2 ":  0.036 # amended
+CHARGE, LEV-1, " H3 ":  0.036 # amended
+CHARGE, LEV-1, " H4 ":  0.142 # amended
+CHARGE, LEV-1, " H5 ":  0.003 # amended
+CHARGE, LEV-1, " H6 ":  0.139 # amended
+CHARGE, LEV-1, " H7 ":  0.159 # amended
+#CHARGE, LEV-1, " H8 ": to_be_filled
+
+CHARGE, LEV-1, " H9 ":  0.326 # amended
+CHARGE, LEV-1, " H10":  0.170 # amended
+CHARGE, LEV-1, " H11":  0.181 # amended
+CHARGE, LEV-1, " H12":  0.163 # amended
+CHARGE, LEV-1, " H13":  0.324 # amended
+CHARGE, LEV-1, " H14":  0.295 # amended
+CHARGE, LEV-1, " H15":  0.110 # amended
+CHARGE, LEV-1, " H16":  0.075 # amended
+CHARGE, LEV-1, " H17":  0.075 # amended
+CHARGE, LEV-1, " H18":  0.075 # amended
+CHARGE, LEV-1, " H19":  0.075 # amended
+
+CHARGE, LEV-2, " C1 ":  0.124 # amended
+CHARGE, LEV-2, " O2 ": -0.330 # amended
+CHARGE, LEV-2, " C3 ":  0.142 # amended
+CHARGE, LEV-2, " C4 ": -0.230 # amended
+CHARGE, LEV-2, " C5 ":  0.396 # amended
+CHARGE, LEV-2, " N6 ": -0.680 # amended
+CHARGE, LEV-2, " C7 ":  0.411 # amended
+CHARGE, LEV-2, " C8 ": -0.353 # amended
+CHARGE, LEV-2, " C9 ":  0.164 # amended
+CHARGE, LEV-2, " C10": -0.153 # amended
+CHARGE, LEV-2, " C11": -0.098 # amended
+CHARGE, LEV-2, " C12": -0.086 # amended
+CHARGE, LEV-2, " C13":  0.888 # amended
+CHARGE, LEV-2, " O14": -0.909 # amended
+CHARGE, LEV-2, " N15": -1.036 # amended
+CHARGE, LEV-2, " O16": -0.234 # amended
+CHARGE, LEV-2, " C17":  0.075 # amended
+CHARGE, LEV-2, " C18": -0.095 # amended
+CHARGE, LEV-2, " C19": -0.040 # amended
+CHARGE, LEV-2, " C20":  0.083 # amended
+CHARGE, LEV-2, " C21": -0.150 # amended
+CHARGE, LEV-2, " C22": -0.101 # amended
+CHARGE, LEV-2, " N23": -0.478 # amended
+CHARGE, LEV-2, " C24":  0.777 # amended
+CHARGE, LEV-2, " O25": -0.611 # amended
+CHARGE, LEV-2, " N26": -0.535 # amended
+CHARGE, LEV-2, " C27":  0.058 # amended
+CHARGE, LEV-2, " C28": -0.150 # amended
+CHARGE, LEV-2, " C29": -0.150 # amended
+CHARGE, LEV-2, "CL  ": -0.115 # amended
+CHARGE, LEV-2, " H1 ":  0.034 # amended
+CHARGE, LEV-2, " H2 ":  0.034 # amended
+CHARGE, LEV-2, " H3 ":  0.034 # amended
+CHARGE, LEV-2, " H4 ":  0.141 # amended
+CHARGE, LEV-2, " H5 ":  0.002 # amended
+CHARGE, LEV-2, " H6 ":  0.139 # amended
+CHARGE, LEV-2, " H7 ":  0.158 # amended
+CHARGE, LEV-2, " H8 ":  0.331 # amended
+#CHARGE, LEV-2, " H9 ": to_be_filled
+CHARGE, LEV-2, " H10":  0.172 # amended
+CHARGE, LEV-2, " H11":  0.181 # amended
+CHARGE, LEV-2, " H12":  0.163 # amended
+CHARGE, LEV-2, " H13":  0.324 # amended
+CHARGE, LEV-2, " H14":  0.293 # amended
+CHARGE, LEV-2, " H15":  0.110 # amended
+CHARGE, LEV-2, " H16":  0.075 # amended
+CHARGE, LEV-2, " H17":  0.075 # amended
+CHARGE, LEV-2, " H18":  0.075 # amended
+CHARGE, LEV-2, " H19":  0.075 # amended
+
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, LEV01, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " O2 ": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV01, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " N6 ": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV01, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " O14": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV01, " N15": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV01, " O16": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV01, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " N23": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV01, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " O25": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV01, " N26": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV01, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, " C29": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV01, "CL  ": 1.850,  1.700, 0.173 # amended
+RADIUS, LEV01, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H4 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV01, " H19": 1.000,  1.000, 0.020 # amended
+
+RADIUS, LEV-1, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " O2 ": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV-1, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " N6 ": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV-1, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " O14": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV-1, " N15": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV-1, " O16": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV-1, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " N23": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV-1, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " O25": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV-1, " N26": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV-1, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, " C29": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-1, "CL  ": 1.850,  1.700, 0.173 # amended
+RADIUS, LEV-1, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H4 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-1, " H19": 1.000,  1.000, 0.020 # amended
+
+RADIUS, LEV-2, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " O2 ": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV-2, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " N6 ": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV-2, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " O14": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV-2, " N15": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV-2, " O16": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV-2, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " N23": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV-2, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " O25": 1.400,  1.520, 0.200 # amended
+RADIUS, LEV-2, " N26": 1.500,  1.550, 0.160 # amended
+RADIUS, LEV-2, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, " C29": 1.700,  1.700, 0.150 # amended
+RADIUS, LEV-2, "CL  ": 1.850,  1.700, 0.173 # amended
+RADIUS, LEV-2, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H4 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, LEV-2, " H19": 1.000,  1.000, 0.020 # amended
+
+
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, LEV01:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-10.566, rxn08=-4.801
+CONFORMER, LEV-1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-25.476, rxn08=-11.871 
+CONFORMER, LEV-2:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-24.916, rxn08=-11.614 

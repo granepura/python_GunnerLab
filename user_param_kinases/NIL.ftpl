@@ -1,0 +1,576 @@
+# Conformer definition
+CONFLIST, NIL: NILBK, NIL01, NIL+1, NIL+2
+#CONFLIST, NIL: NILBK, NIL01, NIL+1, NIL+2, NILDM
+
+# ATOM name and bonds
+CONNECT, " O17", NIL01:  sp3, " C16"
+CONNECT, " C16", NIL01:  sp2, " O17"," N14"," C18"
+CONNECT, " N14", NIL01:  sp2, " C16"," C11","HN14"
+CONNECT, " C11", NIL01:  sp2, " N14"," C9 "," C12"
+CONNECT, " C9 ", NIL01:  sp2, " C11"," C8 "," H9 "
+CONNECT, " C8 ", NIL01:  sp2, " C9 "," N51"," C6 "
+CONNECT, " N51", NIL01:  sp2, " C8 "," C56"," C52"
+CONNECT, " C56", NIL01:  sp3, " N51"," C55"," H56"
+CONNECT, " C55", NIL01:  sp2, " C56"," C58"," N54"
+CONNECT, " C58", NIL01:  sp3, " C55"," H58","H58A","H58B"
+CONNECT, " N54", NIL01:  sp3, " C55"," C52"
+CONNECT, " C52", NIL01:  sp3, " N51"," N54"," H52"
+CONNECT, " C6 ", NIL01:  sp2, " C8 "," C5 "," H6 "
+CONNECT, " C12", NIL01:  sp2, " C11"," C5 "," H12"
+CONNECT, " C5 ", NIL01:  sp2, " C6 "," C12"," C2 "
+CONNECT, " C2 ", NIL01:  sp3, " C5 "," F4 "," F3 "," F1 "
+CONNECT, " F4 ", NIL01:     , " C2 "
+CONNECT, " F3 ", NIL01:     , " C2 "
+CONNECT, " F1 ", NIL01:     , " C2 "
+CONNECT, " C18", NIL01:  sp2, " C16"," C25"," C19"
+CONNECT, " C25", NIL01:  sp2, " C18"," C23"," H25"
+CONNECT, " C23", NIL01:  sp2, " C25"," C22"," H23"
+CONNECT, " C22", NIL01:  sp2, " C23"," C27"," C21"
+CONNECT, " C27", NIL01:  sp3, " C22"," H27","H27A","H27B"
+CONNECT, " C21", NIL01:  sp2, " C22"," C19"," N31"
+CONNECT, " C19", NIL01:  sp2, " C18"," C21"," H19"
+CONNECT, " N31", NIL01:  sp2, " C21"," C33","HN31"
+CONNECT, " C33", NIL01:  sp2, " N31"," N40"," N34"
+CONNECT, " N40", NIL01:  sp2, " C33"," C38"
+CONNECT, " C38", NIL01:  sp2, " N40"," C36"," H38"
+CONNECT, " C36", NIL01:  sp2, " C38"," C35"," H36"
+CONNECT, " C35", NIL01:  sp2, " C36"," N34"," C41"
+CONNECT, " N34", NIL01:  sp2, " C33"," C35"
+CONNECT, " C41", NIL01:  sp2, " C35"," C49"," C42"
+CONNECT, " C49", NIL01:  sp2, " C41"," C47"," H49"
+CONNECT, " C47", NIL01:  sp2, " C49"," C45"," H47"
+CONNECT, " C45", NIL01:  sp2, " C47"," N44"," H45"
+CONNECT, " N44", NIL01:  sp2, " C45"," C42"
+CONNECT, " C42", NIL01:  sp2, " C41"," N44"," H42"
+CONNECT, "HN14", NIL01:    s, " N14"
+CONNECT, " H9 ", NIL01:    s, " C9 "
+CONNECT, " H56", NIL01:    s, " C56"
+CONNECT, " H58", NIL01:    s, " C58"
+CONNECT, "H58A", NIL01:    s, " C58"
+CONNECT, "H58B", NIL01:    s, " C58"
+CONNECT, " H52", NIL01:    s, " C52"
+CONNECT, " H6 ", NIL01:    s, " C6 "
+CONNECT, " H12", NIL01:    s, " C12"
+CONNECT, " H25", NIL01:    s, " C25"
+CONNECT, " H23", NIL01:    s, " C23"
+CONNECT, " H27", NIL01:    s, " C27"
+CONNECT, "H27A", NIL01:    s, " C27"
+CONNECT, "H27B", NIL01:    s, " C27"
+CONNECT, " H19", NIL01:    s, " C19"
+CONNECT, "HN31", NIL01:    s, " N31"
+CONNECT, " H38", NIL01:    s, " C38"
+CONNECT, " H36", NIL01:    s, " C36"
+CONNECT, " H49", NIL01:    s, " C49"
+CONNECT, " H47", NIL01:    s, " C47"
+CONNECT, " H45", NIL01:    s, " C45"
+CONNECT, " H42", NIL01:    s, " C42"
+
+CONNECT, " O17", NIL+1:  sp3, " C16"
+CONNECT, " C16", NIL+1:  sp2, " O17"," N14"," C18"
+CONNECT, " N14", NIL+1:  sp2, " C16"," C11","HN14"
+CONNECT, " C11", NIL+1:  sp2, " N14"," C9 "," C12"
+CONNECT, " C9 ", NIL+1:  sp2, " C11"," C8 "," H9 "
+CONNECT, " C8 ", NIL+1:  sp2, " C9 "," N51"," C6 "
+CONNECT, " N51", NIL+1:  sp2, " C8 "," C56"," C52"
+CONNECT, " C56", NIL+1:  sp3, " N51"," C55"," H56"
+CONNECT, " C55", NIL+1:  sp2, " C56"," C58"," N54"
+CONNECT, " C58", NIL+1:  sp3, " C55"," H58","H58A","H58B"
+CONNECT, " N54", NIL+1:  sp3, " C55"," C52"," H62"
+CONNECT, " C52", NIL+1:  sp3, " N51"," N54"," H52"
+CONNECT, " C6 ", NIL+1:  sp2, " C8 "," C5 "," H6 "
+CONNECT, " C12", NIL+1:  sp2, " C11"," C5 "," H12"
+CONNECT, " C5 ", NIL+1:  sp2, " C6 "," C12"," C2 "
+CONNECT, " C2 ", NIL+1:  sp3, " C5 "," F4 "," F3 "," F1 "
+CONNECT, " F4 ", NIL+1:     , " C2 "
+CONNECT, " F3 ", NIL+1:     , " C2 "
+CONNECT, " F1 ", NIL+1:     , " C2 "
+CONNECT, " C18", NIL+1:  sp2, " C16"," C25"," C19"
+CONNECT, " C25", NIL+1:  sp2, " C18"," C23"," H25"
+CONNECT, " C23", NIL+1:  sp2, " C25"," C22"," H23"
+CONNECT, " C22", NIL+1:  sp2, " C23"," C27"," C21"
+CONNECT, " C27", NIL+1:  sp3, " C22"," H27","H27A","H27B"
+CONNECT, " C21", NIL+1:  sp2, " C22"," C19"," N31"
+CONNECT, " C19", NIL+1:  sp2, " C18"," C21"," H19"
+CONNECT, " N31", NIL+1:  sp2, " C21"," C33","HN31"
+CONNECT, " C33", NIL+1:  sp2, " N31"," N40"," N34"
+CONNECT, " N40", NIL+1:  sp2, " C33"," C38"
+CONNECT, " C38", NIL+1:  sp2, " N40"," C36"," H38"
+CONNECT, " C36", NIL+1:  sp2, " C38"," C35"," H36"
+CONNECT, " C35", NIL+1:  sp2, " C36"," N34"," C41"
+CONNECT, " N34", NIL+1:  sp2, " C33"," C35"
+CONNECT, " C41", NIL+1:  sp2, " C35"," C49"," C42"
+CONNECT, " C49", NIL+1:  sp2, " C41"," C47"," H49"
+CONNECT, " C47", NIL+1:  sp2, " C49"," C45"," H47"
+CONNECT, " C45", NIL+1:  sp2, " C47"," N44"," H45"
+CONNECT, " N44", NIL+1:  sp2, " C45"," C42"
+CONNECT, " C42", NIL+1:  sp2, " C41"," N44"," H42"
+CONNECT, "HN14", NIL+1:    s, " N14"
+CONNECT, " H9 ", NIL+1:    s, " C9 "
+CONNECT, " H56", NIL+1:    s, " C56"
+CONNECT, " H58", NIL+1:    s, " C58"
+CONNECT, "H58A", NIL+1:    s, " C58"
+CONNECT, "H58B", NIL+1:    s, " C58"
+CONNECT, " H52", NIL+1:    s, " C52"
+CONNECT, " H6 ", NIL+1:    s, " C6 "
+CONNECT, " H12", NIL+1:    s, " C12"
+CONNECT, " H25", NIL+1:    s, " C25"
+CONNECT, " H23", NIL+1:    s, " C23"
+CONNECT, " H27", NIL+1:    s, " C27"
+CONNECT, "H27A", NIL+1:    s, " C27"
+CONNECT, "H27B", NIL+1:    s, " C27"
+CONNECT, " H19", NIL+1:    s, " C19"
+CONNECT, "HN31", NIL+1:    s, " N31"
+CONNECT, " H38", NIL+1:    s, " C38"
+CONNECT, " H36", NIL+1:    s, " C36"
+CONNECT, " H49", NIL+1:    s, " C49"
+CONNECT, " H47", NIL+1:    s, " C47"
+CONNECT, " H45", NIL+1:    s, " C45"
+CONNECT, " H42", NIL+1:    s, " C42"
+CONNECT, " H62", NIL+1:    s, " N54"
+
+CONNECT, " O17", NIL+2:  sp3, " C16"
+CONNECT, " C16", NIL+2:  sp2, " O17"," N14"," C18"
+CONNECT, " N14", NIL+2:  sp2, " C16"," C11","HN14"
+CONNECT, " C11", NIL+2:  sp2, " N14"," C9 "," C12"
+CONNECT, " C9 ", NIL+2:  sp2, " C11"," C8 "," H9 "
+CONNECT, " C8 ", NIL+2:  sp2, " C9 "," N51"," C6 "
+CONNECT, " N51", NIL+2:  sp2, " C8 "," C56"," C52"
+CONNECT, " C56", NIL+2:  sp3, " N51"," C55"," H56"
+CONNECT, " C55", NIL+2:  sp2, " C56"," C58"," N54"
+CONNECT, " C58", NIL+2:  sp3, " C55"," H58","H58A","H58B"
+CONNECT, " N54", NIL+2:  sp3, " C55"," C52"
+CONNECT, " C52", NIL+2:  sp3, " N51"," N54"," H52"
+CONNECT, " C6 ", NIL+2:  sp2, " C8 "," C5 "," H6 "
+CONNECT, " C12", NIL+2:  sp2, " C11"," C5 "," H12"
+CONNECT, " C5 ", NIL+2:  sp2, " C6 "," C12"," C2 "
+CONNECT, " C2 ", NIL+2:  sp3, " C5 "," F4 "," F3 "," F1 "
+CONNECT, " F4 ", NIL+2:     , " C2 "
+CONNECT, " F3 ", NIL+2:     , " C2 "
+CONNECT, " F1 ", NIL+2:     , " C2 "
+CONNECT, " C18", NIL+2:  sp2, " C16"," C25"," C19"
+CONNECT, " C25", NIL+2:  sp2, " C18"," C23"," H25"
+CONNECT, " C23", NIL+2:  sp2, " C25"," C22"," H23"
+CONNECT, " C22", NIL+2:  sp2, " C23"," C27"," C21"
+CONNECT, " C27", NIL+2:  sp3, " C22"," H27","H27A","H27B"
+CONNECT, " C21", NIL+2:  sp2, " C22"," C19"," N31"
+CONNECT, " C19", NIL+2:  sp2, " C18"," C21"," H19"
+CONNECT, " N31", NIL+2:  sp2, " C21"," C33","HN31"
+CONNECT, " C33", NIL+2:  sp2, " N31"," N40"," N34"
+CONNECT, " N40", NIL+2:  sp2, " C33"," C38"
+CONNECT, " C38", NIL+2:  sp2, " N40"," C36"," H38"
+CONNECT, " C36", NIL+2:  sp2, " C38"," C35"," H36"
+CONNECT, " C35", NIL+2:  sp2, " C36"," N34"," C41"
+CONNECT, " N34", NIL+2:  sp2, " C33"," C35"
+CONNECT, " C41", NIL+2:  sp2, " C35"," C49"," C42"
+CONNECT, " C49", NIL+2:  sp2, " C41"," C47"," H49"
+CONNECT, " C47", NIL+2:  sp2, " C49"," C45"," H47"
+CONNECT, " C45", NIL+2:  sp2, " C47"," N44"," H45"
+CONNECT, " N44", NIL+2:  sp2, " C45"," C42"," H64"  #H64 was H62
+CONNECT, " C42", NIL+2:  sp2, " C41"," N44"," H42"
+CONNECT, "HN14", NIL+2:    s, " N14"
+CONNECT, " H9 ", NIL+2:    s, " C9 "
+CONNECT, " H56", NIL+2:    s, " C56"
+CONNECT, " H58", NIL+2:    s, " C58"
+CONNECT, "H58A", NIL+2:    s, " C58"
+CONNECT, "H58B", NIL+2:    s, " C58"
+CONNECT, " H52", NIL+2:    s, " C52"
+CONNECT, " H6 ", NIL+2:    s, " C6 "
+CONNECT, " H12", NIL+2:    s, " C12"
+CONNECT, " H25", NIL+2:    s, " C25"
+CONNECT, " H23", NIL+2:    s, " C23"
+CONNECT, " H27", NIL+2:    s, " C27"
+CONNECT, "H27A", NIL+2:    s, " C27"
+CONNECT, "H27B", NIL+2:    s, " C27"
+CONNECT, " H19", NIL+2:    s, " C19"
+CONNECT, "HN31", NIL+2:    s, " N31"
+CONNECT, " H38", NIL+2:    s, " C38"
+CONNECT, " H36", NIL+2:    s, " C36"
+CONNECT, " H49", NIL+2:    s, " C49"
+CONNECT, " H47", NIL+2:    s, " C47"
+CONNECT, " H45", NIL+2:    s, " C45"
+CONNECT, " H42", NIL+2:    s, " C42"
+CONNECT, " H64", NIL+2:    s, " N44"  #was H62 in NIL.tpl
+
+
+# ATOM charges
+CHARGE, NIL01, " O17": -0.582 # amended
+CHARGE, NIL01, " C16":  0.690 # amended
+CHARGE, NIL01, " N14": -0.472 # amended
+CHARGE, NIL01, " C11":  0.105 # amended
+CHARGE, NIL01, " C9 ": -0.176 # amended
+CHARGE, NIL01, " C8 ":  0.064 # amended
+CHARGE, NIL01, " N51": -0.149 # amended
+CHARGE, NIL01, " C56": -0.249 # amended
+CHARGE, NIL01, " C55":  0.318 # amended
+CHARGE, NIL01, " C58": -0.118 # amended
+CHARGE, NIL01, " N54": -0.655 # amended
+CHARGE, NIL01, " C52":  0.416 # amended
+CHARGE, NIL01, " C6 ": -0.146 # amended
+CHARGE, NIL01, " C12": -0.166 # amended
+CHARGE, NIL01, " C5 ": -0.109 # amended
+CHARGE, NIL01, " C2 ":  0.686 # amended
+CHARGE, NIL01, " F4 ": -0.234 # amended
+CHARGE, NIL01, " F3 ": -0.234 # amended
+CHARGE, NIL01, " F1 ": -0.234 # amended
+CHARGE, NIL01, " C18": -0.146 # amended
+CHARGE, NIL01, " C25": -0.109 # amended
+CHARGE, NIL01, " C23": -0.134 # amended
+CHARGE, NIL01, " C22": -0.025 # amended
+CHARGE, NIL01, " C27": -0.060 # amended
+CHARGE, NIL01, " C21":  0.143 # amended
+CHARGE, NIL01, " C19": -0.096 # amended
+CHARGE, NIL01, " N31": -0.746 # amended
+CHARGE, NIL01, " C33":  0.888 # amended
+CHARGE, NIL01, " N40": -0.732 # amended
+CHARGE, NIL01, " C38":  0.461 # amended
+CHARGE, NIL01, " C36": -0.407 # amended
+CHARGE, NIL01, " C35":  0.536 # amended
+CHARGE, NIL01, " N34": -0.746 # amended
+CHARGE, NIL01, " C41": -0.274 # amended
+CHARGE, NIL01, " C49": -0.069 # amended
+CHARGE, NIL01, " C47": -0.251 # amended
+CHARGE, NIL01, " C45":  0.405 # amended
+CHARGE, NIL01, " N44": -0.666 # amended
+CHARGE, NIL01, " C42":  0.431 # amended
+CHARGE, NIL01, "HN14":  0.326 # amended
+CHARGE, NIL01, " H9 ":  0.187 # amended
+CHARGE, NIL01, " H56":  0.181 # amended
+CHARGE, NIL01, " H58":  0.050 # amended
+CHARGE, NIL01, "H58A":  0.050 # amended
+CHARGE, NIL01, "H58B":  0.050 # amended
+CHARGE, NIL01, " H52":  0.075 # amended
+CHARGE, NIL01, " H6 ":  0.161 # amended
+CHARGE, NIL01, " H12":  0.151 # amended
+CHARGE, NIL01, " H25":  0.136 # amended
+CHARGE, NIL01, " H23":  0.143 # amended
+CHARGE, NIL01, " H27":  0.056 # amended
+CHARGE, NIL01, "H27A":  0.056 # amended
+CHARGE, NIL01, "H27B":  0.056 # amended
+CHARGE, NIL01, " H19":  0.162 # amended
+CHARGE, NIL01, "HN31":  0.461 # amended
+CHARGE, NIL01, " H38":  0.030 # amended
+CHARGE, NIL01, " H36":  0.160 # amended
+CHARGE, NIL01, " H49":  0.144 # amended
+CHARGE, NIL01, " H47":  0.147 # amended
+CHARGE, NIL01, " H45":  0.026 # amended
+CHARGE, NIL01, " H42":  0.034 # amended
+
+CHARGE, NIL+1, " O17": -0.553 # amended
+CHARGE, NIL+1, " C16":  0.694 # amended
+CHARGE, NIL+1, " N14": -0.474 # amended
+CHARGE, NIL+1, " C11":  0.129 # amended
+CHARGE, NIL+1, " C9 ": -0.178 # amended
+CHARGE, NIL+1, " C8 ":  0.112 # amended
+CHARGE, NIL+1, " N51": -0.264 # amended
+CHARGE, NIL+1, " C56": -0.026 # amended
+CHARGE, NIL+1, " C55":  0.067 # amended
+CHARGE, NIL+1, " C58": -0.065 # amended
+CHARGE, NIL+1, " N54": -0.510 # amended
+CHARGE, NIL+1, " C52":  0.192 # amended
+CHARGE, NIL+1, " C6 ": -0.132 # amended
+CHARGE, NIL+1, " C12": -0.092 # amended
+CHARGE, NIL+1, " C5 ": -0.111 # amended
+CHARGE, NIL+1, " C2 ":  0.691 # amended
+CHARGE, NIL+1, " F4 ": -0.220 # amended
+CHARGE, NIL+1, " F3 ": -0.220 # amended
+CHARGE, NIL+1, " F1 ": -0.220 # amended
+CHARGE, NIL+1, " C18": -0.156 # amended
+CHARGE, NIL+1, " C25": -0.117 # amended
+CHARGE, NIL+1, " C23": -0.130 # amended
+CHARGE, NIL+1, " C22": -0.013 # amended
+CHARGE, NIL+1, " C27": -0.064 # amended
+CHARGE, NIL+1, " C21":  0.153 # amended
+CHARGE, NIL+1, " C19": -0.100 # amended
+CHARGE, NIL+1, " N31": -0.739 # amended
+CHARGE, NIL+1, " C33":  0.872 # amended
+CHARGE, NIL+1, " N40": -0.735 # amended
+CHARGE, NIL+1, " C38":  0.458 # amended
+CHARGE, NIL+1, " C36": -0.389 # amended
+CHARGE, NIL+1, " C35":  0.537 # amended
+CHARGE, NIL+1, " N34": -0.734 # amended
+CHARGE, NIL+1, " C41": -0.284 # amended
+CHARGE, NIL+1, " C49": -0.055 # amended
+CHARGE, NIL+1, " C47": -0.249 # amended
+CHARGE, NIL+1, " C45":  0.410 # amended
+CHARGE, NIL+1, " N44": -0.660 # amended
+CHARGE, NIL+1, " C42":  0.421 # amended
+CHARGE, NIL+1, "HN14":  0.330 # amended
+CHARGE, NIL+1, " H9 ":  0.147 # amended
+CHARGE, NIL+1, " H56":  0.228 # amended
+CHARGE, NIL+1, " H58":  0.090 # amended
+CHARGE, NIL+1, "H58A":  0.090 # amended
+CHARGE, NIL+1, "H58B":  0.090 # amended
+CHARGE, NIL+1, " H52":  0.262 # amended
+CHARGE, NIL+1, " H6 ":  0.158 # amended
+CHARGE, NIL+1, " H12":  0.219 # amended
+CHARGE, NIL+1, " H25":  0.125 # amended
+CHARGE, NIL+1, " H23":  0.145 # amended
+CHARGE, NIL+1, " H27":  0.061 # amended
+CHARGE, NIL+1, "H27A":  0.061 # amended
+CHARGE, NIL+1, "H27B":  0.061 # amended
+CHARGE, NIL+1, " H19":  0.161 # amended
+CHARGE, NIL+1, "HN31":  0.454 # amended
+CHARGE, NIL+1, " H38":  0.034 # amended
+CHARGE, NIL+1, " H36":  0.167 # amended
+CHARGE, NIL+1, " H49":  0.149 # amended
+CHARGE, NIL+1, " H47":  0.150 # amended
+CHARGE, NIL+1, " H45":  0.030 # amended
+CHARGE, NIL+1, " H42":  0.028 # amended
+CHARGE, NIL+1, " H62":  0.514 # amended
+
+CHARGE, NIL+2, " O17": -0.581 # amended
+CHARGE, NIL+2, " C16":  0.686 # amended
+CHARGE, NIL+2, " N14": -0.464 # amended
+CHARGE, NIL+2, " C11":  0.094 # amended
+CHARGE, NIL+2, " C9 ": -0.174 # amended
+CHARGE, NIL+2, " C8 ":  0.067 # amended
+CHARGE, NIL+2, " N51": -0.152 # amended
+CHARGE, NIL+2, " C56": -0.248 # amended
+CHARGE, NIL+2, " C55":  0.323 # amended
+CHARGE, NIL+2, " C58": -0.120 # amended
+CHARGE, NIL+2, " N54": -0.653 # amended
+CHARGE, NIL+2, " C52":  0.414 # amended
+CHARGE, NIL+2, " C6 ": -0.141 # amended
+CHARGE, NIL+2, " C12": -0.160 # amended
+CHARGE, NIL+2, " C5 ": -0.108 # amended
+CHARGE, NIL+2, " C2 ":  0.686 # amended
+CHARGE, NIL+2, " F4 ": -0.231 # amended
+CHARGE, NIL+2, " F3 ": -0.231 # amended
+CHARGE, NIL+2, " F1 ": -0.231 # amended
+CHARGE, NIL+2, " C18": -0.138 # amended
+CHARGE, NIL+2, " C25": -0.094 # amended
+CHARGE, NIL+2, " C23": -0.130 # amended
+CHARGE, NIL+2, " C22": -0.023 # amended
+CHARGE, NIL+2, " C27": -0.061 # amended
+CHARGE, NIL+2, " C21":  0.111 # amended
+CHARGE, NIL+2, " C19": -0.087 # amended
+CHARGE, NIL+2, " N31": -0.720 # amended
+CHARGE, NIL+2, " C33":  0.911 # amended
+CHARGE, NIL+2, " N40": -0.697 # amended
+CHARGE, NIL+2, " C38":  0.484 # amended
+CHARGE, NIL+2, " C36": -0.404 # amended
+CHARGE, NIL+2, " C35":  0.481 # amended
+CHARGE, NIL+2, " N34": -0.770 # amended
+CHARGE, NIL+2, " C41": -0.133 # amended
+CHARGE, NIL+2, " C49":  0.007 # amended
+CHARGE, NIL+2, " C47": -0.137 # amended
+CHARGE, NIL+2, " C45":  0.079 # amended
+CHARGE, NIL+2, " N44": -0.450 # amended
+CHARGE, NIL+2, " C42":  0.108 # amended
+CHARGE, NIL+2, "HN14":  0.326 # amended
+CHARGE, NIL+2, " H9 ":  0.185 # amended
+CHARGE, NIL+2, " H56":  0.184 # amended
+CHARGE, NIL+2, " H58":  0.052 # amended
+CHARGE, NIL+2, "H58A":  0.052 # amended
+CHARGE, NIL+2, "H58B":  0.052 # amended
+CHARGE, NIL+2, " H52":  0.070 # amended
+CHARGE, NIL+2, " H6 ":  0.166 # amended
+CHARGE, NIL+2, " H12":  0.151 # amended
+CHARGE, NIL+2, " H25":  0.147 # amended
+CHARGE, NIL+2, " H23":  0.151 # amended
+CHARGE, NIL+2, " H27":  0.055 # amended
+CHARGE, NIL+2, "H27A":  0.055 # amended
+CHARGE, NIL+2, "H27B":  0.055 # amended
+CHARGE, NIL+2, " H19":  0.163 # amended
+CHARGE, NIL+2, "HN31":  0.463 # amended
+CHARGE, NIL+2, " H38":  0.052 # amended
+CHARGE, NIL+2, " H36":  0.163 # amended
+CHARGE, NIL+2, " H49":  0.200 # amended
+CHARGE, NIL+2, " H47":  0.204 # amended
+CHARGE, NIL+2, " H45":  0.215 # amended
+CHARGE, NIL+2, " H42":  0.225 # amended
+CHARGE, NIL+2, " H64":  0.501 # amended was H62 in NIL.tpl
+
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, NIL01, " O17": 1.400,  1.520, 0.200 # amended
+RADIUS, NIL01, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " N14": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL01, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " N51": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL01, " C56": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C55": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C58": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " N54": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL01, " C52": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " F4 ": 1.850,  1.470, 0.173 # amended
+RADIUS, NIL01, " F3 ": 1.850,  1.470, 0.173 # amended
+RADIUS, NIL01, " F1 ": 1.850,  1.470, 0.173 # amended
+RADIUS, NIL01, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " N31": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL01, " C33": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " N40": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL01, " C38": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C36": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C35": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " N34": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL01, " C41": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C49": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C47": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " C45": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, " N44": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL01, " C42": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL01, "HN14": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H56": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H58": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, "H58A": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, "H58B": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H52": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, "H27A": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, "H27B": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, "HN31": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H38": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H36": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H49": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H47": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H45": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL01, " H42": 1.000,  1.000, 0.020 # amended
+
+RADIUS, NIL+1, " O17": 1.400,  1.520, 0.200 # amended
+RADIUS, NIL+1, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " N14": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+1, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " N51": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+1, " C56": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C55": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C58": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " N54": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+1, " C52": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " F4 ": 1.850,  1.470, 0.173 # amended
+RADIUS, NIL+1, " F3 ": 1.850,  1.470, 0.173 # amended
+RADIUS, NIL+1, " F1 ": 1.850,  1.470, 0.173 # amended
+RADIUS, NIL+1, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " N31": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+1, " C33": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " N40": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+1, " C38": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C36": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C35": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " N34": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+1, " C41": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C49": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C47": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " C45": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, " N44": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+1, " C42": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+1, "HN14": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H56": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H58": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, "H58A": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, "H58B": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H52": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, "H27A": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, "H27B": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, "HN31": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H38": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H36": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H49": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H47": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H45": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+1, " H42": 1.000,  1.000, 0.020 # amended
+
+RADIUS, NIL+2, " O17": 1.400,  1.520, 0.200 # amended
+RADIUS, NIL+2, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " N14": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+2, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " N51": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+2, " C56": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C55": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C58": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " N54": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+2, " C52": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " F4 ": 1.850,  1.470, 0.173 # amended
+RADIUS, NIL+2, " F3 ": 1.850,  1.470, 0.173 # amended
+RADIUS, NIL+2, " F1 ": 1.850,  1.470, 0.173 # amended
+RADIUS, NIL+2, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " N31": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+2, " C33": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " N40": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+2, " C38": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C36": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C35": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " N34": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+2, " C41": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C49": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C47": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " C45": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, " N44": 1.500,  1.550, 0.160 # amended
+RADIUS, NIL+2, " C42": 1.700,  1.700, 0.150 # amended
+RADIUS, NIL+2, "HN14": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H56": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H58": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, "H58A": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, "H58B": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H52": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, "H27A": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, "H27B": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, "HN31": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H38": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H36": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H49": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H47": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H45": 1.000,  1.000, 0.020 # amended
+RADIUS, NIL+2, " H42": 1.000,  1.000, 0.020 # amended
+
+
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, NIL01:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-10.019, rxn08=-4.51
+CONFORMER, NIL+1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-19.379, rxn08=-8.84
+CONFORMER, NIL+2:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-21.742, rxn08=-10.133

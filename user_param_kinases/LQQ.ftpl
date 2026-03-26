@@ -1,0 +1,393 @@
+# Conformer definition
+CONFLIST, LQQ: LQQBK, LQQ01, LQQ+1
+#CONFLIST, LQQ: LQQBK, LQQ01, LQQ+1, LQQDM
+
+# ATOM name and bonds
+CONNECT, " O01", LQQ01:  sp3, " C02"
+CONNECT, " C02", LQQ01:  sp2, " O01"," C01"," C03"
+CONNECT, " C01", LQQ01:  sp3, " C02","H011","H012","H013"
+CONNECT, " C03", LQQ01:  sp2, " C02"," C04"," C15"
+CONNECT, " C04", LQQ01:  sp2, " C03"," C05"," C06"
+CONNECT, " C05", LQQ01:  sp3, " C04","H051","H052","H053"
+CONNECT, " C06", LQQ01:  sp2, " C04"," C07"," C09"
+CONNECT, " C07", LQQ01:  sp2, " C06"," N01"," H1 "
+CONNECT, " N01", LQQ01:  sp2, " C07"," C08"
+CONNECT, " C08", LQQ01:  sp2, " N01"," N02"," N04"
+CONNECT, " N02", LQQ01:  sp2, " C08"," C09"
+CONNECT, " C09", LQQ01:  sp2, " C06"," N02"," N03"
+CONNECT, " N03", LQQ01:  sp2, " C09"," C10"," C15"
+CONNECT, " C10", LQQ01:  sp3, " N03"," C11"," C14"," H10"
+CONNECT, " C11", LQQ01:  sp3, " C10"," C12","H111","H112"
+CONNECT, " C12", LQQ01:  sp3, " C11"," C13","H121","H122"
+CONNECT, " C13", LQQ01:  sp3, " C12"," C14","H131","H132"
+CONNECT, " C14", LQQ01:  sp3, " C10"," C13","H141","H142"
+CONNECT, " C15", LQQ01:  sp2, " C03"," N03"," O02"
+CONNECT, " O02", LQQ01:  sp3, " C15"
+CONNECT, " N04", LQQ01:  sp2, " C08"," C16"," H04"
+CONNECT, " C16", LQQ01:  sp2, " N04"," N05"," C20"
+CONNECT, " N05", LQQ01:  sp2, " C16"," C17"
+CONNECT, " C17", LQQ01:  sp2, " N05"," C18"," H17"
+CONNECT, " C18", LQQ01:  sp2, " C17"," C19"," N06"
+CONNECT, " C19", LQQ01:  sp2, " C18"," C20"," H19"
+CONNECT, " C20", LQQ01:  sp2, " C16"," C19"," H20"
+CONNECT, " N06", LQQ01:  sp3, " C18"," C21"," C24"
+CONNECT, " C21", LQQ01:  sp3, " N06"," C22","H211","H212"
+CONNECT, " C22", LQQ01:  sp3, " C21"," N07","H221","H222"
+CONNECT, " N07", LQQ01:  sp2, " C22"," C23"," H07"
+CONNECT, " C23", LQQ01:  sp3, " N07"," C24","H231","H232"
+CONNECT, " C24", LQQ01:  sp3, " N06"," C23","H241","H242"
+CONNECT, "H011", LQQ01:    s, " C01"
+CONNECT, "H012", LQQ01:    s, " C01"
+CONNECT, "H013", LQQ01:    s, " C01"
+CONNECT, "H051", LQQ01:    s, " C05"
+CONNECT, "H052", LQQ01:    s, " C05"
+CONNECT, "H053", LQQ01:    s, " C05"
+CONNECT, " H1 ", LQQ01:    s, " C07"
+CONNECT, " H10", LQQ01:    s, " C10"
+CONNECT, "H111", LQQ01:    s, " C11"
+CONNECT, "H112", LQQ01:    s, " C11"
+CONNECT, "H121", LQQ01:    s, " C12"
+CONNECT, "H122", LQQ01:    s, " C12"
+CONNECT, "H131", LQQ01:    s, " C13"
+CONNECT, "H132", LQQ01:    s, " C13"
+CONNECT, "H141", LQQ01:    s, " C14"
+CONNECT, "H142", LQQ01:    s, " C14"
+CONNECT, " H04", LQQ01:    s, " N04"
+CONNECT, " H17", LQQ01:    s, " C17"
+CONNECT, " H19", LQQ01:    s, " C19"
+CONNECT, " H20", LQQ01:    s, " C20"
+CONNECT, "H211", LQQ01:    s, " C21"
+CONNECT, "H212", LQQ01:    s, " C21"
+CONNECT, "H221", LQQ01:    s, " C22"
+CONNECT, "H222", LQQ01:    s, " C22"
+CONNECT, " H07", LQQ01:    s, " N07"
+CONNECT, "H231", LQQ01:    s, " C23"
+CONNECT, "H232", LQQ01:    s, " C23"
+CONNECT, "H241", LQQ01:    s, " C24"
+CONNECT, "H242", LQQ01:    s, " C24"
+
+CONNECT, " O01", LQQ+1:  sp3, " C02"
+CONNECT, " C02", LQQ+1:  sp2, " O01"," C01"," C03"
+CONNECT, " C01", LQQ+1:  sp3, " C02","H011","H012","H013"
+CONNECT, " C03", LQQ+1:  sp2, " C02"," C04"," C15"
+CONNECT, " C04", LQQ+1:  sp2, " C03"," C05"," C06"
+CONNECT, " C05", LQQ+1:  sp3, " C04","H051","H052","H053"
+CONNECT, " C06", LQQ+1:  sp2, " C04"," C07"," C09"
+CONNECT, " C07", LQQ+1:  sp2, " C06"," N01"," H1 "
+CONNECT, " N01", LQQ+1:  sp2, " C07"," C08"
+CONNECT, " C08", LQQ+1:  sp2, " N01"," N02"," N04"
+CONNECT, " N02", LQQ+1:  sp2, " C08"," C09"
+CONNECT, " C09", LQQ+1:  sp2, " C06"," N02"," N03"
+CONNECT, " N03", LQQ+1:  sp2, " C09"," C10"," C15"
+CONNECT, " C10", LQQ+1:  sp3, " N03"," C11"," C14"," H10"
+CONNECT, " C11", LQQ+1:  sp3, " C10"," C12","H111","H112"
+CONNECT, " C12", LQQ+1:  sp3, " C11"," C13","H121","H122"
+CONNECT, " C13", LQQ+1:  sp3, " C12"," C14","H131","H132"
+CONNECT, " C14", LQQ+1:  sp3, " C10"," C13","H141","H142"
+CONNECT, " C15", LQQ+1:  sp2, " C03"," N03"," O02"
+CONNECT, " O02", LQQ+1:  sp3, " C15"
+CONNECT, " N04", LQQ+1:  sp2, " C08"," C16"," H04"
+CONNECT, " C16", LQQ+1:  sp2, " N04"," N05"," C20"
+CONNECT, " N05", LQQ+1:  sp2, " C16"," C17"
+CONNECT, " C17", LQQ+1:  sp2, " N05"," C18"," H17"
+CONNECT, " C18", LQQ+1:  sp2, " C17"," C19"," N06"
+CONNECT, " C19", LQQ+1:  sp2, " C18"," C20"," H19"
+CONNECT, " C20", LQQ+1:  sp2, " C16"," C19"," H20"
+CONNECT, " N06", LQQ+1:  sp3, " C18"," C21"," C24"
+CONNECT, " C21", LQQ+1:  sp3, " N06"," C22","H211","H212"
+CONNECT, " C22", LQQ+1:  sp3, " C21"," N07","H221","H222"
+CONNECT, " N07", LQQ+1:  sp3, " C22"," C23"," H07"," H63"
+CONNECT, " C23", LQQ+1:  sp3, " N07"," C24","H231","H232"
+CONNECT, " C24", LQQ+1:  sp3, " N06"," C23","H241","H242"
+CONNECT, "H011", LQQ+1:    s, " C01"
+CONNECT, "H012", LQQ+1:    s, " C01"
+CONNECT, "H013", LQQ+1:    s, " C01"
+CONNECT, "H051", LQQ+1:    s, " C05"
+CONNECT, "H052", LQQ+1:    s, " C05"
+CONNECT, "H053", LQQ+1:    s, " C05"
+CONNECT, " H1 ", LQQ+1:    s, " C07"
+CONNECT, " H10", LQQ+1:    s, " C10"
+CONNECT, "H111", LQQ+1:    s, " C11"
+CONNECT, "H112", LQQ+1:    s, " C11"
+CONNECT, "H121", LQQ+1:    s, " C12"
+CONNECT, "H122", LQQ+1:    s, " C12"
+CONNECT, "H131", LQQ+1:    s, " C13"
+CONNECT, "H132", LQQ+1:    s, " C13"
+CONNECT, "H141", LQQ+1:    s, " C14"
+CONNECT, "H142", LQQ+1:    s, " C14"
+CONNECT, " H04", LQQ+1:    s, " N04"
+CONNECT, " H17", LQQ+1:    s, " C17"
+CONNECT, " H19", LQQ+1:    s, " C19"
+CONNECT, " H20", LQQ+1:    s, " C20"
+CONNECT, "H211", LQQ+1:    s, " C21"
+CONNECT, "H212", LQQ+1:    s, " C21"
+CONNECT, "H221", LQQ+1:    s, " C22"
+CONNECT, "H222", LQQ+1:    s, " C22"
+CONNECT, " H07", LQQ+1:    s, " N07"
+CONNECT, " H63", LQQ+1:    s, " N07"
+CONNECT, "H231", LQQ+1:    s, " C23"
+CONNECT, "H232", LQQ+1:    s, " C23"
+CONNECT, "H241", LQQ+1:    s, " C24"
+CONNECT, "H242", LQQ+1:    s, " C24"
+
+
+# ATOM charges
+CHARGE, LQQ01, " O01": -0.509 # amended
+CHARGE, LQQ01, " C02":  0.601 # amended
+CHARGE, LQQ01, " C01": -0.191 # amended
+CHARGE, LQQ01, " C03": -0.292 # amended
+CHARGE, LQQ01, " C04":  0.094 # amended
+CHARGE, LQQ01, " C05": -0.080 # amended
+CHARGE, LQQ01, " C06": -0.413 # amended
+CHARGE, LQQ01, " C07":  0.517 # amended
+CHARGE, LQQ01, " N01": -0.759 # amended
+CHARGE, LQQ01, " C08":  0.933 # amended
+CHARGE, LQQ01, " N02": -0.815 # amended
+CHARGE, LQQ01, " C09":  0.633 # amended
+CHARGE, LQQ01, " N03": -0.411 # amended
+CHARGE, LQQ01, " C10":  0.092 # amended
+CHARGE, LQQ01, " C11": -0.092 # amended
+CHARGE, LQQ01, " C12": -0.077 # amended
+CHARGE, LQQ01, " C13": -0.077 # amended
+CHARGE, LQQ01, " C14": -0.092 # amended
+CHARGE, LQQ01, " C15":  0.718 # amended
+CHARGE, LQQ01, " O02": -0.612 # amended
+CHARGE, LQQ01, " N04": -0.813 # amended
+CHARGE, LQQ01, " C16":  0.602 # amended
+CHARGE, LQQ01, " N05": -0.685 # amended
+CHARGE, LQQ01, " C17":  0.377 # amended
+CHARGE, LQQ01, " C18":  0.014 # amended
+CHARGE, LQQ01, " C19": -0.108 # amended
+CHARGE, LQQ01, " C20": -0.208 # amended
+CHARGE, LQQ01, " N06": -0.658 # amended
+CHARGE, LQQ01, " C21":  0.197 # amended
+CHARGE, LQQ01, " C22":  0.160 # amended
+CHARGE, LQQ01, " N07": -0.824 # amended
+CHARGE, LQQ01, " C23":  0.160 # amended
+CHARGE, LQQ01, " C24":  0.197 # amended
+CHARGE, LQQ01, "H011":  0.067 # amended
+CHARGE, LQQ01, "H012":  0.067 # amended
+CHARGE, LQQ01, "H013":  0.067 # amended
+CHARGE, LQQ01, "H051":  0.060 # amended
+CHARGE, LQQ01, "H052":  0.060 # amended
+CHARGE, LQQ01, "H053":  0.060 # amended
+CHARGE, LQQ01, " H1 ":  0.033 # amended
+CHARGE, LQQ01, " H10":  0.093 # amended
+CHARGE, LQQ01, "H111":  0.060 # amended
+CHARGE, LQQ01, "H112":  0.060 # amended
+CHARGE, LQQ01, "H121":  0.043 # amended
+CHARGE, LQQ01, "H122":  0.043 # amended
+CHARGE, LQQ01, "H131":  0.043 # amended
+CHARGE, LQQ01, "H132":  0.043 # amended
+CHARGE, LQQ01, "H141":  0.060 # amended
+CHARGE, LQQ01, "H142":  0.060 # amended
+CHARGE, LQQ01, " H04":  0.467 # amended
+CHARGE, LQQ01, " H17":  0.027 # amended
+CHARGE, LQQ01, " H19":  0.148 # amended
+CHARGE, LQQ01, " H20":  0.168 # amended
+CHARGE, LQQ01, "H211":  0.044 # amended
+CHARGE, LQQ01, "H212":  0.044 # amended
+CHARGE, LQQ01, "H221":  0.037 # amended
+CHARGE, LQQ01, "H222":  0.037 # amended
+CHARGE, LQQ01, " H07":  0.368 # amended
+CHARGE, LQQ01, "H231":  0.037 # amended
+CHARGE, LQQ01, "H232":  0.037 # amended
+CHARGE, LQQ01, "H241":  0.044 # amended
+CHARGE, LQQ01, "H242":  0.044 # amended
+
+CHARGE, LQQ+1, " O01": -0.497 # amended
+CHARGE, LQQ+1, " C02":  0.596 # amended
+CHARGE, LQQ+1, " C01": -0.192 # amended
+CHARGE, LQQ+1, " C03": -0.269 # amended
+CHARGE, LQQ+1, " C04":  0.078 # amended
+CHARGE, LQQ+1, " C05": -0.081 # amended
+CHARGE, LQQ+1, " C06": -0.391 # amended
+CHARGE, LQQ+1, " C07":  0.514 # amended
+CHARGE, LQQ+1, " N01": -0.770 # amended
+CHARGE, LQQ+1, " C08":  0.919 # amended
+CHARGE, LQQ+1, " N02": -0.794 # amended
+CHARGE, LQQ+1, " C09":  0.630 # amended
+CHARGE, LQQ+1, " N03": -0.406 # amended
+CHARGE, LQQ+1, " C10":  0.086 # amended
+CHARGE, LQQ+1, " C11": -0.092 # amended
+CHARGE, LQQ+1, " C12": -0.078 # amended
+CHARGE, LQQ+1, " C13": -0.078 # amended
+CHARGE, LQQ+1, " C14": -0.092 # amended
+CHARGE, LQQ+1, " C15":  0.715 # amended
+CHARGE, LQQ+1, " O02": -0.591 # amended
+CHARGE, LQQ+1, " N04": -0.825 # amended
+CHARGE, LQQ+1, " C16":  0.669 # amended
+CHARGE, LQQ+1, " N05": -0.692 # amended
+CHARGE, LQQ+1, " C17":  0.412 # amended
+CHARGE, LQQ+1, " C18": -0.068 # amended
+CHARGE, LQQ+1, " C19": -0.075 # amended
+CHARGE, LQQ+1, " C20": -0.223 # amended
+CHARGE, LQQ+1, " N06": -0.653 # amended
+CHARGE, LQQ+1, " C21":  0.171 # amended
+CHARGE, LQQ+1, " C22":  0.098 # amended
+CHARGE, LQQ+1, " N07": -0.762 # amended
+CHARGE, LQQ+1, " C23":  0.098 # amended
+CHARGE, LQQ+1, " C24":  0.171 # amended
+CHARGE, LQQ+1, "H011":  0.070 # amended
+CHARGE, LQQ+1, "H012":  0.070 # amended
+CHARGE, LQQ+1, "H013":  0.070 # amended
+CHARGE, LQQ+1, "H051":  0.062 # amended
+CHARGE, LQQ+1, "H052":  0.062 # amended
+CHARGE, LQQ+1, "H053":  0.062 # amended
+CHARGE, LQQ+1, " H1 ":  0.038 # amended
+CHARGE, LQQ+1, " H10":  0.089 # amended
+CHARGE, LQQ+1, "H111":  0.061 # amended
+CHARGE, LQQ+1, "H112":  0.061 # amended
+CHARGE, LQQ+1, "H121":  0.047 # amended
+CHARGE, LQQ+1, "H122":  0.047 # amended
+CHARGE, LQQ+1, "H131":  0.047 # amended
+CHARGE, LQQ+1, "H132":  0.047 # amended
+CHARGE, LQQ+1, "H141":  0.061 # amended
+CHARGE, LQQ+1, "H142":  0.061 # amended
+CHARGE, LQQ+1, " H04":  0.477 # amended
+CHARGE, LQQ+1, " H17":  0.022 # amended
+CHARGE, LQQ+1, " H19":  0.144 # amended
+CHARGE, LQQ+1, " H20":  0.185 # amended
+CHARGE, LQQ+1, "H211":  0.082 # amended
+CHARGE, LQQ+1, "H212":  0.082 # amended
+CHARGE, LQQ+1, "H221":  0.114 # amended
+CHARGE, LQQ+1, "H222":  0.114 # amended
+CHARGE, LQQ+1, " H07":  0.452 # amended
+CHARGE, LQQ+1, " H63":  0.453 # amended
+CHARGE, LQQ+1, "H231":  0.114 # amended
+CHARGE, LQQ+1, "H232":  0.114 # amended
+CHARGE, LQQ+1, "H241":  0.082 # amended
+CHARGE, LQQ+1, "H242":  0.082 # amended
+
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, LQQ01, " O01": 1.400,  1.520, 0.200 # amended
+RADIUS, LQQ01, " C02": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C01": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C03": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C04": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C05": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C06": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C07": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " N01": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ01, " C08": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " N02": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ01, " C09": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " N03": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ01, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " O02": 1.400,  1.520, 0.200 # amended
+RADIUS, LQQ01, " N04": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ01, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " N05": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ01, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " N06": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ01, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " N07": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ01, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ01, "H011": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H012": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H013": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H051": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H052": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H053": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H111": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H112": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H121": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H122": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H131": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H132": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H141": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H142": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, " H04": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H211": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H212": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H221": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H222": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, " H07": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H231": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H232": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H241": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ01, "H242": 1.000,  1.000, 0.020 # amended
+
+RADIUS, LQQ+1, " O01": 1.400,  1.520, 0.200 # amended
+RADIUS, LQQ+1, " C02": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C01": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C03": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C04": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C05": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C06": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C07": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " N01": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ+1, " C08": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " N02": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ+1, " C09": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " N03": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ+1, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " O02": 1.400,  1.520, 0.200 # amended
+RADIUS, LQQ+1, " N04": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ+1, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " N05": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ+1, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " N06": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ+1, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " N07": 1.500,  1.550, 0.160 # amended
+RADIUS, LQQ+1, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, LQQ+1, "H011": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H012": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H013": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H051": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H052": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H053": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H111": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H112": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H121": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H122": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H131": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H132": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H141": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H142": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, " H04": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H211": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H212": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H221": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H222": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, " H07": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H231": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H232": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H241": 1.000,  1.000, 0.020 # amended
+RADIUS, LQQ+1, "H242": 1.000,  1.000, 0.020 # amended
+
+
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, LQQ01:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-8.973, rxn08=-4.087
+CONFORMER, LQQ+1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-22.840, rxn08=-10.61

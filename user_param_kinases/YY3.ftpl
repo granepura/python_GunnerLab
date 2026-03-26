@@ -1,0 +1,1531 @@
+# Conformer definition
+CONFLIST, YY3: YY3BK, YY301, YY3+1, YY3+2, YY3+3, YY3+4, YY3+a, YY3+b
+#CONFLIST, YY3: YY3BK, YY301, YY3+1, YY3+2, YY3+3, YY3+4, YY3+a, YY3+b, YY3DM
+
+# ATOM name and bonds
+CONNECT, " C13", YY301:  sp3, " N2 "," H1 "," H2 "," H3 "
+CONNECT, " N2 ", YY301:  sp3, " C13"," C12"," C11"
+CONNECT, " C12", YY301:  sp3, " N2 "," H5 "," H6 "," H7 "
+CONNECT, " C11", YY301:  sp3, " N2 "," C10"," H8 "," H9 "
+CONNECT, " C10", YY301:  sp3, " C11"," N1 "," H10"," H11"
+CONNECT, " N1 ", YY301:  sp3, " C10"," C28"," C2 "
+CONNECT, " C28", YY301:  sp3, " N1 "," H12"," H13"," H14"
+CONNECT, " C3 ", YY301:  sp2, " C4 "," C2 "," H15"
+CONNECT, " C4 ", YY301:  sp2, " C3 "," O1 "," C5 "
+CONNECT, " O1 ", YY301:  sp2, " C4 "," C14"
+CONNECT, " C14", YY301:  sp3, " O1 "," H16"," H17"," H18"
+CONNECT, " C2 ", YY301:  sp2, " N1 "," C3 "," C1 "
+CONNECT, " C1 ", YY301:  sp2, " C2 "," N  "," C6 "
+CONNECT, " N  ", YY301:  sp2, " C1 "," C7 "," H19"
+CONNECT, " C7 ", YY301:  sp2, " N  "," O  "," C8 "
+CONNECT, " O  ", YY301:  sp3, " C7 "
+CONNECT, " C8 ", YY301:  sp2, " C7 "," C9 "," H20"
+CONNECT, " C9 ", YY301:  sp2, " C8 "," H22"," H23"
+CONNECT, " C6 ", YY301:  sp2, " C1 "," C5 "," H25"
+CONNECT, " C5 ", YY301:  sp2, " C4 "," C6 "," N3 "
+CONNECT, " N3 ", YY301:  sp2, " C5 "," C15"," H26"
+CONNECT, " C15", YY301:  sp2, " N3 "," N5 "," N4 "
+CONNECT, " N5 ", YY301:  sp2, " C15"," C18"
+CONNECT, " N4 ", YY301:  sp2, " C15"," C16"
+CONNECT, " C16", YY301:  sp2, " N4 "," C17"," H27"
+CONNECT, " C17", YY301:  sp2, " C16"," C18"," H28"
+CONNECT, " C18", YY301:  sp2, " N5 "," C17"," C19"
+CONNECT, " C19", YY301:  sp2, " C18"," C26"," C20"
+CONNECT, " C26", YY301:  sp2, " C19"," C25"," C21"
+CONNECT, " C25", YY301:  sp2, " C26"," C24"," H29"
+CONNECT, " C24", YY301:  sp2, " C25"," C23"," H30"
+CONNECT, " C23", YY301:  sp2, " C24"," C22"," H31"
+CONNECT, " C22", YY301:  sp2, " C23"," C21"," H32"
+CONNECT, " C21", YY301:  sp2, " C26"," C22"," N6 "
+CONNECT, " N6 ", YY301:  sp2, " C21"," C27"," C20"
+CONNECT, " C27", YY301:  sp3, " N6 "," H33"," H34"," H35"
+CONNECT, " C20", YY301:  sp3, " C19"," N6 "," H36"
+CONNECT, " H1 ", YY301:    s, " C13"
+CONNECT, " H2 ", YY301:    s, " C13"
+CONNECT, " H3 ", YY301:    s, " C13"
+CONNECT, " H5 ", YY301:    s, " C12"
+CONNECT, " H6 ", YY301:    s, " C12"
+CONNECT, " H7 ", YY301:    s, " C12"
+CONNECT, " H8 ", YY301:    s, " C11"
+CONNECT, " H9 ", YY301:    s, " C11"
+CONNECT, " H10", YY301:    s, " C10"
+CONNECT, " H11", YY301:    s, " C10"
+CONNECT, " H12", YY301:    s, " C28"
+CONNECT, " H13", YY301:    s, " C28"
+CONNECT, " H14", YY301:    s, " C28"
+CONNECT, " H15", YY301:    s, " C3 "
+CONNECT, " H16", YY301:    s, " C14"
+CONNECT, " H17", YY301:    s, " C14"
+CONNECT, " H18", YY301:    s, " C14"
+CONNECT, " H19", YY301:    s, " N  "
+CONNECT, " H20", YY301:    s, " C8 "
+CONNECT, " H22", YY301:    s, " C9 "
+CONNECT, " H23", YY301:    s, " C9 "
+CONNECT, " H25", YY301:    s, " C6 "
+CONNECT, " H26", YY301:    s, " N3 "
+CONNECT, " H27", YY301:    s, " C16"
+CONNECT, " H28", YY301:    s, " C17"
+CONNECT, " H29", YY301:    s, " C25"
+CONNECT, " H30", YY301:    s, " C24"
+CONNECT, " H31", YY301:    s, " C23"
+CONNECT, " H32", YY301:    s, " C22"
+CONNECT, " H33", YY301:    s, " C27"
+CONNECT, " H34", YY301:    s, " C27"
+CONNECT, " H35", YY301:    s, " C27"
+CONNECT, " H36", YY301:    s, " C20"
+
+CONNECT, " C13", YY3+1:  sp3, " N2 "," H1 "," H2 "," H3 "
+CONNECT, " N2 ", YY3+1:  sp3, " C13"," C12"," C11"," H72"
+CONNECT, " C12", YY3+1:  sp3, " N2 "," H5 "," H6 "," H7 "
+CONNECT, " C11", YY3+1:  sp3, " N2 "," C10"," H8 "," H9 "
+CONNECT, " C10", YY3+1:  sp3, " C11"," N1 "," H10"," H11"
+CONNECT, " N1 ", YY3+1:  sp3, " C10"," C28"," C2 "
+CONNECT, " C28", YY3+1:  sp3, " N1 "," H12"," H13"," H14"
+CONNECT, " C3 ", YY3+1:  sp2, " C4 "," C2 "," H15"
+CONNECT, " C4 ", YY3+1:  sp2, " C3 "," O1 "," C5 "
+CONNECT, " O1 ", YY3+1:  sp2, " C4 "," C14"
+CONNECT, " C14", YY3+1:  sp3, " O1 "," H16"," H17"," H18"
+CONNECT, " C2 ", YY3+1:  sp2, " N1 "," C3 "," C1 "
+CONNECT, " C1 ", YY3+1:  sp2, " C2 "," N  "," C6 "
+CONNECT, " N  ", YY3+1:  sp2, " C1 "," C7 "," H19"
+CONNECT, " C7 ", YY3+1:  sp2, " N  "," O  "," C8 "
+CONNECT, " O  ", YY3+1:  sp3, " C7 "
+CONNECT, " C8 ", YY3+1:  sp2, " C7 "," C9 "," H20"
+CONNECT, " C9 ", YY3+1:  sp2, " C8 "," H22"," H23"
+CONNECT, " C6 ", YY3+1:  sp2, " C1 "," C5 "," H25"
+CONNECT, " C5 ", YY3+1:  sp2, " C4 "," C6 "," N3 "
+CONNECT, " N3 ", YY3+1:  sp2, " C5 "," C15"," H26"
+CONNECT, " C15", YY3+1:  sp2, " N3 "," N5 "," N4 "
+CONNECT, " N5 ", YY3+1:  sp2, " C15"," C18"
+CONNECT, " N4 ", YY3+1:  sp2, " C15"," C16"
+CONNECT, " C16", YY3+1:  sp2, " N4 "," C17"," H27"
+CONNECT, " C17", YY3+1:  sp2, " C16"," C18"," H28"
+CONNECT, " C18", YY3+1:  sp2, " N5 "," C17"," C19"
+CONNECT, " C19", YY3+1:  sp2, " C18"," C26"," C20"
+CONNECT, " C26", YY3+1:  sp2, " C19"," C25"," C21"
+CONNECT, " C25", YY3+1:  sp2, " C26"," C24"," H29"
+CONNECT, " C24", YY3+1:  sp2, " C25"," C23"," H30"
+CONNECT, " C23", YY3+1:  sp2, " C24"," C22"," H31"
+CONNECT, " C22", YY3+1:  sp2, " C23"," C21"," H32"
+CONNECT, " C21", YY3+1:  sp2, " C26"," C22"," N6 "
+CONNECT, " N6 ", YY3+1:  sp2, " C21"," C27"," C20"
+CONNECT, " C27", YY3+1:  sp3, " N6 "," H33"," H34"," H35"
+CONNECT, " C20", YY3+1:  sp3, " C19"," N6 "," H36"
+CONNECT, " H1 ", YY3+1:    s, " C13"
+CONNECT, " H2 ", YY3+1:    s, " C13"
+CONNECT, " H3 ", YY3+1:    s, " C13"
+CONNECT, " H5 ", YY3+1:    s, " C12"
+CONNECT, " H6 ", YY3+1:    s, " C12"
+CONNECT, " H7 ", YY3+1:    s, " C12"
+CONNECT, " H8 ", YY3+1:    s, " C11"
+CONNECT, " H9 ", YY3+1:    s, " C11"
+CONNECT, " H10", YY3+1:    s, " C10"
+CONNECT, " H11", YY3+1:    s, " C10"
+CONNECT, " H12", YY3+1:    s, " C28"
+CONNECT, " H13", YY3+1:    s, " C28"
+CONNECT, " H14", YY3+1:    s, " C28"
+CONNECT, " H15", YY3+1:    s, " C3 "
+CONNECT, " H16", YY3+1:    s, " C14"
+CONNECT, " H17", YY3+1:    s, " C14"
+CONNECT, " H18", YY3+1:    s, " C14"
+CONNECT, " H19", YY3+1:    s, " N  "
+CONNECT, " H20", YY3+1:    s, " C8 "
+CONNECT, " H22", YY3+1:    s, " C9 "
+CONNECT, " H23", YY3+1:    s, " C9 "
+CONNECT, " H25", YY3+1:    s, " C6 "
+CONNECT, " H26", YY3+1:    s, " N3 "
+CONNECT, " H27", YY3+1:    s, " C16"
+CONNECT, " H28", YY3+1:    s, " C17"
+CONNECT, " H29", YY3+1:    s, " C25"
+CONNECT, " H30", YY3+1:    s, " C24"
+CONNECT, " H31", YY3+1:    s, " C23"
+CONNECT, " H32", YY3+1:    s, " C22"
+CONNECT, " H33", YY3+1:    s, " C27"
+CONNECT, " H34", YY3+1:    s, " C27"
+CONNECT, " H35", YY3+1:    s, " C27"
+CONNECT, " H36", YY3+1:    s, " C20"
+CONNECT, " H72", YY3+1:    s, " N2 "   #mg
+
+CONNECT, " C13", YY3+2:  sp3, " N2 "," H1 "," H2 "," H3 "
+CONNECT, " N2 ", YY3+2:  sp3, " C13"," C12"," C11"
+CONNECT, " C12", YY3+2:  sp3, " N2 "," H5 "," H6 "," H7 "
+CONNECT, " C11", YY3+2:  sp3, " N2 "," C10"," H8 "," H9 "
+CONNECT, " C10", YY3+2:  sp3, " C11"," N1 "," H10"," H11"
+CONNECT, " N1 ", YY3+2:  sp3, " C10"," C28"," C2 "," H71"
+CONNECT, " C28", YY3+2:  sp3, " N1 "," H12"," H13"," H14"
+CONNECT, " C3 ", YY3+2:  sp2, " C4 "," C2 "," H15"
+CONNECT, " C4 ", YY3+2:  sp2, " C3 "," O1 "," C5 "
+CONNECT, " O1 ", YY3+2:  sp2, " C4 "," C14"
+CONNECT, " C14", YY3+2:  sp3, " O1 "," H16"," H17"," H18"
+CONNECT, " C2 ", YY3+2:  sp2, " N1 "," C3 "," C1 "
+CONNECT, " C1 ", YY3+2:  sp2, " C2 "," N  "," C6 "
+CONNECT, " N  ", YY3+2:  sp2, " C1 "," C7 "," H19"
+CONNECT, " C7 ", YY3+2:  sp2, " N  "," O  "," C8 "
+CONNECT, " O  ", YY3+2:  sp3, " C7 "
+CONNECT, " C8 ", YY3+2:  sp2, " C7 "," C9 "," H20"
+CONNECT, " C9 ", YY3+2:  sp2, " C8 "," H22"," H23"
+CONNECT, " C6 ", YY3+2:  sp2, " C1 "," C5 "," H25"
+CONNECT, " C5 ", YY3+2:  sp2, " C4 "," C6 "," N3 "
+CONNECT, " N3 ", YY3+2:  sp2, " C5 "," C15"," H26"
+CONNECT, " C15", YY3+2:  sp2, " N3 "," N5 "," N4 "
+CONNECT, " N5 ", YY3+2:  sp2, " C15"," C18"
+CONNECT, " N4 ", YY3+2:  sp2, " C15"," C16"
+CONNECT, " C16", YY3+2:  sp2, " N4 "," C17"," H27"
+CONNECT, " C17", YY3+2:  sp2, " C16"," C18"," H28"
+CONNECT, " C18", YY3+2:  sp2, " N5 "," C17"," C19"
+CONNECT, " C19", YY3+2:  sp2, " C18"," C26"," C20"
+CONNECT, " C26", YY3+2:  sp2, " C19"," C25"," C21"
+CONNECT, " C25", YY3+2:  sp2, " C26"," C24"," H29"
+CONNECT, " C24", YY3+2:  sp2, " C25"," C23"," H30"
+CONNECT, " C23", YY3+2:  sp2, " C24"," C22"," H31"
+CONNECT, " C22", YY3+2:  sp2, " C23"," C21"," H32"
+CONNECT, " C21", YY3+2:  sp2, " C26"," C22"," N6 "
+CONNECT, " N6 ", YY3+2:  sp2, " C21"," C27"," C20"
+CONNECT, " C27", YY3+2:  sp3, " N6 "," H33"," H34"," H35"
+CONNECT, " C20", YY3+2:  sp3, " C19"," N6 "," H36"
+CONNECT, " H1 ", YY3+2:    s, " C13"
+CONNECT, " H2 ", YY3+2:    s, " C13"
+CONNECT, " H3 ", YY3+2:    s, " C13"
+CONNECT, " H5 ", YY3+2:    s, " C12"
+CONNECT, " H6 ", YY3+2:    s, " C12"
+CONNECT, " H7 ", YY3+2:    s, " C12"
+CONNECT, " H8 ", YY3+2:    s, " C11"
+CONNECT, " H9 ", YY3+2:    s, " C11"
+CONNECT, " H10", YY3+2:    s, " C10"
+CONNECT, " H11", YY3+2:    s, " C10"
+CONNECT, " H12", YY3+2:    s, " C28"
+CONNECT, " H13", YY3+2:    s, " C28"
+CONNECT, " H14", YY3+2:    s, " C28"
+CONNECT, " H15", YY3+2:    s, " C3 "
+CONNECT, " H16", YY3+2:    s, " C14"
+CONNECT, " H17", YY3+2:    s, " C14"
+CONNECT, " H18", YY3+2:    s, " C14"
+CONNECT, " H19", YY3+2:    s, " N  "
+CONNECT, " H20", YY3+2:    s, " C8 "
+CONNECT, " H22", YY3+2:    s, " C9 "
+CONNECT, " H23", YY3+2:    s, " C9 "
+CONNECT, " H25", YY3+2:    s, " C6 "
+CONNECT, " H26", YY3+2:    s, " N3 "
+CONNECT, " H27", YY3+2:    s, " C16"
+CONNECT, " H28", YY3+2:    s, " C17"
+CONNECT, " H29", YY3+2:    s, " C25"
+CONNECT, " H30", YY3+2:    s, " C24"
+CONNECT, " H31", YY3+2:    s, " C23"
+CONNECT, " H32", YY3+2:    s, " C22"
+CONNECT, " H33", YY3+2:    s, " C27"
+CONNECT, " H34", YY3+2:    s, " C27"
+CONNECT, " H35", YY3+2:    s, " C27"
+CONNECT, " H36", YY3+2:    s, " C20"
+CONNECT, " H71", YY3+2:    s, " N1 "  #mg
+
+CONNECT, " C13", YY3+3:  sp3, " N2 "," H1 "," H2 "," H3 "
+CONNECT, " N2 ", YY3+3:  sp3, " C13"," C12"," C11"," H72"
+CONNECT, " C12", YY3+3:  sp3, " N2 "," H5 "," H6 "," H7 "
+CONNECT, " C11", YY3+3:  sp3, " N2 "," C10"," H8 "," H9 "
+CONNECT, " C10", YY3+3:  sp3, " C11"," N1 "," H10"," H11"
+CONNECT, " N1 ", YY3+3:  sp3, " C10"," C28"," C2 "
+CONNECT, " C28", YY3+3:  sp3, " N1 "," H12"," H13"," H14"
+CONNECT, " C3 ", YY3+3:  sp2, " C4 "," C2 "," H15"
+CONNECT, " C4 ", YY3+3:  sp2, " C3 "," O1 "," C5 "
+CONNECT, " O1 ", YY3+3:  sp2, " C4 "," C14"
+CONNECT, " C14", YY3+3:  sp3, " O1 "," H16"," H17"," H18"
+CONNECT, " C2 ", YY3+3:  sp2, " N1 "," C3 "," C1 "
+CONNECT, " C1 ", YY3+3:  sp2, " C2 "," N  "," C6 "
+CONNECT, " N  ", YY3+3:  sp2, " C1 "," C7 "
+#CONNECT, " N  ", YY3+3:  sp2, " C1 "," C7 "," H19"
+CONNECT, " C7 ", YY3+3:  sp2, " N  "," O  "," C8 "
+CONNECT, " O  ", YY3+3:  sp3, " C7 "," H70"
+CONNECT, " C8 ", YY3+3:  sp2, " C7 "," C9 "," H20"
+CONNECT, " C9 ", YY3+3:  sp2, " C8 "," H22"," H23"
+CONNECT, " C6 ", YY3+3:  sp2, " C1 "," C5 "," H25"
+CONNECT, " C5 ", YY3+3:  sp2, " C4 "," C6 "," N3 "
+CONNECT, " N3 ", YY3+3:  sp2, " C5 "," C15"," H26"
+CONNECT, " C15", YY3+3:  sp2, " N3 "," N5 "," N4 "
+CONNECT, " N5 ", YY3+3:  sp2, " C15"," C18"
+CONNECT, " N4 ", YY3+3:  sp2, " C15"," C16"
+CONNECT, " C16", YY3+3:  sp2, " N4 "," C17"," H27"
+CONNECT, " C17", YY3+3:  sp2, " C16"," C18"," H28"
+CONNECT, " C18", YY3+3:  sp2, " N5 "," C17"," C19"
+CONNECT, " C19", YY3+3:  sp2, " C18"," C26"," C20"
+CONNECT, " C26", YY3+3:  sp2, " C19"," C25"," C21"
+CONNECT, " C25", YY3+3:  sp2, " C26"," C24"," H29"
+CONNECT, " C24", YY3+3:  sp2, " C25"," C23"," H30"
+CONNECT, " C23", YY3+3:  sp2, " C24"," C22"," H31"
+CONNECT, " C22", YY3+3:  sp2, " C23"," C21"," H32"
+CONNECT, " C21", YY3+3:  sp2, " C26"," C22"," N6 "
+CONNECT, " N6 ", YY3+3:  sp2, " C21"," C27"," C20"
+CONNECT, " C27", YY3+3:  sp3, " N6 "," H33"," H34"," H35"
+CONNECT, " C20", YY3+3:  sp3, " C19"," N6 "," H36"
+CONNECT, " H1 ", YY3+3:    s, " C13"
+CONNECT, " H2 ", YY3+3:    s, " C13"
+CONNECT, " H3 ", YY3+3:    s, " C13"
+CONNECT, " H5 ", YY3+3:    s, " C12"
+CONNECT, " H6 ", YY3+3:    s, " C12"
+CONNECT, " H7 ", YY3+3:    s, " C12"
+CONNECT, " H8 ", YY3+3:    s, " C11"
+CONNECT, " H9 ", YY3+3:    s, " C11"
+CONNECT, " H10", YY3+3:    s, " C10"
+CONNECT, " H11", YY3+3:    s, " C10"
+CONNECT, " H12", YY3+3:    s, " C28"
+CONNECT, " H13", YY3+3:    s, " C28"
+CONNECT, " H14", YY3+3:    s, " C28"
+CONNECT, " H15", YY3+3:    s, " C3 "
+CONNECT, " H16", YY3+3:    s, " C14"
+CONNECT, " H17", YY3+3:    s, " C14"
+CONNECT, " H18", YY3+3:    s, " C14"
+#CONNECT, " H19", YY3+3:    s, " N  "
+CONNECT, " H20", YY3+3:    s, " C8 "
+CONNECT, " H22", YY3+3:    s, " C9 "
+CONNECT, " H23", YY3+3:    s, " C9 "
+CONNECT, " H25", YY3+3:    s, " C6 "
+CONNECT, " H26", YY3+3:    s, " N3 "
+CONNECT, " H27", YY3+3:    s, " C16"
+CONNECT, " H28", YY3+3:    s, " C17"
+CONNECT, " H29", YY3+3:    s, " C25"
+CONNECT, " H30", YY3+3:    s, " C24"
+CONNECT, " H31", YY3+3:    s, " C23"
+CONNECT, " H32", YY3+3:    s, " C22"
+CONNECT, " H33", YY3+3:    s, " C27"
+CONNECT, " H34", YY3+3:    s, " C27"
+CONNECT, " H35", YY3+3:    s, " C27"
+CONNECT, " H36", YY3+3:    s, " C20"
+CONNECT, " H70", YY3+3:    s, " O  "
+CONNECT, " H72", YY3+3:    s, " N2 "
+
+CONNECT, " C13", YY3+4:  sp3, " N2 "," H1 "," H2 "," H3 "
+CONNECT, " N2 ", YY3+4:  sp3, " C13"," C12"," C11"
+CONNECT, " C12", YY3+4:  sp3, " N2 "," H5 "," H6 "," H7 "
+CONNECT, " C11", YY3+4:  sp3, " N2 "," C10"," H8 "," H9 "
+CONNECT, " C10", YY3+4:  sp3, " C11"," N1 "," H10"," H11"
+CONNECT, " N1 ", YY3+4:  sp3, " C10"," C28"," C2 "," H71"
+CONNECT, " C28", YY3+4:  sp3, " N1 "," H12"," H13"," H14"
+CONNECT, " C3 ", YY3+4:  sp2, " C4 "," C2 "," H15"
+CONNECT, " C4 ", YY3+4:  sp2, " C3 "," O1 "," C5 "
+CONNECT, " O1 ", YY3+4:  sp2, " C4 "," C14"
+CONNECT, " C14", YY3+4:  sp3, " O1 "," H16"," H17"," H18"
+CONNECT, " C2 ", YY3+4:  sp2, " N1 "," C3 "," C1 "
+CONNECT, " C1 ", YY3+4:  sp2, " C2 "," N  "," C6 "
+CONNECT, " N  ", YY3+4:  sp2, " C1 "," C7 "
+#CONNECT, " N  ", YY3+4:  sp2, " C1 "," C7 "," H19"
+CONNECT, " C7 ", YY3+4:  sp2, " N  "," O  "," C8 "
+CONNECT, " O  ", YY3+4:  sp3, " C7 "," H70"
+CONNECT, " C8 ", YY3+4:  sp2, " C7 "," C9 "," H20"
+CONNECT, " C9 ", YY3+4:  sp2, " C8 "," H22"," H23"
+CONNECT, " C6 ", YY3+4:  sp2, " C1 "," C5 "," H25"
+CONNECT, " C5 ", YY3+4:  sp2, " C4 "," C6 "," N3 "
+CONNECT, " N3 ", YY3+4:  sp2, " C5 "," C15"," H26"
+CONNECT, " C15", YY3+4:  sp2, " N3 "," N5 "," N4 "
+CONNECT, " N5 ", YY3+4:  sp2, " C15"," C18"
+CONNECT, " N4 ", YY3+4:  sp2, " C15"," C16"
+CONNECT, " C16", YY3+4:  sp2, " N4 "," C17"," H27"
+CONNECT, " C17", YY3+4:  sp2, " C16"," C18"," H28"
+CONNECT, " C18", YY3+4:  sp2, " N5 "," C17"," C19"
+CONNECT, " C19", YY3+4:  sp2, " C18"," C26"," C20"
+CONNECT, " C26", YY3+4:  sp2, " C19"," C25"," C21"
+CONNECT, " C25", YY3+4:  sp2, " C26"," C24"," H29"
+CONNECT, " C24", YY3+4:  sp2, " C25"," C23"," H30"
+CONNECT, " C23", YY3+4:  sp2, " C24"," C22"," H31"
+CONNECT, " C22", YY3+4:  sp2, " C23"," C21"," H32"
+CONNECT, " C21", YY3+4:  sp2, " C26"," C22"," N6 "
+CONNECT, " N6 ", YY3+4:  sp2, " C21"," C27"," C20"
+CONNECT, " C27", YY3+4:  sp3, " N6 "," H33"," H34"," H35"
+CONNECT, " C20", YY3+4:  sp3, " C19"," N6 "," H36"
+CONNECT, " H1 ", YY3+4:    s, " C13"
+CONNECT, " H2 ", YY3+4:    s, " C13"
+CONNECT, " H3 ", YY3+4:    s, " C13"
+CONNECT, " H5 ", YY3+4:    s, " C12"
+CONNECT, " H6 ", YY3+4:    s, " C12"
+CONNECT, " H7 ", YY3+4:    s, " C12"
+CONNECT, " H8 ", YY3+4:    s, " C11"
+CONNECT, " H9 ", YY3+4:    s, " C11"
+CONNECT, " H10", YY3+4:    s, " C10"
+CONNECT, " H11", YY3+4:    s, " C10"
+CONNECT, " H12", YY3+4:    s, " C28"
+CONNECT, " H13", YY3+4:    s, " C28"
+CONNECT, " H14", YY3+4:    s, " C28"
+CONNECT, " H15", YY3+4:    s, " C3 "
+CONNECT, " H16", YY3+4:    s, " C14"
+CONNECT, " H17", YY3+4:    s, " C14"
+CONNECT, " H18", YY3+4:    s, " C14"
+#CONNECT, " H19", YY3+4:    s, " N  "
+CONNECT, " H20", YY3+4:    s, " C8 "
+CONNECT, " H22", YY3+4:    s, " C9 "
+CONNECT, " H23", YY3+4:    s, " C9 "
+CONNECT, " H25", YY3+4:    s, " C6 "
+CONNECT, " H26", YY3+4:    s, " N3 "
+CONNECT, " H27", YY3+4:    s, " C16"
+CONNECT, " H28", YY3+4:    s, " C17"
+CONNECT, " H29", YY3+4:    s, " C25"
+CONNECT, " H30", YY3+4:    s, " C24"
+CONNECT, " H31", YY3+4:    s, " C23"
+CONNECT, " H32", YY3+4:    s, " C22"
+CONNECT, " H33", YY3+4:    s, " C27"
+CONNECT, " H34", YY3+4:    s, " C27"
+CONNECT, " H35", YY3+4:    s, " C27"
+CONNECT, " H36", YY3+4:    s, " C20"
+CONNECT, " H70", YY3+4:    s, " O  "
+CONNECT, " H71", YY3+4:    s, " N1 "
+
+CONNECT, " C13", YY3+a:  sp3, " N2 "," H1 "," H2 "," H3 "
+CONNECT, " N2 ", YY3+a:  sp3, " C13"," C12"," C11"," H72"
+CONNECT, " C12", YY3+a:  sp3, " N2 "," H5 "," H6 "," H7 "
+CONNECT, " C11", YY3+a:  sp3, " N2 "," C10"," H8 "," H9 "
+CONNECT, " C10", YY3+a:  sp3, " C11"," N1 "," H10"," H11"
+CONNECT, " N1 ", YY3+a:  sp3, " C10"," C28"," C2 "
+CONNECT, " C28", YY3+a:  sp3, " N1 "," H12"," H13"," H14"
+CONNECT, " C3 ", YY3+a:  sp2, " C4 "," C2 "," H15"
+CONNECT, " C4 ", YY3+a:  sp2, " C3 "," O1 "," C5 "
+CONNECT, " O1 ", YY3+a:  sp2, " C4 "," C14"
+CONNECT, " C14", YY3+a:  sp3, " O1 "," H16"," H17"," H18"
+CONNECT, " C2 ", YY3+a:  sp2, " N1 "," C3 "," C1 "
+CONNECT, " C1 ", YY3+a:  sp2, " C2 "," N  "," C6 "
+CONNECT, " N  ", YY3+a:  sp2, " C1 "," C7 "," H19"
+CONNECT, " C7 ", YY3+a:  sp2, " N  "," O  "," C8 "
+CONNECT, " O  ", YY3+a:  sp3, " C7 "," H70"
+CONNECT, " C8 ", YY3+a:  sp2, " C7 "," C9 "," H20"
+CONNECT, " C9 ", YY3+a:  sp2, " C8 "," H22"," H23"
+CONNECT, " C6 ", YY3+a:  sp2, " C1 "," C5 "," H25"
+CONNECT, " C5 ", YY3+a:  sp2, " C4 "," C6 "," N3 "
+CONNECT, " N3 ", YY3+a:  sp2, " C5 "," C15"," H26"
+CONNECT, " C15", YY3+a:  sp2, " N3 "," N5 "," N4 "
+CONNECT, " N5 ", YY3+a:  sp2, " C15"," C18"
+CONNECT, " N4 ", YY3+a:  sp2, " C15"," C16"
+CONNECT, " C16", YY3+a:  sp2, " N4 "," C17"," H27"
+CONNECT, " C17", YY3+a:  sp2, " C16"," C18"," H28"
+CONNECT, " C18", YY3+a:  sp2, " N5 "," C17"," C19"
+CONNECT, " C19", YY3+a:  sp2, " C18"," C26"," C20"
+CONNECT, " C26", YY3+a:  sp2, " C19"," C25"," C21"
+CONNECT, " C25", YY3+a:  sp2, " C26"," C24"," H29"
+CONNECT, " C24", YY3+a:  sp2, " C25"," C23"," H30"
+CONNECT, " C23", YY3+a:  sp2, " C24"," C22"," H31"
+CONNECT, " C22", YY3+a:  sp2, " C23"," C21"," H32"
+CONNECT, " C21", YY3+a:  sp2, " C26"," C22"," N6 "
+CONNECT, " N6 ", YY3+a:  sp2, " C21"," C27"," C20"
+CONNECT, " C27", YY3+a:  sp3, " N6 "," H33"," H34"," H35"
+CONNECT, " C20", YY3+a:  sp3, " C19"," N6 "," H36"
+CONNECT, " H1 ", YY3+a:    s, " C13"
+CONNECT, " H2 ", YY3+a:    s, " C13"
+CONNECT, " H3 ", YY3+a:    s, " C13"
+CONNECT, " H5 ", YY3+a:    s, " C12"
+CONNECT, " H6 ", YY3+a:    s, " C12"
+CONNECT, " H7 ", YY3+a:    s, " C12"
+CONNECT, " H8 ", YY3+a:    s, " C11"
+CONNECT, " H9 ", YY3+a:    s, " C11"
+CONNECT, " H10", YY3+a:    s, " C10"
+CONNECT, " H11", YY3+a:    s, " C10"
+CONNECT, " H12", YY3+a:    s, " C28"
+CONNECT, " H13", YY3+a:    s, " C28"
+CONNECT, " H14", YY3+a:    s, " C28"
+CONNECT, " H15", YY3+a:    s, " C3 "
+CONNECT, " H16", YY3+a:    s, " C14"
+CONNECT, " H17", YY3+a:    s, " C14"
+CONNECT, " H18", YY3+a:    s, " C14"
+CONNECT, " H19", YY3+a:    s, " N  "
+CONNECT, " H20", YY3+a:    s, " C8 "
+CONNECT, " H22", YY3+a:    s, " C9 "
+CONNECT, " H23", YY3+a:    s, " C9 "
+CONNECT, " H25", YY3+a:    s, " C6 "
+CONNECT, " H26", YY3+a:    s, " N3 "
+CONNECT, " H27", YY3+a:    s, " C16"
+CONNECT, " H28", YY3+a:    s, " C17"
+CONNECT, " H29", YY3+a:    s, " C25"
+CONNECT, " H30", YY3+a:    s, " C24"
+CONNECT, " H31", YY3+a:    s, " C23"
+CONNECT, " H32", YY3+a:    s, " C22"
+CONNECT, " H33", YY3+a:    s, " C27"
+CONNECT, " H34", YY3+a:    s, " C27"
+CONNECT, " H35", YY3+a:    s, " C27"
+CONNECT, " H36", YY3+a:    s, " C20"
+CONNECT, " H70", YY3+a:    s, " O  "
+CONNECT, " H72", YY3+a:    s, " N2 "
+
+CONNECT, " C13", YY3+b:  sp3, " N2 "," H1 "," H2 "," H3 "
+CONNECT, " N2 ", YY3+b:  sp3, " C13"," C12"," C11"," H71"
+CONNECT, " C12", YY3+b:  sp3, " N2 "," H5 "," H6 "," H7 "
+CONNECT, " C11", YY3+b:  sp3, " N2 "," C10"," H8 "," H9 "
+CONNECT, " C10", YY3+b:  sp3, " C11"," N1 "," H10"," H11"
+CONNECT, " N1 ", YY3+b:  sp3, " C10"," C28"," C2 "," H72"
+CONNECT, " C28", YY3+b:  sp3, " N1 "," H12"," H13"," H14"
+CONNECT, " C3 ", YY3+b:  sp2, " C4 "," C2 "," H15"
+CONNECT, " C4 ", YY3+b:  sp2, " C3 "," O1 "," C5 "
+CONNECT, " O1 ", YY3+b:  sp2, " C4 "," C14"
+CONNECT, " C14", YY3+b:  sp3, " O1 "," H16"," H17"," H18"
+CONNECT, " C2 ", YY3+b:  sp2, " N1 "," C3 "," C1 "
+CONNECT, " C1 ", YY3+b:  sp2, " C2 "," N  "," C6 "
+CONNECT, " N  ", YY3+b:  sp2, " C1 "," C7 "," H19"
+CONNECT, " C7 ", YY3+b:  sp2, " N  "," O  "," C8 "
+CONNECT, " O  ", YY3+b:  sp3, " C7 "
+CONNECT, " C8 ", YY3+b:  sp2, " C7 "," C9 "," H20"
+CONNECT, " C9 ", YY3+b:  sp2, " C8 "," H22"," H23"
+CONNECT, " C6 ", YY3+b:  sp2, " C1 "," C5 "," H25"
+CONNECT, " C5 ", YY3+b:  sp2, " C4 "," C6 "," N3 "
+CONNECT, " N3 ", YY3+b:  sp2, " C5 "," C15"," H26"
+CONNECT, " C15", YY3+b:  sp2, " N3 "," N5 "," N4 "
+CONNECT, " N5 ", YY3+b:  sp2, " C15"," C18"
+CONNECT, " N4 ", YY3+b:  sp2, " C15"," C16"
+CONNECT, " C16", YY3+b:  sp2, " N4 "," C17"," H27"
+CONNECT, " C17", YY3+b:  sp2, " C16"," C18"," H28"
+CONNECT, " C18", YY3+b:  sp2, " N5 "," C17"," C19"
+CONNECT, " C19", YY3+b:  sp2, " C18"," C26"," C20"
+CONNECT, " C26", YY3+b:  sp2, " C19"," C25"," C21"
+CONNECT, " C25", YY3+b:  sp2, " C26"," C24"," H29"
+CONNECT, " C24", YY3+b:  sp2, " C25"," C23"," H30"
+CONNECT, " C23", YY3+b:  sp2, " C24"," C22"," H31"
+CONNECT, " C22", YY3+b:  sp2, " C23"," C21"," H32"
+CONNECT, " C21", YY3+b:  sp2, " C26"," C22"," N6 "
+CONNECT, " N6 ", YY3+b:  sp2, " C21"," C27"," C20"
+CONNECT, " C27", YY3+b:  sp3, " N6 "," H33"," H34"," H35"
+CONNECT, " C20", YY3+b:  sp3, " C19"," N6 "," H36"
+CONNECT, " H1 ", YY3+b:    s, " C13"
+CONNECT, " H2 ", YY3+b:    s, " C13"
+CONNECT, " H3 ", YY3+b:    s, " C13"
+CONNECT, " H5 ", YY3+b:    s, " C12"
+CONNECT, " H6 ", YY3+b:    s, " C12"
+CONNECT, " H7 ", YY3+b:    s, " C12"
+CONNECT, " H8 ", YY3+b:    s, " C11"
+CONNECT, " H9 ", YY3+b:    s, " C11"
+CONNECT, " H10", YY3+b:    s, " C10"
+CONNECT, " H11", YY3+b:    s, " C10"
+CONNECT, " H12", YY3+b:    s, " C28"
+CONNECT, " H13", YY3+b:    s, " C28"
+CONNECT, " H14", YY3+b:    s, " C28"
+CONNECT, " H15", YY3+b:    s, " C3 "
+CONNECT, " H16", YY3+b:    s, " C14"
+CONNECT, " H17", YY3+b:    s, " C14"
+CONNECT, " H18", YY3+b:    s, " C14"
+CONNECT, " H19", YY3+b:    s, " N  "
+CONNECT, " H20", YY3+b:    s, " C8 "
+CONNECT, " H22", YY3+b:    s, " C9 "
+CONNECT, " H23", YY3+b:    s, " C9 "
+CONNECT, " H25", YY3+b:    s, " C6 "
+CONNECT, " H26", YY3+b:    s, " N3 "
+CONNECT, " H27", YY3+b:    s, " C16"
+CONNECT, " H28", YY3+b:    s, " C17"
+CONNECT, " H29", YY3+b:    s, " C25"
+CONNECT, " H30", YY3+b:    s, " C24"
+CONNECT, " H31", YY3+b:    s, " C23"
+CONNECT, " H32", YY3+b:    s, " C22"
+CONNECT, " H33", YY3+b:    s, " C27"
+CONNECT, " H34", YY3+b:    s, " C27"
+CONNECT, " H35", YY3+b:    s, " C27"
+CONNECT, " H36", YY3+b:    s, " C20"
+CONNECT, " H71", YY3+b:    s, " N1 "
+CONNECT, " H72", YY3+b:    s, " N2 "
+
+
+# ATOM charges
+CHARGE, YY301, " C13":  0.139 # amended
+CHARGE, YY301, " N2 ": -0.704 # amended
+CHARGE, YY301, " C12":  0.139 # amended
+CHARGE, YY301, " C11":  0.135 # amended
+CHARGE, YY301, " C10":  0.246 # amended
+CHARGE, YY301, " N1 ": -0.761 # amended
+CHARGE, YY301, " C28":  0.228 # amended
+CHARGE, YY301, " C3 ": -0.115 # amended
+CHARGE, YY301, " C4 ":  0.016 # amended
+CHARGE, YY301, " O1 ": -0.347 # amended
+CHARGE, YY301, " C14":  0.112 # amended
+CHARGE, YY301, " C2 ":  0.100 # amended
+CHARGE, YY301, " C1 ":  0.070 # amended
+CHARGE, YY301, " N  ": -0.466 # amended
+CHARGE, YY301, " C7 ":  0.661 # amended
+CHARGE, YY301, " O  ": -0.584 # amended
+CHARGE, YY301, " C8 ": -0.243 # amended
+CHARGE, YY301, " C9 ": -0.130 # amended
+CHARGE, YY301, " C6 ": -0.157 # amended
+CHARGE, YY301, " C5 ":  0.169 # amended
+CHARGE, YY301, " N3 ": -0.724 # amended
+CHARGE, YY301, " C15":  0.881 # amended
+CHARGE, YY301, " N5 ": -0.770 # amended
+CHARGE, YY301, " N4 ": -0.730 # amended
+CHARGE, YY301, " C16":  0.463 # amended
+CHARGE, YY301, " C17": -0.413 # amended
+CHARGE, YY301, " C18":  0.581 # amended
+CHARGE, YY301, " C19": -0.240 # amended
+CHARGE, YY301, " C26": -0.064 # amended
+CHARGE, YY301, " C25": -0.091 # amended
+CHARGE, YY301, " C24": -0.150 # amended
+CHARGE, YY301, " C23": -0.119 # amended
+CHARGE, YY301, " C22": -0.136 # amended
+CHARGE, YY301, " C21":  0.078 # amended
+CHARGE, YY301, " N6 ": -0.490 # amended
+CHARGE, YY301, " C27":  0.207 # amended
+CHARGE, YY301, " C20":  0.072 # amended
+CHARGE, YY301, " H1 ":  0.034 # amended
+CHARGE, YY301, " H2 ":  0.034 # amended
+CHARGE, YY301, " H3 ":  0.034 # amended
+CHARGE, YY301, " H5 ":  0.034 # amended
+CHARGE, YY301, " H6 ":  0.034 # amended
+CHARGE, YY301, " H7 ":  0.034 # amended
+CHARGE, YY301, " H8 ":  0.037 # amended
+CHARGE, YY301, " H9 ":  0.037 # amended
+CHARGE, YY301, " H10":  0.039 # amended
+CHARGE, YY301, " H11":  0.039 # amended
+CHARGE, YY301, " H12":  0.027 # amended
+CHARGE, YY301, " H13":  0.027 # amended
+CHARGE, YY301, " H14":  0.027 # amended
+CHARGE, YY301, " H15":  0.151 # amended
+CHARGE, YY301, " H16":  0.040 # amended
+CHARGE, YY301, " H17":  0.040 # amended
+CHARGE, YY301, " H18":  0.040 # amended
+CHARGE, YY301, " H19":  0.321 # amended
+CHARGE, YY301, " H20":  0.129 # amended
+CHARGE, YY301, " H22":  0.131 # amended
+CHARGE, YY301, " H23":  0.131 # amended
+CHARGE, YY301, " H25":  0.202 # amended
+CHARGE, YY301, " H26":  0.463 # amended
+CHARGE, YY301, " H27":  0.028 # amended
+CHARGE, YY301, " H28":  0.156 # amended
+CHARGE, YY301, " H29":  0.138 # amended
+CHARGE, YY301, " H30":  0.130 # amended
+CHARGE, YY301, " H31":  0.130 # amended
+CHARGE, YY301, " H32":  0.132 # amended
+CHARGE, YY301, " H33":  0.052 # amended
+CHARGE, YY301, " H34":  0.052 # amended
+CHARGE, YY301, " H35":  0.052 # amended
+CHARGE, YY301, " H36":  0.182 # amended
+
+CHARGE, YY3+1, " C13":  0.079 # amended
+CHARGE, YY3+1, " N2 ": -0.671 # amended
+CHARGE, YY3+1, " C12":  0.079 # amended
+CHARGE, YY3+1, " C11":  0.057 # amended
+CHARGE, YY3+1, " C10":  0.244 # amended
+CHARGE, YY3+1, " N1 ": -0.737 # amended
+CHARGE, YY3+1, " C28":  0.214 # amended
+CHARGE, YY3+1, " C3 ": -0.109 # amended
+CHARGE, YY3+1, " C4 ":  0.009 # amended
+CHARGE, YY3+1, " O1 ": -0.333 # amended
+CHARGE, YY3+1, " C14":  0.107 # amended
+CHARGE, YY3+1, " C2 ":  0.030 # amended
+CHARGE, YY3+1, " C1 ":  0.108 # amended
+CHARGE, YY3+1, " N  ": -0.477 # amended
+CHARGE, YY3+1, " C7 ":  0.666 # amended
+CHARGE, YY3+1, " O  ": -0.561 # amended
+CHARGE, YY3+1, " C8 ": -0.260 # amended
+CHARGE, YY3+1, " C9 ": -0.104 # amended
+CHARGE, YY3+1, " C6 ": -0.168 # amended
+CHARGE, YY3+1, " C5 ":  0.205 # amended
+CHARGE, YY3+1, " N3 ": -0.714 # amended
+CHARGE, YY3+1, " C15":  0.858 # amended
+CHARGE, YY3+1, " N5 ": -0.723 # amended
+CHARGE, YY3+1, " N4 ": -0.734 # amended
+CHARGE, YY3+1, " C16":  0.458 # amended
+CHARGE, YY3+1, " C17": -0.389 # amended
+CHARGE, YY3+1, " C18":  0.576 # amended
+CHARGE, YY3+1, " C19": -0.242 # amended
+CHARGE, YY3+1, " C26": -0.062 # amended
+CHARGE, YY3+1, " C25": -0.080 # amended
+CHARGE, YY3+1, " C24": -0.152 # amended
+CHARGE, YY3+1, " C23": -0.113 # amended
+CHARGE, YY3+1, " C22": -0.137 # amended
+CHARGE, YY3+1, " C21":  0.081 # amended
+CHARGE, YY3+1, " N6 ": -0.487 # amended
+CHARGE, YY3+1, " C27":  0.207 # amended
+CHARGE, YY3+1, " C20":  0.043 # amended
+CHARGE, YY3+1, " H1 ":  0.106 # amended
+CHARGE, YY3+1, " H2 ":  0.106 # amended
+CHARGE, YY3+1, " H3 ":  0.106 # amended
+CHARGE, YY3+1, " H5 ":  0.106 # amended
+CHARGE, YY3+1, " H6 ":  0.106 # amended
+CHARGE, YY3+1, " H7 ":  0.106 # amended
+CHARGE, YY3+1, " H8 ":  0.107 # amended
+CHARGE, YY3+1, " H9 ":  0.107 # amended
+CHARGE, YY3+1, " H10":  0.053 # amended
+CHARGE, YY3+1, " H11":  0.053 # amended
+CHARGE, YY3+1, " H12":  0.039 # amended
+CHARGE, YY3+1, " H13":  0.039 # amended
+CHARGE, YY3+1, " H14":  0.039 # amended
+CHARGE, YY3+1, " H15":  0.127 # amended
+CHARGE, YY3+1, " H16":  0.041 # amended
+CHARGE, YY3+1, " H17":  0.041 # amended
+CHARGE, YY3+1, " H18":  0.041 # amended
+CHARGE, YY3+1, " H19":  0.310 # amended
+CHARGE, YY3+1, " H20":  0.125 # amended
+CHARGE, YY3+1, " H22":  0.139 # amended
+CHARGE, YY3+1, " H23":  0.139 # amended
+CHARGE, YY3+1, " H25":  0.216 # amended
+CHARGE, YY3+1, " H26":  0.457 # amended
+CHARGE, YY3+1, " H27":  0.034 # amended
+CHARGE, YY3+1, " H28":  0.164 # amended
+CHARGE, YY3+1, " H29":  0.141 # amended
+CHARGE, YY3+1, " H30":  0.131 # amended
+CHARGE, YY3+1, " H31":  0.134 # amended
+CHARGE, YY3+1, " H32":  0.135 # amended
+CHARGE, YY3+1, " H33":  0.054 # amended
+CHARGE, YY3+1, " H34":  0.054 # amended
+CHARGE, YY3+1, " H35":  0.054 # amended
+CHARGE, YY3+1, " H36":  0.171 # amended
+CHARGE, YY3+1, " H72":  0.451 # amended  mg
+
+CHARGE, YY3+2, " C13":  0.129 # amended
+CHARGE, YY3+2, " N2 ": -0.698 # amended
+CHARGE, YY3+2, " C12":  0.128 # amended
+CHARGE, YY3+2, " C11":  0.131 # amended
+CHARGE, YY3+2, " C10":  0.101 # amended
+CHARGE, YY3+2, " N1 ": -0.528 # amended
+CHARGE, YY3+2, " C28":  0.083 # amended
+CHARGE, YY3+2, " C3 ": -0.070 # amended
+CHARGE, YY3+2, " C4 ":  0.013 # amended
+CHARGE, YY3+2, " O1 ": -0.337 # amended
+CHARGE, YY3+2, " C14":  0.108 # amended
+CHARGE, YY3+2, " C2 ": -0.177 # amended
+CHARGE, YY3+2, " C1 ":  0.158 # amended
+CHARGE, YY3+2, " N  ": -0.497 # amended
+CHARGE, YY3+2, " C7 ":  0.676 # amended
+CHARGE, YY3+2, " O  ": -0.532 # amended
+CHARGE, YY3+2, " C8 ": -0.272 # amended
+CHARGE, YY3+2, " C9 ": -0.083 # amended
+CHARGE, YY3+2, " C6 ": -0.187 # amended
+CHARGE, YY3+2, " C5 ":  0.265 # amended
+CHARGE, YY3+2, " N3 ": -0.720 # amended
+CHARGE, YY3+2, " C15":  0.854 # amended
+CHARGE, YY3+2, " N5 ": -0.730 # amended
+CHARGE, YY3+2, " N4 ": -0.737 # amended
+CHARGE, YY3+2, " C16":  0.457 # amended
+CHARGE, YY3+2, " C17": -0.371 # amended
+CHARGE, YY3+2, " C18":  0.586 # amended
+CHARGE, YY3+2, " C19": -0.264 # amended
+CHARGE, YY3+2, " C26": -0.064 # amended
+CHARGE, YY3+2, " C25": -0.097 # amended
+CHARGE, YY3+2, " C24": -0.140 # amended
+CHARGE, YY3+2, " C23": -0.112 # amended
+CHARGE, YY3+2, " C22": -0.129 # amended
+CHARGE, YY3+2, " C21":  0.077 # amended
+CHARGE, YY3+2, " N6 ": -0.478 # amended
+CHARGE, YY3+2, " C27":  0.201 # amended
+CHARGE, YY3+2, " C20":  0.070 # amended
+CHARGE, YY3+2, " H1 ":  0.050 # amended
+CHARGE, YY3+2, " H2 ":  0.050 # amended
+CHARGE, YY3+2, " H3 ":  0.050 # amended
+CHARGE, YY3+2, " H5 ":  0.050 # amended
+CHARGE, YY3+2, " H6 ":  0.050 # amended
+CHARGE, YY3+2, " H7 ":  0.050 # amended
+CHARGE, YY3+2, " H8 ":  0.045 # amended
+CHARGE, YY3+2, " H9 ":  0.045 # amended
+CHARGE, YY3+2, " H10":  0.116 # amended
+CHARGE, YY3+2, " H11":  0.116 # amended
+CHARGE, YY3+2, " H12":  0.100 # amended
+CHARGE, YY3+2, " H13":  0.100 # amended
+CHARGE, YY3+2, " H14":  0.100 # amended
+CHARGE, YY3+2, " H15":  0.159 # amended
+CHARGE, YY3+2, " H16":  0.052 # amended
+CHARGE, YY3+2, " H17":  0.052 # amended
+CHARGE, YY3+2, " H18":  0.052 # amended
+CHARGE, YY3+2, " H19":  0.291 # amended
+CHARGE, YY3+2, " H20":  0.130 # amended
+CHARGE, YY3+2, " H22":  0.145 # amended
+CHARGE, YY3+2, " H23":  0.145 # amended
+CHARGE, YY3+2, " H25":  0.221 # amended
+CHARGE, YY3+2, " H26":  0.481 # amended
+CHARGE, YY3+2, " H27":  0.038 # amended
+CHARGE, YY3+2, " H28":  0.173 # amended
+CHARGE, YY3+2, " H29":  0.133 # amended
+CHARGE, YY3+2, " H30":  0.136 # amended
+CHARGE, YY3+2, " H31":  0.139 # amended
+CHARGE, YY3+2, " H32":  0.138 # amended
+CHARGE, YY3+2, " H33":  0.057 # amended
+CHARGE, YY3+2, " H34":  0.057 # amended
+CHARGE, YY3+2, " H35":  0.057 # amended
+CHARGE, YY3+2, " H36":  0.177 # amended
+CHARGE, YY3+2, " H71":  0.431 # amended  mg
+
+CHARGE, YY3+3, " C13":  0.083 # amended
+CHARGE, YY3+3, " N2 ": -0.678 # amended
+CHARGE, YY3+3, " C12":  0.084 # amended
+CHARGE, YY3+3, " C11":  0.071 # amended
+CHARGE, YY3+3, " C10":  0.213 # amended
+CHARGE, YY3+3, " N1 ": -0.675 # amended
+CHARGE, YY3+3, " C28":  0.201 # amended
+CHARGE, YY3+3, " C3 ": -0.116 # amended
+CHARGE, YY3+3, " C4 ":  0.031 # amended
+CHARGE, YY3+3, " O1 ": -0.345 # amended
+CHARGE, YY3+3, " C14":  0.113 # amended
+CHARGE, YY3+3, " C2 ":  0.085 # amended
+CHARGE, YY3+3, " C1 ":  0.013 # amended
+CHARGE, YY3+3, " N  ": -0.317 # amended
+CHARGE, YY3+3, " C7 ":  0.521 # amended
+CHARGE, YY3+3, " O  ": -0.726 # amended
+CHARGE, YY3+3, " C8 ": -0.174 # amended
+CHARGE, YY3+3, " C9 ": -0.132 # amended
+CHARGE, YY3+3, " C6 ": -0.197 # amended
+CHARGE, YY3+3, " C5 ":  0.204 # amended
+CHARGE, YY3+3, " N3 ": -0.741 # amended
+CHARGE, YY3+3, " C15":  0.882 # amended
+CHARGE, YY3+3, " N5 ": -0.746 # amended
+CHARGE, YY3+3, " N4 ": -0.758 # amended
+CHARGE, YY3+3, " C16":  0.462 # amended
+CHARGE, YY3+3, " C17": -0.409 # amended
+CHARGE, YY3+3, " C18":  0.595 # amended
+CHARGE, YY3+3, " C19": -0.252 # amended
+CHARGE, YY3+3, " C26": -0.052 # amended
+CHARGE, YY3+3, " C25": -0.077 # amended
+CHARGE, YY3+3, " C24": -0.152 # amended
+CHARGE, YY3+3, " C23": -0.113 # amended
+CHARGE, YY3+3, " C22": -0.134 # amended
+CHARGE, YY3+3, " C21":  0.071 # amended
+CHARGE, YY3+3, " N6 ": -0.475 # amended
+CHARGE, YY3+3, " C27":  0.202 # amended
+CHARGE, YY3+3, " C20":  0.057 # amended
+CHARGE, YY3+3, " H1 ":  0.105 # amended
+CHARGE, YY3+3, " H2 ":  0.105 # amended
+CHARGE, YY3+3, " H3 ":  0.105 # amended
+CHARGE, YY3+3, " H5 ":  0.105 # amended
+CHARGE, YY3+3, " H6 ":  0.105 # amended
+CHARGE, YY3+3, " H7 ":  0.105 # amended
+CHARGE, YY3+3, " H8 ":  0.106 # amended
+CHARGE, YY3+3, " H9 ":  0.106 # amended
+CHARGE, YY3+3, " H10":  0.056 # amended
+CHARGE, YY3+3, " H11":  0.056 # amended
+CHARGE, YY3+3, " H12":  0.042 # amended
+CHARGE, YY3+3, " H13":  0.042 # amended
+CHARGE, YY3+3, " H14":  0.042 # amended
+CHARGE, YY3+3, " H15":  0.135 # amended
+CHARGE, YY3+3, " H16":  0.044 # amended
+CHARGE, YY3+3, " H17":  0.044 # amended
+CHARGE, YY3+3, " H18":  0.044 # amended
+#CHARGE, YY3+3, " H19": to_be_filled
+CHARGE, YY3+3, " H20":  0.153 # amended
+CHARGE, YY3+3, " H22":  0.135 # amended
+CHARGE, YY3+3, " H23":  0.135 # amended
+CHARGE, YY3+3, " H25":  0.175 # amended
+CHARGE, YY3+3, " H26":  0.474 # amended
+CHARGE, YY3+3, " H27":  0.028 # amended
+CHARGE, YY3+3, " H28":  0.157 # amended
+CHARGE, YY3+3, " H29":  0.146 # amended
+CHARGE, YY3+3, " H30":  0.130 # amended
+CHARGE, YY3+3, " H31":  0.135 # amended
+CHARGE, YY3+3, " H32":  0.137 # amended
+CHARGE, YY3+3, " H33":  0.057 # amended
+CHARGE, YY3+3, " H34":  0.057 # amended
+CHARGE, YY3+3, " H35":  0.057 # amended
+CHARGE, YY3+3, " H36":  0.171 # amended
+CHARGE, YY3+3, " H70":  0.437 # amended mg
+CHARGE, YY3+3, " H72":  0.450 # amended mg
+
+CHARGE, YY3+4, " C13":  0.131 # amended
+CHARGE, YY3+4, " N2 ": -0.697 # amended
+CHARGE, YY3+4, " C12":  0.131 # amended
+CHARGE, YY3+4, " C11":  0.134 # amended
+CHARGE, YY3+4, " C10":  0.101 # amended
+CHARGE, YY3+4, " N1 ": -0.526 # amended
+CHARGE, YY3+4, " C28":  0.092 # amended
+CHARGE, YY3+4, " C3 ": -0.079 # amended
+CHARGE, YY3+4, " C4 ":  0.022 # amended
+CHARGE, YY3+4, " O1 ": -0.338 # amended
+CHARGE, YY3+4, " C14":  0.106 # amended
+CHARGE, YY3+4, " C2 ": -0.116 # amended
+CHARGE, YY3+4, " C1 ":  0.095 # amended
+CHARGE, YY3+4, " N  ": -0.397 # amended
+CHARGE, YY3+4, " C7 ":  0.566 # amended
+CHARGE, YY3+4, " O  ": -0.673 # amended
+CHARGE, YY3+4, " C8 ": -0.247 # amended
+CHARGE, YY3+4, " C9 ": -0.084 # amended
+CHARGE, YY3+4, " C6 ": -0.189 # amended
+CHARGE, YY3+4, " C5 ":  0.251 # amended
+CHARGE, YY3+4, " N3 ": -0.723 # amended
+CHARGE, YY3+4, " C15":  0.863 # amended
+CHARGE, YY3+4, " N5 ": -0.728 # amended
+CHARGE, YY3+4, " N4 ": -0.757 # amended
+CHARGE, YY3+4, " C16":  0.459 # amended
+CHARGE, YY3+4, " C17": -0.395 # amended
+CHARGE, YY3+4, " C18":  0.598 # amended
+CHARGE, YY3+4, " C19": -0.262 # amended
+CHARGE, YY3+4, " C26": -0.053 # amended
+CHARGE, YY3+4, " C25": -0.081 # amended
+CHARGE, YY3+4, " C24": -0.147 # amended
+CHARGE, YY3+4, " C23": -0.110 # amended
+CHARGE, YY3+4, " C22": -0.131 # amended
+CHARGE, YY3+4, " C21":  0.072 # amended
+CHARGE, YY3+4, " N6 ": -0.471 # amended
+CHARGE, YY3+4, " C27":  0.199 # amended
+CHARGE, YY3+4, " C20":  0.061 # amended
+CHARGE, YY3+4, " H1 ":  0.048 # amended
+CHARGE, YY3+4, " H2 ":  0.048 # amended
+CHARGE, YY3+4, " H3 ":  0.048 # amended
+CHARGE, YY3+4, " H5 ":  0.048 # amended
+CHARGE, YY3+4, " H6 ":  0.048 # amended
+CHARGE, YY3+4, " H7 ":  0.048 # amended
+CHARGE, YY3+4, " H8 ":  0.049 # amended
+CHARGE, YY3+4, " H9 ":  0.049 # amended
+CHARGE, YY3+4, " H10":  0.110 # amended
+CHARGE, YY3+4, " H11":  0.110 # amended
+CHARGE, YY3+4, " H12":  0.096 # amended
+CHARGE, YY3+4, " H13":  0.096 # amended
+CHARGE, YY3+4, " H14":  0.096 # amended
+CHARGE, YY3+4, " H15":  0.161 # amended
+CHARGE, YY3+4, " H16":  0.052 # amended
+CHARGE, YY3+4, " H17":  0.052 # amended
+CHARGE, YY3+4, " H18":  0.052 # amended
+#CHARGE, YY3+4, " H19":  0.371 # amended mg
+CHARGE, YY3+4, " H20":  0.145 # amended
+CHARGE, YY3+4, " H22":  0.143 # amended
+CHARGE, YY3+4, " H23":  0.143 # amended
+CHARGE, YY3+4, " H25":  0.183 # amended
+CHARGE, YY3+4, " H26":  0.480 # amended
+CHARGE, YY3+4, " H27":  0.033 # amended
+CHARGE, YY3+4, " H28":  0.162 # amended
+CHARGE, YY3+4, " H29":  0.145 # amended
+CHARGE, YY3+4, " H30":  0.135 # amended
+CHARGE, YY3+4, " H31":  0.138 # amended
+CHARGE, YY3+4, " H32":  0.138 # amended
+CHARGE, YY3+4, " H33":  0.059 # amended
+CHARGE, YY3+4, " H34":  0.059 # amended
+CHARGE, YY3+4, " H35":  0.059 # amended
+CHARGE, YY3+4, " H36":  0.172 # amended
+CHARGE, YY3+4, " H70":  0.457 # amended mg
+CHARGE, YY3+4, " H71":  0.461 # amended mg
+
+CHARGE, YY3+a, " C13":  0.082 # amended
+CHARGE, YY3+a, " N2 ": -0.676 # amended
+CHARGE, YY3+a, " C12":  0.082 # amended
+CHARGE, YY3+a, " C11":  0.066 # amended
+CHARGE, YY3+a, " C10":  0.207 # amended
+CHARGE, YY3+a, " N1 ": -0.710 # amended
+CHARGE, YY3+a, " C28":  0.178 # amended
+CHARGE, YY3+a, " C3 ": -0.121 # amended
+CHARGE, YY3+a, " C4 ":  0.067 # amended
+CHARGE, YY3+a, " O1 ": -0.333 # amended
+CHARGE, YY3+a, " C14":  0.106 # amended
+CHARGE, YY3+a, " C2 ":  0.062 # amended
+CHARGE, YY3+a, " C1 ":  0.010 # amended
+CHARGE, YY3+a, " N  ": -0.278 # amended
+CHARGE, YY3+a, " C7 ":  0.639 # amended
+CHARGE, YY3+a, " O  ": -0.625 # amended
+CHARGE, YY3+a, " C8 ": -0.294 # amended
+CHARGE, YY3+a, " C9 ": -0.039 # amended
+CHARGE, YY3+a, " C6 ": -0.135 # amended
+CHARGE, YY3+a, " C5 ":  0.221 # amended
+CHARGE, YY3+a, " N3 ": -0.713 # amended
+CHARGE, YY3+a, " C15":  0.849 # amended
+CHARGE, YY3+a, " N5 ": -0.695 # amended
+CHARGE, YY3+a, " N4 ": -0.765 # amended
+CHARGE, YY3+a, " C16":  0.442 # amended
+CHARGE, YY3+a, " C17": -0.354 # amended
+CHARGE, YY3+a, " C18":  0.596 # amended
+CHARGE, YY3+a, " C19": -0.280 # amended
+CHARGE, YY3+a, " C26": -0.065 # amended
+CHARGE, YY3+a, " C25": -0.097 # amended
+CHARGE, YY3+a, " C24": -0.137 # amended
+CHARGE, YY3+a, " C23": -0.107 # amended
+CHARGE, YY3+a, " C22": -0.126 # amended
+CHARGE, YY3+a, " C21":  0.080 # amended
+CHARGE, YY3+a, " N6 ": -0.472 # amended
+CHARGE, YY3+a, " C27":  0.199 # amended
+CHARGE, YY3+a, " C20":  0.055 # amended
+CHARGE, YY3+a, " H1 ":  0.111 # amended
+CHARGE, YY3+a, " H2 ":  0.111 # amended
+CHARGE, YY3+a, " H3 ":  0.111 # amended
+CHARGE, YY3+a, " H5 ":  0.111 # amended
+CHARGE, YY3+a, " H6 ":  0.111 # amended
+CHARGE, YY3+a, " H7 ":  0.111 # amended
+CHARGE, YY3+a, " H8 ":  0.111 # amended
+CHARGE, YY3+a, " H9 ":  0.111 # amended
+CHARGE, YY3+a, " H10":  0.065 # amended
+CHARGE, YY3+a, " H11":  0.065 # amended
+CHARGE, YY3+a, " H12":  0.052 # amended
+CHARGE, YY3+a, " H13":  0.052 # amended
+CHARGE, YY3+a, " H14":  0.052 # amended
+CHARGE, YY3+a, " H15":  0.149 # amended
+CHARGE, YY3+a, " H16":  0.056 # amended
+CHARGE, YY3+a, " H17":  0.056 # amended
+CHARGE, YY3+a, " H18":  0.056 # amended
+CHARGE, YY3+a, " H19":  0.370 # amended
+CHARGE, YY3+a, " H20":  0.176 # amended
+CHARGE, YY3+a, " H22":  0.163 # amended
+CHARGE, YY3+a, " H23":  0.163 # amended
+CHARGE, YY3+a, " H25":  0.198 # amended
+CHARGE, YY3+a, " H26":  0.476 # amended
+CHARGE, YY3+a, " H27":  0.027 # amended
+CHARGE, YY3+a, " H28":  0.181 # amended
+CHARGE, YY3+a, " H29":  0.131 # amended
+CHARGE, YY3+a, " H30":  0.139 # amended
+CHARGE, YY3+a, " H31":  0.142 # amended
+CHARGE, YY3+a, " H32":  0.144 # amended
+CHARGE, YY3+a, " H33":  0.060 # amended
+CHARGE, YY3+a, " H34":  0.060 # amended
+CHARGE, YY3+a, " H35":  0.060 # amended
+CHARGE, YY3+a, " H36":  0.170 # amended
+CHARGE, YY3+a, " H70":  0.488 # amended mg
+CHARGE, YY3+a, " H72":  0.442 # amended mg
+
+CHARGE, YY3+b, " C13":  0.072 # amended
+CHARGE, YY3+b, " N2 ": -0.675 # amended
+CHARGE, YY3+b, " C12":  0.071 # amended
+CHARGE, YY3+b, " C11":  0.077 # amended
+CHARGE, YY3+b, " C10":  0.082 # amended
+CHARGE, YY3+b, " N1 ": -0.512 # amended
+CHARGE, YY3+b, " C28":  0.078 # amended
+CHARGE, YY3+b, " C3 ": -0.116 # amended
+CHARGE, YY3+b, " C4 ":  0.102 # amended
+CHARGE, YY3+b, " O1 ": -0.319 # amended
+CHARGE, YY3+b, " C14":  0.110 # amended
+CHARGE, YY3+b, " C2 ": -0.205 # amended
+CHARGE, YY3+b, " C1 ":  0.179 # amended
+CHARGE, YY3+b, " N  ": -0.504 # amended
+CHARGE, YY3+b, " C7 ":  0.682 # amended
+CHARGE, YY3+b, " O  ": -0.527 # amended
+CHARGE, YY3+b, " C8 ": -0.287 # amended
+CHARGE, YY3+b, " C9 ": -0.055 # amended
+CHARGE, YY3+b, " C6 ": -0.224 # amended
+CHARGE, YY3+b, " C5 ":  0.275 # amended
+CHARGE, YY3+b, " N3 ": -0.715 # amended
+CHARGE, YY3+b, " C15":  0.845 # amended
+CHARGE, YY3+b, " N5 ": -0.721 # amended
+CHARGE, YY3+b, " N4 ": -0.740 # amended
+CHARGE, YY3+b, " C16":  0.452 # amended
+CHARGE, YY3+b, " C17": -0.380 # amended
+CHARGE, YY3+b, " C18":  0.603 # amended
+CHARGE, YY3+b, " C19": -0.273 # amended
+CHARGE, YY3+b, " C26": -0.049 # amended
+CHARGE, YY3+b, " C25": -0.086 # amended
+CHARGE, YY3+b, " C24": -0.142 # amended
+CHARGE, YY3+b, " C23": -0.109 # amended
+CHARGE, YY3+b, " C22": -0.125 # amended
+CHARGE, YY3+b, " C21":  0.069 # amended
+CHARGE, YY3+b, " N6 ": -0.463 # amended
+CHARGE, YY3+b, " C27":  0.196 # amended
+CHARGE, YY3+b, " C20":  0.068 # amended
+CHARGE, YY3+b, " H1 ":  0.119 # amended
+CHARGE, YY3+b, " H2 ":  0.119 # amended
+CHARGE, YY3+b, " H3 ":  0.119 # amended
+CHARGE, YY3+b, " H5 ":  0.119 # amended
+CHARGE, YY3+b, " H6 ":  0.119 # amended
+CHARGE, YY3+b, " H7 ":  0.119 # amended
+CHARGE, YY3+b, " H8 ":  0.119 # amended
+CHARGE, YY3+b, " H9 ":  0.119 # amended
+CHARGE, YY3+b, " H10":  0.129 # amended
+CHARGE, YY3+b, " H11":  0.129 # amended
+CHARGE, YY3+b, " H12":  0.110 # amended
+CHARGE, YY3+b, " H13":  0.110 # amended
+CHARGE, YY3+b, " H14":  0.110 # amended
+CHARGE, YY3+b, " H15":  0.136 # amended
+CHARGE, YY3+b, " H16":  0.057 # amended
+CHARGE, YY3+b, " H17":  0.057 # amended
+CHARGE, YY3+b, " H18":  0.057 # amended
+CHARGE, YY3+b, " H19":  0.285 # amended
+CHARGE, YY3+b, " H20":  0.126 # amended
+CHARGE, YY3+b, " H22":  0.153 # amended
+CHARGE, YY3+b, " H23":  0.153 # amended
+CHARGE, YY3+b, " H25":  0.211 # amended
+CHARGE, YY3+b, " H26":  0.462 # amended
+CHARGE, YY3+b, " H27":  0.033 # amended
+CHARGE, YY3+b, " H28":  0.167 # amended
+CHARGE, YY3+b, " H29":  0.137 # amended
+CHARGE, YY3+b, " H30":  0.134 # amended
+CHARGE, YY3+b, " H31":  0.143 # amended
+CHARGE, YY3+b, " H32":  0.142 # amended
+CHARGE, YY3+b, " H33":  0.063 # amended
+CHARGE, YY3+b, " H34":  0.063 # amended
+CHARGE, YY3+b, " H35":  0.063 # amended
+CHARGE, YY3+b, " H36":  0.172 # amended
+CHARGE, YY3+b, " H71":  0.435 # amended mg
+CHARGE, YY3+b, " H72":  0.477 # amended mg
+
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, YY301, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " N2 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY301, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY301, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " O1 ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY301, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " N  ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY301, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " O  ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY301, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY301, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " N5 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY301, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY301, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " N6 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY301, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, YY301, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H26": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H28": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H29": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H31": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H32": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H33": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H34": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, YY301, " H36": 1.000,  1.000, 0.020 # amended
+
+RADIUS, YY3+1, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " N2 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+1, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+1, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " O1 ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+1, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " N  ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+1, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " O  ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+1, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+1, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " N5 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+1, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+1, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " N6 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+1, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+1, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H26": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H28": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H29": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H31": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H32": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H33": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H34": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+1, " H36": 1.000,  1.000, 0.020 # amended
+
+RADIUS, YY3+2, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " N2 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+2, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+2, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " O1 ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+2, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " N  ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+2, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " O  ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+2, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+2, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " N5 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+2, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+2, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " N6 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+2, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+2, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H26": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H28": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H29": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H31": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H32": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H33": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H34": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+2, " H36": 1.000,  1.000, 0.020 # amended
+
+RADIUS, YY3+3, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " N2 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+3, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+3, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " O1 ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+3, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " N  ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+3, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " O  ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+3, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+3, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " N5 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+3, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+3, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " N6 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+3, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+3, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H18": 1.000,  1.000, 0.020 # amended
+#RADIUS, YY3+3, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H26": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H28": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H29": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H31": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H32": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H33": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H34": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+3, " H36": 1.000,  1.000, 0.020 # amended
+
+RADIUS, YY3+4, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " N2 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+4, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+4, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " O1 ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+4, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " N  ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+4, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " O  ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+4, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+4, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " N5 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+4, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+4, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " N6 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+4, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+4, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H18": 1.000,  1.000, 0.020 # amended
+#RADIUS, YY3+4, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H26": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H28": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H29": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H31": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H32": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H33": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H34": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+4, " H36": 1.000,  1.000, 0.020 # amended
+
+RADIUS, YY3+a, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " N2 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+a, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+a, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " O1 ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+a, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " N  ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+a, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " O  ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+a, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+a, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " N5 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+a, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+a, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " N6 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+a, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+a, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H26": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H28": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H29": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H31": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H32": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H33": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H34": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+a, " H36": 1.000,  1.000, 0.020 # amended
+
+RADIUS, YY3+b, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " N2 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+b, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+b, " C28": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " O1 ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+b, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " N  ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+b, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " O  ": 1.400,  1.520, 0.200 # amended
+RADIUS, YY3+b, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+b, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " N5 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+b, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+b, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C26": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " N6 ": 1.500,  1.550, 0.160 # amended
+RADIUS, YY3+b, " C27": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, YY3+b, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H2 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H3 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H5 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H6 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H9 ": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H12": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H13": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H16": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H17": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H19": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H26": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H27": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H28": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H29": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H30": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H31": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H32": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H33": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H34": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H35": 1.000,  1.000, 0.020 # amended
+RADIUS, YY3+b, " H36": 1.000,  1.000, 0.020 # amended
+
+
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, YY301:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-11.231, rxn08=-5.045
+CONFORMER, YY3+1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-21.983, rxn08=-10.171
+CONFORMER, YY3+2:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-19.142, rxn08=-8.781
+CONFORMER, YY3+3:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-22.66, rxn08=-10.237
+CONFORMER, YY3+4:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-17.25, rxn08=-8.171
+CONFORMER, YY3+a:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-41.91, rxn08=-19.681
+CONFORMER, YY3+b:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04=-46.56, rxn08=-21.838

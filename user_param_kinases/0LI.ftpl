@@ -1,0 +1,623 @@
+# Conformer definition
+CONFLIST, 0LI: 0LIBK, 0LI01, 0LI+1, 0LI+2
+#CONFLIST, 0LI: 0LIBK, 0LI01, 0LI+1, 0LI+2, 0LIDM
+
+# ATOM name and bonds
+CONNECT, " N1 ", 0LI01:  sp3, " C84"," C1 "
+CONNECT, " N3 ", 0LI01:  sp3, " C20"," C21"," C24"
+CONNECT, " C4 ", 0LI01:   sp, " C5 "," C3 "
+CONNECT, " C5 ", 0LI01:  sp2, " C4 "," C6 "," C10"
+CONNECT, " C6 ", 0LI01:  sp2, " C5 "," C7 "," C11"
+CONNECT, " C7 ", 0LI01:  sp2, " C6 "," C8 "," H7 "
+CONNECT, " C8 ", 0LI01:  sp2, " C7 "," C9 "," H8 "
+CONNECT, " C10", 0LI01:  sp2, " C5 "," C9 "," H10"
+CONNECT, " C13", 0LI01:  sp2, " N2 "," C14"," C18"
+CONNECT, " C15", 0LI01:  sp2, " C14"," C16"," H15"
+CONNECT, " C17", 0LI01:  sp2, " C16"," C18"," C19"
+CONNECT, " C20", 0LI01:  sp3, " N3 "," C16"," H20","H20A"
+CONNECT, " C21", 0LI01:  sp3, " N3 "," C22"," H21","H21A"
+CONNECT, " C22", 0LI01:  sp3, " C21"," N4 "," H22","H22A"
+CONNECT, " C24", 0LI01:  sp3, " N3 "," C23"," H24","H24A"
+CONNECT, " C81", 0LI01:  sp2, " C82"," C84"," H81"
+CONNECT, " C82", 0LI01:  sp2, " C81"," C83"," H82"
+CONNECT, " C83", 0LI01:  sp2, " C82"," N81"," H83"
+CONNECT, " N81", 0LI01:  sp2, " C83"," N82"
+CONNECT, " N82", 0LI01:  sp2, " N81"," C84"," C2 "
+CONNECT, " C84", 0LI01:  sp2, " N1 "," C81"," N82"
+CONNECT, " C1 ", 0LI01:  sp3, " N1 "," C2 "," H1 "
+CONNECT, " C2 ", 0LI01:  sp3, " N82"," C1 "," C3 "
+CONNECT, " C3 ", 0LI01:   sp, " C4 "," C2 "
+CONNECT, " C9 ", 0LI01:  sp2, " C8 "," C10"," C12"
+CONNECT, " C11", 0LI01:  sp3, " C6 "," H11","H11A","H11B"
+CONNECT, " C12", 0LI01:  sp2, " C9 "," O1 "," N2 "
+CONNECT, " O1 ", 0LI01:  sp3, " C12"
+CONNECT, " N2 ", 0LI01:  sp2, " C13"," C12"," HN2"
+CONNECT, " C14", 0LI01:  sp2, " C13"," C15"," H14"
+CONNECT, " C16", 0LI01:  sp2, " C15"," C17"," C20"
+CONNECT, " C18", 0LI01:  sp2, " C13"," C17"," H18"
+CONNECT, " C19", 0LI01:  sp3, " C17"," F1 "," F2 "," F3 "
+CONNECT, " F1 ", 0LI01:     , " C19"
+CONNECT, " F2 ", 0LI01:     , " C19"
+CONNECT, " F3 ", 0LI01:     , " C19"
+CONNECT, " C23", 0LI01:  sp3, " C24"," N4 "," H23","H23A"
+CONNECT, " C25", 0LI01:  sp3, " N4 "," H25","H25A","H25B"
+CONNECT, " N4 ", 0LI01:  sp3, " C22"," C23"," C25"
+CONNECT, " H7 ", 0LI01:    s, " C7 "
+CONNECT, " H8 ", 0LI01:    s, " C8 "
+CONNECT, " H10", 0LI01:    s, " C10"
+CONNECT, " H15", 0LI01:    s, " C15"
+CONNECT, " H20", 0LI01:    s, " C20"
+CONNECT, "H20A", 0LI01:    s, " C20"
+CONNECT, " H21", 0LI01:    s, " C21"
+CONNECT, "H21A", 0LI01:    s, " C21"
+CONNECT, " H22", 0LI01:    s, " C22"
+CONNECT, "H22A", 0LI01:    s, " C22"
+CONNECT, " H24", 0LI01:    s, " C24"
+CONNECT, "H24A", 0LI01:    s, " C24"
+CONNECT, " H81", 0LI01:    s, " C81"
+CONNECT, " H82", 0LI01:    s, " C82"
+CONNECT, " H83", 0LI01:    s, " C83"
+CONNECT, " H1 ", 0LI01:    s, " C1 "
+CONNECT, " H11", 0LI01:    s, " C11"
+CONNECT, "H11A", 0LI01:    s, " C11"
+CONNECT, "H11B", 0LI01:    s, " C11"
+CONNECT, " HN2", 0LI01:    s, " N2 "
+CONNECT, " H14", 0LI01:    s, " C14"
+CONNECT, " H18", 0LI01:    s, " C18"
+CONNECT, " H23", 0LI01:    s, " C23"
+CONNECT, "H23A", 0LI01:    s, " C23"
+CONNECT, " H25", 0LI01:    s, " C25"
+CONNECT, "H25A", 0LI01:    s, " C25"
+CONNECT, "H25B", 0LI01:    s, " C25"
+
+CONNECT, " N1 ", 0LI+1:  sp3, " C84"," C1 "
+CONNECT, " N3 ", 0LI+1:  sp3, " C20"," C21"," C24"," H67"
+CONNECT, " C4 ", 0LI+1:   sp, " C5 "," C3 "
+CONNECT, " C5 ", 0LI+1:  sp2, " C4 "," C6 "," C10"
+CONNECT, " C6 ", 0LI+1:  sp2, " C5 "," C7 "," C11"
+CONNECT, " C7 ", 0LI+1:  sp2, " C6 "," C8 "," H7 "
+CONNECT, " C8 ", 0LI+1:  sp2, " C7 "," C9 "," H8 "
+CONNECT, " C10", 0LI+1:  sp2, " C5 "," C9 "," H10"
+CONNECT, " C13", 0LI+1:  sp2, " N2 "," C14"," C18"
+CONNECT, " C15", 0LI+1:  sp2, " C14"," C16"," H15"
+CONNECT, " C17", 0LI+1:  sp2, " C16"," C18"," C19"
+CONNECT, " C20", 0LI+1:  sp3, " N3 "," C16"," H20","H20A"
+CONNECT, " C21", 0LI+1:  sp3, " N3 "," C22"," H21","H21A"
+CONNECT, " C22", 0LI+1:  sp3, " C21"," N4 "," H22","H22A"
+CONNECT, " C24", 0LI+1:  sp3, " N3 "," C23"," H24","H24A"
+CONNECT, " C81", 0LI+1:  sp2, " C82"," C84"," H81"
+CONNECT, " C82", 0LI+1:  sp2, " C81"," C83"," H82"
+CONNECT, " C83", 0LI+1:  sp2, " C82"," N81"," H83"
+CONNECT, " N81", 0LI+1:  sp2, " C83"," N82"
+CONNECT, " N82", 0LI+1:  sp2, " N81"," C84"," C2 "
+CONNECT, " C84", 0LI+1:  sp2, " N1 "," C81"," N82"
+CONNECT, " C1 ", 0LI+1:  sp3, " N1 "," C2 "," H1 "
+CONNECT, " C2 ", 0LI+1:  sp3, " N82"," C1 "," C3 "
+CONNECT, " C3 ", 0LI+1:   sp, " C4 "," C2 "
+CONNECT, " C9 ", 0LI+1:  sp2, " C8 "," C10"," C12"
+CONNECT, " C11", 0LI+1:  sp3, " C6 "," H11","H11A","H11B"
+CONNECT, " C12", 0LI+1:  sp2, " C9 "," O1 "," N2 "
+CONNECT, " O1 ", 0LI+1:  sp3, " C12"
+CONNECT, " N2 ", 0LI+1:  sp2, " C13"," C12"," HN2"
+CONNECT, " C14", 0LI+1:  sp2, " C13"," C15"," H14"
+CONNECT, " C16", 0LI+1:  sp2, " C15"," C17"," C20"
+CONNECT, " C18", 0LI+1:  sp2, " C13"," C17"," H18"
+CONNECT, " C19", 0LI+1:  sp3, " C17"," F1 "," F2 "," F3 "
+CONNECT, " F1 ", 0LI+1:     , " C19"
+CONNECT, " F2 ", 0LI+1:     , " C19"
+CONNECT, " F3 ", 0LI+1:     , " C19"
+CONNECT, " C23", 0LI+1:  sp3, " C24"," N4 "," H23","H23A"
+CONNECT, " C25", 0LI+1:  sp3, " N4 "," H25","H25A","H25B"
+CONNECT, " N4 ", 0LI+1:  sp3, " C22"," C23"," C25"
+CONNECT, " H7 ", 0LI+1:    s, " C7 "
+CONNECT, " H8 ", 0LI+1:    s, " C8 "
+CONNECT, " H10", 0LI+1:    s, " C10"
+CONNECT, " H15", 0LI+1:    s, " C15"
+CONNECT, " H20", 0LI+1:    s, " C20"
+CONNECT, "H20A", 0LI+1:    s, " C20"
+CONNECT, " H21", 0LI+1:    s, " C21"
+CONNECT, "H21A", 0LI+1:    s, " C21"
+CONNECT, " H22", 0LI+1:    s, " C22"
+CONNECT, "H22A", 0LI+1:    s, " C22"
+CONNECT, " H24", 0LI+1:    s, " C24"
+CONNECT, "H24A", 0LI+1:    s, " C24"
+CONNECT, " H81", 0LI+1:    s, " C81"
+CONNECT, " H82", 0LI+1:    s, " C82"
+CONNECT, " H83", 0LI+1:    s, " C83"
+CONNECT, " H1 ", 0LI+1:    s, " C1 "
+CONNECT, " H11", 0LI+1:    s, " C11"
+CONNECT, "H11A", 0LI+1:    s, " C11"
+CONNECT, "H11B", 0LI+1:    s, " C11"
+CONNECT, " HN2", 0LI+1:    s, " N2 "
+CONNECT, " H14", 0LI+1:    s, " C14"
+CONNECT, " H18", 0LI+1:    s, " C18"
+CONNECT, " H23", 0LI+1:    s, " C23"
+CONNECT, "H23A", 0LI+1:    s, " C23"
+CONNECT, " H25", 0LI+1:    s, " C25"
+CONNECT, "H25A", 0LI+1:    s, " C25"
+CONNECT, "H25B", 0LI+1:    s, " C25"
+CONNECT, " H67", 0LI+1:    s, " N3 "
+
+CONNECT, " N1 ", 0LI+2:  sp3, " C84"," C1 "
+CONNECT, " N3 ", 0LI+2:  sp3, " C20"," C21"," C24"
+CONNECT, " C4 ", 0LI+2:   sp, " C5 "," C3 "
+CONNECT, " C5 ", 0LI+2:  sp2, " C4 "," C6 "," C10"
+CONNECT, " C6 ", 0LI+2:  sp2, " C5 "," C7 "," C11"
+CONNECT, " C7 ", 0LI+2:  sp2, " C6 "," C8 "," H7 "
+CONNECT, " C8 ", 0LI+2:  sp2, " C7 "," C9 "," H8 "
+CONNECT, " C10", 0LI+2:  sp2, " C5 "," C9 "," H10"
+CONNECT, " C13", 0LI+2:  sp2, " N2 "," C14"," C18"
+CONNECT, " C15", 0LI+2:  sp2, " C14"," C16"," H15"
+CONNECT, " C17", 0LI+2:  sp2, " C16"," C18"," C19"
+CONNECT, " C20", 0LI+2:  sp3, " N3 "," C16"," H20","H20A"
+CONNECT, " C21", 0LI+2:  sp3, " N3 "," C22"," H21","H21A"
+CONNECT, " C22", 0LI+2:  sp3, " C21"," N4 "," H22","H22A"
+CONNECT, " C24", 0LI+2:  sp3, " N3 "," C23"," H24","H24A"
+CONNECT, " C81", 0LI+2:  sp2, " C82"," C84"," H81"
+CONNECT, " C82", 0LI+2:  sp2, " C81"," C83"," H82"
+CONNECT, " C83", 0LI+2:  sp2, " C82"," N81"," H83"
+CONNECT, " N81", 0LI+2:  sp2, " C83"," N82"
+CONNECT, " N82", 0LI+2:  sp2, " N81"," C84"," C2 "
+CONNECT, " C84", 0LI+2:  sp2, " N1 "," C81"," N82"
+CONNECT, " C1 ", 0LI+2:  sp3, " N1 "," C2 "," H1 "
+CONNECT, " C2 ", 0LI+2:  sp3, " N82"," C1 "," C3 "
+CONNECT, " C3 ", 0LI+2:   sp, " C4 "," C2 "
+CONNECT, " C9 ", 0LI+2:  sp2, " C8 "," C10"," C12"
+CONNECT, " C11", 0LI+2:  sp3, " C6 "," H11","H11A","H11B"
+CONNECT, " C12", 0LI+2:  sp2, " C9 "," O1 "," N2 "
+CONNECT, " O1 ", 0LI+2:  sp3, " C12"
+CONNECT, " N2 ", 0LI+2:  sp2, " C13"," C12"," HN2"
+CONNECT, " C14", 0LI+2:  sp2, " C13"," C15"," H14"
+CONNECT, " C16", 0LI+2:  sp2, " C15"," C17"," C20"
+CONNECT, " C18", 0LI+2:  sp2, " C13"," C17"," H18"
+CONNECT, " C19", 0LI+2:  sp3, " C17"," F1 "," F2 "," F3 "
+CONNECT, " F1 ", 0LI+2:     , " C19"
+CONNECT, " F2 ", 0LI+2:     , " C19"
+CONNECT, " F3 ", 0LI+2:     , " C19"
+CONNECT, " C23", 0LI+2:  sp3, " C24"," N4 "," H23","H23A"
+CONNECT, " C25", 0LI+2:  sp3, " N4 "," H25","H25A","H25B"
+CONNECT, " N4 ", 0LI+2:  sp3, " C22"," C23"," C25"," H67"
+CONNECT, " H7 ", 0LI+2:    s, " C7 "
+CONNECT, " H8 ", 0LI+2:    s, " C8 "
+CONNECT, " H10", 0LI+2:    s, " C10"
+CONNECT, " H15", 0LI+2:    s, " C15"
+CONNECT, " H20", 0LI+2:    s, " C20"
+CONNECT, "H20A", 0LI+2:    s, " C20"
+CONNECT, " H21", 0LI+2:    s, " C21"
+CONNECT, "H21A", 0LI+2:    s, " C21"
+CONNECT, " H22", 0LI+2:    s, " C22"
+CONNECT, "H22A", 0LI+2:    s, " C22"
+CONNECT, " H24", 0LI+2:    s, " C24"
+CONNECT, "H24A", 0LI+2:    s, " C24"
+CONNECT, " H81", 0LI+2:    s, " C81"
+CONNECT, " H82", 0LI+2:    s, " C82"
+CONNECT, " H83", 0LI+2:    s, " C83"
+CONNECT, " H1 ", 0LI+2:    s, " C1 "
+CONNECT, " H11", 0LI+2:    s, " C11"
+CONNECT, "H11A", 0LI+2:    s, " C11"
+CONNECT, "H11B", 0LI+2:    s, " C11"
+CONNECT, " HN2", 0LI+2:    s, " N2 "
+CONNECT, " H14", 0LI+2:    s, " C14"
+CONNECT, " H18", 0LI+2:    s, " C18"
+CONNECT, " H23", 0LI+2:    s, " C23"
+CONNECT, "H23A", 0LI+2:    s, " C23"
+CONNECT, " H25", 0LI+2:    s, " C25"
+CONNECT, "H25A", 0LI+2:    s, " C25"
+CONNECT, "H25B", 0LI+2:    s, " C25"
+CONNECT, " H67", 0LI+2:    s, " N4 "
+
+
+# ATOM charges
+CHARGE, 0LI01, " N1 ": -0.644 # amended
+CHARGE, 0LI01, " N3 ": -0.754 # amended
+CHARGE, 0LI01, " C4 ": -0.084 # amended
+CHARGE, 0LI01, " C5 ":  0.014 # amended
+CHARGE, 0LI01, " C6 ": -0.017 # amended
+CHARGE, 0LI01, " C7 ": -0.147 # amended
+CHARGE, 0LI01, " C8 ": -0.091 # amended
+CHARGE, 0LI01, " C10": -0.042 # amended
+CHARGE, 0LI01, " C13":  0.069 # amended
+CHARGE, 0LI01, " C15": -0.100 # amended
+CHARGE, 0LI01, " C17": -0.139 # amended
+CHARGE, 0LI01, " C20":  0.219 # amended
+CHARGE, 0LI01, " C21":  0.175 # amended
+CHARGE, 0LI01, " C22":  0.171 # amended
+CHARGE, 0LI01, " C24":  0.175 # amended
+CHARGE, 0LI01, " C81": -0.155 # amended
+CHARGE, 0LI01, " C82": -0.260 # amended
+CHARGE, 0LI01, " C83":  0.396 # amended
+CHARGE, 0LI01, " N81": -0.483 # amended
+CHARGE, 0LI01, " N82":  0.073 # amended
+CHARGE, 0LI01, " C84":  0.416 # amended
+CHARGE, 0LI01, " C1 ":  0.364 # amended
+CHARGE, 0LI01, " C2 ": -0.093 # amended
+CHARGE, 0LI01, " C3 ": -0.065 # amended
+CHARGE, 0LI01, " C9 ": -0.164 # amended
+CHARGE, 0LI01, " C11": -0.067 # amended
+CHARGE, 0LI01, " C12":  0.688 # amended
+CHARGE, 0LI01, " O1 ": -0.582 # amended
+CHARGE, 0LI01, " N2 ": -0.470 # amended
+CHARGE, 0LI01, " C14": -0.135 # amended
+CHARGE, 0LI01, " C16": -0.051 # amended
+CHARGE, 0LI01, " C18": -0.153 # amended
+CHARGE, 0LI01, " C19":  0.685 # amended
+CHARGE, 0LI01, " F1 ": -0.240 # amended
+CHARGE, 0LI01, " F2 ": -0.240 # amended
+CHARGE, 0LI01, " F3 ": -0.240 # amended
+CHARGE, 0LI01, " C23":  0.171 # amended
+CHARGE, 0LI01, " C25":  0.161 # amended
+CHARGE, 0LI01, " N4 ": -0.739 # amended
+CHARGE, 0LI01, " H7 ":  0.142 # amended
+CHARGE, 0LI01, " H8 ":  0.137 # amended
+CHARGE, 0LI01, " H10":  0.168 # amended
+CHARGE, 0LI01, " H15":  0.164 # amended
+CHARGE, 0LI01, " H20":  0.055 # amended
+CHARGE, 0LI01, "H20A":  0.055 # amended
+CHARGE, 0LI01, " H21":  0.040 # amended
+CHARGE, 0LI01, "H21A":  0.040 # amended
+CHARGE, 0LI01, " H22":  0.037 # amended
+CHARGE, 0LI01, "H22A":  0.037 # amended
+CHARGE, 0LI01, " H24":  0.040 # amended
+CHARGE, 0LI01, "H24A":  0.040 # amended
+CHARGE, 0LI01, " H81":  0.170 # amended
+CHARGE, 0LI01, " H82":  0.158 # amended
+CHARGE, 0LI01, " H83":  0.054 # amended
+CHARGE, 0LI01, " H1 ":  0.054 # amended
+CHARGE, 0LI01, " H11":  0.056 # amended
+CHARGE, 0LI01, "H11A":  0.056 # amended
+CHARGE, 0LI01, "H11B":  0.056 # amended
+CHARGE, 0LI01, " HN2":  0.322 # amended
+CHARGE, 0LI01, " H14":  0.182 # amended
+CHARGE, 0LI01, " H18":  0.145 # amended
+CHARGE, 0LI01, " H23":  0.037 # amended
+CHARGE, 0LI01, "H23A":  0.037 # amended
+CHARGE, 0LI01, " H25":  0.032 # amended
+CHARGE, 0LI01, "H25A":  0.032 # amended
+CHARGE, 0LI01, "H25B":  0.032 # amended
+
+CHARGE, 0LI+1, " N1 ": -0.643 # amended
+CHARGE, 0LI+1, " N3 ": -0.685 # amended
+CHARGE, 0LI+1, " C4 ": -0.115 # amended
+CHARGE, 0LI+1, " C5 ":  0.032 # amended
+CHARGE, 0LI+1, " C6 ": -0.006 # amended
+CHARGE, 0LI+1, " C7 ": -0.142 # amended
+CHARGE, 0LI+1, " C8 ": -0.096 # amended
+CHARGE, 0LI+1, " C10": -0.039 # amended
+CHARGE, 0LI+1, " C13":  0.129 # amended
+CHARGE, 0LI+1, " C15": -0.119 # amended
+CHARGE, 0LI+1, " C17": -0.095 # amended
+CHARGE, 0LI+1, " C20":  0.157 # amended
+CHARGE, 0LI+1, " C21":  0.110 # amended
+CHARGE, 0LI+1, " C22":  0.147 # amended
+CHARGE, 0LI+1, " C24":  0.110 # amended
+CHARGE, 0LI+1, " C81": -0.155 # amended
+CHARGE, 0LI+1, " C82": -0.255 # amended
+CHARGE, 0LI+1, " C83":  0.401 # amended
+CHARGE, 0LI+1, " N81": -0.491 # amended
+CHARGE, 0LI+1, " N82":  0.077 # amended
+CHARGE, 0LI+1, " C84":  0.424 # amended
+CHARGE, 0LI+1, " C1 ":  0.375 # amended
+CHARGE, 0LI+1, " C2 ": -0.116 # amended
+CHARGE, 0LI+1, " C3 ": -0.028 # amended
+CHARGE, 0LI+1, " C9 ": -0.173 # amended
+CHARGE, 0LI+1, " C11": -0.072 # amended
+CHARGE, 0LI+1, " C12":  0.700 # amended
+CHARGE, 0LI+1, " O1 ": -0.569 # amended
+CHARGE, 0LI+1, " N2 ": -0.485 # amended
+CHARGE, 0LI+1, " C14": -0.115 # amended
+CHARGE, 0LI+1, " C16": -0.154 # amended
+CHARGE, 0LI+1, " C18": -0.149 # amended
+CHARGE, 0LI+1, " C19":  0.683 # amended
+CHARGE, 0LI+1, " F1 ": -0.226 # amended
+CHARGE, 0LI+1, " F2 ": -0.226 # amended
+CHARGE, 0LI+1, " F3 ": -0.226 # amended
+CHARGE, 0LI+1, " C23":  0.147 # amended
+CHARGE, 0LI+1, " C25":  0.151 # amended
+CHARGE, 0LI+1, " N4 ": -0.738 # amended
+CHARGE, 0LI+1, " H7 ":  0.149 # amended
+CHARGE, 0LI+1, " H8 ":  0.129 # amended
+CHARGE, 0LI+1, " H10":  0.166 # amended
+CHARGE, 0LI+1, " H15":  0.130 # amended
+CHARGE, 0LI+1, " H20":  0.115 # amended
+CHARGE, 0LI+1, "H20A":  0.115 # amended
+CHARGE, 0LI+1, " H21":  0.105 # amended
+CHARGE, 0LI+1, "H21A":  0.105 # amended
+CHARGE, 0LI+1, " H22":  0.075 # amended
+CHARGE, 0LI+1, "H22A":  0.075 # amended
+CHARGE, 0LI+1, " H24":  0.106 # amended
+CHARGE, 0LI+1, "H24A":  0.106 # amended
+CHARGE, 0LI+1, " H81":  0.176 # amended
+CHARGE, 0LI+1, " H82":  0.163 # amended
+CHARGE, 0LI+1, " H83":  0.056 # amended
+CHARGE, 0LI+1, " H1 ":  0.056 # amended
+CHARGE, 0LI+1, " H11":  0.063 # amended
+CHARGE, 0LI+1, "H11A":  0.063 # amended
+CHARGE, 0LI+1, "H11B":  0.063 # amended
+CHARGE, 0LI+1, " HN2":  0.335 # amended
+CHARGE, 0LI+1, " H14":  0.191 # amended
+CHARGE, 0LI+1, " H18":  0.168 # amended
+CHARGE, 0LI+1, " H23":  0.075 # amended
+CHARGE, 0LI+1, "H23A":  0.075 # amended
+CHARGE, 0LI+1, " H25":  0.057 # amended
+CHARGE, 0LI+1, "H25A":  0.057 # amended
+CHARGE, 0LI+1, "H25B":  0.057 # amended
+CHARGE, 0LI+1, " H67":  0.444 # amended
+
+
+CHARGE, 0LI+2, " N1 ": -0.642 # amended
+CHARGE, 0LI+2, " N3 ": -0.752 # amended
+CHARGE, 0LI+2, " C4 ": -0.106 # amended
+CHARGE, 0LI+2, " C5 ":  0.025 # amended
+CHARGE, 0LI+2, " C6 ": -0.012 # amended
+CHARGE, 0LI+2, " C7 ": -0.143 # amended
+CHARGE, 0LI+2, " C8 ": -0.093 # amended
+CHARGE, 0LI+2, " C10": -0.042 # amended
+CHARGE, 0LI+2, " C13":  0.101 # amended
+CHARGE, 0LI+2, " C15": -0.110 # amended
+CHARGE, 0LI+2, " C17": -0.123 # amended
+CHARGE, 0LI+2, " C20":  0.226 # amended
+CHARGE, 0LI+2, " C21":  0.150 # amended
+CHARGE, 0LI+2, " C22":  0.106 # amended
+CHARGE, 0LI+2, " C24":  0.150 # amended
+CHARGE, 0LI+2, " C81": -0.153 # amended
+CHARGE, 0LI+2, " C82": -0.257 # amended
+CHARGE, 0LI+2, " C83":  0.398 # amended
+CHARGE, 0LI+2, " N81": -0.488 # amended
+CHARGE, 0LI+2, " N82":  0.074 # amended
+CHARGE, 0LI+2, " C84":  0.423 # amended
+CHARGE, 0LI+2, " C1 ":  0.371 # amended
+CHARGE, 0LI+2, " C2 ": -0.107 # amended
+CHARGE, 0LI+2, " C3 ": -0.041 # amended
+CHARGE, 0LI+2, " C9 ": -0.173 # amended
+CHARGE, 0LI+2, " C11": -0.070 # amended
+CHARGE, 0LI+2, " C12":  0.696 # amended
+CHARGE, 0LI+2, " O1 ": -0.582 # amended
+CHARGE, 0LI+2, " N2 ": -0.473 # amended
+CHARGE, 0LI+2, " C14": -0.138 # amended
+CHARGE, 0LI+2, " C16": -0.088 # amended
+CHARGE, 0LI+2, " C18": -0.150 # amended
+CHARGE, 0LI+2, " C19":  0.684 # amended
+CHARGE, 0LI+2, " F1 ": -0.233 # amended
+CHARGE, 0LI+2, " F2 ": -0.233 # amended
+CHARGE, 0LI+2, " F3 ": -0.233 # amended
+CHARGE, 0LI+2, " C23":  0.106 # amended
+CHARGE, 0LI+2, " C25":  0.084 # amended
+CHARGE, 0LI+2, " N4 ": -0.684 # amended
+CHARGE, 0LI+2, " H7 ":  0.147 # amended
+CHARGE, 0LI+2, " H8 ":  0.134 # amended
+CHARGE, 0LI+2, " H10":  0.167 # amended
+CHARGE, 0LI+2, " H15":  0.136 # amended
+CHARGE, 0LI+2, " H20":  0.070 # amended
+CHARGE, 0LI+2, "H20A":  0.070 # amended
+CHARGE, 0LI+2, " H21":  0.079 # amended
+CHARGE, 0LI+2, "H21A":  0.079 # amended
+CHARGE, 0LI+2, " H22":  0.110 # amended
+CHARGE, 0LI+2, "H22A":  0.110 # amended
+CHARGE, 0LI+2, " H24":  0.078 # amended
+CHARGE, 0LI+2, "H24A":  0.078 # amended
+CHARGE, 0LI+2, " H81":  0.173 # amended
+CHARGE, 0LI+2, " H82":  0.160 # amended
+CHARGE, 0LI+2, " H83":  0.053 # amended
+CHARGE, 0LI+2, " H1 ":  0.053 # amended
+CHARGE, 0LI+2, " H11":  0.060 # amended
+CHARGE, 0LI+2, "H11A":  0.060 # amended
+CHARGE, 0LI+2, "H11B":  0.060 # amended
+CHARGE, 0LI+2, " HN2":  0.330 # amended
+CHARGE, 0LI+2, " H14":  0.187 # amended
+CHARGE, 0LI+2, " H18":  0.156 # amended
+CHARGE, 0LI+2, " H23":  0.110 # amended
+CHARGE, 0LI+2, "H23A":  0.110 # amended
+CHARGE, 0LI+2, " H25":  0.105 # amended
+CHARGE, 0LI+2, "H25A":  0.105 # amended
+CHARGE, 0LI+2, "H25B":  0.105 # amended
+CHARGE, 0LI+2, " H67":  0.447 # amended
+
+# Atom radius, dielectric boundary radius, VDW radius, and energy well depth
+RADIUS, 0LI01, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI01, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI01, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C81": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C82": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C83": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " N81": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI01, " N82": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI01, " C84": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " O1 ": 1.400,  1.520, 0.200 # amended
+RADIUS, 0LI01, " N2 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI01, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " F1 ": 1.850,  1.470, 0.173 # amended
+RADIUS, 0LI01, " F2 ": 1.850,  1.470, 0.173 # amended
+RADIUS, 0LI01, " F3 ": 1.850,  1.470, 0.173 # amended
+RADIUS, 0LI01, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI01, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI01, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, "H20A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, "H21A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, "H22A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H24": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, "H24A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H81": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H82": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H83": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, "H11A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, "H11B": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " HN2": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, "H23A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, "H25A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI01, "H25B": 1.000,  1.000, 0.020 # amended
+
+RADIUS, 0LI+1, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+1, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+1, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C81": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C82": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C83": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " N81": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+1, " N82": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+1, " C84": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " O1 ": 1.400,  1.520, 0.200 # amended
+RADIUS, 0LI+1, " N2 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+1, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " F1 ": 1.850,  1.470, 0.173 # amended
+RADIUS, 0LI+1, " F2 ": 1.850,  1.470, 0.173 # amended
+RADIUS, 0LI+1, " F3 ": 1.850,  1.470, 0.173 # amended
+RADIUS, 0LI+1, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+1, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+1, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, "H20A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, "H21A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, "H22A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H24": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, "H24A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H81": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H82": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H83": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, "H11A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, "H11B": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " HN2": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, "H23A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, "H25A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, "H25B": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+1, " H67": 1.000,  1.000, 0.020 # amended
+
+RADIUS, 0LI+2, " N1 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+2, " N3 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+2, " C4 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C5 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C6 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C7 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C8 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C10": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C13": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C15": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C17": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C20": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C21": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C22": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C24": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C81": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C82": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C83": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " N81": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+2, " N82": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+2, " C84": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C1 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C2 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C3 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C9 ": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C11": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C12": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " O1 ": 1.400,  1.520, 0.200 # amended
+RADIUS, 0LI+2, " N2 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+2, " C14": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C16": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C18": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C19": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " F1 ": 1.850,  1.470, 0.173 # amended
+RADIUS, 0LI+2, " F2 ": 1.850,  1.470, 0.173 # amended
+RADIUS, 0LI+2, " F3 ": 1.850,  1.470, 0.173 # amended
+RADIUS, 0LI+2, " C23": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " C25": 1.700,  1.700, 0.150 # amended
+RADIUS, 0LI+2, " N4 ": 1.500,  1.550, 0.160 # amended
+RADIUS, 0LI+2, " H7 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H8 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H10": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H15": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H20": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, "H20A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H21": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, "H21A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H22": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, "H22A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H24": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, "H24A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H81": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H82": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H83": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H1 ": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H11": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, "H11A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, "H11B": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " HN2": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H14": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H18": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H23": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, "H23A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H25": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, "H25A": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, "H25B": 1.000,  1.000, 0.020 # amended
+RADIUS, 0LI+2, " H67": 1.000,  1.000, 0.020 # amended
+
+
+# Conformer parameters that appear in head3.lst: ne, Em0, nH, pKa0, rxn
+CONFORMER, 0LI01:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -8.297, rxn08= -3.97
+CONFORMER, 0LI+1:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -15.541, rxn08= -8.194
+CONFORMER, 0LI+2:  Em0=0.0, pKa0=0.00, ne=0, nH=0, rxn02= 0, rxn04= -15.809, rxn08= -9.556
