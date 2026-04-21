@@ -37,6 +37,24 @@ if not args.resi_list and not args.resi_start_stop:
     parser.error('At least one of -resi_list or -resi_start_stop is required')
 
 RE_PAIRS = re.compile(r'\(([^,]+),([^)]+)\)')
+RE_CONFORMER_NUM = re.compile(r'_\d+')
+RE_RESIDUE_CORE = re.compile(r'([A-Z]{3}).*?([A-Z]\d{4})')
+
+
+def normalize_residue(name):
+    name = RE_CONFORMER_NUM.sub('', name)
+    m = RE_RESIDUE_CORE.search(name)
+    return m.group(1) + m.group(2) if m else name
+
+
+def normalize_state(state_id):
+    pairs = set()
+    for m in RE_PAIRS.finditer(state_id):
+        a, b = m.group(1).strip(), m.group(2).strip()
+        a, b = sorted([normalize_residue(a), normalize_residue(b)])
+        pairs.add((a, b))
+    sorted_pairs = sorted(pairs)
+    return ','.join(f'({a},{b})' for a, b in sorted_pairs)
 
 
 def parse_state_graph(state_str):
@@ -94,12 +112,34 @@ def print_and_write(out_file, text):
     out_file.write(text + '\n')
 
 
-states = []
-with open(args.input_csv) as f:
-    reader = csv.DictReader(f)
-    for row in reader:
-        states.append(row)
+def read_input_csv(path):
+    rows = []
+    with open(path) as f:
+        first_line = f.readline().strip()
+        if first_line.startswith('#'):
+            header_line = f.readline().strip()
+        else:
+            header_line = first_line
+        fields = [h.strip() for h in header_line.split(',')]
 
+        is_raw = 'state_id' in fields
+        if is_raw:
+            print('Detected raw input CSV (state_id column). Normalizing residues...')
+            for line in f:
+                parts = line.rsplit(',', 3)
+                state_id = parts[0].strip('"')
+                count = int(parts[-2])
+                state_norm = normalize_state(state_id)
+                rows.append({'state_normalized': state_norm, 'count': str(count)})
+        else:
+            remaining = f.read()
+            reader = csv.DictReader([header_line + '\n'] + remaining.splitlines(True))
+            for r in reader:
+                rows.append(r)
+    return rows
+
+
+states = read_input_csv(args.input_csv)
 total_microstates = sum(int(row['count']) for row in states)
 
 if args.resi_list:
