@@ -33,9 +33,10 @@ def normalize_state(state_id):
 
 
 counts = defaultdict(int)
+input_unique_conf = 0
 
 with open(input_csv) as f:
-    next(f)  # skip comment line
+    comment_line = next(f).strip()
     next(f)  # skip header line
     for line in f:
         parts = line.rsplit(',', 3)
@@ -43,16 +44,30 @@ with open(input_csv) as f:
         count = int(parts[-2])
         key = normalize_state(state_id)
         counts[key] += count
-
-output_file = input_csv.replace('.csv', '_output.csv')
-with open(output_file, 'w') as out:
-    out.write('state_normalized,count,hb_count\n')
-    for state, count in sorted(counts.items(), key=lambda x: -x[1]):
-        hb_count = state.count('(')
-        out.write(f'"{state}",{count},{hb_count}\n')
+        input_unique_conf += 1
 
 total = sum(counts.values())
-print(f"Input file:      {input_csv}")
-print(f"Unique states:   {len(counts)}")
-print(f"Total count:     {total}")
-print(f"Output saved to: {output_file}")
+
+RE_NUMS = re.compile(r'[\d,]+')
+nums = [int(n.replace(',', '')) for n in RE_NUMS.findall(comment_line)]
+total_state_space = nums[-1] if len(nums) >= 3 else total
+
+output_file = input_csv.replace('.csv', '_resi-states.csv')
+with open(output_file, 'w') as out:
+    pct = total / total_state_space * 100 if total_state_space else 0
+    out.write(f'# Input: {input_unique_conf:,} unique conformational microstates, '
+              f'sum count {total:,}/{total_state_space:,} ({pct:.2f}%) of the state space\n')
+    out.write(f'# Output: {len(counts):,} unique residue microstates '
+              f'(aggregated from {input_unique_conf:,} conformational microstates)\n')
+    out.write('state_normalized,hb_count,count,occ\n')
+    for state, count in sorted(counts.items(), key=lambda x: -x[1]):
+        hb_count = state.count('(')
+        occ = count / total_state_space
+        out.write(f'"{state}",{hb_count},{count},{occ:.2e}\n')
+
+print(f"Input file:                        {input_csv}")
+print(f"Unique conformational microstates: {input_unique_conf:,}")
+print(f"Total microstates (sum count):     {total:,}")
+print(f"Total state space:                 {total_state_space:,}")
+print(f"Unique residue microstates:        {len(counts):,}")
+print(f"Output saved to:                   {output_file}")
