@@ -8,33 +8,40 @@ from collections import Counter, defaultdict
 import networkx as nx
 
 parser = argparse.ArgumentParser(
-    description='Find hydrogen bond networks for each state vector. '
-                'Reads the aggregated output CSV and builds an HB graph '
-                'per state, then filters by residue list or entry/exit residues.')
+    description='Find H-bond networks across unique residue microstates. '
+                'Accepts either the raw MCCE hb_states CSV (state_id column, '
+                'conformer-level pairs) or the aggregated residue-level CSV '
+                '(state_normalized column from hb_state_aggregate.py). Builds '
+                'an H-bond graph per microstate and searches for networks using '
+                'one of two modes: -resi_list reports connected subnetworks '
+                'containing any listed residue; -resi_start_stop finds shortest '
+                'paths from entry to exit residues and ranks them by Arrhenius '
+                'rate and energy with pairwise and uncorrelated statistics.')
 parser.add_argument('input_csv', metavar='input.csv',
-                    help='Path to the aggregated output CSV file '
-                         '(e.g. hb_states_pH7.00eH0.00_output.csv)')
+                    help='Input CSV: either raw hb_states (state_id,averE,count,occ) '
+                         'or aggregated (state_normalized,hb_count,count,occ)')
 parser.add_argument('-resi_list', metavar='FILE',
                     help='Text file with residues of interest (one per line). '
                          'Reports connected subnetworks containing any listed residue.')
 parser.add_argument('-resi_start_stop', metavar='FILE',
                     help='Tab-separated file with ENTRY/EXIT columns. '
-                         'Header line: ENTRY<tab>EXIT. '
-                         'Each subsequent line: ENTRY_RES<tab>EXIT_RES or just ENTRY_RES.')
+                         'Header: ENTRY<tab>EXIT. Each line: ENTRY_RES<tab>EXIT_RES '
+                         'or just ENTRY_RES (entry-only). Finds paths from any entry '
+                         'residue to any exit residue.')
 parser.add_argument('-max_path_length', type=int, default=None, metavar='N',
-                    help='Maximum path length (number of edges) for start/stop '
-                         'network search. Default: shortest paths only. '
-                         'Set to find all paths up to N edges.')
+                    help='Maximum path length (edges) for start/stop search. '
+                         'Default: shortest paths only. Set N to find all simple '
+                         'paths up to N edges (can be slow for large N).')
 parser.add_argument('-topnets', type=int, default=10, metavar='N',
-                    help='Number of top networks to display in statistics '
-                         '(default: 10)')
+                    help='Number of top networks to display (default: 10)')
+parser.add_argument('-node_min', type=int, default=5, metavar='N',
+                    help='Minimum number of nodes in a network path (default: 5)')
 parser.add_argument('-A', type=float, default=1e13,
-                    help='Arrhenius pre-exponential factor in /sec '
-                         '(default: 1e13)')
+                    help='Arrhenius pre-exponential factor in /sec (default: 1e13)')
 args = parser.parse_args()
 
 if not args.resi_list and not args.resi_start_stop:
-    parser.error('At least one of -resi_list or -resi_start_stop is required')
+    parser.error('at least one of -resi_list or -resi_start_stop is required')
 
 RE_PAIRS = re.compile(r'\(([^,]+),([^)]+)\)')
 RE_CONFORMER_NUM = re.compile(r'_\d+')
@@ -53,15 +60,13 @@ def normalize_state(state_id):
         a, b = m.group(1).strip(), m.group(2).strip()
         a, b = sorted([normalize_residue(a), normalize_residue(b)])
         pairs.add((a, b))
-    sorted_pairs = sorted(pairs)
-    return ','.join(f'({a},{b})' for a, b in sorted_pairs)
+    return ','.join(f'({a},{b})' for a, b in sorted(pairs))
 
 
 def parse_state_graph(state_str):
     G = nx.Graph()
     for m in RE_PAIRS.finditer(state_str):
-        a, b = m.group(1).strip(), m.group(2).strip()
-        G.add_edge(a, b)
+        G.add_edge(m.group(1).strip(), m.group(2).strip())
     return G
 
 
@@ -76,8 +81,7 @@ def read_resi_list(path):
 
 
 def read_resi_start_stop(path):
-    entry = set()
-    exit_ = set()
+    entry, exit_ = set(), set()
     with open(path) as f:
         for line in f:
             line = line.strip()
@@ -90,128 +94,131 @@ def read_resi_start_stop(path):
             if len(parts) >= 2:
                 exit_.add(parts[1])
     if not entry:
-        print('Error: no entry residues found in', path, file=sys.stderr)
-        sys.exit(1)
+        sys.exit(f'Error: no entry residues found in {path}')
     if not exit_:
-        print('Error: no exit residues found in', path, file=sys.stderr)
-        sys.exit(1)
+        sys.exit(f'Error: no exit residues found in {path}')
     return entry, exit_
 
 
 def format_edge_list(edges):
-    sorted_edges = sorted(('(%s,%s)' % (min(a, b), max(a, b))) for a, b in edges)
-    return ','.join(sorted_edges)
+    return ','.join(sorted(f'({min(a,b)},{max(a,b)})' for a, b in edges))
 
 
-def format_path(path):
-    return ' -> '.join(path)
-
-
-def print_and_write(out_file, text):
+def print_and_write(fh, text):
     print(text)
-    out_file.write(text + '\n')
+    fh.write(text + '\n')
 
 
 def read_input_csv(path):
     rows = []
     with open(path) as f:
-        first_line = f.readline().strip()
-        if first_line.startswith('#'):
-            header_line = f.readline().strip()
-        else:
-            header_line = first_line
+        header_line = ''
+        for raw_line in f:
+            raw_line = raw_line.strip()
+            if raw_line.startswith('#'):
+                continue
+            header_line = raw_line
+            break
         fields = [h.strip() for h in header_line.split(',')]
-
         is_raw = 'state_id' in fields
+
         if is_raw:
-            print('Detected raw input CSV (state_id column). Normalizing residues...')
+            print(f'  Format: raw MCCE hb_states (conformer-level). Normalizing ...')
             for line in f:
                 parts = line.rsplit(',', 3)
-                state_id = parts[0].strip('"')
                 count = int(parts[-2])
-                state_norm = normalize_state(state_id)
-                rows.append({'state_normalized': state_norm, 'count': str(count)})
+                rows.append({
+                    'state_normalized': normalize_state(parts[0].strip('"')),
+                    'count': str(count),
+                })
         else:
+            print(f'  Format: aggregated residue-level CSV')
             remaining = f.read()
-            reader = csv.DictReader([header_line + '\n'] + remaining.splitlines(True))
-            for r in reader:
+            for r in csv.DictReader([header_line + '\n'] + remaining.splitlines(True)):
                 rows.append(r)
     return rows
 
 
+print(f'Reading {args.input_csv} ...')
 states = read_input_csv(args.input_csv)
 total_microstates = sum(int(row['count']) for row in states)
+print(f'  Unique states: {len(states):,}')
+print(f'  Total microstates: {total_microstates:,}')
 
 if args.resi_list:
     resi_set = read_resi_list(args.resi_list)
+    print(f'\n--- resi_list mode ---')
     print(f'Residues of interest ({len(resi_set)}): {", ".join(sorted(resi_set))}')
-    print()
 
-    out_file = args.input_csv.replace('.csv', '_networks_resi_list.csv')
-    with open(out_file, 'w', newline='') as out:
+    out_path = args.input_csv.replace('.csv', '_networks_resi_list.csv')
+    matched = 0
+    with open(out_path, 'w', newline='') as out:
         writer = csv.writer(out)
         writer.writerow(['state_rank', 'count', 'hb_count',
                          'residues_matched', 'network_edges', 'network_size',
                          'full_state'])
-        rank = 0
-        matched = 0
-        for row in states:
-            rank += 1
+        for rank, row in enumerate(states, 1):
             state_str = row['state_normalized']
             G = parse_state_graph(state_str)
-            components = list(nx.connected_components(G))
-            for comp in components:
+            for comp in nx.connected_components(G):
+                if len(comp) < args.node_min:
+                    continue
                 overlap = comp & resi_set
                 if not overlap:
                     continue
                 sub = G.subgraph(comp)
                 writer.writerow([
-                    rank,
-                    row['count'],
-                    row['hb_count'],
+                    rank, row['count'], row.get('hb_count', state_str.count('(')),
                     ' '.join(sorted(overlap)),
-                    format_edge_list(sub.edges()),
-                    len(sub.edges()),
+                    format_edge_list(sub.edges()), len(sub.edges()),
                     state_str,
                 ])
                 matched += 1
 
-    print(f'States processed:    {rank}')
-    print(f'Networks found:      {matched}')
-    print(f'Output saved to:     {out_file}')
+    print(f'Networks found: {matched:,}')
+    print(f'Output saved to: {out_path}')
 
 if args.resi_start_stop:
     entry_set, exit_set = read_resi_start_stop(args.resi_start_stop)
+    print(f'\n--- resi_start_stop mode ---')
     print(f'Entry residues ({len(entry_set)}): {", ".join(sorted(entry_set))}')
     print(f'Exit residues  ({len(exit_set)}): {", ".join(sorted(exit_set))}')
-    print()
 
     use_shortest = args.max_path_length is None
     if use_shortest:
-        print('Mode: shortest paths only (use -max_path_length N for all paths up to N edges)')
+        print('Path mode: shortest paths only (use -max_path_length N for all paths up to N edges)')
     else:
-        print(f'Mode: all simple paths up to {args.max_path_length} edges')
-    print()
+        print(f'Path mode: all simple paths up to {args.max_path_length} edges')
+    print(f'Minimum path nodes: {args.node_min}')
+
+    print(f'Scanning {len(states):,} states for entry->exit networks ...')
 
     network_counts = Counter()
     pairwise_counts = defaultdict(int)
+    state_edge_sets = []
+    states_with_paths = 0
 
-    for row in states:
+    for i, row in enumerate(states):
         state_str = row['state_normalized']
         count = int(row['count'])
         G = parse_state_graph(state_str)
+        nodes = set(G.nodes())
 
+        edge_set = set()
         for a, b in G.edges():
-            edge_key = (min(a, b), max(a, b))
-            pairwise_counts[edge_key] += count
+            edge = (min(a, b), max(a, b))
+            pairwise_counts[edge] += count
+            edge_set.add(edge)
+        state_edge_sets.append((edge_set, count))
 
-        entries_in_graph = entry_set & set(G.nodes())
-        exits_in_graph = exit_set & set(G.nodes())
-        if not entries_in_graph or not exits_in_graph:
+        entries_in = entry_set & nodes
+        exits_in = exit_set & nodes
+        if not entries_in or not exits_in:
             continue
 
-        for e_start in sorted(entries_in_graph):
-            for e_end in sorted(exits_in_graph):
+        found_any = False
+        for e_start in sorted(entries_in):
+            for e_end in sorted(exits_in):
                 if e_start == e_end:
                     continue
                 if not nx.has_path(G, e_start, e_end):
@@ -222,80 +229,97 @@ if args.resi_start_stop:
                     paths = nx.all_simple_paths(G, e_start, e_end,
                                                 cutoff=args.max_path_length)
                 for path in paths:
-                    network_str = ' -> '.join(path)
-                    network_counts[network_str] += count
+                    if len(path) < args.node_min:
+                        continue
+                    network_counts[' -> '.join(path)] += count
+                    found_any = True
+        if found_any:
+            states_with_paths += 1
+
+    print(f'  States with at least one path: {states_with_paths:,}')
+    print(f'  Unique networks found: {len(network_counts):,}')
 
     top_networks = network_counts.most_common(args.topnets)
     A = args.A
-
     out_txt = args.input_csv.replace('.csv', '_networks_start_stop.txt')
     out_csv = args.input_csv.replace('.csv', '_networks_start_stop.csv')
 
-    with open(out_txt, 'w') as out_file, \
-         open(out_csv, 'w', newline='') as csv_file:
+    print(f'Writing results ...')
 
-        csv_writer = csv.writer(csv_file)
+    with open(out_txt, 'w') as fh_txt, \
+         open(out_csv, 'w', newline='') as fh_csv:
+
+        csv_writer = csv.writer(fh_csv)
         csv_writer.writerow(['network_rank', 'count', 'percentage',
                              'rate_k_per_sec', 'energy_kcal_mol',
                              'network', 'path_length',
-                             'pw_percentages', 'uncorr_percentage'])
+                             'subnet_percentages', 'pw_percentages',
+                             'uncorr_percentage'])
 
-        print_and_write(out_file,
-                        f'Total microstates: {total_microstates}')
-        print_and_write(out_file,
-                        f'Total unique states: {len(states)}')
-        print_and_write(out_file,
-                        f'Unique networks found: {len(network_counts)}')
-        print_and_write(out_file,
-                        f'Arrhenius pre-exponential factor A = {A:.2e} /sec')
-        print_and_write(out_file,
-                        f'Top {min(args.topnets, len(top_networks))} networks:\n')
-        print_and_write(out_file, '=' * 120)
+        print_and_write(fh_txt, f'Total microstates: {total_microstates:,}')
+        print_and_write(fh_txt, f'Total unique states: {len(states):,}')
+        print_and_write(fh_txt, f'States with entry->exit paths: {states_with_paths:,}')
+        print_and_write(fh_txt, f'Unique networks found: {len(network_counts):,}')
+        print_and_write(fh_txt, f'Arrhenius pre-exponential factor A = {A:.2e} /sec')
+        print_and_write(fh_txt, f'Minimum path nodes: {args.node_min}')
+        print_and_write(fh_txt, f'Top {min(args.topnets, len(top_networks))} networks:\n')
+        print_and_write(fh_txt, '=' * 120)
 
-        for idx, (network_str, count) in enumerate(top_networks, start=1):
+        for idx, (network_str, count) in enumerate(top_networks, 1):
             nodes = network_str.split(' -> ')
             ratio = count / total_microstates
             if ratio >= 1.0:
-                E = 0.0
-                k = A
+                E, k = 0.0, A
             else:
                 E = -1.364 * math.log10(ratio)
                 k = A * 10 ** (-E / 1.364)
 
-            print_and_write(out_file, '')
-            print_and_write(out_file,
-                            f'Network {idx}: {count} microstates '
+            print_and_write(fh_txt, '')
+            print_and_write(fh_txt,
+                            f'Network {idx}: {count:,} microstates '
                             f'({ratio:.2%}) share this network.')
-            print_and_write(out_file,
+            print_and_write(fh_txt,
                             f'Network Rate & Energy: k = {k:.2e} /sec, '
                             f'E = {E:.2e} kcal/mol')
-            print_and_write(out_file, 'Network structure:')
-            print_and_write(out_file, network_str)
+            print_and_write(fh_txt, 'Network structure:')
+            print_and_write(fh_txt, network_str)
+
+            subnet_percents = []
+            for si in range(2, len(nodes) + 1):
+                prefix_edges = set()
+                for j in range(si - 1):
+                    prefix_edges.add((min(nodes[j], nodes[j + 1]),
+                                      max(nodes[j], nodes[j + 1])))
+                subnet_count = sum(c for es, c in state_edge_sets
+                                   if prefix_edges <= es)
+                subnet_percents.append(subnet_count / total_microstates)
+
+            subnet_line = 'Subnet %:' + ' ' * max(1, len(nodes[0]) - 8)
+            for i in range(len(subnet_percents)):
+                sn_str = f'{subnet_percents[i]:.2%}'
+                padding = len(f' -> {nodes[i + 1]}') - len(sn_str)
+                subnet_line += ' ' * max(padding, 1) + sn_str
+            print_and_write(fh_txt, subnet_line)
 
             pw_percents = []
             pw_ratios = []
             for i in range(len(nodes) - 1):
                 edge_key = (min(nodes[i], nodes[i + 1]),
                             max(nodes[i], nodes[i + 1]))
-                edge_count = pairwise_counts.get(edge_key, 0)
-                pw_ratio = edge_count / total_microstates
+                pw_ratio = pairwise_counts.get(edge_key, 0) / total_microstates
                 pw_percents.append(f'{pw_ratio:.2%}')
                 pw_ratios.append(pw_ratio)
 
-            uncorr = 1.0
-            for r in pw_ratios:
-                uncorr *= r
-            uncorr_pct = uncorr * 100
+            uncorr_pct = math.prod(pw_ratios) * 100
 
-            pw_line = 'PW %:' + ' ' * (len(nodes[0]) - 4)
+            pw_line = 'PW %:' + ' ' * max(1, len(nodes[0]) - 4)
             for i in range(len(nodes) - 1):
-                arrow_and_node = f' -> {nodes[i + 1]}'
                 pw_str = pw_percents[i]
-                padding = len(arrow_and_node) - len(pw_str)
+                padding = len(f' -> {nodes[i + 1]}') - len(pw_str)
                 pw_line += ' ' * max(padding, 1) + pw_str
-            print_and_write(out_file, pw_line)
+            print_and_write(fh_txt, pw_line)
 
-            print_and_write(out_file,
+            print_and_write(fh_txt,
                             f'Uncorr %: {uncorr_pct:.2e}% '
                             f'(PW is just the pairwise interaction %)')
 
@@ -303,11 +327,11 @@ if args.resi_start_stop:
                 idx, count, f'{ratio:.6f}',
                 f'{k:.2e}', f'{E:.2e}',
                 network_str, len(nodes) - 1,
+                ';'.join(f'{sp:.2%}' for sp in subnet_percents),
                 ';'.join(pw_percents), f'{uncorr_pct:.2e}%',
             ])
 
-            print_and_write(out_file, '-' * 120)
+            print_and_write(fh_txt, '-' * 120)
 
-    print()
-    print(f'Statistics saved to:  {out_txt}')
-    print(f'CSV saved to:         {out_csv}')
+    print(f'\nStatistics saved to: {out_txt}')
+    print(f'CSV saved to:        {out_csv}')
