@@ -1,0 +1,3 @@
+PDBID  PROT       PROT_MEM
+6G2J   DAHJK      AHJK
+6G72   DAHJK      AHJK
