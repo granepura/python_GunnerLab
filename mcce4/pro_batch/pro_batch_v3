@@ -2,7 +2,7 @@
 
 """
 CLI Module: pro_batch
-Version: pro_batch_v2
+Version: pro_batch_v3
 
 NOTES:
 1. The current implementation uses the cwd submit script as the master, which is
@@ -759,6 +759,12 @@ def protein_batch():
 
     # Child: detach from terminal, run jobs in background
     os.setsid()
+    devnull_fd = os.open(os.devnull, os.O_RDWR)
+    os.dup2(devnull_fd, 0)
+    log_fd = _log_fh.fileno()
+    os.dup2(log_fd, 1)
+    os.dup2(log_fd, 2)
+    os.close(devnull_fd)
     sys.stdin = open(os.devnull, "r")
     sys.stdout = _log_fh
     sys.stderr = _log_fh
