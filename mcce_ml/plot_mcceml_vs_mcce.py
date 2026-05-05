@@ -187,10 +187,16 @@ def plot_per_sequence(df, out_dir):
         ax.set_aspect("equal")
 
         mae = mean_absolute_error(sub["MCCE_pKa"], sub["ML_pKa"])
+        rmse = np.sqrt(mean_squared_error(sub["MCCE_pKa"], sub["ML_pKa"]))
         r2 = r2_score(sub["MCCE_pKa"], sub["ML_pKa"])
-        ax.set_title(f"{seq}  (MAE={mae:.2f}, R²={r2:.2f})", fontsize=11)
+        n_pts = len(sub)
+        ax.set_title(f"{seq}", fontsize=11)
         ax.set_xlabel("MCCE pKa", fontsize=9)
         ax.set_ylabel("ML pKa", fontsize=9)
+        stats = f"N={n_pts}\nMAE={mae:.2f}\nRMSE={rmse:.2f}\nR²={r2:.3f}"
+        ax.text(0.05, 0.95, stats, transform=ax.transAxes, fontsize=8,
+                verticalalignment="top",
+                bbox=dict(boxstyle="round,pad=0.3", facecolor="wheat", alpha=0.8))
         ax.tick_params(labelsize=8)
         ax.grid(True, alpha=0.2)
 

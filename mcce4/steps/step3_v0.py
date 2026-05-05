@@ -58,7 +58,6 @@ logger.setLevel(logging.DEBUG)
 energy_folder = "energies"
 PW_CUTOFF = 0.001  # cut off value for pairwise interaction to report
 PROGRESS_LOG = "progress_step3.log"
-PBE_TASK_TIMEOUT = 1000  # seconds per conformer; rerun stragglers with -c
 
 global run_options
 global instance_name 
@@ -1708,44 +1707,24 @@ if __name__ == "__main__":
         max_pool = run_options.p
         logger.info("   Running PBE solver in %d threads" % max_pool)
 
-#        with Pool(max_pool) as pool:
-#            results = []
-#            async_results = [pool.apply_async(safe_pbe, (arg,)) for arg in work_load]
-#
-#            for i, r in enumerate(async_results):
-#                try:
-#                    res = r.get(timeout=300)  # 300 seconds timeout per task, test if this solves premature termination
-#                except TimeoutError:
-#                    logger.error(f"Task {i} timed out")
-#                    results.append("[ERROR] Task timed out")
-#                    pool.terminate()   # stop all workers immediately
-#                    exit()              # exit to stop program
-#                except Exception as e:
-#                    logger.error(f"Task {i} failed with error: {e}")
-#                    results.append("[ERROR] Task failed")
-
-        failed_tasks = []
         with Pool(max_pool) as pool:
+            results = []
             async_results = [pool.apply_async(safe_pbe, (arg,)) for arg in work_load]
-            for i, r in enumerate(async_results):
-                ir, ic = work_load[i]
-                confid = protein.residue[ir].conf[ic].confID
-                try:
-                    res = r.get(timeout=PBE_TASK_TIMEOUT)
-                except TimeoutError:
-                    logger.error(f"Task {i} ({confid}) timed out after {PBE_TASK_TIMEOUT}s")
-                    failed_tasks.append((i, confid, "timeout"))
-                    continue
-                except Exception as e:
-                    logger.error(f"Task {i} ({confid}) failed: {e}")
-                    failed_tasks.append((i, confid, str(e)))
-                    continue
 
-        if failed_tasks:
-            with open("failed_conformers.txt", "w") as f:
-                for i, cid, reason in failed_tasks:
-                    f.write(f"{i}\t{cid}\t{reason}\n")
-            logger.warning(f"{len(failed_tasks)} conformers failed; see failed_conformers.txt")
+            for i, r in enumerate(async_results):
+                try:
+                    res = r.get(timeout=300)  # 300 seconds timeout per task, test if this solves premature termination
+                except TimeoutError:
+                    logger.error(f"Task {i} timed out")
+                    results.append("[ERROR] Task timed out")
+                    pool.terminate()   # stop all workers immediately
+                    exit()              # exit to stop program
+                except Exception as e:
+                    logger.error(f"Task {i} failed with error: {e}")
+                    results.append("[ERROR] Task failed")
+
+        if results:
+            logger.warning("    Error PBE solving on %s" % str(results))
 
         cwd = os.getcwd()
         logger.info("   Time needed: %d seconds.", time.time() - start_t)
