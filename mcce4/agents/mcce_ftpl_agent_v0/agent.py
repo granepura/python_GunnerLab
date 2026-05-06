@@ -147,10 +147,10 @@ def node_enumerate_states(state: AgentState) -> AgentState:
         states = enumerate_protonation_states(
             state["smiles"], ph=state.get("ph", 7.4),
             pdb_path=state["pdb_path"],
-            ph_min=state.get("_dimorphite_ph_min", 6.4),
-            ph_max=state.get("_dimorphite_ph_max", 8.4),
+            ph_min=state.get("_dimorphite_ph_min", 6.5),
+            ph_max=state.get("_dimorphite_ph_max", 7.5),
             precision=state.get("_dimorphite_precision", 1.0),
-            max_variants=state.get("_dimorphite_max_variants", 128),
+            max_variants=state.get("_dimorphite_max_variants", 32),
             label_states=state.get("_dimorphite_label_states", False),
         )
     else:
@@ -997,10 +997,10 @@ def run_agent(pdb_path: str = None, use_gui: bool = False,
                llm_provider: str = "gemini",
                api_key: str = None,
                lig_code: str = None,
-               ph_min: float = 6.4,
-               ph_max: float = 8.4,
+               ph_min: float = 6.5,
+               ph_max: float = 7.5,
                precision: float = 1.0,
-               max_variants: int = 128,
+               max_variants: int = 32,
                label_states: bool = False) -> AgentState:
     """Run the full agent pipeline.
 
@@ -1018,8 +1018,8 @@ def run_agent(pdb_path: str = None, use_gui: bool = False,
         api_key: Optional API key for the LLM provider.
         lig_code: 3-letter RCSB ligand code. When provided without pdb_path,
                   SMILES is fetched from RCSB and 3D structures are built.
-        ph_min: Dimorphite-DL minimum pH (default: 6.4).
-        ph_max: Dimorphite-DL maximum pH (default: 8.4).
+        ph_min: Dimorphite-DL minimum pH (default: 6.5).
+        ph_max: Dimorphite-DL maximum pH (default: 7.5).
         precision: Dimorphite-DL pKa precision (std devs from mean).
         max_variants: Dimorphite-DL max protonation variants per compound.
         label_states: Dimorphite-DL label output SMILES.

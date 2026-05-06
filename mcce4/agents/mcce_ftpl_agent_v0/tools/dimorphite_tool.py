@@ -15,10 +15,10 @@ from ..config import CHARGE_TO_CONF
 
 def enumerate_protonation_states(smiles: str, ph: float = 7.4,
                                   pdb_path: str = None,
-                                  ph_min: float = 6.4,
-                                  ph_max: float = 8.4,
+                                  ph_min: float = 6.5,
+                                  ph_max: float = 7.5,
                                   precision: float = 1.0,
-                                  max_variants: int = 128,
+                                  max_variants: int = 32,
                                   label_states: bool = False) -> List[ConformerState]:
     """Enumerate protonation states at target pH using Dimorphite-DL.
 
@@ -40,8 +40,8 @@ def enumerate_protonation_states(smiles: str, ph: float = 7.4,
         smiles: Input SMILES string.
         ph: Target pH (used for state rationale text).
         pdb_path: Optional path to PDB (unused, kept for API compat).
-        ph_min: Minimum pH for protonation enumeration (default: 6.4).
-        ph_max: Maximum pH for protonation enumeration (default: 8.4).
+        ph_min: Minimum pH for protonation enumeration (default: 6.5).
+        ph_max: Maximum pH for protonation enumeration (default: 7.5).
         precision: pKa precision factor (std devs from mean pKa).
         max_variants: Max protonation variants per compound.
         label_states: Label output SMILES as PROTONATED/DEPROTONATED/BOTH.

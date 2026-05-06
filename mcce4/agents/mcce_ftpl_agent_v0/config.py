@@ -190,10 +190,10 @@ PHASE_NAME_MAP = {
 # ──────────────────────────────────────────────────────────────────────────────
 # Dimorphite-DL defaults
 # ──────────────────────────────────────────────────────────────────────────────
-DIMORPHITE_PH_MIN = 6.4           # Minimum pH for protonation enumeration
-DIMORPHITE_PH_MAX = 8.4           # Maximum pH for protonation enumeration
+DIMORPHITE_PH_MIN = 6.5           # Minimum pH for protonation enumeration
+DIMORPHITE_PH_MAX = 7.5           # Maximum pH for protonation enumeration
 DIMORPHITE_PRECISION = 1.0        # pKa precision (std devs from mean pKa)
-DIMORPHITE_MAX_VARIANTS = 128     # Max protonation variants per compound
+DIMORPHITE_MAX_VARIANTS = 32      # Max protonation variants per compound
 DIMORPHITE_LABEL_STATES = False   # Label output SMILES as PROTONATED/DEPROTONATED/BOTH
 
 # ──────────────────────────────────────────────────────────────────────────────

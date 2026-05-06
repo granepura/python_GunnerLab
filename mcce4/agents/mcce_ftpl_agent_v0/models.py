@@ -104,6 +104,9 @@ def make_labels_unique(states: list) -> list:
     label_index: dict = {}     # base_label → next index
     charge_index: dict = {}    # charge → next index (for disambiguation)
     neutral_index = 0          # for multiple neutral states
+    # MCCE conformer names are exactly 5 chars: lig_id(3) + label(2).
+    # Labels must be at most 2 characters, so max 9 states per charge.
+    MAX_PER_CHARGE = 9
 
     result = []
     for s in states:
@@ -113,12 +116,18 @@ def make_labels_unique(states: list) -> list:
         if label_counts[label] > 1 or charge_counts[charge] > 1:
             # Need disambiguation
             if charge == 0:
-                # Neutral: 01, 02, 03, ...
                 neutral_index += 1
+                if neutral_index > MAX_PER_CHARGE:
+                    logging.warning(f"  Dropping neutral state #{neutral_index} — "
+                                    f"MCCE 5-char limit allows max {MAX_PER_CHARGE} per charge")
+                    continue
                 new_label = f"0{neutral_index}"
             else:
-                # Ionic with duplicates: use alpha-numeric code
                 idx = charge_index.get(charge, 0)
+                if idx >= MAX_PER_CHARGE:
+                    logging.warning(f"  Dropping charge={charge:+d} state #{idx+1} — "
+                                    f"MCCE 5-char limit allows max {MAX_PER_CHARGE} per charge")
+                    continue
                 charge_index[charge] = idx + 1
                 letter = _charge_letter(charge)
                 new_label = f"{letter}{idx + 1}"
@@ -129,6 +138,8 @@ def make_labels_unique(states: list) -> list:
             # Single neutral state keeps "01"
             if charge == 0 and new_label in ("01",):
                 pass  # keep as-is
+
+        assert len(new_label) <= 2, f"Label '{new_label}' exceeds 2-char MCCE limit"
 
         if isinstance(s, dict):
             s = {**s, 'label': new_label}
