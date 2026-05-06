@@ -1,0 +1,34 @@
+# Choose command to run to create the environment:
+# 1. Create a NEW environment named 'mc4':
+#  conda env create -f mc4.yml
+# 2. Update an existing 'mc4' environment:
+#  conda env update -n mc4 -f mc4.yml
+#
+name: mc4
+channels:
+  - openeye
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - numba
+  - mdanalysis
+  - parmed
+  - vtk=9.3
+  - setuptools>=64
+  - pymol-open-source
+  - openeye-toolkits
+  - pip:
+    - scipy
+    - matplotlib
+    - pandas
+    - networkx
+    - requests
+    - seaborn
+    - fastapi>=0.100.0
+    - uvicorn[standard]>=0.20.0
+    - python-multipart>=0.0.5
+    - websockets>=10.0
+    - dimorphite-dl
