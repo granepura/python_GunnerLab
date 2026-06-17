@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+"""
+Tool file: mcce_ftpl — MCCE4 Topology File AI Agent
+
+Codebase: /mcce4/mcce_ftpl_agent
+
+Usage:
+  mcce4_agent_ftpl.py EMH.pdb                                    # Full auto (PDB input)
+  mcce4_agent_ftpl.py EMH.cif                                    # CIF input (auto-converts)
+  mcce4_agent_ftpl.py -lig-code EMH                              # Ligand code only (fetches from RCSB)
+  mcce4_agent_ftpl.py EMH.pdb -lig-code EMH                      # PDB + ligand code
+  mcce4_agent_ftpl.py --lig-code EMH --dry-run --no-llm          # Quick test from RCSB
+  mcce4_agent_ftpl.py EMH.pdb --gui                              # Web GUI
+  mcce4_agent_ftpl.py EMH.pdb -state-pdbs EMH_01.pdb EMH_+1.pdb  # User states
+  mcce4_agent_ftpl.py EMH.pdb --no-llm --dry-run                 # Minimal run
+  mcce4_agent_ftpl.py EMH.pdb -llm-provider claude               # Use Claude LLM
+  mcce4_agent_ftpl.py EMH.pdb -llm-provider chatgpt              # Use ChatGPT LLM
+  mcce4_agent_ftpl.py EMH.pdb -llm-provider claude --api-key KEY # Custom API key
+
+"""
+
+from mcce4.mcce_ftpl_agent.cli import cli
+
+
+if __name__ == "__main__":
+    cli()
