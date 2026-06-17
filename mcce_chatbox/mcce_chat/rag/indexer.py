@@ -154,7 +154,8 @@ def collect_source_files(root_dir: str) -> list:
     return files
 
 
-def build_index(root_dir: str, index_dir: str = None, force: bool = False):
+def build_index(root_dir: str, index_dir: str = None, force: bool = False,
+                include_web: bool = True, refresh_web: bool = False):
     """Build or rebuild the ChromaDB index."""
     chromadb = _require_chromadb()
     ef = _get_embedding_function()
@@ -183,8 +184,9 @@ def build_index(root_dir: str, index_dir: str = None, force: bool = False):
         print("Use --rebuild-index to force rebuild.")
         return
 
+    # --- Local source files ---
     source_files = collect_source_files(root_dir)
-    print(f"Indexing {len(source_files)} files from {root_dir} ...")
+    print(f"Indexing {len(source_files)} local files from {root_dir} ...")
 
     all_chunks = []
     for ftype, fpath in source_files:
@@ -194,6 +196,18 @@ def build_index(root_dir: str, index_dir: str = None, force: bool = False):
             all_chunks.extend(_chunk_ftpl(fpath))
         else:
             all_chunks.extend(_chunk_sliding_window(fpath))
+
+    # --- Web sources ---
+    if include_web:
+        try:
+            from mcce_chat.rag.web_fetcher import fetch_all_web_sources, chunk_web_pages
+            print("\nFetching web sources ...")
+            web_pages = fetch_all_web_sources(index_dir, refresh=refresh_web)
+            web_chunks = chunk_web_pages(web_pages)
+            print(f"  {len(web_chunks)} chunks from web sources")
+            all_chunks.extend(web_chunks)
+        except Exception as e:
+            print(f"  Warning: Web fetching failed ({e}), indexing local sources only.")
 
     if not all_chunks:
         print("No chunks found to index.")
@@ -208,4 +222,4 @@ def build_index(root_dir: str, index_dir: str = None, force: bool = False):
                       "name": c["name"]} for c in batch]
         collection.add(ids=ids, documents=documents, metadatas=metadatas)
 
-    print(f"Indexed {len(all_chunks)} chunks into {index_dir}")
+    print(f"\nIndexed {len(all_chunks)} total chunks into {index_dir}")

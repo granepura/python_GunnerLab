@@ -1,0 +1,25 @@
+# mcce-chat conda environment
+# 1. Create:  conda env create -f mc4_chat.yml
+# 2. Update:  conda env update -n mc4_chat -f mc4_chat.yml
+#
+name: mc4_chat
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - requests
+  - pip:
+    # LLM providers (install whichever you use)
+    - anthropic
+    - openai
+    - ollama
+    - google-genai
+    # RAG
+    - chromadb
+    - sentence-transformers
+    - rank-bm25
+    - beautifulsoup4
+    # Display
+    - rich

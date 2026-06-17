@@ -62,17 +62,21 @@ def main(root_dir: str = None):
         prog="mcce-chat",
         description="MCCE4 AI assistant — ask questions about your MCCE4 run",
     )
-    parser.add_argument("question", nargs="?", default=None,
+    parser.add_argument("question", nargs="*",
                         help="Single-shot question (omit for interactive REPL)")
     parser.add_argument("--provider", "-p", default=None,
-                        help="LLM provider (anthropic, ollama, groq, openai, openai_compat)")
+                        help="LLM provider (anthropic, ollama, groq, openai, gemini, openai_compat)")
     parser.add_argument("--model", "-m", default=None, help="Model name")
     parser.add_argument("--save-provider", action="store_true",
                         help="Save provider/model choice to ~/.mcce_chat.conf")
     parser.add_argument("--list-models", action="store_true",
                         help="List known providers and models")
     parser.add_argument("--rebuild-index", action="store_true",
-                        help="Build or rebuild the RAG index from MCCE4 source")
+                        help="Build or rebuild the RAG index from MCCE4 source + web")
+    parser.add_argument("--refresh-web", action="store_true",
+                        help="Re-download web sources when rebuilding index")
+    parser.add_argument("--no-web", action="store_true",
+                        help="Skip web sources when rebuilding index (local only)")
     parser.add_argument("--status", action="store_true",
                         help="Print run directory context and exit")
     parser.add_argument("--no-rag", action="store_true",
@@ -101,7 +105,9 @@ def main(root_dir: str = None):
     if args.rebuild_index:
         try:
             from mcce_chat.rag.indexer import build_index
-            build_index(root_dir, force=True)
+            build_index(root_dir, force=True,
+                        include_web=not args.no_web,
+                        refresh_web=args.refresh_web)
         except Exception as e:
             print_error(f"Failed to build index: {e}")
             sys.exit(1)
@@ -122,9 +128,10 @@ def main(root_dir: str = None):
 
     print_banner(run_dir, ctx.mode(), pdb_id, ctx.book_state, provider, model)
 
-    if args.question:
+    question = " ".join(args.question) if args.question else ""
+    if question:
         messages = []
-        _do_chat(args.question, messages, provider, model,
+        _do_chat(question, messages, provider, model,
                  run_context_text, root_dir, args.no_rag)
         return
 
