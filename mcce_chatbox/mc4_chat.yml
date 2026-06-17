@@ -19,6 +19,7 @@ dependencies:
     # RAG
     - chromadb
     - sentence-transformers
+    - einops
     - rank-bm25
     - beautifulsoup4
     # Display
