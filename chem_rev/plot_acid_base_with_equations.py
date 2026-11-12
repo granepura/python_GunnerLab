@@ -44,7 +44,8 @@ FS_REACTION = 16        # the reaction equilibrium scheme
 FS_EQUATION = 13        # the dG / f equations (hidden by --no_legend)
 FS_CURVE_LABEL = 14     # the on-curve species labels
 FS_PKA = 13             # the "pKa = 7" marker annotation
-FS_REFERENCE = 13       # "<species> reference" on the ΔG = 0 line
+FS_REFERENCE = 13       # the "HA_{ΔG=0}" label on the zero line
+ZERO_LINE_WIDTH = 2.0    # the bold black ΔG = 0 line (diagonal is 2.6)
 
 # Translucent white backing, so a text block stays legible where the larger
 # type runs up against a curve (the equations graze the sigmoid flank on the
@@ -80,6 +81,13 @@ SP_B = r"$\mathrm{B}$"
 # Acids (A-, HA) share the HA/A- couple; bases (BH+, B) share the BH+/B couple.
 RXN_ACID = r"$\mathrm{HA \rightleftharpoons A^- + H^+}$"
 RXN_BASE = r"$\mathrm{BH^+ \rightleftharpoons B + H^+}$"
+
+# Labels for the black zero line: it is the free energy of the plotted
+# species' conjugate partner, i.e. the partner's own ΔG = 0.
+ZERO_HA = r"$\mathbf{HA}_{\mathbf{\Delta G=0}}$"
+ZERO_AMINUS = r"$\mathbf{A^-}_{\mathbf{\Delta G=0}}$"
+ZERO_BHPLUS = r"$\mathbf{BH^+}_{\mathbf{\Delta G=0}}$"
+ZERO_B = r"$\mathbf{B}_{\mathbf{\Delta G=0}}$"
 
 # Governing equations per species (mathtext): free energy and probability.
 # Drawn colour-coded in an in-panel legend by ``plot_panel``.
@@ -142,7 +150,6 @@ def configure_panel(
     pka_ha: str,
     colors: tuple[str, str],
     reference: str,
-    descending: bool,
 ) -> None:
     dark, light = colors
 
@@ -153,7 +160,9 @@ def configure_panel(
     ax.set_ylabel(r"Relative free energy, $\Delta G$ (kcal/mol)", color=dark)
     ax.grid(alpha=0.25)
 
-    ax.axhline(0.0, linewidth=1.0, color="black")
+    # Bold zero line: it is the conjugate partner's free energy (ΔG = 0),
+    # labelled with a ZERO_* string below. Thinner than the 2.6 diagonal.
+    ax.axhline(0.0, linewidth=ZERO_LINE_WIDTH, color="black", zorder=3)
     ax.axvline(PKA, linewidth=1.0, linestyle="--", color="black")
 
     ax_fraction.set_ylim(0.0, 1.0)
@@ -189,19 +198,19 @@ def configure_panel(
     )
 
     # Name the reference state on the black ΔG = 0 line: it is the free energy
-    # of the conjugate partner the plotted species is measured against. Placed
-    # just above the line at the end where the diagonal is *below* zero (right
-    # for a descending line, left for an ascending one) -- the opposite side
-    # from the pKa label, under the sigmoid plateau, and clear of the equations
-    # (which sit at 0.28-0.36 / 0.64-0.72 of the panel height).
-    margin = 0.03 * (PH_MAX - PH_MIN)
-    ref_x, ref_ha = (PH_MAX - margin, "right") if descending else (PH_MIN + margin, "left")
+    # of the conjugate partner the plotted species is measured against. Always
+    # at the LEFT end, just above the line, in every panel -- beside the ΔG
+    # axis it belongs to. Clear there for either slope: the diagonal is far
+    # above or below the line at the left edge, the sigmoid sits on a plateau
+    # at the top or bottom, the pKa label is near the pKa below the line, and
+    # the equations sit at 0.28-0.36 / 0.64-0.72 of the panel height.
+    ref_x = PH_MIN + 0.03 * (PH_MAX - PH_MIN)
     ax.annotate(
-        f"{reference} reference",
+        reference,
         xy=(ref_x, 0.0),
         xytext=(0, 5),
         textcoords="offset points",
-        ha=ref_ha, va="bottom",
+        ha="left", va="bottom",
         color="black",
         fontsize=FS_REFERENCE,
         zorder=8,
@@ -230,8 +239,8 @@ def plot_panel(
     the subplot. ``reaction`` is the equilibrium scheme drawn near the top of
     the panel (always shown). ``eq_dG``/``eq_frac`` are the two governing
     equations, drawn colour-coded inside the panel (unless ``--no_legend``).
-    ``reference`` is the conjugate partner whose free energy the black
-    ΔG = 0 line represents; it is labelled "<reference> reference" on it.
+    ``reference`` is the label for the black zero line (a ``ZERO_*``
+    constant, e.g. HA with subscript ΔG=0): the conjugate partner's free energy.
 
     ``fe_xfrac`` gives the x-position of the free-energy label as a fraction
     (0-1) of the plotted pH window, so it stays in-frame for any
@@ -261,7 +270,7 @@ def plot_panel(
 
     configure_panel(
         ax, ax_fraction, y_limit, pka_dx, pka_ha, colors,
-        reference, descending,
+        reference,
     )
 
     # Panel identifier (e.g. "A") above the subplot, pushed out to the far
@@ -372,7 +381,7 @@ def plot_ionized_states(df: pd.DataFrame) -> plt.Figure:
             panel_label="A",
             reaction=RXN_ACID,
             eq_dG=EQ_DG_AMINUS, eq_frac=EQ_F_AMINUS,
-            reference=SP_HA,
+            reference=ZERO_HA,
         ),
         plot_panel(
             axes[1], df,
@@ -384,7 +393,7 @@ def plot_ionized_states(df: pd.DataFrame) -> plt.Figure:
             panel_label="B",
             reaction=RXN_BASE,
             eq_dG=EQ_DG_BHPLUS, eq_frac=EQ_F_BHPLUS,
-            reference=SP_B,
+            reference=ZERO_B,
         ),
     ]
 
@@ -409,7 +418,7 @@ def plot_neutral_states(df: pd.DataFrame) -> plt.Figure:
             panel_label="A",
             reaction=RXN_ACID,
             eq_dG=EQ_DG_HA, eq_frac=EQ_F_HA,
-            reference=SP_AMINUS,
+            reference=ZERO_AMINUS,
         ),
         plot_panel(
             axes[1], df,
@@ -421,7 +430,7 @@ def plot_neutral_states(df: pd.DataFrame) -> plt.Figure:
             panel_label="B",
             reaction=RXN_BASE,
             eq_dG=EQ_DG_B, eq_frac=EQ_F_B,
-            reference=SP_BHPLUS,
+            reference=ZERO_BHPLUS,
         ),
     ]
 
@@ -450,7 +459,7 @@ def plot_all_states(df: pd.DataFrame) -> plt.Figure:
             panel_label="A",
             reaction=RXN_ACID,
             eq_dG=EQ_DG_AMINUS, eq_frac=EQ_F_AMINUS,
-            reference=SP_HA,
+            reference=ZERO_HA,
         ),
         plot_panel(
             axes[0, 1], df,
@@ -462,7 +471,7 @@ def plot_all_states(df: pd.DataFrame) -> plt.Figure:
             panel_label="B",
             reaction=RXN_BASE,
             eq_dG=EQ_DG_BHPLUS, eq_frac=EQ_F_BHPLUS,
-            reference=SP_B,
+            reference=ZERO_B,
         ),
         plot_panel(
             axes[1, 0], df,
@@ -474,7 +483,7 @@ def plot_all_states(df: pd.DataFrame) -> plt.Figure:
             panel_label="C",
             reaction=RXN_ACID,
             eq_dG=EQ_DG_HA, eq_frac=EQ_F_HA,
-            reference=SP_AMINUS,
+            reference=ZERO_AMINUS,
         ),
         plot_panel(
             axes[1, 1], df,
@@ -486,7 +495,7 @@ def plot_all_states(df: pd.DataFrame) -> plt.Figure:
             panel_label="D",
             reaction=RXN_BASE,
             eq_dG=EQ_DG_B, eq_frac=EQ_F_B,
-            reference=SP_BHPLUS,
+            reference=ZERO_BHPLUS,
         ),
     ]
 
@@ -519,6 +528,9 @@ def parse_args() -> argparse.Namespace:
             "\n"
             "  # drop the equation legend from every figure\n"
             "  python3 plot_acid_base_with_equations.py --no_legend\n"
+            "\n"
+            "  # also open the figures in a window (default: save only)\n"
+            "  python3 plot_acid_base_with_equations.py --show\n"
         ),
     )
     parser.add_argument(
@@ -538,6 +550,11 @@ def parse_args() -> argparse.Namespace:
         "--no_legend", action="store_true",
         help="Omit the equation legend from every figure.",
     )
+    parser.add_argument(
+        "--show", action="store_true",
+        help="Open the figures in an interactive window after saving them "
+             "(default: save to disk only, no window).",
+    )
     return parser.parse_args()
 
 
@@ -556,47 +573,49 @@ def main() -> None:
     output_directory = Path("plot_acid_base_with_equations")
     output_directory.mkdir(exist_ok=True)
 
+    created: list[tuple[Path, str]] = []
+
     # The CSV always covers the full pH 0-14 range, independent of the plot window.
+    csv_path = output_directory / "acid_base_values.csv"
     csv_df = calculate_values(0.0, 14.0, N_POINTS)
-    csv_df.to_csv(output_directory / "acid_base_values.csv", index=False)
+    csv_df.to_csv(csv_path, index=False)
+    created.append((csv_path, f"values table, pH 0-14, {len(csv_df)} rows"))
 
     # Figures use the (possibly narrowed) plot window from --ph-min/--ph-max.
     df = calculate_values(PH_MIN, PH_MAX, N_POINTS)
 
-    ionized_figure = plot_ionized_states(df)
-    ionized_figure.savefig(
-        output_directory / "figure_ionized_states_equations.png",
-        dpi=DPI,
-        bbox_inches="tight",
+    figures = (
+        (plot_ionized_states, "figure_ionized_states_equations",
+         "ionized states: A- (A), BH+ (B)"),
+        (plot_neutral_states, "figure_neutral_states_equations",
+         "neutral states: HA (A), B (B)"),
+        (plot_all_states, "figure_all_states_equations",
+         "all states, 2x2: A-, BH+, HA, B (A-D)"),
     )
-    ionized_figure.savefig(
-        output_directory / "figure_ionized_states_equations.pdf",
-        bbox_inches="tight",
-    )
+    for plot_function, stem, what in figures:
+        figure = plot_function(df)
+        png_path = output_directory / f"{stem}.png"
+        pdf_path = output_directory / f"{stem}.pdf"
+        figure.savefig(png_path, dpi=DPI, bbox_inches="tight")
+        figure.savefig(pdf_path, bbox_inches="tight")
+        created.append((png_path, f"{what}, {DPI} dpi"))
+        created.append((pdf_path, what))
 
-    neutral_figure = plot_neutral_states(df)
-    neutral_figure.savefig(
-        output_directory / "figure_neutral_states_equations.png",
-        dpi=DPI,
-        bbox_inches="tight",
+    # Summary of what was written and where.
+    print(f"Wrote {len(created)} files to {output_directory.resolve()}/")
+    print(
+        f"  settings: pKa = {PKA:g}, plot pH {PH_MIN:g}-{PH_MAX:g}, "
+        f"equations {'hidden (--no_legend)' if NO_LEGEND else 'shown'}"
     )
-    neutral_figure.savefig(
-        output_directory / "figure_neutral_states_equations.pdf",
-        bbox_inches="tight",
-    )
+    width = max(len(path.name) for path, _ in created)
+    for path, what in created:
+        print(f"  {path.name:<{width}}  {what}")
 
-    all_figure = plot_all_states(df)
-    all_figure.savefig(
-        output_directory / "figure_all_states_equations.png",
-        dpi=DPI,
-        bbox_inches="tight",
-    )
-    all_figure.savefig(
-        output_directory / "figure_all_states_equations.pdf",
-        bbox_inches="tight",
-    )
-
-    plt.show()
+    # Figures are always saved; a window opens only when asked for.
+    if args.show:
+        plt.show()
+    else:
+        plt.close("all")
 
 
 if __name__ == "__main__":
