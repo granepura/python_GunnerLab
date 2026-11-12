@@ -22,7 +22,6 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from matplotlib.lines import Line2D
 
 
 # ============================= User settings ============================= #
@@ -33,6 +32,30 @@ PH_MIN = 0.0
 PH_MAX = 14.0
 N_POINTS = 1401
 DPI = 300
+
+# When True, the equation legend is omitted from every figure (--no_legend).
+NO_LEGEND = False
+
+# Font sizes for the in-panel text, collected here so the whole figure family
+# can be scaled from one place. Axis labels and tick labels are set through
+# rcParams below; the rest are passed explicitly where the text is drawn.
+FS_PANEL_LABEL = 26     # the bold A/B/C/D identifier
+FS_REACTION = 16        # the reaction equilibrium scheme
+FS_EQUATION = 13        # the dG / f equations (hidden by --no_legend)
+FS_CURVE_LABEL = 14     # the on-curve species labels
+FS_PKA = 13             # the "pKa = 7" marker annotation
+FS_REFERENCE = 13       # "<species> reference" on the ΔG = 0 line
+
+# Translucent white backing, so a text block stays legible where the larger
+# type runs up against a curve (the equations graze the sigmoid flank on the
+# ascending panels). Same treatment as the reaction scheme.
+EQ_BBOX = dict(facecolor="white", edgecolor="none", alpha=0.7, pad=2)
+
+plt.rcParams.update({
+    "axes.labelsize": 15,
+    "xtick.labelsize": 13,
+    "ytick.labelsize": 13,
+})
 
 # kcal mol^-1 K^-1
 R_KCAL = 0.00198720425864083
@@ -52,6 +75,22 @@ SP_AMINUS = r"$\mathrm{A^-}$"
 SP_HA = r"$\mathrm{HA}$"
 SP_BHPLUS = r"$\mathrm{BH^+}$"
 SP_B = r"$\mathrm{B}$"
+
+# Reaction equilibrium schemes (mathtext), drawn near the top of each panel.
+# Acids (A-, HA) share the HA/A- couple; bases (BH+, B) share the BH+/B couple.
+RXN_ACID = r"$\mathrm{HA \rightleftharpoons A^- + H^+}$"
+RXN_BASE = r"$\mathrm{BH^+ \rightleftharpoons B + H^+}$"
+
+# Governing equations per species (mathtext): free energy and probability.
+# Drawn colour-coded in an in-panel legend by ``plot_panel``.
+EQ_DG_AMINUS = r"$\Delta G_{\mathrm{A^-}}=2.303RT(\mathrm{p}K_a-\mathrm{pH})$"
+EQ_F_AMINUS = r"$f_{\mathrm{A^-}}=\left[1+10^{(\mathrm{p}K_a-\mathrm{pH})}\right]^{-1}$"
+EQ_DG_HA = r"$\Delta G_{\mathrm{HA}}=2.303RT(\mathrm{pH}-\mathrm{p}K_a)$"
+EQ_F_HA = r"$f_{\mathrm{HA}}=\left[1+10^{(\mathrm{pH}-\mathrm{p}K_a)}\right]^{-1}$"
+EQ_DG_BHPLUS = r"$\Delta G_{\mathrm{BH^+}}=2.303RT(\mathrm{pH}-\mathrm{p}K_a)$"
+EQ_F_BHPLUS = r"$f_{\mathrm{BH^+}}=\left[1+10^{(\mathrm{pH}-\mathrm{p}K_a)}\right]^{-1}$"
+EQ_DG_B = r"$\Delta G_{\mathrm{B}}=2.303RT(\mathrm{p}K_a-\mathrm{pH})$"
+EQ_F_B = r"$f_{\mathrm{B}}=\left[1+10^{(\mathrm{p}K_a-\mathrm{pH})}\right]^{-1}$"
 
 
 # ============================= Calculations ============================== #
@@ -102,6 +141,8 @@ def configure_panel(
     pka_dx: float,
     pka_ha: str,
     colors: tuple[str, str],
+    reference: str,
+    descending: bool,
 ) -> None:
     dark, light = colors
 
@@ -117,7 +158,7 @@ def configure_panel(
 
     ax_fraction.set_ylim(0.0, 1.0)
     ax_fraction.set_yticks(np.linspace(0.0, 1.0, 6))
-    ax_fraction.set_ylabel("Fractional occupancy", color=light)
+    ax_fraction.set_ylabel("Probability", color=light)
 
     # Colour each y-axis to match its curve: left = free energy (dark),
     # right = occupancy (light), so it is clear which axis reads which.
@@ -144,7 +185,26 @@ def configure_panel(
         xytext=(pka_dx, -16),
         textcoords="offset points",
         ha=pka_ha,
-        fontsize=11,
+        fontsize=FS_PKA,
+    )
+
+    # Name the reference state on the black ΔG = 0 line: it is the free energy
+    # of the conjugate partner the plotted species is measured against. Placed
+    # just above the line at the end where the diagonal is *below* zero (right
+    # for a descending line, left for an ascending one) -- the opposite side
+    # from the pKa label, under the sigmoid plateau, and clear of the equations
+    # (which sit at 0.28-0.36 / 0.64-0.72 of the panel height).
+    margin = 0.03 * (PH_MAX - PH_MIN)
+    ref_x, ref_ha = (PH_MAX - margin, "right") if descending else (PH_MIN + margin, "left")
+    ax.annotate(
+        f"{reference} reference",
+        xy=(ref_x, 0.0),
+        xytext=(0, 5),
+        textcoords="offset points",
+        ha=ref_ha, va="bottom",
+        color="black",
+        fontsize=FS_REFERENCE,
+        zorder=8,
     )
 
 
@@ -154,20 +214,31 @@ def plot_panel(
     dG_col: str,
     frac_col: str,
     colors: tuple[str, str],
-    title: str,
     species: str,
     fe_xfrac: float,
     occ_frac: float,
     y_limit: float,
+    panel_label: str,
+    reaction: str,
+    eq_dG: str,
+    eq_frac: str,
+    reference: str,
 ) -> dict:
-    """Draw one species panel: free-energy line + occupancy sigmoid.
+    """Draw one species panel: free-energy line + probability sigmoid.
+
+    ``panel_label`` (e.g. ``"A"``) is set as a bold left-aligned title above
+    the subplot. ``reaction`` is the equilibrium scheme drawn near the top of
+    the panel (always shown). ``eq_dG``/``eq_frac`` are the two governing
+    equations, drawn colour-coded inside the panel (unless ``--no_legend``).
+    ``reference`` is the conjugate partner whose free energy the black
+    ΔG = 0 line represents; it is labelled "<reference> reference" on it.
 
     ``fe_xfrac`` gives the x-position of the free-energy label as a fraction
     (0-1) of the plotted pH window, so it stays in-frame for any
-    ``--ph-min``/``--ph-max`` choice. The occupancy label is anchored
+    ``--ph-min``/``--ph-max`` choice. The probability label is anchored
     automatically at the plateau-side edge of the window (see below).
 
-    The occupancy label is placed here; the free-energy label rides along
+    The probability label is placed here; the free-energy label rides along
     the diagonal line and is added later (see ``place_line_labels``), once
     the final axes geometry is known so its rotation matches the slope.
     """
@@ -188,8 +259,48 @@ def plot_panel(
     descending = y0 > y1
     pka_dx, pka_ha = (-10, "right") if descending else (10, "left")
 
-    ax.set_title(title, fontsize=13)
-    configure_panel(ax, ax_fraction, y_limit, pka_dx, pka_ha, colors)
+    configure_panel(
+        ax, ax_fraction, y_limit, pka_dx, pka_ha, colors,
+        reference, descending,
+    )
+
+    # Panel identifier (e.g. "A") above the subplot, pushed out to the far
+    # top-left (into the margin) and set large and bold.
+    ax.text(
+        -0.13, 1.05, panel_label,
+        transform=ax.transAxes, ha="left", va="bottom",
+        fontsize=FS_PANEL_LABEL, fontweight="bold",
+    )
+
+    # Reaction equilibrium scheme centred near the top of the panel. Always
+    # drawn (independent of --no_legend); the top-centre stays clear of both
+    # curves (the diagonal and sigmoid both pass through mid-height at the pKa).
+    ax_fraction.text(
+        0.5, 0.955, reaction, transform=ax_fraction.transAxes,
+        ha="center", va="top", fontsize=FS_REACTION, zorder=9,
+        bbox=EQ_BBOX,
+    )
+
+    # The two governing equations, colour-coded, drawn as plain text (not a
+    # legend box) on the left side, mid-height: delta-G on top, f below. These
+    # are the toggleable "legend" equations -- omitted when --no_legend (unlike
+    # the reaction scheme above, which is always shown). The zero line
+    # (mid-height, full width) and the diagonal force a direction-aware choice --
+    # lower-left for a descending line (its upper-left is filled by the diagonal),
+    # upper-left for an ascending one -- so they clear the zero line, the
+    # diagonal, the sigmoid plateau, and the centred pKa label.
+    if not NO_LEGEND:
+        eq_y_dG, eq_y_f = (0.36, 0.28) if descending else (0.72, 0.64)
+        ax_fraction.text(
+            0.03, eq_y_dG, eq_dG, transform=ax_fraction.transAxes,
+            ha="left", va="center", color=dark, fontsize=FS_EQUATION, zorder=9,
+            bbox=EQ_BBOX,
+        )
+        ax_fraction.text(
+            0.03, eq_y_f, eq_frac, transform=ax_fraction.transAxes,
+            ha="left", va="center", color=light, fontsize=FS_EQUATION, zorder=9,
+            bbox=EQ_BBOX,
+        )
 
     # Occupancy label: anchored at the plateau-side edge of the window and
     # aligned so the text grows inward over the flat plateau -- never back
@@ -201,8 +312,8 @@ def plot_panel(
     else:                            # plateau at low pH  -> anchor at left edge
         occ_x, occ_ha = PH_MIN + margin, "left"
     ax_fraction.text(
-        occ_x, occ_frac, f"{species} occupancy",
-        ha=occ_ha, va="center", color=dark, fontsize=11.5,
+        occ_x, occ_frac, f"{species} probability",
+        ha=occ_ha, va="center", color=dark, fontsize=FS_CURVE_LABEL,
     )
 
     # Endpoints of the (linear) free-energy line, for the rotated label.
@@ -241,28 +352,8 @@ def place_line_labels(labels: list[dict]) -> None:
             ha="center",
             va="bottom",
             color=entry["color"],
-            fontsize=11.5,
+            fontsize=FS_CURVE_LABEL,
         )
-
-
-def add_equation_legend(
-    fig: plt.Figure,
-    entries: list[tuple[str, str]],
-) -> None:
-    """Bottom legend collecting the governing equations (colour-coded)."""
-    handles = [
-        Line2D([0], [0], linewidth=2.6, color=color, label=label)
-        for color, label in entries
-    ]
-    fig.legend(
-        handles=handles,
-        loc="lower center",
-        ncol=2,
-        frameon=True,
-        fontsize=11,
-        bbox_to_anchor=(0.5, -0.02),
-        title=r"$2.303\,RT \approx 1.364$ kcal/mol at 298 K",
-    )
 
 
 def plot_ionized_states(df: pd.DataFrame) -> plt.Figure:
@@ -275,33 +366,29 @@ def plot_ionized_states(df: pd.DataFrame) -> plt.Figure:
             axes[0], df,
             "dG_Aminus_relative_HA_kcal_per_mol", "fraction_Aminus",
             RED,
-            r"A. Single Acid ($\mathrm{HA \rightleftharpoons A^- + H^+}$)",
             SP_AMINUS,
             fe_xfrac=0.17, occ_frac=0.90,
             y_limit=y_limit,
+            panel_label="A",
+            reaction=RXN_ACID,
+            eq_dG=EQ_DG_AMINUS, eq_frac=EQ_F_AMINUS,
+            reference=SP_HA,
         ),
         plot_panel(
             axes[1], df,
             "dG_BHplus_relative_B_kcal_per_mol", "fraction_BHplus",
             BLUE,
-            r"B. Single Base ($\mathrm{BH^+ \rightleftharpoons B + H^+}$)",
             SP_BHPLUS,
             fe_xfrac=0.83, occ_frac=0.90,
             y_limit=y_limit,
+            panel_label="B",
+            reaction=RXN_BASE,
+            eq_dG=EQ_DG_BHPLUS, eq_frac=EQ_F_BHPLUS,
+            reference=SP_B,
         ),
     ]
 
-    add_equation_legend(
-        fig,
-        [
-            # Left column: acid equations.  Right column: base equations.
-            (RED[0], r"$\Delta G_{\mathrm{A^-}}=2.303RT(\mathrm{p}K_a-\mathrm{pH})$"),
-            (RED[1], r"$f_{\mathrm{A^-}}=\left[1+10^{(\mathrm{p}K_a-\mathrm{pH})}\right]^{-1}$"),
-            (BLUE[0], r"$\Delta G_{\mathrm{BH^+}}=2.303RT(\mathrm{pH}-\mathrm{p}K_a)$"),
-            (BLUE[1], r"$f_{\mathrm{BH^+}}=\left[1+10^{(\mathrm{pH}-\mathrm{p}K_a)}\right]^{-1}$"),
-        ],
-    )
-    fig.tight_layout(rect=(0.0, 0.14, 1.0, 1.0))
+    fig.tight_layout()
     place_line_labels(labels)
     return fig
 
@@ -316,33 +403,29 @@ def plot_neutral_states(df: pd.DataFrame) -> plt.Figure:
             axes[0], df,
             "dG_HA_relative_Aminus_kcal_per_mol", "fraction_HA",
             RED,
-            r"A. Single Acid ($\mathrm{HA \rightleftharpoons A^- + H^+}$)",
             SP_HA,
             fe_xfrac=0.83, occ_frac=0.90,
             y_limit=y_limit,
+            panel_label="A",
+            reaction=RXN_ACID,
+            eq_dG=EQ_DG_HA, eq_frac=EQ_F_HA,
+            reference=SP_AMINUS,
         ),
         plot_panel(
             axes[1], df,
             "dG_B_relative_BHplus_kcal_per_mol", "fraction_B",
             BLUE,
-            r"B. Single Base ($\mathrm{BH^+ \rightleftharpoons B + H^+}$)",
             SP_B,
             fe_xfrac=0.17, occ_frac=0.90,
             y_limit=y_limit,
+            panel_label="B",
+            reaction=RXN_BASE,
+            eq_dG=EQ_DG_B, eq_frac=EQ_F_B,
+            reference=SP_BHPLUS,
         ),
     ]
 
-    add_equation_legend(
-        fig,
-        [
-            # Left column: acid equations.  Right column: base equations.
-            (RED[0], r"$\Delta G_{\mathrm{HA}}=2.303RT(\mathrm{pH}-\mathrm{p}K_a)$"),
-            (RED[1], r"$f_{\mathrm{HA}}=\left[1+10^{(\mathrm{pH}-\mathrm{p}K_a)}\right]^{-1}$"),
-            (BLUE[0], r"$\Delta G_{\mathrm{B}}=2.303RT(\mathrm{p}K_a-\mathrm{pH})$"),
-            (BLUE[1], r"$f_{\mathrm{B}}=\left[1+10^{(\mathrm{p}K_a-\mathrm{pH})}\right]^{-1}$"),
-        ],
-    )
-    fig.tight_layout(rect=(0.0, 0.14, 1.0, 1.0))
+    fig.tight_layout()
     place_line_labels(labels)
     return fig
 
@@ -350,8 +433,8 @@ def plot_neutral_states(df: pd.DataFrame) -> plt.Figure:
 def plot_all_states(df: pd.DataFrame) -> plt.Figure:
     """All four species on one 2x2 figure, panels A/B/C/D.
 
-    A. deprotonated acid A-      B. protonated base BH+   (ionized states)
-    C. protonated acid HA        D. deprotonated base B   (neutral states)
+    A deprotonated acid A-    B protonated base BH+   (ionized states)
+    C protonated acid HA      D deprotonated base B   (neutral states)
     """
     y_limit = 1.08 * TWO_303_RT * max(abs(PH_MIN - PKA), abs(PH_MAX - PKA))
     fig, axes = plt.subplots(2, 2, figsize=(13.5, 12.6))
@@ -361,56 +444,53 @@ def plot_all_states(df: pd.DataFrame) -> plt.Figure:
             axes[0, 0], df,
             "dG_Aminus_relative_HA_kcal_per_mol", "fraction_Aminus",
             RED,
-            r"A. Single Acid, $\mathrm{A^-}$ ($\mathrm{HA \rightleftharpoons A^- + H^+}$)",
             SP_AMINUS,
             fe_xfrac=0.17, occ_frac=0.90,
             y_limit=y_limit,
+            panel_label="A",
+            reaction=RXN_ACID,
+            eq_dG=EQ_DG_AMINUS, eq_frac=EQ_F_AMINUS,
+            reference=SP_HA,
         ),
         plot_panel(
             axes[0, 1], df,
             "dG_BHplus_relative_B_kcal_per_mol", "fraction_BHplus",
             BLUE,
-            r"B. Single Base, $\mathrm{BH^+}$ ($\mathrm{BH^+ \rightleftharpoons B + H^+}$)",
             SP_BHPLUS,
             fe_xfrac=0.83, occ_frac=0.90,
             y_limit=y_limit,
+            panel_label="B",
+            reaction=RXN_BASE,
+            eq_dG=EQ_DG_BHPLUS, eq_frac=EQ_F_BHPLUS,
+            reference=SP_B,
         ),
         plot_panel(
             axes[1, 0], df,
             "dG_HA_relative_Aminus_kcal_per_mol", "fraction_HA",
             RED,
-            r"C. Single Acid, $\mathrm{HA}$ ($\mathrm{HA \rightleftharpoons A^- + H^+}$)",
             SP_HA,
             fe_xfrac=0.83, occ_frac=0.90,
             y_limit=y_limit,
+            panel_label="C",
+            reaction=RXN_ACID,
+            eq_dG=EQ_DG_HA, eq_frac=EQ_F_HA,
+            reference=SP_AMINUS,
         ),
         plot_panel(
             axes[1, 1], df,
             "dG_B_relative_BHplus_kcal_per_mol", "fraction_B",
             BLUE,
-            r"D. Single Base, $\mathrm{B}$ ($\mathrm{BH^+ \rightleftharpoons B + H^+}$)",
             SP_B,
             fe_xfrac=0.17, occ_frac=0.90,
             y_limit=y_limit,
+            panel_label="D",
+            reaction=RXN_BASE,
+            eq_dG=EQ_DG_B, eq_frac=EQ_F_B,
+            reference=SP_BHPLUS,
         ),
     ]
 
-    add_equation_legend(
-        fig,
-        [
-            # Left column: all four acid equations (A- and HA).
-            (RED[0], r"$\Delta G_{\mathrm{A^-}}=2.303RT(\mathrm{p}K_a-\mathrm{pH})$"),
-            (RED[1], r"$f_{\mathrm{A^-}}=\left[1+10^{(\mathrm{p}K_a-\mathrm{pH})}\right]^{-1}$"),
-            (RED[0], r"$\Delta G_{\mathrm{HA}}=2.303RT(\mathrm{pH}-\mathrm{p}K_a)$"),
-            (RED[1], r"$f_{\mathrm{HA}}=\left[1+10^{(\mathrm{pH}-\mathrm{p}K_a)}\right]^{-1}$"),
-            # Right column: all four base equations (BH+ and B).
-            (BLUE[0], r"$\Delta G_{\mathrm{BH^+}}=2.303RT(\mathrm{pH}-\mathrm{p}K_a)$"),
-            (BLUE[1], r"$f_{\mathrm{BH^+}}=\left[1+10^{(\mathrm{pH}-\mathrm{p}K_a)}\right]^{-1}$"),
-            (BLUE[0], r"$\Delta G_{\mathrm{B}}=2.303RT(\mathrm{p}K_a-\mathrm{pH})$"),
-            (BLUE[1], r"$f_{\mathrm{B}}=\left[1+10^{(\mathrm{p}K_a-\mathrm{pH})}\right]^{-1}$"),
-        ],
-    )
-    fig.tight_layout(rect=(0.0, 0.10, 1.0, 1.0))
+    fig.tight_layout()
     place_line_labels(labels)
     return fig
 
@@ -436,6 +516,9 @@ def parse_args() -> argparse.Namespace:
             "\n"
             "  # combine both\n"
             "  python3 plot_acid_base_with_equations.py --pka 9 --ph-min 6 --ph-max 12\n"
+            "\n"
+            "  # drop the equation legend from every figure\n"
+            "  python3 plot_acid_base_with_equations.py --no_legend\n"
         ),
     )
     parser.add_argument(
@@ -451,11 +534,15 @@ def parse_args() -> argparse.Namespace:
         "--ph-max", type=float, default=PH_MAX,
         help="Upper pH bound for the plots (default: %(default)s).",
     )
+    parser.add_argument(
+        "--no_legend", action="store_true",
+        help="Omit the equation legend from every figure.",
+    )
     return parser.parse_args()
 
 
 def main() -> None:
-    global PKA, PH_MIN, PH_MAX
+    global PKA, PH_MIN, PH_MAX, NO_LEGEND
 
     args = parse_args()
     if args.ph_min >= args.ph_max:
@@ -464,6 +551,7 @@ def main() -> None:
         )
     PKA = args.pka
     PH_MIN, PH_MAX = args.ph_min, args.ph_max
+    NO_LEGEND = args.no_legend
 
     output_directory = Path("plot_acid_base_with_equations")
     output_directory.mkdir(exist_ok=True)
