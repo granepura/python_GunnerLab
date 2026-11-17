@@ -46,6 +46,7 @@ FS_CURVE_LABEL = 14     # the on-curve species labels
 FS_PKA = 13             # the "pKa = 7" marker annotation
 FS_REFERENCE = 13       # the "HA_{ΔG=0}" label on the zero line
 ZERO_LINE_WIDTH = 2.0    # the bold black ΔG = 0 line (diagonal is 2.6)
+PROB_LINE_WIDTH = 2.6    # the titration (probability) sigmoid, = diagonal
 
 # Translucent white backing, so a text block stays legible where the larger
 # type runs up against a curve (the equations graze the sigmoid flank on the
@@ -68,8 +69,8 @@ TWO_303_RT = 2.303 * R_KCAL * TEMPERATURE_K
 # Each pair keeps a family identity -- acids (A-, HA) warm, bases (BH+, B)
 # cool -- but uses two distinct, fully saturated hues so the two curves and
 # their matching y-axes stay easy to tell apart.
-RED = ("#c0392b", "#e07b00")   # acids: crimson free energy, orange occupancy
-BLUE = ("#15398c", "#0f8f8f")  # bases: navy free energy, teal occupancy
+RED = ("#c0392b", "#c45a00")   # acids: crimson free energy, burnt-orange occupancy
+BLUE = ("#15398c", "#00706f")  # bases: navy free energy, dark-teal occupancy
 
 # Species labels as mathtext.
 SP_AMINUS = r"$\mathrm{A^-}$"
@@ -88,6 +89,14 @@ ZERO_HA = r"$\mathbf{HA}_{\mathbf{\Delta G=0}}$"
 ZERO_AMINUS = r"$\mathbf{A^-}_{\mathbf{\Delta G=0}}$"
 ZERO_BHPLUS = r"$\mathbf{BH^+}_{\mathbf{\Delta G=0}}$"
 ZERO_B = r"$\mathbf{B}_{\mathbf{\Delta G=0}}$"
+
+# On-line labels for the free-energy diagonal: "<species> free energy".
+# With the shared neutral reference, every acid diagonal is A- and every base
+# diagonal BH+ (FE_HA / FE_B are kept for completeness but unused).
+FE_AMINUS = r"$\mathrm{A^-}$ free energy"
+FE_BHPLUS = r"$\mathrm{BH^+}$ free energy"
+FE_HA = r"$\mathrm{HA}$ free energy"
+FE_B = r"$\mathrm{B}$ free energy"
 
 # Governing equations per species (mathtext): free energy and probability.
 # Drawn colour-coded in an in-panel legend by ``plot_panel``.
@@ -232,20 +241,30 @@ def plot_panel(
     eq_dG: str,
     eq_frac: str,
     reference: str,
+    fe_label: str,
+    occ_pos: tuple[float, float, str] | None = None,
+    extra: dict | None = None,
 ) -> dict:
     """Draw one species panel: free-energy line + probability sigmoid.
 
-    ``panel_label`` (e.g. ``"A"``) is set as a bold left-aligned title above
+    ``panel_label`` (e.g. ``"a"``; lowercase, since A/B would read as acid/base) is set as a bold left-aligned title above
     the subplot. ``reaction`` is the equilibrium scheme drawn near the top of
     the panel (always shown). ``eq_dG``/``eq_frac`` are the two governing
     equations, drawn colour-coded inside the panel (unless ``--no_legend``).
-    ``reference`` is the label for the black zero line (a ``ZERO_*``
+    ``fe_label`` (a ``FE_*`` constant, e.g. "A⁻ free energy") rides along the
+    diagonal. ``reference`` is the label for the black zero line (a ``ZERO_*``
     constant, e.g. HA with subscript ΔG=0): the conjugate partner's free energy.
 
     ``fe_xfrac`` gives the x-position of the free-energy label as a fraction
     (0-1) of the plotted pH window, so it stays in-frame for any
     ``--ph-min``/``--ph-max`` choice. The probability label is anchored
     automatically at the plateau-side edge of the window (see below).
+
+    ``occ_pos`` = (pH offset from the pKa, probability, ha) overrides the
+    automatic probability-label position -- used where the plateau side is
+    already taken by the diagonal. ``extra`` adds a second probability curve
+    for the conjugate species (dashed, same hue): a dict with ``frac_col``,
+    ``species``, ``eq`` and ``pos`` (same form as ``occ_pos``).
 
     The probability label is placed here; the free-energy label rides along
     the diagonal line and is added later (see ``place_line_labels``), once
@@ -258,7 +277,12 @@ def plot_panel(
     fe_pH = PH_MIN + fe_xfrac * (PH_MAX - PH_MIN)
 
     ax.plot(df["pH"], df[dG_col], linewidth=2.6, color=dark, zorder=5)
-    ax_fraction.plot(df["pH"], df[frac_col], linewidth=2.0, color=light, zorder=4)
+    ax_fraction.plot(df["pH"], df[frac_col], linewidth=PROB_LINE_WIDTH, color=light, zorder=4)
+    if extra is not None:
+        ax_fraction.plot(
+            df["pH"], df[extra["frac_col"]], linewidth=PROB_LINE_WIDTH,
+            color=light, linestyle=(0, (5, 2.5)), zorder=4,
+        )
 
     y0 = float(df[dG_col].iloc[0])
     y1 = float(df[dG_col].iloc[-1])
@@ -281,13 +305,13 @@ def plot_panel(
         fontsize=FS_PANEL_LABEL, fontweight="bold",
     )
 
-    # Reaction equilibrium scheme centred near the top of the panel. Always
-    # drawn (independent of --no_legend); the top-centre stays clear of both
-    # curves (the diagonal and sigmoid both pass through mid-height at the pKa).
+    # Reaction equilibrium scheme centred ABOVE the plot area, on the same
+    # line as the panel letter. Always drawn (independent of --no_legend).
+    # Outside the axes nothing can cross it, so it needs no white backing
+    # (inside, that box used to blank out a stretch of the sigmoid).
     ax_fraction.text(
-        0.5, 0.955, reaction, transform=ax_fraction.transAxes,
-        ha="center", va="top", fontsize=FS_REACTION, zorder=9,
-        bbox=EQ_BBOX,
+        0.5, 1.03, reaction, transform=ax_fraction.transAxes,
+        ha="center", va="bottom", fontsize=FS_REACTION, zorder=9,
     )
 
     # The two governing equations, colour-coded, drawn as plain text (not a
@@ -299,36 +323,46 @@ def plot_panel(
     # upper-left for an ascending one -- so they clear the zero line, the
     # diagonal, the sigmoid plateau, and the centred pKa label.
     if not NO_LEGEND:
-        eq_y_dG, eq_y_f = (0.36, 0.28) if descending else (0.72, 0.64)
-        ax_fraction.text(
-            0.03, eq_y_dG, eq_dG, transform=ax_fraction.transAxes,
-            ha="left", va="center", color=dark, fontsize=FS_EQUATION, zorder=9,
-            bbox=EQ_BBOX,
-        )
-        ax_fraction.text(
-            0.03, eq_y_f, eq_frac, transform=ax_fraction.transAxes,
-            ha="left", va="center", color=light, fontsize=FS_EQUATION, zorder=9,
-            bbox=EQ_BBOX,
-        )
+        eqs = [(eq_dG, dark), (eq_frac, light)]
+        if extra is not None:
+            eqs.append((extra["eq"], light))
+        # Descending: block hangs from 0.36 down (lower-left). Ascending: block
+        # ends at 0.64 (upper-left), so a third line goes on top, not into the
+        # zero-line label just above mid-height.
+        top = 0.36 if descending else 0.64 + 0.08 * (len(eqs) - 1)
+        for i, (text, color) in enumerate(eqs):
+            ax_fraction.text(
+                0.03, top - 0.08 * i, text, transform=ax_fraction.transAxes,
+                ha="left", va="center", color=color, fontsize=FS_EQUATION,
+                zorder=9, bbox=EQ_BBOX,
+            )
 
     # Occupancy label: anchored at the plateau-side edge of the window and
     # aligned so the text grows inward over the flat plateau -- never back
     # across the steep transition. This keeps it clear at any window width.
     rising = float(df[frac_col].iloc[-1]) > float(df[frac_col].iloc[0])
     margin = 0.03 * (PH_MAX - PH_MIN)
-    if rising:                       # plateau at high pH -> anchor at right edge
+    if occ_pos is not None:          # explicit: (pH offset from pKa, f, ha)
+        occ_x, occ_frac, occ_ha = PKA + occ_pos[0], occ_pos[1], occ_pos[2]
+    elif rising:                     # plateau at high pH -> anchor at right edge
         occ_x, occ_ha = PH_MAX - margin, "right"
     else:                            # plateau at low pH  -> anchor at left edge
         occ_x, occ_ha = PH_MIN + margin, "left"
     ax_fraction.text(
         occ_x, occ_frac, f"{species} probability",
-        ha=occ_ha, va="center", color=dark, fontsize=FS_CURVE_LABEL,
+        ha=occ_ha, va="center", color=light, fontsize=FS_CURVE_LABEL,
     )
+    if extra is not None:
+        dx, ef, eha = extra["pos"]
+        ax_fraction.text(
+            PKA + dx, ef, f"{extra['species']} probability",
+            ha=eha, va="center", color=light, fontsize=FS_CURVE_LABEL,
+        )
 
     # Endpoints of the (linear) free-energy line, for the rotated label.
     return {
         "ax": ax,
-        "text": f"{species} free energy",
+        "text": fe_label,
         "color": dark,
         "fe_pH": fe_pH,
         "y0": y0,
@@ -366,139 +400,110 @@ def place_line_labels(labels: list[dict]) -> None:
 
 
 def plot_ionized_states(df: pd.DataFrame) -> plt.Figure:
-    """Ionized species: deprotonated acid A- and protonated base BH+."""
-    y_limit = 1.08 * TWO_303_RT * max(abs(PH_MIN - PKA), abs(PH_MAX - PKA))
+    """Ionized species A- (a) and BH+ (b), neutral form at ΔG = 0."""
     fig, axes = plt.subplots(1, 2, figsize=(13.5, 6.6))
-
     labels = [
-        plot_panel(
-            axes[0], df,
-            "dG_Aminus_relative_HA_kcal_per_mol", "fraction_Aminus",
-            RED,
-            SP_AMINUS,
-            fe_xfrac=0.17, occ_frac=0.90,
-            y_limit=y_limit,
-            panel_label="A",
-            reaction=RXN_ACID,
-            eq_dG=EQ_DG_AMINUS, eq_frac=EQ_F_AMINUS,
-            reference=ZERO_HA,
-        ),
-        plot_panel(
-            axes[1], df,
-            "dG_BHplus_relative_B_kcal_per_mol", "fraction_BHplus",
-            BLUE,
-            SP_BHPLUS,
-            fe_xfrac=0.83, occ_frac=0.90,
-            y_limit=y_limit,
-            panel_label="B",
-            reaction=RXN_BASE,
-            eq_dG=EQ_DG_BHPLUS, eq_frac=EQ_F_BHPLUS,
-            reference=ZERO_B,
-        ),
+        _acid_panel(axes[0], df, _y_limit(), "a", "ionized"),
+        _base_panel(axes[1], df, _y_limit(), "b", "ionized"),
     ]
-
     fig.tight_layout()
     place_line_labels(labels)
     return fig
 
 
+def _acid_panel(ax, df, y_limit, label, curve):
+    """Acid panel with the shared reference: ΔG(A- − HA), HA at ΔG = 0.
+
+    ``curve`` picks the probability shown: "ionized" (A-), "neutral" (HA),
+    or "both" (A- solid, HA dashed). The energy line is identical in all three.
+    """
+    common = dict(
+        dG_col="dG_Aminus_relative_HA_kcal_per_mol", colors=RED,
+        y_limit=y_limit, panel_label=label, reaction=RXN_ACID,
+        eq_dG=EQ_DG_AMINUS, reference=ZERO_HA, fe_label=FE_AMINUS,
+    )
+    if curve == "ionized":
+        return plot_panel(ax, df, frac_col="fraction_Aminus", species=SP_AMINUS,
+                          fe_xfrac=0.17, occ_frac=0.90, eq_frac=EQ_F_AMINUS, **common)
+    if curve == "neutral":
+        # HA falls; its plateau corner (upper-left) is the diagonal's, so the
+        # label sits beside the flank in the free upper-right quadrant.
+        return plot_panel(ax, df, frac_col="fraction_HA", species=SP_HA,
+                          fe_xfrac=0.17, occ_frac=0.90, eq_frac=EQ_F_HA,
+                          occ_pos=(0.35, 0.90, "left"), **common)
+    return plot_panel(ax, df, frac_col="fraction_Aminus", species=SP_AMINUS,
+                      fe_xfrac=0.83, occ_frac=0.90, eq_frac=EQ_F_AMINUS,
+                      extra=dict(frac_col="fraction_HA", species=SP_HA,
+                                 eq=EQ_F_HA, pos=(-1.6, 0.93, "right")),
+                      **common)
+
+
+def _base_panel(ax, df, y_limit, label, curve):
+    """Base panel with the shared reference: ΔG(BH+ − B), B at ΔG = 0."""
+    common = dict(
+        dG_col="dG_BHplus_relative_B_kcal_per_mol", colors=BLUE,
+        y_limit=y_limit, panel_label=label, reaction=RXN_BASE,
+        eq_dG=EQ_DG_BHPLUS, reference=ZERO_B, fe_label=FE_BHPLUS,
+    )
+    if curve == "ionized":
+        return plot_panel(ax, df, frac_col="fraction_BHplus", species=SP_BHPLUS,
+                          fe_xfrac=0.83, occ_frac=0.90, eq_frac=EQ_F_BHPLUS, **common)
+    if curve == "neutral":
+        return plot_panel(ax, df, frac_col="fraction_B", species=SP_B,
+                          fe_xfrac=0.83, occ_frac=0.90, eq_frac=EQ_F_B,
+                          occ_pos=(-0.35, 0.90, "right"), **common)
+    return plot_panel(ax, df, frac_col="fraction_BHplus", species=SP_BHPLUS,
+                      fe_xfrac=0.17, occ_frac=0.90, eq_frac=EQ_F_BHPLUS,
+                      extra=dict(frac_col="fraction_B", species=SP_B,
+                                 eq=EQ_F_B, pos=(1.6, 0.93, "left")),
+                      **common)
+
+
+def _y_limit() -> float:
+    return 1.08 * TWO_303_RT * max(abs(PH_MIN - PKA), abs(PH_MAX - PKA))
+
+
 def plot_neutral_states(df: pd.DataFrame) -> plt.Figure:
-    """Neutral species: protonated acid HA and deprotonated base B."""
-    y_limit = 1.08 * TWO_303_RT * max(abs(PH_MIN - PKA), abs(PH_MAX - PKA))
+    """Neutral species HA (a) and B (b), on the same energy lines as the
+    ionized figure (HA and B stay the ΔG = 0 reference)."""
     fig, axes = plt.subplots(1, 2, figsize=(13.5, 6.6))
-
     labels = [
-        plot_panel(
-            axes[0], df,
-            "dG_HA_relative_Aminus_kcal_per_mol", "fraction_HA",
-            RED,
-            SP_HA,
-            fe_xfrac=0.83, occ_frac=0.90,
-            y_limit=y_limit,
-            panel_label="A",
-            reaction=RXN_ACID,
-            eq_dG=EQ_DG_HA, eq_frac=EQ_F_HA,
-            reference=ZERO_AMINUS,
-        ),
-        plot_panel(
-            axes[1], df,
-            "dG_B_relative_BHplus_kcal_per_mol", "fraction_B",
-            BLUE,
-            SP_B,
-            fe_xfrac=0.17, occ_frac=0.90,
-            y_limit=y_limit,
-            panel_label="B",
-            reaction=RXN_BASE,
-            eq_dG=EQ_DG_B, eq_frac=EQ_F_B,
-            reference=ZERO_BHPLUS,
-        ),
+        _acid_panel(axes[0], df, _y_limit(), "a", "neutral"),
+        _base_panel(axes[1], df, _y_limit(), "b", "neutral"),
     ]
+    fig.tight_layout()
+    place_line_labels(labels)
+    return fig
 
+
+def plot_both_probabilities(df: pd.DataFrame) -> plt.Figure:
+    """Alternative 1x2: one panel per couple, one energy line, both
+    probabilities (ionized solid, neutral dashed) crossing at the pKa."""
+    fig, axes = plt.subplots(1, 2, figsize=(13.5, 6.6))
+    labels = [
+        _acid_panel(axes[0], df, _y_limit(), "a", "both"),
+        _base_panel(axes[1], df, _y_limit(), "b", "both"),
+    ]
     fig.tight_layout()
     place_line_labels(labels)
     return fig
 
 
 def plot_all_states(df: pd.DataFrame) -> plt.Figure:
-    """All four species on one 2x2 figure, panels A/B/C/D.
+    """2x2, one reference throughout (the neutral form at ΔG = 0).
 
-    A deprotonated acid A-    B protonated base BH+   (ionized states)
-    C protonated acid HA      D deprotonated base B   (neutral states)
+    Columns share an energy line -- acid ΔG(A- − HA), base ΔG(BH+ − B) --
+    and only the probability curve changes by row:
+    a A- probability    b BH+ probability   (ionized)
+    c HA probability    d B probability     (neutral)
     """
-    y_limit = 1.08 * TWO_303_RT * max(abs(PH_MIN - PKA), abs(PH_MAX - PKA))
     fig, axes = plt.subplots(2, 2, figsize=(13.5, 12.6))
-
     labels = [
-        plot_panel(
-            axes[0, 0], df,
-            "dG_Aminus_relative_HA_kcal_per_mol", "fraction_Aminus",
-            RED,
-            SP_AMINUS,
-            fe_xfrac=0.17, occ_frac=0.90,
-            y_limit=y_limit,
-            panel_label="A",
-            reaction=RXN_ACID,
-            eq_dG=EQ_DG_AMINUS, eq_frac=EQ_F_AMINUS,
-            reference=ZERO_HA,
-        ),
-        plot_panel(
-            axes[0, 1], df,
-            "dG_BHplus_relative_B_kcal_per_mol", "fraction_BHplus",
-            BLUE,
-            SP_BHPLUS,
-            fe_xfrac=0.83, occ_frac=0.90,
-            y_limit=y_limit,
-            panel_label="B",
-            reaction=RXN_BASE,
-            eq_dG=EQ_DG_BHPLUS, eq_frac=EQ_F_BHPLUS,
-            reference=ZERO_B,
-        ),
-        plot_panel(
-            axes[1, 0], df,
-            "dG_HA_relative_Aminus_kcal_per_mol", "fraction_HA",
-            RED,
-            SP_HA,
-            fe_xfrac=0.83, occ_frac=0.90,
-            y_limit=y_limit,
-            panel_label="C",
-            reaction=RXN_ACID,
-            eq_dG=EQ_DG_HA, eq_frac=EQ_F_HA,
-            reference=ZERO_AMINUS,
-        ),
-        plot_panel(
-            axes[1, 1], df,
-            "dG_B_relative_BHplus_kcal_per_mol", "fraction_B",
-            BLUE,
-            SP_B,
-            fe_xfrac=0.17, occ_frac=0.90,
-            y_limit=y_limit,
-            panel_label="D",
-            reaction=RXN_BASE,
-            eq_dG=EQ_DG_B, eq_frac=EQ_F_B,
-            reference=ZERO_BHPLUS,
-        ),
+        _acid_panel(axes[0, 0], df, _y_limit(), "a", "ionized"),
+        _base_panel(axes[0, 1], df, _y_limit(), "b", "ionized"),
+        _acid_panel(axes[1, 0], df, _y_limit(), "c", "neutral"),
+        _base_panel(axes[1, 1], df, _y_limit(), "d", "neutral"),
     ]
-
     fig.tight_layout()
     place_line_labels(labels)
     return fig
@@ -586,11 +591,13 @@ def main() -> None:
 
     figures = (
         (plot_ionized_states, "figure_ionized_states_equations",
-         "ionized states: A- (A), BH+ (B)"),
+         "ionized states: A- (a), BH+ (b)"),
         (plot_neutral_states, "figure_neutral_states_equations",
-         "neutral states: HA (A), B (B)"),
+         "neutral states: HA (a), B (b), ionized-state energy lines"),
         (plot_all_states, "figure_all_states_equations",
-         "all states, 2x2: A-, BH+, HA, B (A-D)"),
+         "all states, 2x2, shared reference: A-, BH+, HA, B (a-d)"),
+        (plot_both_probabilities, "figure_both_probabilities_equations",
+         "alternative 1x2: both probabilities per couple (a acid, b base)"),
     )
     for plot_function, stem, what in figures:
         figure = plot_function(df)
